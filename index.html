@@ -8,6 +8,25 @@
 	    <link rel="stylesheet" type="text/css" href="src/style-sheets/common.css">
 	</head>
 	<body>
+		<div id="wrap">
 
-	</bod>
+		</div>
+		<script crossorigin src="https://unpkg.com/react@15/dist/react.min.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+		<script type="text/javascript">
+		document.onreadystatechange = function () {
+			if (document.readyState == "interactive") {
+				initApplication();
+			}
+		}
+
+		function initApplication()
+		{
+			ReactDOM.render(
+				<h1>Hello, world!</h1>,
+				document.getElementById('root')
+			);
+		}
+		</script>
+	</body>
 </html>
