@@ -1,11 +1,23 @@
 <!doctype html>
 <html lang="ko" name="a@hax0r.info">
 	<head>
-	    <meta charset="UTF-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-	    <title>영준이</title>
-	    <link rel="stylesheet" type="text/css" href="src/style-sheets/common.css">
+	    <meta charset="UTF-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="author" content="영준" />
+		<meta name="description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
+	    <title>
+			영준이, A.K.A hax0r
+		</title>
+	    <link rel="stylesheet" type="text/css" href="src/style-sheets/common.css" />
+
+		<!-- Begin : Seo meta tag (e.g. open graph)-->
+		<meta property="og:description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
+		<meta property="og:title" content="영준이, A.K.A hax0r">
+
+		<meta name="twitter:description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
+		<meta name="twitter:title" content="영준이, A.K.A hax0r">
+		<!-- Ended : Seo meta tag (e.g. open graph)-->
 	</head>
 	<body>
 		<!--[if lt IE 10]>
@@ -31,251 +43,273 @@
 				'video' : 'src/videos/',
 				'image' : 'src/images',
 				'css' : 'src/style-sheet/',
-				'js' : 'src/javascript/'
+				'js' : 'src/javascript/',
 			},
 			'dummy' : {
 				'preVideoIndex' : null
+			},
+			'urls' : {
+				'blogRssUrl' : 'http://blog.hax0r.info/rss'
 			}
 		};
 
 
-		/**
-		 * 쿠키 생성
-		 * @method createCookie
-		 * @param  {[type]}     name  생성 쿠기 명
-		 * @param  {[type]}     value 값
-		 * @param  {[type]}     days  유효 일
-		 * @return {[void]}
-		 */
-		function createCookie(name,value,days)
-		{
-		    var expires = "";
-		    if ( days ) {
-		        var date = new Date();
-		        date.setTime(date.getTime() + (days*24*60*60*1000));
-		        expires = "; expires=" + date.toUTCString();
-		    }
-
-		    document.cookie = name + "=" + value + expires + "; path=/";
-		}
-
-
-		/**
-		 * 쿠기 조회
-		 * @method readCookie
-		 * @param  {[type]}   name 생성된 쿠기 명
-		 * @return {[type]}        [description]
-		 */
-		function readCookie(name)
-		{
-		    var nameEq = name + "=",
-				ca = document.cookie.split(';');
-
-			for ( var i=0;i < ca.length;i++ ) {
-		        var c = ca[i];
-		        while ( c.charAt(0) == ' ' ) {
-					c = c.substring(1,c.length);
-				}
-
-				if ( c.indexOf(nameEq) == 0 ) {
-					return c.substring(nameEq.length,c.length);
-				}
-		    }
-
-		    return null;
-		}
-
-
-		/**
-		 * 쿠기 삭제
-		 * @method eraseCookie
-		 * @param  {[type]}    name 생성된 쿠키 명
-		 * @return {[void]}
-		 */
-		function eraseCookie(name)
-		{
-		    createCookie(name,"",-1);
-		}
-
-
-		/**
-		 * [loadMyBlogContents description]
-		 * @method loadMyBlogContents
-		 * @param  {integer}           page
-		 * @return {object}                [볼르고 내용]
-		 */
-		function loadMyBlogContents(page)
-		{
-			var xmlHttpClient = new XMLHttpRequest(),
-				feedUrl = 'http://blog.hax0r.info/rss',
-				/* Access-Control-Allow-Origin 문제, Resion 에 따라서 호스트를 변경할까도 고민 중 */
-				feedUrlConvertJsonWithExtraApi = 'https://api.rss2json.com/v1/api.json?rss_url='+feedUrl;
-
-			xmlHttpClient.open("GET", feedUrlConvertJsonWithExtraApi, true);
-			xmlHttpClient.send(null);
-
-			return new Promise(function (resolve, reject)
-			{
-				xmlHttpClient.onreadystatechange = function ()
+		if ( 'addEventListener' in document ) {
+			try {
+				/**
+				 * 쿠키 생성
+				 * @method createCookie
+				 * @param  {String}     name  생성 쿠기 명
+				 * @param  {String}     value 값
+				 * @param  {Integer}     days  유효 일
+				 * @return {Void}
+				 */
+				function createCookie(name,value,days)
 				{
-						resolve({
-							'data' : JSON.parse(xmlHttpClient.responseText)
-						});
-				};
-			})
+				    var expires = "";
+				    if ( days ) {
+				        var date = new Date();
+				        date.setTime(date.getTime() + (days*24*60*60*1000));
+				        expires = "; expires=" + date.toUTCString();
+				    }
 
-		}
-
-
-
-		/**
-		 * 파싱 된 블로그 게시물을 본 페이지에 적습니다.
-		 * @method writeDownToArticles
-		 * @param  {object}            contentsInformation Blog rss information
-		 * @return {void}
-		 */
-		function writeDownToArticles(contentsInformation)
-		{
-			if ( typeof contentsInformation.items === 'undefined' ) {
-				return false;
-			}
-
-			for ( var i = 0; i < contentsInformation.items.length; i++ ) {
-				console.log(contentsInformation.items[i]);
-			}
-		}
-
-
-		class App
-		{
-
-			/**
-			 * 비디오 변경
-			 * @method chooseVideo
-			 * @param  {Number}  재생할 비디오 항목
-			 * @return {void}
-			 */
-			static chooseVideo(index)
-			{
-				var maximumIndex = 3,
-					videoNames = [
-						'1.mov',
-						'2.mov',
-						'3.mov'
-					],
-					idx = parseInt(readCookie('hax0rVideoIndex')) || 0;
-
-				idx = ( idx + 1+Math.floor(Math.random() * (maximumIndex-1)) ) % maximumIndex;
-
-				var nextIdx = idx,
-					returnIndex = ( typeof index === 'undefined' ) ? nextIdx : index;
-
-				if ( appConfig.dummy.preVideoIndex == ( maximumIndex - 1 ) ) {
-					returnIndex = 0;
+				    document.cookie = name + "=" + value + expires + "; path=/";
 				}
 
-				var nextVideoPath = appConfig.path.video + videoNames[returnIndex];
-				appConfig.dummy.preVideoIndex = returnIndex;
 
-				createCookie('hax0rVideoIndex', returnIndex, 1);
+				/**
+				 * 쿠기 조회
+				 * @method readCookie
+				 * @param  {String}   name 생성된 쿠기 명
+				 * @return {Null}
+				 */
+				function readCookie(name)
+				{
+				    var nameEq = name + "=",
+						ca = document.cookie.split(';');
 
-				var video = document.getElementsByClassName('play-with-me')[0];
-				video.pause();
+					for ( var i=0;i < ca.length;i++ ) {
+				        var c = ca[i];
+				        while ( c.charAt(0) == ' ' ) {
+							c = c.substring(1,c.length);
+						}
 
-				video.pause();
+						if ( c.indexOf(nameEq) == 0 ) {
+							return c.substring(nameEq.length,c.length);
+						}
+				    }
 
-				var i = -1;
-				while ( i++ < video.childNodes.length ) {
-					if ( typeof video.childNodes[i] !== 'undefined' ) {
-						console.log(video.childNodes[i].remove([0]));
+				    return null;
+				}
+
+
+				/**
+				 * 쿠기 삭제
+				 * @method eraseCookie
+				 * @param  {String}    name 생성된 쿠키 명
+				 * @return {Void}
+				 */
+				function eraseCookie(name)
+				{
+				    createCookie(name,"",-1);
+				}
+
+
+				/**
+				 * page 인자 값에 따라, 블로그 내용을 요청하여 반환합니다.
+				 * @method loadMyBlogContents
+				 * @param  {Integer}           page
+				 * @return {Object}                [볼르고 내용]
+				 */
+				function loadMyBlogContents(page)
+				{
+					var xmlHttpClient = new XMLHttpRequest(),
+						feedUrl = appConfig.urls.blogRssUrl,
+						/* Access-Control-Allow-Origin 문제, Resion 에 따라서 호스트를 변경할까도 고민 중 */
+						feedUrlConvertJsonWithExtraApi = 'https://api.rss2json.com/v1/api.json?rss_url='+feedUrl;
+
+					xmlHttpClient.open("GET", feedUrlConvertJsonWithExtraApi, true);
+					xmlHttpClient.send(null);
+
+					return new Promise(function (resolve, reject)
+					{
+						xmlHttpClient.onreadystatechange = function ()
+						{
+								resolve({
+									'data' : JSON.parse(xmlHttpClient.responseText)
+								});
+						};
+					})
+
+				}
+
+
+				/**
+				 * 파싱 된 블로그 게시물을 본 페이지에 적습니다.
+				 * @method writeDownToArticles
+				 * @param  {Object}            contentsInformation Blog rss information
+				 * @return {Void}
+				 */
+				function writeDownToArticles(contentsInformation)
+				{
+					// console.log(contentsInformation.items);
+					if ( typeof contentsInformation.items === 'undefined' ) {
+						return false;
+					}
+
+					for ( var i = 0; i < contentsInformation.items.length; i++ ) {
+						// console.log(contentsInformation.items[i]);
 					}
 				}
 
-				var source = document.createElement('source');
 
-				source.setAttribute('src', nextVideoPath);
+				class App
+				{
 
-				video.appendChild(source);
-				video.load();
-				video.play();
-			}
-
-
-			/**
-			 * 앱 초기 bootstrap
-			 * @method initApplication
-			 * @return {[void]}
-			 */
-			static initApplication()
-			{
-				var layOutHeader = React.createClass({
-					render: function()
+					/**
+					 * 비디오 선택
+					 * @method chooseVideo
+					 * @param  {Number}  재생할 비디오 항목
+					 * @return {Void}
+					 */
+					static chooseVideo(index)
 					{
-						return (
-							<div className="header-wrapper">
-								<div className="header-content">
-									<div className="extra-area">
-										<div className="follow-me">
-											<div className="follow-item pull-left-not-sm">
-												<a className="github-button" 	href="https://github.com/webhacking" aria-label="Follow @webhacking on GitHub">Follow @webhacking</a>
+						/* 매운 시크하고 잘생긴 영준님을 재생할거임*/
+						var maximumIndex = 3,
+							videoNames = [
+								'1.mov',
+								'2.mov',
+								'3.mov'
+							],
+							idx = parseInt(readCookie('hax0rVideoIndex')) || 0;
+
+						console.log(readCookie('hax0rVideoIndex'))
+						console.log('idx');
+						console.log(idx);
+
+						idx = ( idx + 1+Math.floor(Math.random() * (maximumIndex-1)) ) % maximumIndex;
+
+						var nextIdx = idx,
+							returnIndex = ( typeof index === 'undefined' ) ? nextIdx : index;
+
+						if ( appConfig.dummy.preVideoIndex == ( maximumIndex - 1 ) ) {
+							returnIndex = 0;
+						}
+
+						appConfig.dummy.preVideoIndex = returnIndex;
+						createCookie('hax0rVideoIndex', returnIndex);
+						return returnIndex;
+					}
+
+
+					/**
+					 * 비디오 출력
+					 * @method selectVideo
+					 * @param  {[type]}    nextVideoPath [description]
+					 * @return {[type]}                  [description]
+					 */
+					static selectVideo(returnIndex)
+					{
+						var maximumIndex = 3,
+							videoNames = [
+								'1.mov',
+								'2.mov',
+								'3.mov'
+							],
+							nextVideoPath = appConfig.path.video + videoNames[returnIndex],
+							video = document.getElementsByClassName('play-with-me')[0];
+
+						video.pause();
+
+						var i = -1;
+						while ( i++ < video.childNodes.length ) {
+							if ( typeof video.childNodes[i] !== 'undefined' ) {
+								console.log(video.childNodes[i].remove([0]));
+							}
+						}
+
+						var source = document.createElement('source');
+						source.setAttribute('src', nextVideoPath);
+
+						video.appendChild(source);
+						video.load();
+						video.play();
+					}
+
+
+					/**
+					 * 앱 초기 bootstrap
+					 * @method initApplication
+					 * @return {Void}
+					 */
+					static initApplication()
+					{
+						var LayoutHeader = React.createClass({
+							render: function()
+							{
+								return (
+									<div className="header-wrapper">
+										<div className="header-content">
+											<div className="extra-area">
+												<div className="follow-me">
+													<div className="follow-item pull-left-not-sm">
+														<a className="github-button" 	href="https://github.com/webhacking" aria-label="Follow @webhacking on GitHub">Follow @webhacking</a>
+													</div>
+													<div className="follow-item pull-left-not-sm">
+														<a className="github-button" href="https://github.com/webhacking/webhacking.github.io" data-icon="octicon-star" aria-label="Star webhacking/webhacking.github.io on GitHub">Star</a>
+													</div>
+												</div>
 											</div>
-											<div className="follow-item pull-left-not-sm">
-												<a className="github-button" href="https://github.com/webhacking/webhacking.github.io" data-icon="octicon-star" aria-label="Star webhacking/webhacking.github.io on GitHub">Star</a>
+											<div className="video-dim">
+											</div>
+											<div className="video-area">
+												<video className="play-with-me" loop="" muted="" preload="metadata" crossorigin="anonymous" autoPlay>
+										            <source src={appConfig.path.video +  App.chooseVideo() + '.mov'} />
+										        </video>
 											</div>
 										</div>
 									</div>
-									<div className="video-dim">
+								)
+							}
+						});
+
+						var LayoutBody = React.createClass({
+							render : function()
+							{
+								return (
+									<div className="body-wrapper">
 									</div>
-									<div className="video-area">
-										<video className="play-with-me" loop="" muted="" preload="metadata" crossorigin="anonymous" autoPlay>
-								            <source src={appConfig.path.video + '1.mov'} />
-								        </video>
-									</div>
-								</div>
-							</div>
-						)
+								)
+							}
+						});
+
+						ReactDOM.render(
+							<LayoutHeader/>,
+							document.getElementById('wrap')
+						);
 					}
-				});
+				}
 
-				var LayoutBody = React.createClass({
-					render : function()
-					{
-						return (
-							<div className="body-wrapper">
-							</div>
-						)
-					}
-				});
-
-				ReactDOM.render(
-					<layOutHeader/>,
-					document.getElementById('wrap')
-				);
-			}
-		}
-
-		if ( 'addEventListener' in document ) {
-			console.log('Welcome');
-			try {
 				App.initApplication(document.readyState);
 
 				var blogContents = loadMyBlogContents();
 				blogContents.then(function(contentsInformation)
 				{
 					writeDownToArticles(contentsInformation.data);
-				})
+				});
+
 				setInterval(function()
 				{
-					App.chooseVideo();
-				},15000)
+					App.selectVideo(App.chooseVideo());
+				},15000);
 			}
 			catch(e) {
-				switch (true) {
-					case (e instanceof EvalError):
+				switch ( true ) {
+					case ( e instanceof EvalError ):
 						throw new Error("Eval에러" + e.message);
 						console.log("Eval에러" + e.message);
 						break;
-					case (e instanceof RangeError):
+					case ( e instanceof RangeError ):
 						throw new Error("Range에러: " + e.message);
 						console.log("Range에러: " + e.message);
 						break;
