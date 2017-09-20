@@ -189,6 +189,7 @@
 
 						idx = ( idx + 1+Math.floor(Math.random() * (maximumIndex-1)) ) % maximumIndex;
 
+						console.log(idx);
 						var nextIdx = idx,
 							returnIndex = ( typeof index === 'undefined' ) ? nextIdx : index;
 
@@ -301,7 +302,7 @@
 				setInterval(function()
 				{
 					App.selectVideo(App.chooseVideo());
-				},15000);
+				},5000);
 			}
 			catch(e) {
 				switch ( true ) {
