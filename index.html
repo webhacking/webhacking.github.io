@@ -3,9 +3,13 @@
 	<head>
 	    <meta charset="UTF-8" />
 	    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<meta name="robots" content="noimageindex, noarchive">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="theme-color" content="#000000">
+		<meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 		<meta name="author" content="영준" />
 		<meta name="description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
+		<link rel="canonical" href="http://www.hax0r.info/" />
 	    <title>
 			영준이, A.K.A hax0r
 		</title>
@@ -45,13 +49,13 @@
 				'css' : 'src/style-sheet/',
 				'js' : 'src/javascript/',
 			},
-			'dummy' : {
-				'preVideoIndex' : null,
-				'videoNames' : [
+			'video' : {
+				'names' : [
 					'1.mov',
 					'2.mov',
 					'3.mov'
-				]
+				],
+				'preIndex' : null
 			},
 			'urls' : {
 				'blogRssUrl' : 'http://blog.hax0r.info/rss'
@@ -157,7 +161,6 @@
 				 */
 				function writeDownToArticles(contentsInformation)
 				{
-					// console.log(contentsInformation.items);
 					if ( typeof contentsInformation.items === 'undefined' ) {
 						return false;
 					}
@@ -183,21 +186,16 @@
 						var maximumIndex = 3,
 							idx = parseInt(readCookie('hax0rVideoIndex')) || 0;
 
-						console.log(readCookie('hax0rVideoIndex'))
-						console.log('idx');
-						console.log(idx);
-
 						idx = ( idx + 1+Math.floor(Math.random() * (maximumIndex-1)) ) % maximumIndex;
 
-						console.log(idx);
 						var nextIdx = idx,
 							returnIndex = ( typeof index === 'undefined' ) ? nextIdx : index;
 
-						if ( appConfig.dummy.preVideoIndex == ( maximumIndex - 1 ) ) {
+						if ( appConfig.video.preIndex == ( maximumIndex - 1 ) ) {
 							returnIndex = 0;
 						}
 
-						appConfig.dummy.preVideoIndex = returnIndex;
+						appConfig.video.preIndex = returnIndex;
 						createCookie('hax0rVideoIndex', returnIndex);
 						return returnIndex;
 					}
@@ -212,7 +210,7 @@
 					static selectVideo(returnIndex)
 					{
 						var maximumIndex = 3,
-							nextVideoPath = appConfig.path.video + appConfig.dummy.videoNames[returnIndex],
+							nextVideoPath = appConfig.path.video + appConfig.video.names[returnIndex],
 							video = document.getElementsByClassName('play-with-me')[0];
 
 						video.pause();
@@ -260,7 +258,7 @@
 											</div>
 											<div className="video-area">
 												<video className="play-with-me" controls loop muted preload="metadata" crossorigin="anonymous" autoPlay>
-										            <source src={appConfig.path.video +  appConfig.dummy.videoNames[App.chooseVideo()]} />
+										            <source src={appConfig.path.video +  appConfig.video.names[App.chooseVideo()]} />
 										        </video>
 											</div>
 										</div>
