@@ -47,11 +47,11 @@
 			},
 			'dummy' : {
 				'preVideoIndex' : null,
-				'videoNames' = [
+				'videoNames' : [
 					'1.mov',
 					'2.mov',
 					'3.mov'
-				],
+				]
 			},
 			'urls' : {
 				'blogRssUrl' : 'http://blog.hax0r.info/rss'
@@ -180,7 +180,7 @@
 					static chooseVideo(index)
 					{
 						/* 매운 시크하고 잘생긴 영준님을 재생할거임*/
-						var maximumIndex = 3;
+						var maximumIndex = 3,
 							idx = parseInt(readCookie('hax0rVideoIndex')) || 0;
 
 						console.log(readCookie('hax0rVideoIndex'))
@@ -211,8 +211,8 @@
 					 */
 					static selectVideo(returnIndex)
 					{
-						var maximumIndex = 3;
-							nextVideoPath = appConfig.path.video + appConfig.videoNames[returnIndex],
+						var maximumIndex = 3,
+							nextVideoPath = appConfig.path.video + appConfig.dummy.videoNames[returnIndex],
 							video = document.getElementsByClassName('play-with-me')[0];
 
 						video.pause();
@@ -260,7 +260,7 @@
 											</div>
 											<div className="video-area">
 												<video className="play-with-me" controls loop muted preload="metadata" crossorigin="anonymous" autoPlay>
-										            <source src={appConfig.path.video +  appConfig.videoNames[App.chooseVideo()] + '.mov'} />
+										            <source src={appConfig.path.video +  appConfig.dummy.videoNames[App.chooseVideo()] + '.mov'} />
 										        </video>
 											</div>
 										</div>
