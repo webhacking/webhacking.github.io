@@ -103,6 +103,23 @@ body::-webkit-scrollbar-corner
 	border-width:3px 0 0 3px;
 	box-shadow:inset 1px 1px 0 rgba(0,0,0,.14);
 }
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+video::-webkit-media-controls {
+  display: none;
+}
+
+/* Could Use thise as well for Individual Controls */
+video::-webkit-media-controls-play-button {}
+
+video::-webkit-media-controls-volume-slider {}
+
+video::-webkit-media-controls-mute-button {}
+
+video::-webkit-media-controls-timeline {}
+
+video::-webkit-media-controls-current-time-display {}
 *, *:before, *:after, hr, hr:before, hr:after
 {
 	-moz-box-sizing: border-box;
@@ -134,7 +151,7 @@ body::-webkit-scrollbar-corner
 
 .header-wrapper
 {
-	height: 530px;
+	height: 180px;
 	overflow: hidden;
 	position: relative;
 }
@@ -162,15 +179,27 @@ body::-webkit-scrollbar-corner
 	margin-left : 5px
 }
 
+.welcome-text {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 50px;
+	z-index: 3;
+}
+.welcome-text > h2 {
+	color : #fff
+}
 video.play-with-me
 {
 	position: absolute;
 	left: 0;
-	top: -100;
+	top: -10;
 	width: 100%;
 	height: 100%;
 	z-index: -2;
 	object-fit: cover;
+	pointer-events: none;
 }
 .video-dim
 {
@@ -191,4 +220,11 @@ video.play-with-me
 .pull-left-not-xs, .pull-left-not-sm, .pull-left-not-md, .pull-left-not-lg
 {
 	float: left;
+}
+
+.darkGray {
+	padding-top: 0;
+	padding-bottom: 0;
+	background-color: #222528;
+	box-shadow: 0 -2px 4px 0 rgba(0,0,0,.2);
 }

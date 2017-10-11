@@ -3,9 +3,9 @@
 	<head>
 	    <meta charset="UTF-8" />
 	    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<meta name="robots" content="noimageindex, noarchive">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="theme-color" content="#000000">
+		<meta name="robots" content="noimageindex, noarchive" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="#000000" />
 		<meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
 		<meta name="author" content="영준" />
 		<meta name="description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
@@ -17,19 +17,16 @@
 
 		<!-- Begin : Seo meta tag (e.g. open graph)-->
 		<meta property="og:description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
-		<meta property="og:title" content="영준이, A.K.A hax0r">
+		<meta property="og:title" content="영준이, A.K.A hax0r" />
 
 		<meta name="twitter:description" content="I am a Passionate Back-end developer always in hunger of learning new things and sharing what i have learned. 21Years old Software engineer" />
-		<meta name="twitter:title" content="영준이, A.K.A hax0r">
+		<meta name="twitter:title" content="영준이, A.K.A hax0r" />
 		<!-- Ended : Seo meta tag (e.g. open graph)-->
 	</head>
 	<body>
 		<!--[if lt IE 10]>
       		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     	<![endif]-->
-		<div id="wrap">
-
-		</div>
 		<script src="https://fb.me/react-15.0.0.js"></script>
 		<script src="https://fb.me/react-dom-15.0.0.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
@@ -226,6 +223,7 @@
 						source.setAttribute('src', nextVideoPath);
 
 						video.appendChild(source);
+						video.controls = false;
 						video.load();
 						video.play();
 					}
@@ -238,11 +236,12 @@
 					 */
 					static initApplication()
 					{
+						var welcomeText = 'Always in hunger of learning new things';
 						var LayoutHeader = React.createClass({
 							render: function()
 							{
 								return (
-									<div className="header-wrapper">
+									<header className="header-wrapper">
 										<div className="header-content">
 											<div className="extra-area">
 												<div className="follow-me">
@@ -256,13 +255,16 @@
 											</div>
 											<div className="video-dim">
 											</div>
+											<div className="welcome-text">
+												<h2>{welcomeText}</h2>
+											</div>
 											<div className="video-area">
-												<video className="play-with-me" controls loop muted preload="metadata" crossorigin="anonymous" autoPlay>
+												<video className="play-with-me" controls loop muted controls="false" preload="metadata" crossorigin="anonymous" autoPlay>
 										            <source src={appConfig.path.video +  appConfig.video.names[App.chooseVideo()]} />
 										        </video>
 											</div>
 										</div>
-									</div>
+									</header>
 								)
 							}
 						});
@@ -277,9 +279,24 @@
 							}
 						});
 
+
+						var LayoutFooter = React.createClass({
+							render : function()
+							{
+								return (
+									<footer className="footer-wrapper">
+									</footer>
+								)
+							}
+						});
+
 						ReactDOM.render(
-							<LayoutHeader/>,
-							document.getElementById('wrap')
+							<div id="wrap">
+								<LayoutHeader/>
+								<LayoutBody/>
+								<LayoutFooter/>
+							</div>,
+							document.body
 						);
 					}
 				}
