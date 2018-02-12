@@ -26,11 +26,6 @@ layout: default
 
   {{ content }}
 
-  <div class="post-facebook-comments">
-    <div class="fb-comments" data-href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" data-numposts="5" width="100%"></div>
-    {% include facebook-comments.html %}
-  </div>
-
   {% if page.comments != false and site.disqus.id %}
   <div class="post-disqus">
       <section id="disqus_thread"></section>

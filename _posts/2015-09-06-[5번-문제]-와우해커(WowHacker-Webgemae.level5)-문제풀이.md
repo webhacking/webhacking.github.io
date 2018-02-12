@@ -1,0 +1,159 @@
+---
+layout: post
+title: "[5번 문제] 와우해커(WowHacker Webgemae.level5) 문제풀이"
+description: ""
+date: 2015-09-06
+tags: ['5번', 'writeup', '문제', '문제풀이', '와우해커', '워게임', '웹해커', '해답']
+comments: true
+share: true
+---
+
+이전 ASP 프로젝트가 끝나고, 다시 또 프로젝트에 들어가야 될 것 같아서 블로그 포스팅을 몰아서 하는 것 같다.
+
+각설하고, 4번문제에 이어서 5번 문제풀이를 하겠다.
+
+  
+
+  
+
+![](/assets/images/posts/75/217A5B4C55EC137524F19F.PNG)
+
+  
+
+  
+
+Level.5의 기재되어있는 링크에 접속하면 아래와 같이 이용자의 인증을 필요한다.
+
+서버 메세지가 "admin's home"이라고한다. 즉, 여기서 말하는 이용자 인증은 관리자 인증을 뜻 한다.
+
+일단 아무런 계정정보가 없으니 취소를 해보자.
+
+  
+
+  
+
+![](/assets/images/posts/75/2669A44C55EC1378323AE2.PNG)
+
+서버가 401을 에러를 뱉고있다.  
+
+"Authorization Required
+
+This server could not verify that you are authorized to access the document
+requested. Either you supplied the wrong credentials (e.g., bad password), or
+your browser doesn't understand how to supply the credentials required.
+
+Apache Server at webgame.wowhacker.com Port 80"
+
+  
+
+400대의 에러는 "웹브라우저 측의 요청에러 상태 코드입니다."
+
+이 중 401에러는 "사용자 인증과 관련된 코드. 401번 상태 코드가 전달되면 웹 브라우저는 사용자에게
+
+아이디와 패스워드를 입력할 것을 요구함. 여기서 제대로 된 계정정보를 입력할 경우 해당 URL로 이동되고, 만일
+
+잘못입력할 경우 403번 상태코드를 발생시킴"
+
+  
+
+HTTP 기본 인증(HTTP Basic Authentication) 기능이 사용됨을 확인할 수 있다.
+
+더 자세한 내역을 확인 하기 위해 프록시 툴을 이용해서 전송되는 데이터들을 보도록하자.(프록시 서버는 중계기능을 하며
+
+정보를 일시적으로 보관한다. 이용자가 원할때 보관된 데이터를 참고할수있다.) 웹서버가 아파치 서버다.
+
+  
+
+![](/assets/images/posts/75/2340563F55EC1474375E03.PNG)
+
+  
+
+  
+
+![](/assets/images/posts/75/2371CA3F55EC1477062D0A.PNG)
+
+  
+
+  
+
+프록시 툴로는 파로스,버프슈트,아킬레스 등이 있는데, 해당 포스팅에서는 제일 많이 알려진 파로스를 사용했습니다.
+
+간단하게 로컬에서 프록시 설정하고 패킷을 잡아볼까요. 해당 주소로 다시 접속하여서 로그인 액션부분을 잡아줍니다.
+
+  
+
+GET http://webgame.wowhacker.com/UhaveToAuth HTTP/1.1
+
+Host: webgame.wowhacker.com
+
+Proxy-Connection: keep-alive
+
+Cache-Control: max-age=0
+
+Authorization: Basic Og==
+
+Accept:
+text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+
+Upgrade-Insecure-Requests: 1
+
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like
+Gecko) Chrome/45.0.2454.85 Safari/537.36 Paros/3.2.13
+
+Accept-Encoding: sdch
+
+Accept-Language: ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4
+
+Cookie: __utma=14578993.918649071.1440162413.1441211022.1441534031.8;
+__utmc=14578993; __utmz=14578993.1441534031.8.5.utmccn=(referral)|utmcsr=wowha
+cker.com|utmcct=/about.php|utmcmd=referral
+
+  
+
+잡힌 데이터중에서 유심히 봐야할부분은 이부분"Authorization"입니다.
+
+Og==는 base64로 해쉬되어있고 디코딩값은 :란 값이 나옵니다.
+
+그럼 이번에는 admin이라는 계정과 admin이라는 패스워드로 접근해봅시다.
+
+  
+
+Authorization: Basic YWRtaW46YWRtaW4= 이라는 값을 얻었습니다.
+
+디코딩하면 admin:admin 라는 결과값을 얻을수있습니다. 아이디와 패스워드 사이에 :가 들어가
+
+base64값으로 인코딩 됨을 확인할수있습니다.
+
+  
+
+HTML메소드에서 GET,POST가 대표적으로 많이 사용하지만 이외
+OPTIONS메소드,PUT메소드,HEAD메소드,DELETE메소드,LINK메소드,UNLINE메소드 등등 여러 메소드가 존재합니다. 인증 설정
+중 Limit을 설정하면 메소드를 제한할 수 있습니다. 그 외 메소드를 이용하면 아파시 웹서버의 웹 인증을 우회할 수 있다는 얘기입니다.
+OPTIONS 메소드는 응답 가능한(서버에서 지원하는) HTTP 메소드를 요청합니다.
+
+  
+
+기존 GET방식을 OPTIONS방식으로 바꿔준후 Request 하면 됩니다.
+
+키 값GET,GET * key: ISayDDaeYouSayMireoyo!
+
+  
+
+![](/assets/images/posts/75/226D204655EC1E1729ED54.PNG)
+
+  
+
+  
+
+![](/assets/images/posts/75/2224324F55EC1E8813EA86.JPEG)
+
+  
+
+  
+
+  
+
+  
+
+  
+
