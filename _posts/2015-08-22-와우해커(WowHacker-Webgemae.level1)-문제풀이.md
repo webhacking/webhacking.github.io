@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[1번 문제] 와우해커(WowHacker Webgemae.level1) 문제풀이"
+title: "와우해커(WowHacker Webgemae.level1) 문제풀이"
 description: ""
 date: 2015-08-22
 tags: ['심심', '와우해커', '워게임', '웹게임']
