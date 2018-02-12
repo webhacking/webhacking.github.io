@@ -1,0 +1,62 @@
+---
+layout: post
+title: "Google cloud connecting to Linux Instances"
+description: ""
+date: 2017-10-10
+tags: []
+comments: true
+share: true
+---
+
+# Google cloud connecting to Linux Instances
+
+본 문서에서는 SSH 를 통해 구글 클라우드 VM 인스턴스에 접속하는 방법을 서술하고있습니다.
+
+구글 클라우드 [공식 문서](https://cloud.google.com/compute/docs/instances/connecting-to-
+instance)를 참고한 이후, 개인적으로 정리하고 작성한 문서입니다.
+
+## SSH Key 등록
+
+SSH 키가 존재하지 않는 경우, 먼저 SSH Key 를 생성해주세요.
+
+명령어 옵션에 대한 설명은 아래와 같습니다.
+
+  
+
+    ssh-keygen -t rsa -C "your-id@{your-email}"
+
+  
+
+Key 가 이미 존재하는 경우, 위 명령어 질의는 건너뛰고, Public key 내용을 `cat` 명령어를 통해 출력 후
+
+구글 클라우드 `Metadata` 탭으로 이동합니다.
+
+  
+
+탭 내 항목이 두개가 존재하는데, 여기서 `Add ssh key` 를 선택 후, 출력된 Public key 내용을 추가합니다.
+
+  
+
+## SSH 접속
+
+아래 명령어를 통해서 접속합니다.
+
+"[]" 안에 담긴 항목들의 설명은 아래와 같습니다.
+
+  
+
+  * PATH_TO_PRIVATE_KEY
+    * SSH KEY 비공개키 주소를 기입합니다. (e.g. ~/.ssh/id_rsa)
+  * USERNAME
+    * 키 생성시 등록한 아이디
+  * EXTERNAL_IP_ADDRESS
+    * 접속을 희망하는 인스턴스 외부 아이피 주소
+
+  
+
+    ssh -i [PATH_TO_PRIVATE_KEY] [USERNAME]@[EXTERNAL_IP_ADDRESS]
+
+  
+
+  
+
