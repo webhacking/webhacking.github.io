@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[2번 문제] 와우해커(WowHacker Webgemae.level2) 문제풀이"
+title: "WowHacker Webgemae level2"
 description: ""
 date: 2015-08-22
 tags: ['2번', 'write up', '문제', '와우해커', '워게임', '웹해킹', '풀이']

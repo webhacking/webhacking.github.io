@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 2번 문제"
+title: "Webhacking.kr 2번 문제"
 description: ""
 date: 2015-09-30
 tags: ['블라인드인젝션', '뽐뿌', '심심', '심심할때', '올드좀비', '워게임', '웹해킹', '인젝션', '탈탈', '털림']

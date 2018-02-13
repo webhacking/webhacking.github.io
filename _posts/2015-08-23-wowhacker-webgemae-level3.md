@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[3번 문제] 와우해커(WowHacker Webgemae.level3) 문제풀이"
+title: "WowHacker Webgemae level3"
 description: ""
 date: 2015-08-23
 tags: ['3번', 'WebHacking', 'wowhacker', 'writeup', '레벨3', '문제', '문제풀이', '와우해커', '정답', '해답']

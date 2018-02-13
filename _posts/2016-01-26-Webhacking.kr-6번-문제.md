@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 6번 문제"
+title: "Webhacking.kr 6번 문제"
 description: ""
 date: 2016-01-26
 tags: ['6번', 'writeup', '문제풀이', '워게임', '웹해킹', '정답', '풀이', '해킹', '해킹문제']

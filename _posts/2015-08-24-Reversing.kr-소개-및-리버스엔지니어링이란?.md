@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Reversing.kr] Reversing.kr 소개 및 리버스엔지니어링이란?"
+title: "Reversing.kr,리버스엔지니어링이란?"
 description: ""
 date: 2015-08-24
 tags: ['Reverse Engineering', 'writeup', '리버스엔지니어링', '리버싱', '문제풀이', '역공학', '정답', '풀이', '해답']

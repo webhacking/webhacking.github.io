@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 8번 문제"
+title: "Webhacking.kr 8번 문제"
 description: ""
 date: 2016-03-09
 tags: ['8번', 'webhacking.kr', '웹해킹', '해킹']

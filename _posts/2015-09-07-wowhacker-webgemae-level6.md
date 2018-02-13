@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[6번 문제] 와우해커(WowHacker Webgemae.level6) 문제풀이"
+title: "WowHacker Webgemae level6"
 description: ""
 date: 2015-09-07
 tags: []

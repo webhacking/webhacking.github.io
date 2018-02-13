@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 31번 문제"
+title: "Webhacking.kr 31번 문제"
 description: ""
 date: 2017-05-02
 tags: []

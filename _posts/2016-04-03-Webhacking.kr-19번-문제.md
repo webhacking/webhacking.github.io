@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 19번 문제"
+title: "Webhacking.kr 19번 문제"
 description: ""
 date: 2016-04-03
 tags: ['문제풀이', '풀이']

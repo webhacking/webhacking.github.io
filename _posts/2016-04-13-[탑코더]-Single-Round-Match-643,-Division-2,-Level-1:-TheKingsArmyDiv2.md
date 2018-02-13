@@ -106,7 +106,22 @@ of awards the king has to give to make all soldiers happy in the end.
 
   
 
-    public class TheKingsArmyDiv2 {    public int getNumber(String[] state) {        int rtn = 2;        int H = state.length;        int W = state[0].length();                for (int i = 0; i < H; i++) {            for (int j = 0; j < W; j++) {                                if (state[i].charAt(j) == 'H') {                    rtn = 1;                                        if (j+1 < W  && state[i].charAt(j+1) == 'H')                        return 0;                                        if (i+1 < H && state[i+1].charAt(j) == 'H')                        return 0;                }            }        }                return rtn;            }
+    public  class  TheKingsArmyDiv2  {    
+        public  int  getNumber(String[]  state)  {        
+            int  rtn  =  2;        
+            int  H  =  state.length;        
+            int  W  =  state[0].length();                
+            for  (int  i  =  0;  i  <  H;  i++)  {            
+                for  (int  j  =  0;  j  <  W;  j++)  {                                
+                    if  (state[i].charAt(j)  ==  'H')  {                    
+                        rtn  =  1;                                        
+                        if  (j + 1  <  W   &&  state[i].charAt(j + 1)  ==  'H')                         return  0;                                        
+                        if  (i + 1  <  H  &&  state[i + 1].charAt(j)  ==  'H')                         return  0;                
+                    }            
+                }        
+            }                
+            return  rtn;            
+        }
     }
 
   

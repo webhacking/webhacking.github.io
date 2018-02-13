@@ -17,8 +17,40 @@ share: true
   
 
   
-
-    function formatBytes(string $file, string $type) : int{   switch ( $type ) {       /* bytes to KB */      case \"KB\":         $filesize = filesize($file) * .0009765625;      break;      /* bytes to MB */      case \"MB\":         $filesize = (filesize($file) * .0009765625) * .0009765625;      break;      /* bytes to GB */      case \"GB\":         $filesize = ((filesize($file) * .0009765625) * .0009765625) * .0009765625;      break;   }      return round($filesize, 2).\' \'.$type;}
-
-  
-
+    function formatBytes(string $file, string $type) : int
+    
+    {
+    
+       switch ( $type ) {
+    
+           /* bytes to KB */
+    
+          case \"KB\":
+    
+             $filesize = filesize($file) * .0009765625;
+    
+          break;
+    
+          /* bytes to MB */
+    
+          case \"MB\":
+    
+             $filesize = (filesize($file) * .0009765625) * .0009765625;
+    
+          break;
+    
+          /* bytes to GB */
+    
+          case \"GB\":
+    
+             $filesize = ((filesize($file) * .0009765625) * .0009765625) * .0009765625;
+    
+          break;
+    
+       }
+    
+       
+    
+       return round($filesize, 2).\' \'.$type;
+    
+    }

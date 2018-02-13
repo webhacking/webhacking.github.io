@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 1번 문제"
+title: "Webhacking.kr 1번 문제"
 description: ""
 date: 2015-09-08
 tags: ['wargame', 'writeup', '문제풀이', '심심할때', '워게임', '웹해킹', '재밌는게임', '해킹']
