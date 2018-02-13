@@ -5,6 +5,8 @@ name:               "Hax0r"
 author:
   github:           webhacking
   email:            a@hax0r.info
+  twitter:          YoungJoooooooon
+
 
 copyright:
   year:             2015
@@ -12,7 +14,7 @@ copyright:
 
 # Google-analytics
 google-analytics:
-  id:               ""
+  id:               "UA-113990699-1"
 
 # Disqus
 disqus:
@@ -29,22 +31,13 @@ timezone:           Asia/Seoul
 permalink:          /:year-:month-:day/:title/
 
 # Pagination
-paginate:           5
+paginate:           20
 paginate_path:      /page:num/
 
 # Markdown
 markdown:           kramdown
 kramdown:
   input:            GFM
-
-# Navigation
-nav:
-  - name:           "About"
-    url:            "/about"
-  - name:           "Tags"
-    url:            "/tags"
-  - name:           "Github"
-    url:            "https://github.com/webhacking/webhacking.github.io"
 
 # Sass
 sass:
