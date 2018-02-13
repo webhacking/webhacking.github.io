@@ -8,45 +8,30 @@ comments: true
 share: true
 ---
 
-github 통해서 소스 공유하겠습니다.
+`Github` 통해서 [공유](https://github.com/webhacking/infinite-scroll-by-codekit)했습니다.
 
 링크 : https://github.com/webhacking/infinite-scroll-by-codekit
 
   
 
-**## 생각**
+## 생각
 
-프론트단은 반응형 처리였고, 슬릭딜 RSS에서 상품이미지하고 가격,무료배송 파싱해서 뿌리는거였음.
-
-**  
-**
-
-**## 기획**
-
-목적 : 해외 딜 관련 메인 목업 제작
-
+프론트단은 반응형 처리였고, 슬릭딜 RSS에서 상품이미지하고 가격,무료배송을 파싱하여 출력함.
   
-
-[요약] RSS파싱하여 DB에 넣고, 해당 DB기준으로 정보를 뿌리는 메인페이지 구현
-
-  
-
-핫딜 : https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&sear
+- 핫딜 : https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&sear
 chin=first&rss=1
 
-쿠폰 :
+- 쿠폰 :
 https://slickdeals.net/newsearch.php?searchin=first&forumchoice%5b%5d=10&rss=1
-[해상도]
 
-  
 
-반응형으로 구축
+## 상세 내용
 
 Gride형의 경우 딜8개(2줄* 4개딜)
 
 단, 웹페이지 가로 width 길이에 따라 노출되는 딜 숫자 조정 가능
 
-list 형의 경우 딜 8개(1줄 *8개 딜) [사이트 주요 구성]
+list 형의 경우 딜 8개(1줄 *8개 딜) 
 
 이벤트/프로모션 배너
 

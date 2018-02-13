@@ -9,7 +9,10 @@ share: true
 ---
 
 
-    9번 라인 조건에 $result['id'] 의 값이 admin으로 고정되어있다. 쿼리문('id='1' or '1=1' and id='admin'#' and pw=md5('')')준비하고 날린다.
+9번 라인 조건에 $result['id'] 의 값이 admin으로 고정되어있다.
+
+쿼리문('id='1' or '1=1' and id='admin'#' and pw=md5('')')준비하고 요청한다.
+    
     <?php
       include "../config.php"; 
       login_chk();

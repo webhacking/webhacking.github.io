@@ -8,20 +8,15 @@ comments: true
 share: true
 ---
 
-혼자서 참여하고 짱박혀있을때가 많았는데, 이번에는 팀원,지인들이랑 참여할 계획입니다..
 
-신청은 _[이 곳](https://docs.google.com/forms/d/1Iz_D-
-Ckx3bC1Viyz_MbMsSDBYgCLNfyzBnAr6OBq8zA/viewform?c=0&w=1)_ 을 통해서 해주세요.
-
-  
-
-장소는 : 서울대학교 38동 글로벌공학교육센터 다목적홀
+장소 : 서울대학교 38동 글로벌공학교육센터 다목적홀
 
 참가자 발표 및 팀 발표: 3.18(금) 오후 3시, 개별통보
 
-  
+신청은 [이 곳](https://docs.google.com/forms/d/1Iz_D-Ckx3bC1Viyz_MbMsSDBYgCLNfyzBnAr6OBq8zA/viewform?c=0&w=1)을 통해서 해주세요.
 
-**Energy Hackathon 2016**
+
+# Energy Hackathon 2016
 
   
 

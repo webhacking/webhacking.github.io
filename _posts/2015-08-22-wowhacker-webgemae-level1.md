@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "와우해커(WowHacker Webgemae.level1) 문제풀이"
+title: "WowHacker Webgemae level1"
 description: ""
 date: 2015-08-22
 tags: ['심심', '와우해커', '워게임', '웹게임']
@@ -12,8 +12,7 @@ share: true
 
 심심풀이, 즉 할거 없을 때 하면 시간 때우기로 좋다.
 
-  
-
+ 
   
 
 ![](/assets/images/posts/41/24545A4B55D8243A34CB98.PNG)

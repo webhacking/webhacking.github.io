@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[5번 문제] 와우해커(WowHacker Webgemae.level5) 문제풀이"
+title: "WowHacker Webgemae level5"
 description: ""
 date: 2015-09-06
 tags: ['5번', 'writeup', '문제', '문제풀이', '와우해커', '워게임', '웹해커', '해답']

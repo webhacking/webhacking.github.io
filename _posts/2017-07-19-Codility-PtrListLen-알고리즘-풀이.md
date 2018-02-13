@@ -7,18 +7,14 @@ tags: []
 comments: true
 share: true
 ---
+  
+
+## PtrListLen
 
 회사에서 면접 진행하기 앞 서, 면접자에게 문제를 주기 전
 
 먼저 Codility 문제를 풀어보고 난이도를 판단해서 문제를 고르기로하여 간단하게 문제를 풀어보았다.
 
-  
-
-  
-
-**PtrListLen**
-
-  
 
 A pointer is called a linked list if:
 
@@ -81,17 +77,35 @@ not be the focus of the assessment.
 
   
 
-  
+## 작성한 코드
 
-**작성한 코드**
 
-  
+    function solution($m)
+    
+    {
+    
+         // var_dump($m);
+    
+         $counter = 0;
+    
+         while ( $m ) {
+    
+             $m = $m->next;
+    
+             $counter++;
+    
+         }
+    
+         
+    
+         
+    
+        //   var_dump($counter);
+    
+         return $counter;
+    
+    }
 
-  
-
-    function solution($m){     // var_dump($m);     $counter = 0;     while ( $m ) {         $m = $m->next;         $counter++;     }              //   var_dump($counter);     return $counter;}
-
-  
 
 ![](/assets/images/posts/785/2105CE33596F1E25249094.PNG)
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 22번 문제"
+title: "Webhacking.kr 22번 문제"
 description: ""
 date: 2016-04-18
 tags: ['22번', 'MD5', '개념', '문제', '알고리즘', '풀이']

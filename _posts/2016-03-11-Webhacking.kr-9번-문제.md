@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 9번 문제"
+title: "Webhacking.kr 9번 문제"
 description: ""
 date: 2016-03-11
 tags: ['9번', 'Apache', 'Hack', 'Python', 'pythonhack', 'WebHacking', '문제풀이', '우회', '인젝션', '정답', '코드', '파이썬', '파이썬해킹', '풀이', '해킹']

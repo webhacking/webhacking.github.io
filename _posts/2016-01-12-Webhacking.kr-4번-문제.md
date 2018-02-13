@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[풀이] Webhacking.kr 4번 문제"
+title: "Webhacking.kr 4번 문제"
 description: ""
 date: 2016-01-12
 tags: ['160bit', '4번', 'BASE64', 'hash', 'hash개념', 'SHA-1', 'WebHacking', 'webhacking.kr', 'writeup', '웹해킹', '풀이', '해쉬', '해쉬함수', '해시함수', '해킹']
