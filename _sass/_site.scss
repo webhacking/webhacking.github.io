@@ -172,9 +172,40 @@ body {
   }
 
   &-disqus {
-    margin-top: 4rem;
+    margin-top: 1rem;
   }
 
+  &-author {
+    overflow : hidden;
+    border-top: 1px solid #eee;
+    margin: 4rem 0px 2rem 0px;
+    padding: 1rem 0px 0px 0px
+  }
+
+  &-author .author-image {
+    width: 20%;
+    float: left;
+    margin: 0px;
+  }
+
+  &-author .author-image img {
+    border: 1px solid #eee;
+    margin : 0px
+  }
+
+  &-author .about-me {
+    padding-left: 25px;
+    width: 80%;
+    float: right
+  }
+
+  &-author .about-me h4 {
+    margin: 0px;
+  }
+
+  &-author .about-me p {
+    margin-top: 1rem;
+  }
 }
 
 /*--------------

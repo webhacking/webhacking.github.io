@@ -26,6 +26,8 @@ layout: default
 
   {{ content }}
 
+  {% include author.html %}
+
   {% if page.comments != false and site.disqus.id %}
   <div class="post-disqus">
       <section id="disqus_thread"></section>

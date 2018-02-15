@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 매개변수(parameter), 전달인자(argument)
+categories : ""
+sub_categories : ""
 ---
 
 일반적인 프로그래밍 입문 책에서는 `매겨변수`와 `전달인자`의 대한 제대로된 개념을 설명하고있다.

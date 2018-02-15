@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 라라벨에서 Constants 제대로 사용하기
+categories : ""
+sub_categories : ""
 ---
 
 [Laravel](https://laravel.com/) 에는 별도의 Constants 관련 디렉토리와 명령어가 존재하지 않는다.
