@@ -2,6 +2,8 @@
 layout: post
 title: "Linux IO Diagram"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-10-31
 tags: []
 comments: true

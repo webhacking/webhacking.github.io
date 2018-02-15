@@ -2,6 +2,8 @@
 layout: post
 title: "C++ API 디자인(API Design for C++)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-12-21
 tags: []
 comments: true

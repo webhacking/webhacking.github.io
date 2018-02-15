@@ -2,7 +2,11 @@
 layout: post
 title: "WowHacker Webgemae level4"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-09-03
+categories : ""
+sub_categories : ""
 tags: ['4번', 'write up', '문제풀이', '와우해커', '워게임', '웹해킹', '해커', '해킹']
 comments: true
 share: true

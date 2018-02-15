@@ -2,6 +2,8 @@
 layout: post
 title: "성능 향상을 위한 InnoDB File-Format Management"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-04-04
 tags: ['MySQL Barracuda']
 comments: true

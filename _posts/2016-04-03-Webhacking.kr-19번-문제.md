@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 19번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-03
 tags: ['문제풀이', '풀이']
 comments: true

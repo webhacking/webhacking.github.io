@@ -2,6 +2,8 @@
 layout: post
 title: "Debian or Ubuntu Every package “has no installation candidate”"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-07-01
 tags: []
 comments: true

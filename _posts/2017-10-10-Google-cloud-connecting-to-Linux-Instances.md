@@ -2,6 +2,8 @@
 layout: post
 title: "Google cloud connecting to Linux Instances"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-10-10
 tags: []
 comments: true

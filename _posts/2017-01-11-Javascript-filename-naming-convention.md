@@ -2,6 +2,8 @@
 layout: post
 title: "Javascript filename naming convention"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-01-11
 tags: []
 comments: true

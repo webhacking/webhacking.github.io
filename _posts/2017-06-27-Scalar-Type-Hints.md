@@ -2,6 +2,8 @@
 layout: post
 title: "Scalar Type Hints"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-27
 tags: []
 comments: true

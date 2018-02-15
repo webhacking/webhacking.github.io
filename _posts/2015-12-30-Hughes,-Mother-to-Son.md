@@ -2,6 +2,8 @@
 layout: post
 title: "Hughes, Mother to Son"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-12-30
 tags: []
 comments: true

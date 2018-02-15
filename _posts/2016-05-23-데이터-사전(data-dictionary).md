@@ -2,6 +2,8 @@
 layout: post
 title: "데이터 사전(data dictionary)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-05-23
 tags: []
 comments: true

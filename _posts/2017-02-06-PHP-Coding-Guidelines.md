@@ -2,6 +2,8 @@
 layout: post
 title: "PHP Coding Guidelines"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-02-06
 tags: []
 comments: true

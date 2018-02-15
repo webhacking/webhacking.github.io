@@ -2,6 +2,8 @@
 layout: post
 title: "3 ways to define a JavaScript class"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-06-03
 tags: []
 comments: true

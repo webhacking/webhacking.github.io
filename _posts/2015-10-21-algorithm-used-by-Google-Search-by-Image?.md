@@ -2,6 +2,8 @@
 layout: post
 title: "algorithm used by Google Search by Image?"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-21
 tags: []
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Connect to docker container from host"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-11-18
 tags: []
 comments: true

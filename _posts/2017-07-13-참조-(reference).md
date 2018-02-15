@@ -2,6 +2,8 @@
 layout: post
 title: "참조 (reference)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-13
 tags: []
 comments: true

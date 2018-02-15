@@ -2,6 +2,8 @@
 layout: post
 title: "휴봇 스크립트 테스트 (TESTING HUBOT SCRIPTS)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-01
 tags: ['휴봇 스크립트 테스트']
 comments: true

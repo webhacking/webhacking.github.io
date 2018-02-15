@@ -2,6 +2,8 @@
 layout: post
 title: "CDATA (Character Data) 설명"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-01-31
 tags: ['CDATA', 'Character Data']
 comments: true

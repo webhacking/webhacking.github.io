@@ -2,6 +2,8 @@
 layout: post
 title: "Energy Hackathon 2016 서울"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-28
 tags: ['a@hax0r.info', 'Energy Hackathon', '김지윤', '에너지해커톤', '에너촉', '엘지', '엘지유플러스', '우영준', '인코어드', '장준호', '한전', '해커톤']
 comments: true

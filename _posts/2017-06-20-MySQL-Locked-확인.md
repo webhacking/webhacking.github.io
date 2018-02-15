@@ -2,6 +2,8 @@
 layout: post
 title: "MySQL Locked 확인"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-20
 tags: []
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Depth First Search Algorithm"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-05-02
 tags: []
 comments: true

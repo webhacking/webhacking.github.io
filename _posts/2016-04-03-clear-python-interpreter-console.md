@@ -2,6 +2,8 @@
 layout: post
 title: "clear python interpreter console"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-03
 tags: []
 comments: true

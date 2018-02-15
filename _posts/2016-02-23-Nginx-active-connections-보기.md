@@ -2,6 +2,8 @@
 layout: post
 title: "Nginx active connections 보기"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-02-23
 tags: []
 comments: true

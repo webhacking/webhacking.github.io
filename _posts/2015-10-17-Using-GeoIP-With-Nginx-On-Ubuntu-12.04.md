@@ -2,6 +2,8 @@
 layout: post
 title: "Using GeoIP With Nginx On Ubuntu 12.04"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-17
 tags: []
 comments: true

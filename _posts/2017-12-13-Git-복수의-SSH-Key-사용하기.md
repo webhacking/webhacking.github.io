@@ -2,6 +2,8 @@
 layout: post
 title: "Git 복수의 SSH Key 사용하기"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-12-13
 tags: []
 comments: true

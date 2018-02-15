@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 30번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-06-17
 tags: ['30번', 'challenge_30_answer', 'WebHacking', '문제', '웹해킹', '풀이', '해킹']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "[MySQL] length() vs char_length()"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-08
 tags: []
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "슬랙에서 휴봇 사용하기 (Slack Developer Kit for Hubot)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-05-14
 tags: ['Getting Started With Hubot', 'Hubot', 'Slack Developer Kit for Hubot']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Google I/O 2017 Extended in Seoul"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-03
 tags: []
 comments: true

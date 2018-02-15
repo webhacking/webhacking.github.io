@@ -2,6 +2,8 @@
 layout: post
 title: "[1] Lord Of Sqlinjection"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-12-08
 tags: []
 comments: true

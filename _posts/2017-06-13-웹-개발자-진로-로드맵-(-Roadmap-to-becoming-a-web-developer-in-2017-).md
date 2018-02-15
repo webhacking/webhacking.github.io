@@ -2,6 +2,8 @@
 layout: post
 title: "웹 개발자 진로 로드맵 ( Roadmap to becoming a web developer in 2017 )"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-13
 tags: ['Roadmap to becoming a web developer in 2017']
 comments: true

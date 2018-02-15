@@ -2,6 +2,8 @@
 layout: post
 title: "Avoid Character Encoding Problems, 엑셀 한글 파일명 깨짐 현상"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-12-09
 tags: ['Avoid Character Encoding Problems', 'php 엑셀', 'php 인코딩', '엑셀 한글깨짐', '인코딩 문제']
 comments: true

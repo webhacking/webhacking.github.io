@@ -2,6 +2,8 @@
 layout: post
 title: "CCNA(Cisco Certified Network Associate) 준비"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-12-08
 tags: ['ccna', '자격증']
 comments: true

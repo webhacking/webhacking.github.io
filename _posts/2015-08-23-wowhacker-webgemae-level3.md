@@ -2,7 +2,11 @@
 layout: post
 title: "WowHacker Webgemae level3"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-08-23
+categories : ""
+sub_categories : ""
 tags: ['3번', 'WebHacking', 'wowhacker', 'writeup', '레벨3', '문제', '문제풀이', '와우해커', '정답', '해답']
 comments: true
 share: true

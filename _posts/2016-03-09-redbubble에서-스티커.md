@@ -2,6 +2,8 @@
 layout: post
 title: "redbubble에서 스티커"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-09
 tags: []
 comments: true

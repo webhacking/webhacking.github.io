@@ -2,6 +2,8 @@
 layout: post
 title: "JavaScript Date 객체"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-04
 tags: []
 comments: true

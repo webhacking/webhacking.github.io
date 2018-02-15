@@ -2,6 +2,8 @@
 layout: post
 title: "python 교집합, Intersection of two lists"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-19
 tags: ['http://stackoverflow.com/questions/642763/python-intersection-of-two-lists']
 comments: true

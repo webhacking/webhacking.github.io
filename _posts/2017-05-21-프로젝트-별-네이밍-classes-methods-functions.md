@@ -2,6 +2,8 @@
 layout: post
 title: "프로젝트 별 네이밍 classes, methods, functions"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-05-21
 tags: []
 comments: true

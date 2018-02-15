@@ -2,6 +2,8 @@
 layout: post
 title: "AWS 루트계정 활성화 & PasswordAuthentication"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-19
 tags: []
 comments: true

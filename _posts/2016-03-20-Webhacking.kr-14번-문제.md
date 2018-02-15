@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 14번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-20
 tags: []
 comments: true

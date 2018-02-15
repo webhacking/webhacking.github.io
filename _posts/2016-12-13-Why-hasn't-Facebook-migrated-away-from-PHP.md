@@ -2,6 +2,8 @@
 layout: post
 title: "Why hasn't Facebook migrated away from PHP"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-12-13
 tags: []
 comments: true

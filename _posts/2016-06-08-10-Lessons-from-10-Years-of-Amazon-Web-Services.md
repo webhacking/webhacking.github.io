@@ -2,6 +2,8 @@
 layout: post
 title: "10 Lessons from 10 Years of Amazon Web Services"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-06-08
 tags: ['Werner Vogels']
 comments: true

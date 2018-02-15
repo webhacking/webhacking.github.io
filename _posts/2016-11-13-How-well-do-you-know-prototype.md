@@ -2,6 +2,8 @@
 layout: post
 title: "How well do you know prototype"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-11-13
 tags: []
 comments: true

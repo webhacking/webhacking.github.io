@@ -2,6 +2,8 @@
 layout: post
 title: "Computer Science and Engineering 컴퓨터공학 무료강의"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-12-09
 tags: ['MIT', 'OpenCourseWare', 'UC Berkeley', '무료강의', '컴공', '컴퓨터공학']
 comments: true

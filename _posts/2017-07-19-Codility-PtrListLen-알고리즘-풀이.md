@@ -2,6 +2,8 @@
 layout: post
 title: "Codility - PtrListLen 알고리즘 풀이"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-19
 tags: []
 comments: true

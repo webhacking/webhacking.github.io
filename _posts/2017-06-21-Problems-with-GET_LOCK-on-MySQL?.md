@@ -2,6 +2,8 @@
 layout: post
 title: "Problems with GET_LOCK on MySQL?"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-21
 tags: ['isolation level', 'MySQL 지연현상', 'Problems with GET_LOCK on MySQL??', 'repeatable-read 지연']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "[C] 하노이탑 (Tower of Hanoi) - 재귀함수 활용"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-07
 tags: []
 comments: true

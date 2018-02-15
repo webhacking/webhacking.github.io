@@ -6,6 +6,7 @@ author:
   github:           webhacking
   email:            a@hax0r.info
   twitter:          YoungJoooooooon
+  facebook:         hax0rKR
 
 
 copyright:
@@ -64,5 +65,6 @@ gems:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-admin
+  - jekyll-sitemap
 
 exclude:            [vendor]

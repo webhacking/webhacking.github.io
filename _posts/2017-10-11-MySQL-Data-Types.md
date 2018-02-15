@@ -2,6 +2,8 @@
 layout: post
 title: "MySQL Data Types"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-10-11
 tags: []
 comments: true

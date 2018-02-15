@@ -2,6 +2,8 @@
 layout: post
 title: "The Great Gatsby. Novel by F. Scott Fitzgerald"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-03
 tags: []
 comments: true

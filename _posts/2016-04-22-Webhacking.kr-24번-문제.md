@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 24번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-22
 tags: ['24번', '쉬는문제', '쉬운문제']
 comments: true

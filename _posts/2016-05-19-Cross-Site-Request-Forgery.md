@@ -2,6 +2,8 @@
 layout: post
 title: "Cross-Site Request Forgery"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-05-19
 tags: ['cross-site request forgery', 'CSRF', '개념', '개념정리', '정리']
 comments: true

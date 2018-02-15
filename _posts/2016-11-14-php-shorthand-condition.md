@@ -2,6 +2,8 @@
 layout: post
 title: "php shorthand condition"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-11-14
 tags: []
 comments: true

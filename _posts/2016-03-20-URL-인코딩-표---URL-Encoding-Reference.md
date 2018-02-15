@@ -2,6 +2,8 @@
 layout: post
 title: "URL 인코딩 표 - URL Encoding Reference"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-20
 tags: []
 comments: true

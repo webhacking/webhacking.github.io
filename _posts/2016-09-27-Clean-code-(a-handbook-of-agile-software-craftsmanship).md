@@ -2,6 +2,8 @@
 layout: post
 title: "클린 코드:: Clean code (a handbook of agile software craftsmanship)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-09-27
 tags: ['Clean code: a handbook of agile software craftsmanship.', '클린코드']
 comments: true
