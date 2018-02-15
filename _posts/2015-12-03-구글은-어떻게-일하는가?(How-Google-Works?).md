@@ -2,6 +2,8 @@
 layout: post
 title: "구글은 어떻게 일하는가?(How Google Works?)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-12-03
 tags: []
 comments: true

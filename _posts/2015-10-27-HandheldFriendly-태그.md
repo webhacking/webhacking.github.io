@@ -2,6 +2,8 @@
 layout: post
 title: "HandheldFriendly 태그"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-27
 tags: []
 comments: true

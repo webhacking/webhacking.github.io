@@ -2,6 +2,8 @@
 layout: post
 title: "아파치 분산 데이타 베이스, Cassandra: Basic Rules of Cassandra Data Modeling"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-19
 tags: ['Basic Rules of Cassandra Data Modeling', 'cassandra', 'MongoDB vs Cassandra Performance']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "php 교집합 array_intersect"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-01
 tags: []
 comments: true

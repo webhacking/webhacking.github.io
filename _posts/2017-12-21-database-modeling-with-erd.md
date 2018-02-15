@@ -1,17 +1,16 @@
 ---
+title: ERD 를 통한 데이터베이스 모델링
 layout: post
-title: "ERD 를 통한 데이터베이스 모델링"
-description: ""
-date: 2017-12-21
-tags: []
+categories : ""
+sub_categories : ""
+date: '2017-12-21'
 comments: true
 share: true
 ---
 
-**About ERD**
+## TL;DR
 
   
-
 [ERD](https://www.smartdraw.com/entity-relationship-diagram/) 는 Entity
 Relationship Diagram의 약자이며, 개체 관계 다이어그램 뜻 한다.
 
@@ -19,6 +18,8 @@ Relationship Diagram의 약자이며, 개체 관계 다이어그램 뜻 한다.
 학위 논문에 처음 등장했다.
 
   
+## ERD 를 통한 데이터베이스 모델링
+
 
 데이터베이스 모델링을 함에 있어, 시각적 다이어그램이 좀 더 명확한 모델링을 할 수 있게 도움을 준다는 것을 많이 깨달았다.
 
@@ -112,6 +113,3 @@ IE 는 까마귀 발(Crow’s Foot Model)로도 불린다.
   
 
 ![](/assets/images/posts/848/9929A44A5A53678925A681.JPEG)
-
-  
-

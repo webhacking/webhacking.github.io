@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 11번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-14
 tags: ['11번', 'Regular Expression', 'webhacking.kr', '문제풀이', '정규식', '정답', '풀이', '해답', '해킹']
 comments: true

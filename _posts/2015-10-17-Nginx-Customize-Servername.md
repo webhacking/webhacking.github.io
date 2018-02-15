@@ -2,6 +2,8 @@
 layout: post
 title: "Nginx Customize Servername"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-17
 tags: []
 comments: true

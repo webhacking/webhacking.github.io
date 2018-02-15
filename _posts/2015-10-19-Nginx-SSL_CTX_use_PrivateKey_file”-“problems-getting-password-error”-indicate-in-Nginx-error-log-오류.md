@@ -2,6 +2,8 @@
 layout: post
 title: "[Nginx] SSL_CTX_use_PrivateKey_file” “problems getting password error” indicate in Nginx error log 오류"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-19
 tags: []
 comments: true

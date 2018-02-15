@@ -2,6 +2,8 @@
 layout: post
 title: "AWS Route 53 DNS&Cloud flare DNS 서비스"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-10
 tags: ['AWS', 'AWS Route 53', 'Cloud flare DNS', 'DDos', 'dns', 'DNS free', '디도스', '라우트', '레일건', '무려', '분산처리', '설명', '소개', '아마존', '앱', '웹서비스']
 comments: true

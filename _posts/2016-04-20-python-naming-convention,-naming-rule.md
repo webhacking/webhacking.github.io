@@ -2,6 +2,8 @@
 layout: post
 title: "python naming convention, naming rule"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-20
 tags: []
 comments: true

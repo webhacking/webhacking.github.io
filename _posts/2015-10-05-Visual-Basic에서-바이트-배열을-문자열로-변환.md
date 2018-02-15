@@ -2,6 +2,8 @@
 layout: post
 title: "Visual Basic에서 바이트 배열을 문자열로 변환"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-05
 tags: []
 comments: true

@@ -1,6 +1,8 @@
 ---
 title: 나는 Jekyll 을 사용하여 GitHub Pages에 블로깅하기로 했다.
 layout: post
+categories : ""
+sub_categories : ""
 ---
 
 ## 티스토리가 싫어요.
@@ -25,6 +27,12 @@ layout: post
 ## 이사 짐을 꾸려요.
 
 작성한 글들을 `markdown` 으로 정적으로 정제하고 싶었고, 그 결과 [Jekyll](https://jekyllrb.com/), [Hexo](https://hexo.io/ko/index.html) 라는 선택지가 주어졌고  후보군 둘다 고만고만하여 일전에 사용해본 `Jekyll` 을 사용하기로 했다.
+
+`jekyll` 에 대해 간략하게 소개하자면 웹사이트 생성 도구다.
+
+Markdown, Liquid, YAML, HTML/CSS 등을 편집하고 jekyll 서버를 동작하면 정적 웹 페이지를 생성해준다.
+
+> 블로그나 프로젝트 웹페이지로 안성맞춤이다
 
 `github` 에서는 너무나 고맙게도 [github page](https://pages.github.com/) 라는 서비스를 제공하기에 무료 호스팅을 사용할 수 있다. (Thanks github)
 
@@ -85,35 +93,35 @@ layout: post
 
 아래 `main.py` 에서 1부터 최근 마지막 작성한 `sequence number` 를 구해, 순차적으로 parsing 하여, 본문을 `markdown` 문법으로 치환 후 메타데이터 및 이미지 파일과 함께 저장을 한다.
 
+```python
+import re, html2text
+from Tistory.Post import Post
 
-	import re, html2text
-	from Tistory.Post import Post
+post = Post(blog='http://blog.hax0r.info', image_dir='assets/images/posts/')
+for i in range(1, post.latest()):
+        content = post.read(i)
 
-	post = Post(blog='http://blog.hax0r.info', image_dir='assets/images/posts/')
-	for i in range(1, post.latest()):
-			content = post.read(i)
+        if content:
+                print('수행 :' + str(i))
+                h = html2text.HTML2Text()
+                markdown = h.handle(content[0])
 
-			if content:
-					print('수행 :' + str(i))
-					h = html2text.HTML2Text()
-					markdown = h.handle(content[0])
+                replaced = """
+                        ---
+                        layout: post
+                        title: "%s"
+                        description: ""
+                        date: %s
+                        tags: %s
+                        comments: true
+                        share: true
+                        ---
+                """ % (content[1]['title'], content[1]['published_date'], content[1]['tags'])
 
-					replaced = """
-							---
-							layout: post
-							title: "%s"
-							description: ""
-							date: %s
-							tags: %s
-							comments: true
-							share: true
-							---
-					""" % (content[1]['title'], content[1]['published_date'], content[1]['tags'])
-
-					file = open('Storage/Posts/' + str(content[1]['published_date']) + '-' + str(i) + '.md', 'w')
-					file.write(re.sub(r'(^[ \t]+|[ \t]+(?=:))', '', replaced, flags=re.M) + '\n' + markdown)
-					file.close()
-				
+                file = open('Storage/Posts/' + str(content[1]['published_date']) + '-' + str(i) + '.md', 'w')
+                file.write(re.sub(r'(^[ \t]+|[ \t]+(?=:))', '', replaced, flags=re.M) + '\n' + markdown)
+                file.close()
+```
 
 아래는 `Post.py`  의 내용이다.
 전반적으로 specifically 나의 이전 블로그에 초점을 두고 있어, 만약 사용한다면 조금 수정이 필요할 것 이다.
@@ -122,87 +130,88 @@ layout: post
 
 따라서 급히 작성한 코드라 그리 예쁘지 않다는 점을 이해해주길 바란다.
 
-	import os
-	import re
-	import requests
-	from datetime import datetime
+```python
+import os
+import re
+import requests
+from datetime import datetime
 
-	from PIL import Image
-	from Tistory.Base import Base
-	from bs4 import BeautifulSoup
-
-
-	class Post(Base):
-
-			def __init__(self, image_dir, blog):
-					super().__init__()
-
-					self.image_dir = "Storage/Images/"
-					self.blog = blog
-
-					if image_dir :
-							self.image_dir = image_dir
+from PIL import Image
+from Tistory.Base import Base
+from bs4 import BeautifulSoup
 
 
-			def make_relate_dir(self, page_number):
-					if not os.path.exists(self.image_dir):
-							os.makedirs(self.image_dir)
+class Post(Base):
 
-					if not os.path.exists(self.image_dir + str(page_number)):
-							os.makedirs(self.image_dir + str(page_number))
+        def __init__(self, image_dir, blog):
+                super().__init__()
 
-			@staticmethod
-			def clean(html):
-					cleanr = re.compile('<.*?>')
-					return re.sub(cleanr, '', html)
+                self.image_dir = "Storage/Images/"
+                self.blog = blog
 
-			def latest(self):
-					response = requests.get(self.blog + '/', headers=self.header)
-					soup = BeautifulSoup(response.content, 'html.parser')
-					body = soup.select('body')
+                if image_dir :
+                        self.image_dir = image_dir
 
-					posts_numbers = []
-					for link in body[0].find_all('a'):
-							if link.has_attr('href'):
-									if not link['href'].replace('/', '').isdigit():
-											continue
-									posts_numbers.append(int(link['href'].replace('/', '')))
-					return sorted(posts_numbers, reverse=True)[0]
 
-			def read(self, page_number):
-					response = requests.get(self.blog + '/' + str(page_number), headers=self.header)
-					soup = BeautifulSoup(response.content, 'html.parser')
+        def make_relate_dir(self, page_number):
+                if not os.path.exists(self.image_dir):
+                        os.makedirs(self.image_dir)
 
-					body = soup.select('.tt_article_useless_p_margin')
-					if not body:
-							return False
+                if not os.path.exists(self.image_dir + str(page_number)):
+                        os.makedirs(self.image_dir + str(page_number))
 
-					for image in body[0].find_all('img'):
-							self.make_relate_dir(page_number)
+        @staticmethod
+        def clean(html):
+                cleanr = re.compile('<.*?>')
+                return re.sub(cleanr, '', html)
 
-							path, file_name = os.path.split(image['src'])
-							im = Image.open(requests.get(image['src'], stream=True).raw)
-							im.save(os.path.join(self.image_dir + str(page_number), file_name + "." + im.format), quality=85)
+        def latest(self):
+                response = requests.get(self.blog + '/', headers=self.header)
+                soup = BeautifulSoup(response.content, 'html.parser')
+                body = soup.select('body')
 
-							image['src'] = self.image_dir + str(page_number) + "/" + file_name + "." + im.format
+                posts_numbers = []
+                for link in body[0].find_all('a'):
+                        if link.has_attr('href'):
+                                if not link['href'].replace('/', '').isdigit():
+                                        continue
+                                posts_numbers.append(int(link['href'].replace('/', '')))
+                return sorted(posts_numbers, reverse=True)[0]
 
-					tags = []
-					title = soup.select('h3.tit_post')[0].text
-					published_date = datetime.strptime(re.search(r'\d{4}.\d{2}.\d{2}', str(soup.select('span.info_post')[0])).group(), '%Y.%m.%d').date()
+        def read(self, page_number):
+                response = requests.get(self.blog + '/' + str(page_number), headers=self.header)
+                soup = BeautifulSoup(response.content, 'html.parser')
 
-					for tag in soup.select('#mArticle dl.list_tag a'):
-							tags.append(tag.text)
+                body = soup.select('.tt_article_useless_p_margin')
+                if not body:
+                        return False
 
-					for code in soup.find_all("code"):
-							code.replace_with(self.clean(str(code.findChildren()[0])))
+                for image in body[0].find_all('img'):
+                        self.make_relate_dir(page_number)
 
-					content = str(body[0]).split('<div class="container_postbtn">')[0]
-					return content, {
-							'title' : title,
-							'published_date' : published_date,
-							'tags' : tags
-					}
+                        path, file_name = os.path.split(image['src'])
+                        im = Image.open(requests.get(image['src'], stream=True).raw)
+                        im.save(os.path.join(self.image_dir + str(page_number), file_name + "." + im.format), quality=85)
 
+                        image['src'] = self.image_dir + str(page_number) + "/" + file_name + "." + im.format
+
+                tags = []
+                title = soup.select('h3.tit_post')[0].text
+                published_date = datetime.strptime(re.search(r'\d{4}.\d{2}.\d{2}', str(soup.select('span.info_post')[0])).group(), '%Y.%m.%d').date()
+
+                for tag in soup.select('#mArticle dl.list_tag a'):
+                        tags.append(tag.text)
+
+                for code in soup.find_all("code"):
+                        code.replace_with(self.clean(str(code.findChildren()[0])))
+
+                content = str(body[0]).split('<div class="container_postbtn">')[0]
+                return content, {
+                        'title' : title,
+                        'published_date' : published_date,
+                        'tags' : tags
+                }
+```
 ## 이사 끝
 
 나의 이전 티스토리 블로그는 폐쇄할 계획이며, 폐쇄가 되면 모든 데이터는 삭제된다고한다.

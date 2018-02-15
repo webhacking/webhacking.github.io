@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 21번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-08
 tags: []
 comments: true

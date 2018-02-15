@@ -2,6 +2,8 @@
 layout: post
 title: "Becoming a Better Programmer"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-17
 tags: ['Becoming a Better Programmer', '훌륭한 프로그래머 되는 법']
 comments: true

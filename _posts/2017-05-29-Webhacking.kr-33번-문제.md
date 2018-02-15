@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 33번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-05-29
 tags: ['Webhacking.kr 33번 문제', '답', '풀이', '해결']
 comments: true

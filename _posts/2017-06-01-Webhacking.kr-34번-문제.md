@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 34번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-01
 tags: []
 comments: true

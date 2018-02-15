@@ -2,6 +2,8 @@
 layout: post
 title: "Cyber Security Challenge 2015 write-ups"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-18
 tags: []
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 32번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-05-11
 tags: []
 comments: true

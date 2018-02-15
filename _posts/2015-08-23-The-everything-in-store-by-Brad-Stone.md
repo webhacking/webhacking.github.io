@@ -2,7 +2,11 @@
 layout: post
 title: "The everything in store by Brad Stone"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-08-23
+categories : ""
+sub_categories : ""
 tags: ['amzone', 'Book', 'Jeff Bezos and the Age of Amazon', 'the everything in store by Brad Stone', '세상의 모든것을 팝니다', '아마존', '아마존닷컴', '아마존세상의 모든것을 팝니다', '제프베조스']
 comments: true
 share: true

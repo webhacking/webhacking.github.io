@@ -2,7 +2,11 @@
 layout: post
 title: "Google Style Guides: (Style guides for Google-originated open-source projects)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-09-26
+categories : ""
+sub_categories : ""
 tags: []
 comments: true
 share: true

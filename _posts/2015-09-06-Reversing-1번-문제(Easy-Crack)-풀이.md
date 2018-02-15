@@ -2,7 +2,11 @@
 layout: post
 title: "[Reversing.kr] Reversing.kr - 1번 문제(Easy Crack) 풀이"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-09-06
+categories : ""
+sub_categories : ""
 tags: []
 comments: true
 share: true

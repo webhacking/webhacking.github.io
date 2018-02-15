@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 36번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-14
 tags: []
 comments: true

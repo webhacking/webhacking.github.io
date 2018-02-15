@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 5번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-01-26
 tags: ['5번', 'WebHacking', '문제', '웹해킹', '정답', '풀이', '해킹']
 comments: true

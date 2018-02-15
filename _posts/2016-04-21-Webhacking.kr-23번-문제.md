@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 23번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-21
 tags: ['23번', '풀이']
 comments: true

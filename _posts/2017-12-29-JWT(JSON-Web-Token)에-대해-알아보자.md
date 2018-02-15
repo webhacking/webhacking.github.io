@@ -2,6 +2,8 @@
 layout: post
 title: "JWT(JSON Web Token)에 대해 알아보자"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-12-29
 tags: ['json web token']
 comments: true

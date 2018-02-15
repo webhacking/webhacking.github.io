@@ -2,6 +2,8 @@
 layout: post
 title: "자바스크립트 가인수(arguments)처리"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-05-29
 tags: []
 comments: true

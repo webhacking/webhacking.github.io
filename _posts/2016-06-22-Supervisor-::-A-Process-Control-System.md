@@ -2,6 +2,8 @@
 layout: post
 title: "Supervisor:: A Process Control System"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-06-22
 tags: ['Process Control', 'Supervisor', 'Supervisord']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Rails work"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-07-01
 tags: []
 comments: true

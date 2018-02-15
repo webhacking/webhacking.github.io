@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 8번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-09
 tags: ['8번', 'webhacking.kr', '웹해킹', '해킹']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "Why and When You Should Use Redis"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-15
 tags: []
 comments: true

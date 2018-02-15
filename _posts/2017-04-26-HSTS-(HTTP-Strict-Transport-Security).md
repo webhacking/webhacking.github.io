@@ -2,6 +2,8 @@
 layout: post
 title: "HSTS (HTTP Strict Transport Security)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-04-26
 tags: ['HTTP Strict Transport Security Cheat Sheet']
 comments: true

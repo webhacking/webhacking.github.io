@@ -2,6 +2,8 @@
 layout: post
 title: "Find Table Names using SQL Injection"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-06-17
 tags: []
 comments: true

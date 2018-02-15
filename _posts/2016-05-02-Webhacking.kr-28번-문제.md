@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 28번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-05-02
 tags: ['28번']
 comments: true

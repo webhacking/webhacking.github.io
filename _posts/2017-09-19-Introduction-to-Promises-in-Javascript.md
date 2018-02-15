@@ -2,6 +2,8 @@
 layout: post
 title: "Introduction to Promises in Javascript"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-09-19
 tags: ['Introduction to Promises in JavaScript', 'JavaScript Promises for beginner']
 comments: true

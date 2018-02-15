@@ -2,6 +2,8 @@
 layout: post
 title: "SSL Certificate 이슈"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-11-12
 tags: []
 comments: true

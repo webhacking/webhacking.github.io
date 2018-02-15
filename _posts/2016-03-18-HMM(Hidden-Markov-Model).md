@@ -2,6 +2,8 @@
 layout: post
 title: "HMM(Hidden Markov Model)"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-18
 tags: []
 comments: true

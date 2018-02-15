@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 50번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-10-10
 tags: []
 comments: true

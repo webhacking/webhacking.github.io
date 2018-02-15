@@ -2,6 +2,8 @@
 layout: post
 title: "Analysis of Algorithms"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-04-05
 tags: ['hassing', 'Heap', '알고리즘', '정수론']
 comments: true

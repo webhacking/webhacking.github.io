@@ -2,6 +2,8 @@
 layout: post
 title: "Adaptive Hash Index"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-06-26
 tags: ['Adaptive Hash Index', 'hash index', 'InnoDB']
 comments: true

@@ -2,6 +2,8 @@
 layout: post
 title: "텔레그램(Telegram) CLI 통해서 가지고 놀기 with BotApi"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-01-19
 tags: ['API', 'CLI', 'telegram', '개념', '리눅스', '명령어', '봇', '서버', '소개', '영문', '우분투', '유닉스', '텔레그램', '한글', '한글화']
 comments: true

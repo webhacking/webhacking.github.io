@@ -2,6 +2,8 @@
 layout: post
 title: "Workbench 에서 EER Diagram enlarge 하기"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-12-20
 tags: []
 comments: true

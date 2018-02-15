@@ -2,6 +2,8 @@
 layout: post
 title: "Lets' Encrypt로 무료로 HTTPS"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-05-29
 tags: ["How To Secure Apache with Let's Encrypt on Ubuntu 14.04", "Lets' Encrypt", '설치']
 comments: true

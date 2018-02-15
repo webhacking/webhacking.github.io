@@ -2,6 +2,8 @@
 layout: post
 title: "Javascript 관련 책들"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2015-10-03
 tags: []
 comments: true

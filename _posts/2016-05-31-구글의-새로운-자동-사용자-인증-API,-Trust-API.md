@@ -2,6 +2,8 @@
 layout: post
 title: "구글의 새로운 자동 사용자 인증 API, Trust API"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-05-31
 tags: ['Trust API']
 comments: true

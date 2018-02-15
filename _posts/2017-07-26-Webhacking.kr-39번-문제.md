@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 39번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2017-07-26
 tags: []
 comments: true

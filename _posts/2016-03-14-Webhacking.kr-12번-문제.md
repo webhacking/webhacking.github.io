@@ -2,6 +2,8 @@
 layout: post
 title: "Webhacking.kr 12번 문제"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-03-14
 tags: ['12번', 'Hack', 'hacking', 'WebHacking', '문제풀이', '풀이']
 comments: true

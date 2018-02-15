@@ -2,6 +2,8 @@
 layout: post
 title: "MantisHub SOAP의 웹 서비스 API 정리"
 description: ""
+categories : ""
+sub_categories : ""
 date: 2016-02-24
 tags: ['API', 'MantisHub', 'soap', '맨티스']
 comments: true
