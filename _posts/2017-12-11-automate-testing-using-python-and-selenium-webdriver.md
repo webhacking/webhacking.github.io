@@ -1,9 +1,9 @@
 ---
+title: Python & Selenium 을 이용한 QA 자동화
 layout: post
-title: "Python & Selenium 을 이용한 QA 자동화"
-description: ""
-date: 2017-12-11
-tags: ['Test Automation']
+date: '2017-12-11'
+tags:
+- Test Automation
 comments: true
 share: true
 ---
@@ -151,6 +151,3 @@ python.readthedocs.io/api.html)를 통해서 확인하길바란다.
   
 
 ![](/assets/images/posts/842/99FA80505A30FEBB18D8DA.PNG)
-
-  
-

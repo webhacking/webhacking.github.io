@@ -1,14 +1,16 @@
 ---
+title: Composer 속도 향상
 layout: post
-title: "Composer 속도 향상"
-description: ""
-date: 2018-01-11
-tags: ['composer 성능 향상', 'composer 속도', '퍼포먼스']
+date: '2018-01-11'
+tags:
+- composer 성능 향상
+- composer 속도
+- 퍼포먼스
 comments: true
 share: true
 ---
 
-# Composer 속도 향상
+# Optimizing composer
 
 [Composer](https://getcomposer.org/) 는 상황에 따라 느리다는 평을 많이 받고있다.
 
@@ -180,12 +182,3 @@ ithub.com/composer/composer) 를 보면 많은 성능 이슈들과 고군분투�
 100% PHP로 작성된 라이브러리이기 때문에, PHP 엔진이 수를 가릴 것이라 생각한다.
 
 위 방법을 통해 당신의 composer 에 대한 이슈가 해결 되었길 바란다.
-
-  
-
-  
-
-  
-
-  
-

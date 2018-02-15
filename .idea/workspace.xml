@@ -2,86 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="710a41ca-2ec4-49f0-a994-cecbdcdd3712" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-06-19-생각.md" afterPath="$PROJECT_DIR$/_posts/2015-06-19-생각.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-06-19-유니티-이벤트-함수-호출-순서.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-06-19-해커뉴스-관련해서-github-tool-atom.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-06-20-infinite-scroll-(무한스크롤).md" afterPath="$PROJECT_DIR$/_posts/2015-06-20-infinite-scroll-(무한스크롤).md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-06-23-코드게이트-2015-기조연설.-해커의-자격.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-08-22-와우해커(WowHacker-Webgemae.level1)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-08-22-wowhacker-webgemae-level1.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-08-22-와우해커(WowHacker-Webgemae.level2)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-08-22-wowhacker-webgemae-level2.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-08-23-The-everything-in-store-by-Brad-Stone.md" afterPath="$PROJECT_DIR$/_posts/2015-08-23-The-everything-in-store-by-Brad-Stone.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-08-23-와우해커(WowHacker-Webgemae.level3)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-08-23-wowhacker-webgemae-level3.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-08-24-Reversing.kr-소개-및-리버스엔지니어링이란?.md" afterPath="$PROJECT_DIR$/_posts/2015-08-24-Reversing.kr-소개-및-리버스엔지니어링이란?.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-09-03-와우해커(WowHacker-Webgemae.level4)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-09-03-wowhacker-webgemae-level4.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-09-06-와우해커(WowHacker-Webgemae.level5)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-09-06-wowhacker-webgemae-level5.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-09-07-와우해커(WowHacker-Webgemae.level6)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-09-07-wowhacker-webgemae-level6.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-09-08-Webhacking.kr-1번-문제.md" afterPath="$PROJECT_DIR$/_posts/2015-09-08-Webhacking.kr-1번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-09-08-와우해커(WowHacker-Webgemae.level7)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-09-08-wowhacker-webgemae-level7.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-09-30-Webhacking.kr-2번-문제.md" afterPath="$PROJECT_DIR$/_posts/2015-09-30-Webhacking.kr-2번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-10-01-와우해커(WowHacker-Webgemae.level8)-문제풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-10-01-wowhacker-webgemae-level8.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-10-12-넥슨-입사문제-중에서.md" afterPath="$PROJECT_DIR$/_posts/2015-10-12-넥슨-입사문제-중에서.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-10-12-장풍과학-계절별-별자리-암기법.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-10-15-구글-입사문제-중에서.md" afterPath="$PROJECT_DIR$/_posts/2015-10-15-구글-입사문제-중에서.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-10-19-영어,-일상영어.md" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-12-08-Lord-Of-Sqlinjection-2.md" afterPath="$PROJECT_DIR$/_posts/2015-12-08-Lord-Of-Sqlinjection-2.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-12-26-입력---형성평가1.md" afterPath="$PROJECT_DIR$/_posts/2015-12-26-입력---형성평가1.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2015-12-26-입력---형성평가2.md" afterPath="$PROJECT_DIR$/_posts/2015-12-26-입력---형성평가2.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-01-05-Webhacking.kr-3번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-01-05-Webhacking.kr-3번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-01-12-Webhacking.kr-4번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-01-12-Webhacking.kr-4번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-01-26-Webhacking.kr-5번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-01-26-Webhacking.kr-5번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-01-26-Webhacking.kr-6번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-01-26-Webhacking.kr-6번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-01-28-Webhacking.kr-7번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-01-28-Webhacking.kr-7번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-08-Energy-Hackathon(에너지-해커톤)-2016-서울.md" afterPath="$PROJECT_DIR$/_posts/2016-03-08-Energy-Hackathon(에너지-해커톤)-2016-서울.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-09-Webhacking.kr-8번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-09-Webhacking.kr-8번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-11-Webhacking.kr-9번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-11-Webhacking.kr-9번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-14-Webhacking.kr-10번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-14-Webhacking.kr-10번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-14-Webhacking.kr-11번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-14-Webhacking.kr-11번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-14-Webhacking.kr-12번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-14-Webhacking.kr-12번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-18-0이-1이-되려면...md" afterPath="$PROJECT_DIR$/_posts/2016-03-18-0-to-1.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-13번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-13번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-14번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-14번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-15번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-15번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-16번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-16번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-17번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-17번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-18번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-Webhacking.kr-18번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-27-Google-DeepMind's-Deep-Q-learning-playing-Atari-Breakout.md" afterPath="$PROJECT_DIR$/_posts/2016-03-27-Google-DeepMind's-Deep-Q-learning-playing-Atari-Breakout.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-03-28-Energy-Hackathon-2016-서울.md" afterPath="$PROJECT_DIR$/_posts/2016-03-28-Energy-Hackathon-2016-서울.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-03-Webhacking.kr-19번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-03-Webhacking.kr-19번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-03-Webhacking.kr-20번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-03-Webhacking.kr-20번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-08-Webhacking.kr-21번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-08-Webhacking.kr-21번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-13-[탑코더]-Single-Round-Match-643,-Division-2,-Level-1:-TheKingsArmyDiv2.md" afterPath="$PROJECT_DIR$/_posts/2016-04-13-[탑코더]-Single-Round-Match-643,-Division-2,-Level-1:-TheKingsArmyDiv2.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-18-Webhacking.kr-22번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-18-Webhacking.kr-22번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-19-python-교집합,-Intersection-of-two-lists.md" afterPath="$PROJECT_DIR$/_posts/2016-04-19-python-교집합,-Intersection-of-two-lists.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-21-Webhacking.kr-23번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-21-Webhacking.kr-23번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-22-Webhacking.kr-24번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-22-Webhacking.kr-24번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-22-XML-인덴트-강제-조정.md" afterPath="$PROJECT_DIR$/_posts/2016-04-22-XML-인덴트-강제-조정.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-24-Webhacking.kr-25번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-24-Webhacking.kr-25번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-27-Webhacking.kr-26번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-27-Webhacking.kr-26번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-04-27-검색-알고리즘-성능-총정리.md" afterPath="$PROJECT_DIR$/_posts/2016-04-27-검색-알고리즘-성능-총정리.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-05-01-Webhacking.kr-27번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-05-01-Webhacking.kr-27번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-05-02-Depth-First-Search-Algorithm.md" afterPath="$PROJECT_DIR$/_posts/2016-05-02-Depth-First-Search-Algorithm.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-05-02-Webhacking.kr-28번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-05-02-Webhacking.kr-28번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-05-31-Webhacking.kr-29번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-05-31-Webhacking.kr-29번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2016-06-17-[풀이]-Webhacking.kr-30번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-06-17-[풀이]-Webhacking.kr-30번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-05-02-Webhacking.kr-31번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-05-02-Webhacking.kr-31번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-05-11-Webhacking.kr-32번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-05-11-Webhacking.kr-32번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-05-29-Webhacking.kr-33번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-05-29-Webhacking.kr-33번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-06-02-Webhacking.kr-35번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-06-02-Webhacking.kr-35번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-12-PHP-get-file-sizes-in-kb,-mb,-gb.md" afterPath="$PROJECT_DIR$/_posts/2017-07-12-PHP-get-file-sizes-in-kb,-mb,-gb.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-14-Webhacking.kr-36번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-07-14-Webhacking.kr-36번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-14-Webhacking.kr-37번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-07-14-Webhacking.kr-37번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-19-Codility-DeepestPit-알고리즘-풀이.md" afterPath="$PROJECT_DIR$/_posts/2017-07-19-Codility-DeepestPit-알고리즘-풀이.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-19-Codility-PtrListLen-알고리즘-풀이.md" afterPath="$PROJECT_DIR$/_posts/2017-07-19-Codility-PtrListLen-알고리즘-풀이.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-21-Webhacking.kr-38번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-07-21-Webhacking.kr-38번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-26-Webhacking.kr-39번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-07-26-Webhacking.kr-39번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-07-27-Webhacking.kr-40번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-07-27-Webhacking.kr-40번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-09-29-Webhacking.kr-49번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-09-29-Webhacking.kr-49번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-10-10-Webhacking.kr-50번-문제.md" afterPath="$PROJECT_DIR$/_posts/2017-10-10-Webhacking.kr-50번-문제.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2017-11-10-최고의-집합.md" afterPath="$PROJECT_DIR$/_posts/2017-11-10-최고의-집합.md" />
-      <change beforePath="$PROJECT_DIR$/_posts/2018-01-11-Composer-속도-향상.md" afterPath="$PROJECT_DIR$/_posts/2018-01-11-Composer-속도-향상.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-11-Python-&amp;-Selenium-을-이용한-QA-자동화.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-07-반갑다-2018년.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-01-11-Composer-속도-향상.md" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,12 +15,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="2017-07-19-Codility-DeepestPit-알고리즘-풀이.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2017-07-19-Codility-DeepestPit-알고리즘-풀이.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1562">
+              <first_editor relative-caret-position="1800">
                 <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
                 <folding />
               </first_editor>
@@ -105,15 +29,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2016-05-02-Depth-First-Search-Algorithm.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2016-05-02-Depth-First-Search-Algorithm.md">
+      <file leaf-file-name="2017-07-03-Google-IO-2017-Extended-in-Seoul.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-07-03-Google-IO-2017-Extended-in-Seoul.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="150">
-                <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <first_editor relative-caret-position="-62">
+                <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Rakefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Rakefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-849">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017-07-26-Webhacking.kr-39번-문제.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2017-07-26-Webhacking.kr-39번-문제.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="195">
+                <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-79">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_site/assets/css/main.css" />
         <option value="$PROJECT_DIR$/_posts/2016-03-19-git-how-to-remove-a-directory-in-my-GitHub-repository.md" />
         <option value="$PROJECT_DIR$/_posts/2017-06-01-Webhacking.kr-34번-문제.md" />
         <option value="$PROJECT_DIR$/_layouts/default.html" />
@@ -196,6 +152,7 @@
         <option value="$PROJECT_DIR$/_posts/2015-12-26-입력---형성평가2.md" />
         <option value="$PROJECT_DIR$/_posts/2016-04-27-검색-알고리즘-성능-총정리.md" />
         <option value="$PROJECT_DIR$/_posts/2016-05-02-Depth-First-Search-Algorithm.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-02-15-using-jekyll.md" />
       </list>
     </option>
   </component>
@@ -206,11 +163,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
     <option name="y" value="23" />
-    <option name="width" value="1916" />
-    <option name="height" value="1057" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -228,6 +184,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,7 +216,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -294,27 +250,27 @@
       <workItem from="1518329052224" duration="1033000" />
       <workItem from="1518393209930" duration="4160000" />
       <workItem from="1518410389736" duration="2648000" />
-      <workItem from="1518486985126" duration="4606000" />
+      <workItem from="1518486985126" duration="5463000" />
+      <workItem from="1518663346135" duration="1621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19434000" />
+    <option name="totallyTimeSpent" value="21912000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1916" height="1057" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26040554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12804006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32800853" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32711443" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -322,6 +278,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -336,108 +293,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2016-05-01-Webhacking.kr-27번-문제.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-01-26-Webhacking.kr-5번-문제.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-04-03-Webhacking.kr-20번-문제.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-09-08-Webhacking.kr-1번-문제.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/2015-09-15/singleton-class/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="75" column="8" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-01-07-반갑다-2018년.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="555">
-            <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-12-13-Git-복수의-SSH-Key-사용하기.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-11-10-최고의-집합.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="154">
-            <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-12-20-Workbench-에서-EER-Diagram-enlarge-하기.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2017-12-21-ERD-를-통한-데이터베이스-모델링.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-81">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -448,18 +308,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-752">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-09-19-Introduction-to-Promises-in-Javascript.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-5012">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -470,7 +318,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -481,7 +328,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -492,7 +338,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
             <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="33" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -511,7 +356,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="180">
             <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -522,7 +366,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="195">
             <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -533,7 +376,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -544,7 +386,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -555,7 +396,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -566,7 +406,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -577,7 +416,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="232">
             <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -588,7 +426,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="165">
             <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -599,7 +436,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="-23">
             <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -610,7 +446,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="345">
             <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -621,7 +456,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="313">
             <caret line="105" column="4" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="4" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -632,7 +466,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="285">
             <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -643,7 +476,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -654,7 +486,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="76">
             <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -665,7 +496,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -676,7 +506,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -687,7 +516,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -698,7 +526,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="195">
             <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -709,7 +536,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="180">
             <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -720,7 +546,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -731,7 +556,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -742,7 +566,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -753,7 +576,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="448">
             <caret line="52" column="0" lean-forward="true" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -764,7 +586,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -775,7 +596,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -786,7 +606,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -797,7 +616,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -808,7 +626,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="296">
             <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -819,7 +636,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -830,7 +646,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="210">
             <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -841,7 +656,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="221">
             <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -852,7 +666,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="240">
             <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -863,18 +676,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="150">
             <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2017-07-19-Codility-DeepestPit-알고리즘-풀이.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1562">
-            <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -884,7 +685,118 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="150">
-            <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-01-11-optimizing-composer.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="208">
+            <caret line="172" column="7" lean-forward="false" selection-start-line="172" selection-start-column="7" selection-end-line="172" selection-end-column="7" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-12-11-무기력.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-137">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-11-23-Docker-빌드-할-때,-쉘-스크립트-에러.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="300">
+            <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-02-15-using-jekyll.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="373">
+            <caret line="197" column="33" lean-forward="false" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-09-19-Introduction-to-Promises-in-Javascript.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-849">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-07-26-Webhacking.kr-39번-문제.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="195">
+            <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-07-19-Codility-DeepestPit-알고리즘-풀이.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1800">
+            <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2017-07-03-Google-IO-2017-Extended-in-Seoul.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-62">
+            <caret line="1" column="3" lean-forward="false" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
             <folding />
           </first_editor>
           <second_editor />
