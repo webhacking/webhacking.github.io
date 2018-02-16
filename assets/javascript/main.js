@@ -59,4 +59,18 @@ hx.ready(function()
             hx.addClass(e.currentTarget, 'is-on');
         }
     });
+
+    var shareButtons = document.getElementsByClassName("share-button");
+
+    for ( var i = 0; i < shareButtons.length; i++ ) {
+        hx.addEvent('click', shareButtons[i], function(e)
+        {
+            ga("send", "event", {
+                eventCategory: "Outbound Link",
+                eventAction: "click",
+                eventLabel: e.target.href,
+                transport: "beacon"
+            });
+        });
+    }
 })
