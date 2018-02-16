@@ -23,7 +23,6 @@ mark {
 
 header {
   position : relative;
-  z-index: 10;
 }
 
 .content-container {
@@ -341,10 +340,14 @@ header {
   transition: all 0.2s;
 }
 
-.nav-list.opended {
+body.opened-nav .nav-list {
   background: #0000008c;
   border-radius: 5px;
   padding: 10px;
+}
+
+body.opened-nav header {
+  z-index: 10;
 }
 
 .nav-list .spacer {
