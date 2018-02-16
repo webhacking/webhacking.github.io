@@ -124,6 +124,23 @@ header {
   Post
   -------------- */
 .post {
+  blockquote, blockquote  p {
+    position: relative;
+    font-size: 22.4px;
+    font-style: italic;
+    padding: 16px 16px 16px 50px;
+    line-height: 1.5em;
+    color: #FFF;
+    background-color: #6739b6;
+    border: none;
+  }
+
+  blockquote p:first-child:before {
+    content: url(../icons/quote.png) no-close-quote;
+    position: absolute;
+    top: 16px;
+    left: 0;
+  }
 
   &-title {
     margin-top: 0rem;
@@ -409,6 +426,11 @@ body.opened-nav header {
 }
 .nav-btn.is-on+.nav-list{
   opacity:1
+}
+
+.list {
+  position : relative;
+  z-index: 2;
 }
 
 /*--------------
