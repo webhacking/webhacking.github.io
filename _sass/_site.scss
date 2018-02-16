@@ -357,16 +357,6 @@ header {
   transition: all 0.2s;
 }
 
-body.opened-nav .nav-list {
-  background: #0000008c;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-body.opened-nav header {
-  z-index: 10;
-}
-
 .nav-list .spacer {
   text-align: center;
 }
@@ -656,6 +646,16 @@ ul.nav-list > li:before {
 /* For mobile device */
 
 @media (max-width: 480px) {
+  body.opened-nav .nav-list {
+    background: #0000008c;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  body.opened-nav header {
+    z-index: 10;
+  }
+
   .nav {
     transform: none;
     right: 0px;
