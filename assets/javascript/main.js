@@ -55,7 +55,11 @@ hx.ready(function()
 
         if ( hx.hasClass(e.currentTarget, 'is-on') ) {
             hx.removeClass(e.currentTarget, 'is-on');
+            hx.removeClass(document.querySelector('ul.nav-list'), 'opended');
+            hx.addClass(document.getElementById('veil'), 'hide');
         } else {
+            hx.removeClass(document.getElementById('veil'), 'hide');
+            hx.addClass(document.querySelector('ul.nav-list'), 'opended');
             hx.addClass(e.currentTarget, 'is-on');
         }
     });
