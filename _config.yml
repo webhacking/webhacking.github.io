@@ -27,6 +27,7 @@ url:                "http://blog.hax0r.info"
 # url:                "http://localhost:4000" # use this url when you develop
 baseurl:            ""
 
+minify_html: true
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Asia/Seoul

@@ -16,6 +16,15 @@ body {
   padding: 0;
 }
 
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+header {
+  position : relative;
+}
+
 .content-container {
   max-width: 48rem;
   padding: 5rem 1rem;
@@ -27,12 +36,22 @@ body {
   }
 }
 
+.content-container.face {
+  padding: 2rem 1rem;
+  @media (max-width: 48rem){
+    padding: 2rem 1.3rem;
+  }
+}
+
+.hide {
+  display : none!important
+}
 
 /*--------------
   Header
   -------------- */
 .header {
-  padding: 2%;
+  padding: 0px;
   margin-bottom: 1.5em;
 
   &-title {
@@ -43,10 +62,6 @@ body {
 
     a {
       color: $base-color;
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
     }
 
     span {
@@ -178,7 +193,7 @@ body {
   &-author {
     overflow : hidden;
     border-top: 1px solid #eee;
-    margin: 4rem 0px 2rem 0px;
+    margin: 2rem 0px 2rem 0px;
     padding: 1rem 0px 0px 0px
   }
 
@@ -285,6 +300,105 @@ body {
   }
 }
 
+
+.nav {
+  position: absolute;
+  top: 12px;
+  left: -15px;
+  transform: translateX(-100%);
+  text-align: right;
+}
+.nav-btn {
+  display: inline-block;
+  line-height: 16px;
+}
+.nav-btn.is-on .ci-burger {
+  background: transparent;
+}
+.nav-btn.is-on .ci-burger::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+.nav-btn.is-on .ci-burger::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+.nav-btn.is-on + .nav-list {
+  opacity: 1;
+}
+.nav-list {
+  list-style: none;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  padding: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.nav-list .spacer {
+  text-align: center;
+}
+
+.ci {
+  display: inline-block;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  vertical-align: top;
+}
+.ci:before, .ci:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.ci-burger {
+  width: 16px;
+  height: 3px;
+  top: 7px;
+  left: 0;
+  background: #333;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ci-burger:before, .ci-burger:after {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ci-burger:before {
+  top: -6px;
+}
+.ci-burger:after {
+  bottom: -6px;
+}
+
+.nav-btn.is-on .ci-burger{
+  background:transparent
+}
+.nav-btn.is-on .ci-burger::before{
+  -webkit-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  transform:rotate(45deg);
+  top:0
+}
+.nav-btn.is-on .ci-burger::after{
+  -webkit-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  bottom:0
+}
+.nav-btn.is-on+.nav-list{
+  opacity:1
+}
 
 /*--------------
   Tags
@@ -408,4 +522,98 @@ body {
       margin: 4px;
     }
   }
+}
+
+ul.nav-list > li:before {
+  content: ""
+}
+
+
+.share-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px 2px 8px;
+  margin-right: 10px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.share-button:hover {
+  color: #fff;
+  background-color: #4f4f4f;
+}
+
+.share-button:active {
+  top: 1px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.share-button svg {
+  fill: #ffffff;
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+}
+
+.share-button.facebook { background-color: #4A66B7; }
+.share-button.facebook:hover { background-color: #556fbb; }
+
+.share-button.twitter { background-color: #1B95E0; }
+.share-button.twitter:hover { background-color: #269ce5; }
+
+.share-button.pinterest { background-color: #c92228; }
+.share-button.pinterest:hover { background-color: #cf4146; }
+
+.share-button.linkedin { background-color: #0077B5; }
+.share-button.linkedin:hover { background-color: #1e84b9; }
+
+.share-button.reddit { background-color: #5f99cf; }
+.share-button.reddit:hover { background-color: #75a6d4; }
+
+.share-button.tumblr { background-color: #35465c; }
+.share-button.tumblr:hover { background-color: #455166; }
+
+.share-button.hacker-news { background-color: #ff6600; }
+.share-button.hacker-news:hover { background-color: #ff7515; }
+
+.share-button.designer-news { background-color: #2d72d9; }
+.share-button.designer-news:hover { background-color: #3d82e9; }
+
+.share-button.google-plus {
+  background-color: #fefefe;
+  color: #333;
+}
+
+.share-button.google-plus:hover {
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+.share-button.google-plus svg {
+  fill: #DB4437;
+}
+
+.share-page .share-head {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.share-page .share-body {
+  overflow : hidden;
+}
+
+.share-page .share-body ul > li {
+  float : left;
+  margin : 0px;
+}
+
+.share-page .share-body ul > li:before {
+  content : ""
 }
