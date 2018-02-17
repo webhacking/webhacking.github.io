@@ -10,7 +10,7 @@ comments: true
 share: true
 ---
 
-
+```python
     def hanoi_imp(n, curr, dest, rest):
         if n == 0: return
         hanoi_imp(n - 1, curr, rest, dest)
@@ -38,4 +38,4 @@ share: true
         print(list(hanoi_gen(3, "A", "B", "C")))
         print(hanoi_cps(3, "A", "B", "C"))
         pass
-
+```

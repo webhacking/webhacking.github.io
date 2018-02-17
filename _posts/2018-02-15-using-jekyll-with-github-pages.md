@@ -36,6 +36,10 @@ sub_categories : ""
 
 Markdown, Liquid, YAML, HTML/CSS 등을 편집하고 jekyll 서버를 동작하면 정적 웹 페이지를 생성해준다.
 
+![Dr_Jekyll_and_Mr_Hyde_poster](/assets/images/posts/using-jekyll-with-gitHub-pages/1280px-Dr_Jekyll_and_Mr_Hyde_poster_edit2-1.jpg)
+
+[Chicago Modifications by Papa Lima Whiskey](https://en.wikipedia.org/wiki/Strange_Case_of_Dr_Jekyll_and_Mr_Hyde#/media/File:Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg)
+
 > 블로그나 프로젝트 웹페이지로 안성맞춤이다
 
 `github` 에서는 너무나 고맙게도 [github page](https://pages.github.com/) 라는 서비스를 제공하기에 무료 호스팅을 사용할 수 있다. (Thanks github)
@@ -218,7 +222,19 @@ class Post(Base):
 ```
 ## 이사 끝
 
-나의 이전 티스토리 블로그는 폐쇄할 계획이며, 폐쇄가 되면 모든 데이터는 삭제된다고한다.
+![new blog](/assets/images/posts/using-jekyll-with-gitHub-pages/new-blog-screen.png)
+
+귀찮음을 이기고, 마주한 블로그는 아주 마음에들었다.
+
+오랜글들을 다시금 볼 수 있는 기회였고, 덕분에 창피함이 무엇인지 다시금 상기되었다.
+
+현재 테마에서 카테고리, 검색, 포스트 본문 이외 여러부분을 따로 많은 부분을 신경써야한다는 애로사항이 존재했지만
+
+이 또한 높은 자유도라 생각하고 재밌게 그려냈다.
+
+> 본질인 글을 전달하고 싶다.
+
+이전 티스토리 블로그는 폐쇄할 계획이며, 폐쇄가 되면 모든 데이터는 삭제된다고한다.
 
 그래서 혹시 몰라서 아래와 같이 치환하지 않은 본문 문서를 따로 postfix로 backup을 붙여 저장하기로 했다.
 
