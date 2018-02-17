@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="710a41ca-2ec4-49f0-a994-cecbdcdd3712" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/javascript/main.js" afterPath="$PROJECT_DIR$/assets/javascript/main.js" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-12-5-Most-Dangerous-Hackers-Of-All-Time.md" afterPath="$PROJECT_DIR$/_posts/2015-12-12-5-most-dangerous-hackers-of-all-time.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-28-Console-객체.md" afterPath="$PROJECT_DIR$/_posts/2015-12-28-about-javascript-console-object.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-28-Languages-used.md" afterPath="$PROJECT_DIR$/_posts/2015-12-28-languages-used.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-28-Letsencrypt-Certificates.md" afterPath="$PROJECT_DIR$/_posts/2015-12-28-letsencrypt-certificates.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-05-31-Webhacking.kr-29번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-05-31-webhacking-kr-29.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-08-10-Lessons-from-10-Years-of-Amazon-Web-Services.md" afterPath="$PROJECT_DIR$/_posts/2016-06-08-10-lessons-from-10-years-of-amazon-web-services.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +32,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/javascript/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            <state relative-caret-position="-1050">
+              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -194,6 +199,11 @@
             <path>
               <item name="webhacking.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="webhacking.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="_posts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="webhacking.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="webhacking.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -243,12 +253,12 @@
       <workItem from="1518410389736" duration="2648000" />
       <workItem from="1518486985126" duration="5463000" />
       <workItem from="1518663346135" duration="25674000" />
-      <workItem from="1518856967370" duration="8535000" />
+      <workItem from="1518856967370" duration="9357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54500000" />
+    <option name="totallyTimeSpent" value="55322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -304,17 +314,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-29-코드리뷰-라이브-#1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2016-03-30-elk.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -862,10 +861,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-06-08-10-lessons-from-10-years-of-amazon-web-services.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="-1050">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
         </state>
       </provider>
