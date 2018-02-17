@@ -7,9 +7,13 @@ var hax0r = {
             hx.isMobile = true;
         }
     },
-    boot : function()
+    initialize : function ()
     {
         this.chooseDevice();
+
+        this.removeClass(document.querySelector('nav.nav > a'), 'is-on');
+        this.removeClass(document.querySelector('body'), 'opened-nav');
+        this.addClass(document.getElementById('veil'), 'hide');
     },
     ready : function(fn)
     {
@@ -60,11 +64,12 @@ var hax0r = {
 window.hx = hax0r;
 hx.ready(function()
 {
-    hx.chooseDevice();
+    hx.initialize();
     hx.addEvent('resize', window, function(e)
     {
+        hx.initialize();
         hx.chooseDevice();
-    })
+    });
 
     hx.removeClass(document.querySelector('nav.nav'), 'hide');
     hx.addEvent('click', document.querySelector('nav.nav > a'), function(e)
@@ -101,4 +106,4 @@ hx.ready(function()
             });
         });
     }
-})
+});
