@@ -2,7 +2,7 @@
 layout: post
 title: "Setting CORS on Apache with correct response headers"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2017-05-26
 tags: []

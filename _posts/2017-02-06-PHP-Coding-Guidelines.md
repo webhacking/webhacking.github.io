@@ -2,7 +2,7 @@
 layout: post
 title: "PHP Coding Guidelines"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2017-02-06
 tags: []

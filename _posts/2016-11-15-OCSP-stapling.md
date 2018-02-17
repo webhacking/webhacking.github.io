@@ -2,7 +2,7 @@
 layout: post
 title: "OCSP stapling"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-11-15
 tags: []

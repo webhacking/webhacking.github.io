@@ -2,7 +2,7 @@
 layout: post
 title: "Is it safe to delete index.html from all folders?"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2016-05-10
 tags: []

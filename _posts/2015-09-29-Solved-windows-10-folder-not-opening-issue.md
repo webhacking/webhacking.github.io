@@ -2,11 +2,9 @@
 layout: post
 title: "Solved windows 10 folder not opening issue"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-29
-categories : ""
-sub_categories : ""
 tags: []
 comments: true
 share: true

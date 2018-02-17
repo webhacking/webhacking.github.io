@@ -2,7 +2,7 @@
 layout: post
 title: "php shorthand condition"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2016-11-14
 tags: []

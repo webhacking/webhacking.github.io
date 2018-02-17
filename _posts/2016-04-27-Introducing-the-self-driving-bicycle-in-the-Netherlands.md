@@ -2,7 +2,7 @@
 layout: post
 title: "Introducing the self-driving bicycle in the Netherlands"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-04-27
 tags: []
@@ -11,4 +11,4 @@ share: true
 ---
 
 
-
+<iframe width="853" height="480" src="https://www.youtube.com/embed/LSZPNwZex9s" frameborder="0" allowfullscreen=""></iframe>

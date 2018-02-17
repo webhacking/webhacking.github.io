@@ -2,7 +2,7 @@
 layout: post
 title: "Mark Twain"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-06-20
 tags: []

@@ -2,11 +2,9 @@
 layout: post
 title: "WowHacker Webgemae level6"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-07
-categories : ""
-sub_categories : ""
 tags: []
 comments: true
 share: true

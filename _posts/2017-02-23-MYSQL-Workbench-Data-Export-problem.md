@@ -2,7 +2,7 @@
 layout: post
 title: "MYSQL Workbench Data Export problem"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2017-02-23
 tags: ['MYSQL Workbench']

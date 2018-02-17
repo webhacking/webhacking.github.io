@@ -2,7 +2,7 @@
 layout: post
 title: "Hacker News 글 노출 알고리즘"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-08-01
 tags: ['How Hacker News ranking algorithm works']

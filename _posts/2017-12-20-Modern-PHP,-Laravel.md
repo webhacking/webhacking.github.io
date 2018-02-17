@@ -2,7 +2,7 @@
 layout: post
 title: "Modern PHP, Laravel"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2017-12-20
 tags: ['beyond hompage tool']

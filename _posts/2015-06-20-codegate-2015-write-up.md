@@ -2,11 +2,9 @@
 layout: post
 title: "codegate 2015 write up"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-06-20
-categories : ""
-sub_categories : ""
 tags: []
 comments: true
 share: true

@@ -2,7 +2,7 @@
 layout: post
 title: "Error Based SQL Injection"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-12-07
 tags: []

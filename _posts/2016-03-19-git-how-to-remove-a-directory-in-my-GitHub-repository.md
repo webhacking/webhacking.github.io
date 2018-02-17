@@ -2,7 +2,7 @@
 layout: post
 title: "Git how to remove a directory in my GitHub repository"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-03-19
 tags: []

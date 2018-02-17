@@ -15,6 +15,10 @@ copyright:
   year:             2015
   name:             Hax0r
 
+blog-categories:
+  etc : '이외'
+  development : '개발'
+
 # Google-analytics
 google-analytics:
   id:               "UA-113990699-1"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 라라벨에서 Constants 제대로 사용하기
-categories : ""
+categories : development
 sub_categories : ""
 ---
 

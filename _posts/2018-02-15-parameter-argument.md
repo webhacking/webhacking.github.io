@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 매개변수(parameter), 전달인자(argument)
-categories : ""
+categories : development
 sub_categories : ""
 ---
 

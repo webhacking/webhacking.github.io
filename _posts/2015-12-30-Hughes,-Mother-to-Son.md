@@ -2,7 +2,7 @@
 layout: post
 title: "Hughes, Mother to Son"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-12-30
 tags: []

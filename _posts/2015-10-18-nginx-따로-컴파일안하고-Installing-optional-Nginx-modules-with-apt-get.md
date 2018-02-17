@@ -2,7 +2,7 @@
 layout: post
 title: "nginx 따로 컴파일안하고 Installing optional Nginx modules with apt-get"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-18
 tags: []

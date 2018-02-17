@@ -2,7 +2,7 @@
 layout: post
 title: "MYSQL: Order by date but empty dates last not first"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-14
 tags: []

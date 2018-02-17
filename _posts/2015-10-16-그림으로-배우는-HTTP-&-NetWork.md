@@ -2,7 +2,7 @@
 layout: post
 title: "그림으로 배우는 HTTP & NetWork"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-10-16
 tags: []

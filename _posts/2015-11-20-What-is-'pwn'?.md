@@ -2,7 +2,7 @@
 layout: post
 title: "What is 'pwn'?"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-11-20
 tags: []

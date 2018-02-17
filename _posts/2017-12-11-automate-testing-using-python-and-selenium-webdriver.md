@@ -1,7 +1,7 @@
 ---
 title: Python & Selenium 을 이용한 QA 자동화
 layout: post
-categories : ""
+categories : development
 sub_categories : ""
 date: '2017-12-11'
 tags:

@@ -2,7 +2,7 @@
 layout: post
 title: "python towers of hanoi__6_6"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-27
 tags: []

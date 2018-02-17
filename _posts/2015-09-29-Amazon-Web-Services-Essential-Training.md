@@ -2,11 +2,9 @@
 layout: post
 title: "Amazon Web Services Essential Training"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-09-29
-categories : ""
-sub_categories : ""
 tags: []
 comments: true
 share: true

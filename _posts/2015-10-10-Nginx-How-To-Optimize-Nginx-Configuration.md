@@ -2,7 +2,7 @@
 layout: post
 title: "[Nginx] How To Optimize Nginx Configuration"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-10
 tags: []

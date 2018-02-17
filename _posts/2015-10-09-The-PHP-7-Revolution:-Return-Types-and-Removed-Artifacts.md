@@ -2,7 +2,7 @@
 layout: post
 title: "The PHP 7 Revolution: Return Types and Removed Artifacts"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-09
 tags: []

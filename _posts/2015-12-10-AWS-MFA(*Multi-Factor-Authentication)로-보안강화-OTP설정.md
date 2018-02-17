@@ -2,7 +2,7 @@
 layout: post
 title: "[AWS] MFA(*Multi-Factor Authentication)로 보안강화 OTP설정"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-12-10
 tags: []

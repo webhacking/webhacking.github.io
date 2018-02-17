@@ -2,7 +2,7 @@
 layout: post
 title: "윈도우 10 Bash Shell 지원, MS 우분투랑 손 잡음."
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-05-24
 tags: []

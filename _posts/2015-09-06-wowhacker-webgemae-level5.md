@@ -2,11 +2,9 @@
 layout: post
 title: "WowHacker Webgemae level5"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-06
-categories : ""
-sub_categories : ""
 tags: ['5번', 'writeup', '문제', '문제풀이', '와우해커', '워게임', '웹해커', '해답']
 comments: true
 share: true

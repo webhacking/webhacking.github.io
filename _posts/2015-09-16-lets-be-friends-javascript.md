@@ -2,11 +2,9 @@
 layout: post
 title: "친해지자, Javascript"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-16
-categories : ""
-sub_categories : ""
 tags: []
 comments: true
 share: true

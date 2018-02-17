@@ -2,7 +2,7 @@
 layout: post
 title: "Introduction to Algorithms"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-12-31
 tags: []

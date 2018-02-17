@@ -1,4 +1,16 @@
-hax0r = {
+var hax0r = {
+    isMobile : false,
+    chooseDevice : function()
+    {
+        hx.isMobile = false;
+        if ( Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 480 ) {
+            hx.isMobile = true;
+        }
+    },
+    boot : function()
+    {
+        this.chooseDevice();
+    },
     ready : function(fn)
     {
         if ( document.readyState != 'loading' ) {
@@ -48,6 +60,12 @@ hax0r = {
 window.hx = hax0r;
 hx.ready(function()
 {
+    hx.chooseDevice();
+    hx.addEvent('resize', window, function(e)
+    {
+        hx.chooseDevice();
+    })
+
     hx.removeClass(document.querySelector('nav.nav'), 'hide');
     hx.addEvent('click', document.querySelector('nav.nav > a'), function(e)
     {
@@ -56,11 +74,17 @@ hx.ready(function()
         if ( hx.hasClass(e.currentTarget, 'is-on') ) {
             hx.removeClass(e.currentTarget, 'is-on');
             hx.removeClass(document.querySelector('body'), 'opened-nav');
-            hx.addClass(document.getElementById('veil'), 'hide');
+
+            if ( hx.isMobile ) {
+                hx.addClass(document.getElementById('veil'), 'hide');
+            }
         } else {
-            hx.removeClass(document.getElementById('veil'), 'hide');
             hx.addClass(document.querySelector('body'), 'opened-nav');
             hx.addClass(e.currentTarget, 'is-on');
+
+            if ( hx.isMobile ) {
+                hx.removeClass(document.getElementById('veil'), 'hide');
+            }
         }
     });
 

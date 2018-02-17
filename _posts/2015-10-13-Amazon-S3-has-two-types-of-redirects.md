@@ -2,7 +2,7 @@
 layout: post
 title: "Amazon S3 has two types of redirects"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-13
 tags: []

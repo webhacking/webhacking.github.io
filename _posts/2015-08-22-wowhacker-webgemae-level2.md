@@ -2,11 +2,9 @@
 layout: post
 title: "WowHacker Webgemae level2"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-08-22
-categories : ""
-sub_categories : ""
 tags: ['2번', 'write up', '문제', '와우해커', '워게임', '웹해킹', '풀이']
 comments: true
 share: true

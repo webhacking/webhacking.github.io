@@ -2,7 +2,7 @@
 layout: post
 title: "match against in mysql"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2016-04-13
 tags: []
