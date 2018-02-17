@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Mongo] MongoDB를 쓰면서 알게 된 것들"
+title: "MongoDB를 쓰면서 알게 된 것들"
 description: ""
 categories : development
 sub_categories : ""

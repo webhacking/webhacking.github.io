@@ -3,7 +3,95 @@
   <component name="ChangeListManager">
     <list default="true" id="710a41ca-2ec4-49f0-a994-cecbdcdd3712" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/javascript/main.js" afterPath="$PROJECT_DIR$/assets/javascript/main.js" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-08-24-Reversing.kr-소개-및-리버스엔지니어링이란?.md" afterPath="$PROJECT_DIR$/_posts/2015-08-24-about-reversing-kr.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-06-Reversing-1번-문제(Easy-Crack)-풀이.md" afterPath="$PROJECT_DIR$/_posts/2015-09-06-reversing-kr-1-easy-crack.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-06-Webhacking.kr.md" afterPath="$PROJECT_DIR$/_posts/2015-09-06-webhacking.kr.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-23-cpl-목록.md" afterPath="$PROJECT_DIR$/_posts/2015-09-23-cpl-list.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-29-Amazon-Web-Services-Essential-Training.md" afterPath="$PROJECT_DIR$/_posts/2015-09-29-amazon-web-services-essential-training.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-29-Solved-windows-10-folder-not-opening-issue.md" afterPath="$PROJECT_DIR$/_posts/2015-09-29-solved-windows-10-folder-not-opening-issue.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-30-USING-THE-CONSOLE-Navigating-the-Console.md" afterPath="$PROJECT_DIR$/_posts/2015-09-30-using-the-console-navigating-the-console.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-09-30-Webhacking.kr-2번-문제.md" afterPath="$PROJECT_DIR$/_posts/2015-09-30-webhacking.kr-2.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-04-프로그래머-철학을-만나다..md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-06-[Mongo]-MongoDB를-쓰면서-알게-된-것들.md" afterPath="$PROJECT_DIR$/_posts/2015-10-06-what-Ive-learned-using-mongodb.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-09-The-PHP-7-Revolution:-Return-Types-and-Removed-Artifacts.md" afterPath="$PROJECT_DIR$/_posts/2015-10-09-the-php-7-revolution-return-types-and-removed-artifacts.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-10-Nginx-How-To-Optimize-Nginx-Configuration.md" afterPath="$PROJECT_DIR$/_posts/2015-10-10-nginx-how-to-optimize-nginx-configuration.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-10-Nginx-Tuning-For-Best-Performance.md" afterPath="$PROJECT_DIR$/_posts/2015-10-10-nginx-tuning-for-best-performance.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-11-Checking-System-Load-on-Linux.md" afterPath="$PROJECT_DIR$/_posts/2015-10-11-checking-system-load-on-linux.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-11-Talklish-Bible-뉴욕스토리-세트.md" afterPath="$PROJECT_DIR$/_posts/2015-10-11-about-talklish-bible-book.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-11-열혈-C-프로그래밍.md" afterPath="$PROJECT_DIR$/_posts/2015-10-11-high-bite-c-programming.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-11-윈도우즈-API.md" afterPath="$PROJECT_DIR$/_posts/2015-10-11-windows-api.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-13-Amazon-S3-has-two-types-of-redirects.md" afterPath="$PROJECT_DIR$/_posts/2015-10-13-amazon-s3-has-two-types-of-redirects.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-14-MYSQL:-Order-by-date-but-empty-dates-last-not-first.md" afterPath="$PROJECT_DIR$/_posts/2015-10-14-mysql-order-by-date-but-empty-dates-last-not-first.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-15-MySQL-기본-명령어.md" afterPath="$PROJECT_DIR$/_posts/2015-10-15-mysql-basic-commands.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-15-지상전파.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-17-Nginx-Customize-Servername.md" afterPath="$PROJECT_DIR$/_posts/2015-10-17-nginx-customize-servername.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-17-Using-GeoIP-With-Nginx-On-Ubuntu-12.04.md" afterPath="$PROJECT_DIR$/_posts/2015-10-17-using-geoip-with-nginx-on-ubuntu-12.04.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-18-NGINX-SSL-설정.md" afterPath="$PROJECT_DIR$/_posts/2015-10-18-configuration-nginx-ssl.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-18-nginx-따로-컴파일안하고-Installing-optional-Nginx-modules-with-apt-get.md" afterPath="$PROJECT_DIR$/_posts/2015-10-18-Installing-optional-nginx-modules-with-apt-get.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-18-저는-인문학이-처음인데요..md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-19-Nginx-SSL_CTX_use_PrivateKey_file”-“problems-getting-password-error”-indicate-in-Nginx-error-log-오류.md" afterPath="$PROJECT_DIR$/_posts/2015-10-19-fix-nginx-problems-getting-password-error.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-20-I-can't-log-me-in-to..-from-StartSSL.md" afterPath="$PROJECT_DIR$/_posts/2015-10-20-i-cant-log-me-in-to-from-startssl.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-23-hack-me.org-:-WWW-Login-Test.md" afterPath="$PROJECT_DIR$/_posts/2015-10-23-write-up-hack-me-org-www-login-test.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-24-AWS-EC2-FTP-연결지연.md" afterPath="$PROJECT_DIR$/_posts/2015-10-24-connection-delay-aws-ec2-ftp.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-27-Memcahed-설치-및-설정.md" afterPath="$PROJECT_DIR$/_posts/2015-10-27-install-and-configuration-memcahed.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-10-27-python-towers-of-hanoi__6_6.md" afterPath="$PROJECT_DIR$/_posts/2015-10-27-python-towers-of-hanoi__6_6.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-11-04-일주일동안-톰캣-모듈짯다..md" afterPath="$PROJECT_DIR$/_posts/2015-11-04-wrote-a-module-tomcat-for-a-week.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-11-12-IT-트렌드-'빅데이터'에서-'인공지능'으로-세대교체.md" afterPath="$PROJECT_DIR$/_posts/2015-11-12-change-generation-from-big-data-to-ai.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-11-13-Episode-14:-인터랙티브-디벨로퍼-특집-1부.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-11-20-What-is-'pwn'?.md" afterPath="$PROJECT_DIR$/_posts/2015-11-20-what-is-pwn.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-11-25-소프트-스킬,-평범한-개발자의-비범한-인생-전략-71가지.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-11-30-GO:D.md" afterPath="$PROJECT_DIR$/_posts/2015-11-30-go-d.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-01-페이스북-아퀄라('Aquila')-프로젝트.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-03-C++-창시자의-조언.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-03-구글은-어떻게-일하는가?(How-Google-Works?).md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-08-Lord-Of-Sqlinjection-1.md" afterPath="$PROJECT_DIR$/_posts/2015-12-08-lord-of-sqlinjection-1.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-08-Lord-Of-Sqlinjection-2.md" afterPath="$PROJECT_DIR$/_posts/2015-12-08-lord-of-sqlinjection-2.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-08-PHP7-퍼포먼스면에서-어떤가?.md" afterPath="$PROJECT_DIR$/_posts/2015-12-08-how-is-it-in-terms-of-php-performance.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2015-12-29-심심할때-읽기-좋은-리눅스-파일구조.md" afterPath="$PROJECT_DIR$/_posts/2015-12-29-linux-file-structure-that-is-good-to-read-when-bored.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-01-12-Webhacking.kr-4번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-01-12-webhacking.kr-4.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-03-14-알파고?-정말쉬운-머신러닝-기초개념.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-03-16-[탑코더-레드-찍기]TopCoder-탑코더-알고리즘-트레이닝.md" afterPath="$PROJECT_DIR$/_posts/2016-03-16-algorithm-training-from-top-coder.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-03-18-HMM(Hidden-Markov-Model).md" afterPath="$PROJECT_DIR$/_posts/2016-03-18-about-hmm.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-03-19-아파치-분산-데이타-베이스,-Cassandra-:-Basic-Rules-of-Cassandra-Data-Modeling.md" afterPath="$PROJECT_DIR$/_posts/2016-03-19-basic-rules-of-cassandra-data-modeling.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-03-20-Redis-스터디-관련-영상.md" afterPath="$PROJECT_DIR$/_posts/2016-03-20-redis-study-videos.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-04-24-Webhacking.kr-25번-문제.md" afterPath="$PROJECT_DIR$/_posts/2016-04-24-webhacking.kr-25번-문제.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-03-NEXTERS,-알고리즘-스터디-자료.md" afterPath="$PROJECT_DIR$/_posts/2016-06-03-write-up-nexters-algorithm.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-05-정서가-학습을-지속시킨다..md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-08-10-lessons-from-10-years-of-amazon-web-services.md" afterPath="$PROJECT_DIR$/_posts/2016-06-08-10-lessons-from-10-years-of-amazon-web-services.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-17-Webserver-shut-down-unexpectedly-due-to-a-blocked-port.md" afterPath="$PROJECT_DIR$/_posts/2016-06-17-webserver-shut-down-unexpectedly-due-to-a-blocked-port.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-20-Mark-Twain.md" afterPath="$PROJECT_DIR$/_posts/2016-06-20-mark-twain.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-25-Nginx-error-“conflicting-server-name”-ignored.md" afterPath="$PROJECT_DIR$/_posts/2016-06-25-solved-nginx-error-conflicting-server-name-ignored.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-06-30-유체역학에서-상대성-이론까지-물리학-천재들의-노트.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-08-01-Hacker-News-글-노출-알고리즘.md" afterPath="$PROJECT_DIR$/_posts/2016-08-01-hacker-news-algorithm.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-27-AWS-미납(폭탄)요금.md" afterPath="$PROJECT_DIR$/_posts/2016-09-27-aws-unpaid-charges.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-09-27-Clean-code-(a-handbook-of-agile-software-craftsmanship).md" afterPath="$PROJECT_DIR$/_posts/2016-09-27-clean-code.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-12-SSL-Certificate-이슈.md" afterPath="$PROJECT_DIR$/_posts/2016-11-12-issue-about-ssl-certificate.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-13-도커-명령어-정리.md" afterPath="$PROJECT_DIR$/_posts/2016-11-13-docker-commands.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-14-도커(Docker)-간략한-설명.md" afterPath="$PROJECT_DIR$/_posts/2016-11-14-about-docker.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-15-OCSP-stapling.md" afterPath="$PROJECT_DIR$/_posts/2016-11-15-ocsp-stapling.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-16-Docker---이미지-또는-컨테이너-삭제.md" afterPath="$PROJECT_DIR$/_posts/2016-11-16-delete-image-or-container-from-docker.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-11-18-Connect-to-docker-container-from-host.md" afterPath="$PROJECT_DIR$/_posts/2016-11-18-connect-to-docker-container-from-host.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-01-데이터베이스-서버--지연.md" afterPath="$PROJECT_DIR$/_posts/2016-12-01-solved-delay-mysql-database.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-09-Avoid-Character-Encoding-Problems,-엑셀-한글-파일명-깨짐-현상.md" afterPath="$PROJECT_DIR$/_posts/2016-12-09-avoid-character-encoding-problems-brokenp-korean-character.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-13-Why-hasn't-Facebook-migrated-away-from-PHP.md" afterPath="$PROJECT_DIR$/_posts/2016-12-13-why-hasnt-facebook-migrated-away-from-php.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-20-Snort--Network-IDS-IPS.md" afterPath="$PROJECT_DIR$/_posts/2016-12-20-snort-network-ids-ips.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2016-12-28-Git-에서-Out-of-Memory.md" afterPath="$PROJECT_DIR$/_posts/2016-12-28-solved-git-out-of-memory.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-11-Javascript-filename-naming-convention.md" afterPath="$PROJECT_DIR$/_posts/2017-01-11-javascript-filename-naming-convention.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-12-Got-a-packet-bigger-than-'max_allowed_packet'-해결-방안.md" afterPath="$PROJECT_DIR$/_posts/2017-01-12-fix-got-a-packet-bigger-than-max_allowed_packet.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-01-31-CDATA-(Character-Data)-설명.md" afterPath="$PROJECT_DIR$/_posts/2017-01-31-about-cdata-character-data.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-01-도전.md" afterPath="$PROJECT_DIR$/_posts/2017-02-01-challenge.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-02-06-PHP-Coding-Guidelines.md" afterPath="$PROJECT_DIR$/_posts/2017-02-06-php-coding-guidelines.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-04-26-HSTS-(HTTP-Strict-Transport-Security).md" afterPath="$PROJECT_DIR$/_posts/2017-04-26-http-strict-transport-security.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-14-슬랙에서-휴봇-사용하기-(Slack-Developer-Kit-for-Hubot).md" afterPath="$PROJECT_DIR$/_posts/2017-05-14-slack-developer-kit-for-hubot.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-23-MySQL-Resolving-으로-인한-지연현상.md" afterPath="$PROJECT_DIR$/_posts/2017-05-23-mysql-delay-connection-the-reason-resolving.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-26-Apache-Enabling-.htaccess-file-to-rewrite-path.md" afterPath="$PROJECT_DIR$/_posts/2017-05-26-apache-enabling-htaccess-file-to-rewrite-path.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-05-26-Setting-CORS-on-Apache-with-correct-response-headers.md" afterPath="$PROJECT_DIR$/_posts/2017-05-26-setting-cors-on-apache-with-correct-response-headers.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-06-02-Webhacking-kr-35.md" afterPath="$PROJECT_DIR$/_posts/2017-06-02-webhacking-kr-35.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-06-27-Scalar-Type-Hints.md" afterPath="$PROJECT_DIR$/_posts/2017-06-27-scalar-type-hints.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-07-03-Google-IO-2017-Extended-in-Seoul.md" afterPath="$PROJECT_DIR$/_posts/2017-07-03-google-io-2017-extended-in-seoul.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-10-10-Google-cloud-connecting-to-Linux-Instances.md" afterPath="$PROJECT_DIR$/_posts/2017-10-10-google-cloud-connecting-to-linux-instances.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-20-Modern-PHP,-Laravel.md" afterPath="$PROJECT_DIR$/_posts/2017-12-20-modern-php-laravel.md" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md" afterPath="$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,22 +102,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-229">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/javascript/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-              <folding />
+      <file leaf-file-name="2018-02-15-using-jekyll-with-github-pages.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="238">
+                <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -98,10 +179,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_posts/2017-06-20-MySQL-Locked-확인.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-06-21-Problems-with-GET_LOCK-on-MySQL?.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-06-26-Adaptive-Hash-Index.md" />
-        <option value="$PROJECT_DIR$/_posts/2017-06-27-Scalar-Type-Hints.md" />
         <option value="$PROJECT_DIR$/_posts/2017-07-04-Fail2Ban-통하여-브루트-포스-예방.md" />
         <option value="$PROJECT_DIR$/_posts/2017-07-17-Modern-PHP.md" />
         <option value="$PROJECT_DIR$/_posts/2017-07-14-Webhacking.kr-37번-문제.md" />
@@ -143,12 +220,16 @@
         <option value="$PROJECT_DIR$/_posts/2016-03-15-why-and-when-you-should-use-redis.md" />
         <option value="$PROJECT_DIR$/_posts/2015-09-22-C#-request-인코딩-처리.md" />
         <option value="$PROJECT_DIR$/_posts/2015-10-05-Javascript-예외처리(ExceptionHandling).md" />
-        <option value="$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md" />
         <option value="$PROJECT_DIR$/_posts/2016-04-03-clear-python-interpreter-console.md" />
         <option value="$PROJECT_DIR$/_posts/2015-10-08-detect-vmware.md" />
         <option value="$PROJECT_DIR$/_posts/2015-10-05-byte-to-string-from-visual-basic.md" />
         <option value="$PROJECT_DIR$/_posts/2015-10-18-NGINX-SSL-설정.md" />
         <option value="$PROJECT_DIR$/assets/javascript/main.js" />
+        <option value="$PROJECT_DIR$/_posts/2016-06-08-10-lessons-from-10-years-of-amazon-web-services.md" />
+        <option value="$PROJECT_DIR$/_posts/2015-10-06-[Mongo]-MongoDB를-쓰면서-알게-된-것들.md" />
+        <option value="$PROJECT_DIR$/_posts/2015-10-27-python-towers-of-hanoi__6_6.md" />
+        <option value="$PROJECT_DIR$/_posts/2016-08-01-hacker-news-algorithm.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md" />
       </list>
     </option>
   </component>
@@ -194,13 +275,7 @@
             <path>
               <item name="webhacking.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="webhacking.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="webhacking.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="webhacking.github.io" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="javascript" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="_posts" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -243,12 +318,12 @@
       <workItem from="1518410389736" duration="2648000" />
       <workItem from="1518486985126" duration="5463000" />
       <workItem from="1518663346135" duration="25674000" />
-      <workItem from="1518856967370" duration="8535000" />
+      <workItem from="1518856967370" duration="12513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54500000" />
+    <option name="totallyTimeSpent" value="58478000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -304,105 +379,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-29-코드리뷰-라이브-#1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-30-elk.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-29-how-google-makes-improvements-to-its-search-algorithm.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-12-31-frontal-lobe-development.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="2" lean-forward="true" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-12-31-mobile-trend-to-be-at-the-center-of-mobile-on-demand-2016.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-01-06-modesty.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-12-12-HACKER-IN-REAL-LIFE.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-12-11-collective-intelligence-programming.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="240">
-            <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-12-09-learning-free-computer-science-and-engineering.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2015-10-08-engineering-mathematics.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -469,7 +445,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-09-29-Amazon-Web-Services-Essential-Training.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2015-09-29-amazon-web-services-essential-training.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -480,7 +456,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-09-29-Solved-windows-10-folder-not-opening-issue.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2015-09-29-solved-windows-10-folder-not-opening-issue.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -579,7 +555,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2016-03-16-[탑코더-레드-찍기]TopCoder-탑코더-알고리즘-트레이닝.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-03-16-algorithm-training-from-top-coder.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -755,7 +731,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-09-06-Webhacking.kr.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2015-09-06-webhacking.kr.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
@@ -782,17 +758,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="0">
             <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="358">
-            <caret line="172" column="45" lean-forward="false" selection-start-line="172" selection-start-column="45" selection-end-line="172" selection-end-column="45" />
             <folding />
           </first_editor>
           <second_editor />
@@ -832,7 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2015-10-18-NGINX-SSL-설정.md">
+    <entry file="file://$PROJECT_DIR$/_posts/2015-10-18-configuration-nginx-ssl.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="255">
@@ -854,19 +819,126 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
+    <entry file="file://$PROJECT_DIR$/_posts/2016-06-05-정서가-학습을-지속시킨다..md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/categories/categories.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-229">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-06-08-10-lessons-from-10-years-of-amazon-web-services.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/javascript/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+        <state relative-caret-position="-1050">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="37" column="10" lean-forward="true" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2015-10-06-what-Ive-learned-using-mongodb.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2015-10-27-install-and-configuration-memcahed.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2015-10-27-python-towers-of-hanoi__6_6.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2015-10-03-javascript-performance-code-style.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="24" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2015-10-02-short-주소-앞에-0x66-Prefix가-붙으면.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2016-08-01-hacker-news-algorithm.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-02-15-using-jekyll-with-github-pages.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="238">
+            <caret line="236" column="0" lean-forward="false" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

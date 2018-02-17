@@ -14,7 +14,6 @@ share: true
 Services](http://www.allthingsdistributed.com/2016/03/10-lessons-
 from-10-years-of-aws.html)
 
-  
 
 Werner Vogels는 아마존 CTO 이다.
 
