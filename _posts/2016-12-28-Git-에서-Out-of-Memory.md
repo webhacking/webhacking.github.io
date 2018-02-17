@@ -2,7 +2,7 @@
 layout: post
 title: "Git 에서 Out of Memory"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2016-12-28
 tags: []

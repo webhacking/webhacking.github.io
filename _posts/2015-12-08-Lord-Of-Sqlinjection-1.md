@@ -2,7 +2,7 @@
 layout: post
 title: "[1] Lord Of Sqlinjection"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-12-08
 tags: []

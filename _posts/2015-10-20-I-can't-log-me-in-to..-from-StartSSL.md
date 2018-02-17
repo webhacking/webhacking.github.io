@@ -2,7 +2,7 @@
 layout: post
 title: "I can't log me in to.. from StartSSL"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-20
 tags: []

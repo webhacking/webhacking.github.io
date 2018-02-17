@@ -2,7 +2,7 @@
 layout: post
 title: "whitehat-contest-10 write-ups-2015"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-30
 tags: []

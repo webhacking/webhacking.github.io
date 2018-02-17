@@ -2,7 +2,7 @@
 layout: post
 title: "OSX 구조를 이해하면서 배우는 Objective C"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-04-08
 tags: []

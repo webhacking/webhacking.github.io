@@ -2,7 +2,7 @@
 layout: post
 title: "Scalar Type Hints"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2017-06-27
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "MySQL Resolving 으로 인한 지연현상"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2017-05-23
 tags: ['MySQL Resolving Problem', 'MySQL 느려짐', 'MySQL 속도 지연현상', 'skip_name_resolve', '갑자기']

@@ -2,7 +2,7 @@
 layout: post
 title: "each 메소드에서 break 또는 continue"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-06-24
 tags: ['jQuery']

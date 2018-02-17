@@ -2,7 +2,7 @@
 layout: post
 title: "[Nginx] Nginx Tuning For Best Performance"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-10
 tags: []

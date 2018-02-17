@@ -2,11 +2,9 @@
 layout: post
 title: "rel nofollow"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-19
-categories : ""
-sub_categories : ""
 tags: []
 comments: true
 share: true

@@ -2,7 +2,7 @@
 layout: post
 title: "How well do you know prototype"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-11-13
 tags: []

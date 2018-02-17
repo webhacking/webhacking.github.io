@@ -2,7 +2,7 @@
 layout: post
 title: "Talklish Bible 뉴욕스토리 세트"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2015-10-11
 tags: []

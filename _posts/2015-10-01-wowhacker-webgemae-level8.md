@@ -2,7 +2,7 @@
 layout: post
 title: "WowHacker Webgemae level8"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-01
 tags: ['풀이']

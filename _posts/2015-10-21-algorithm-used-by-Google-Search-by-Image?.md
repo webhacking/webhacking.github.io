@@ -2,7 +2,7 @@
 layout: post
 title: "algorithm used by Google Search by Image?"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-21
 tags: []

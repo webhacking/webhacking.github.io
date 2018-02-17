@@ -2,7 +2,7 @@
 layout: post
 title: "python naming convention, naming rule"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2016-04-20
 tags: []

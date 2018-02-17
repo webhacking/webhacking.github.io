@@ -1,7 +1,7 @@
 ---
 title: ERD 를 통한 데이터베이스 모델링
 layout: post
-categories : ""
+categories : development
 sub_categories : ""
 date: '2017-12-21'
 comments: true

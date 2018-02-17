@@ -2,7 +2,7 @@
 layout: post
 title: "Webhacking.kr 29번 문제"
 description: ""
-categories : ""
+categories : etc
 sub_categories : ""
 date: 2016-05-31
 tags: ['29번', 'http://blog.hax0r.info/615', 'Multiple Rows', '서브 쿼리', '정답', '풀이']

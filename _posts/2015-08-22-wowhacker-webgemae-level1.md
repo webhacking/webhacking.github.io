@@ -2,11 +2,9 @@
 layout: post
 title: "WowHacker Webgemae level1"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-08-22
-categories : ""
-sub_categories : ""
 tags: ['심심', '와우해커', '워게임', '웹게임']
 comments: true
 share: true

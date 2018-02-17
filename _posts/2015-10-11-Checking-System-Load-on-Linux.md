@@ -2,7 +2,7 @@
 layout: post
 title: "Checking System Load on Linux"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-11
 tags: []

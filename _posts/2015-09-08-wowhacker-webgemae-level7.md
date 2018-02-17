@@ -2,11 +2,9 @@
 layout: post
 title: "WowHacker Webgemae level7"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-08
-categories : ""
-sub_categories : ""
 tags: ['7번', '7본', '문제풀이', '심심', '심심할때', '와우해커', '와우해킹', '워게임', '웹해킹', '정답', '풀이', '해답', '해킹']
 comments: true
 share: true

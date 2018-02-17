@@ -2,11 +2,9 @@
 layout: post
 title: "Webhacking.kr 2번 문제"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-30
-categories : ""
-sub_categories : ""
 tags: ['블라인드인젝션', '뽐뿌', '심심', '심심할때', '올드좀비', '워게임', '웹해킹', '인젝션', '탈탈', '털림']
 comments: true
 share: true

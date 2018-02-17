@@ -2,7 +2,7 @@
 layout: post
 title: "Apache Enabling .htaccess file to rewrite path"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2017-05-26
 tags: ['Apache Enabling .htaccess file to rewrite path']

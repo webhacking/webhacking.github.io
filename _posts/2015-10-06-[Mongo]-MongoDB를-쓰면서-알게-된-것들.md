@@ -2,7 +2,7 @@
 layout: post
 title: "[Mongo] MongoDB를 쓰면서 알게 된 것들"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-10-06
 tags: []

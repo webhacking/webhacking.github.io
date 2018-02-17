@@ -2,11 +2,9 @@
 layout: post
 title: "Webhacking.kr"
 description: ""
-categories : ""
+categories : development
 sub_categories : ""
 date: 2015-09-06
-categories : ""
-sub_categories : ""
 tags: ['webhacking.kr', 'writeup', '문제', '소개', '올드좀비', '워게임', '웹보아', '웹해킹', '웹해킹케이알', '해킹', '회원가입']
 comments: true
 share: true
