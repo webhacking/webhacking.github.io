@@ -46,7 +46,7 @@ config(['app.timezone' => 'America/Chicago']);
 
 본인이 설정한 방법을 기준으로 서술하겠다.
  
- 1. \`app\` 하위 디렉토리로 \`Constants\` 디렉토리를 생성 한다.
+ * \`app\` 하위 디렉토리로 \`Constants\` 디렉토리를 생성 한다.
 
 - 생성된 디렉토리 정의하고자 하는 내용에 알맞는 파일명을 정의하고 파일 내 상수를 정의한다.
 
@@ -56,8 +56,8 @@ config(['app.timezone' => 'America/Chicago']);
 define(001, 'hax0r');
 ```
  
- 2. \`app\` 하위 디렉토리로 \`Bootstrap\` 디렉토리를 생성한다.
- 3. 아래 코드를 \`Bootstrap\` 디렉토리 내 `Loader.php` 파일에 추가한다.
+ * \`app\` 하위 디렉토리로 \`Bootstrap\` 디렉토리를 생성한다.
+ * 아래 코드를 \`Bootstrap\` 디렉토리 내 `Loader.php` 파일에 추가한다.
 
 ```php
 // Loader.php
@@ -66,15 +66,15 @@ foreach ( glob(__DIR__."/Dependency/*.php") as $dependency ) {
 }
 ```
 
- 4. \`Bootstrap\` 하위 디렉토리로 `Dependency` 디렉토리를 추가한다.
- 5. 아래 코드를 \`Dependency\` 디렉토리 내 `Constants.php`에 추가한다.
+ * \`Bootstrap\` 하위 디렉토리로 `Dependency` 디렉토리를 추가한다.
+ * 아래 코드를 \`Dependency\` 디렉토리 내 `Constants.php`에 추가한다.
 
 ```php
 foreach ( glob(__DIR__."/../../Constants/*.php") as $constantFile ) {
     require $constantFile;
 }
 ```
- 6. 아래와 같이 composer.json 을 추가한다.
+ * 아래와 같이 composer.json 을 추가한다.
 
 ```json
 "autoload": {
