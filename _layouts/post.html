@@ -32,6 +32,9 @@ layout: default
   {% include author.html %}
 
   {% if page.comments != false and site.disqus.id %}
+  <h2>
+    Comments
+  </h2>
   <div class="post-disqus">
       <section id="disqus_thread"></section>
       {% include disqus.html %}
