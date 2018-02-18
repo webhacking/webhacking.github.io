@@ -62,7 +62,14 @@ Markdown, Liquid, YAML, HTML/CSS 등을 편집하고 jekyll 서버를 동작하�
 
 이 부분에 대해 검색해보면 여러  `optimize` 방안이 나오니 크게 문제될 것 은 없다.
 
-이 부분을 제외하고 이전을 생각하면서 대비해야할 항목이라고 생각한 건 기존 `URI` 와의 Link 였다.
+
+![github-pages-now-runs-jekyll-3-2](/assets/images/posts/using-jekyll-with-gitHub-pages/github-pages-now-runs-jekyll-3-2.png)
+
+16년 8월 부터, github page 에서 Jekyll 3.2를 [적용](https://github.com/blog/2236-github-pages-now-runs-jekyll-3-2)하고있다.
+
+해당 버전에서 성능 이슈 또한 많이 개선되었으니 앞으로도 많은 발전이 있을 것이라 생각한다.
+
+위 성능부분을 제외하고 이전을 생각하면서 대비해야할 항목이라고 생각한 건 기존 `URI` 와의 Link 였다.
 
 티스토리는 기본적으로 문서의 `sequence number` 로 URI에 표기하는 반면 `Jekyll` 의 경우 자유럽게 표현 할 수 있지만 통상 `날짜-제목` 으로 표기하기에 고민이 되었다.
 

@@ -9,5 +9,14 @@
       {% include footer.html %}
     </div>
   <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/main.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/light-jekyll-search.js"></script>
+
+  <script type="text/javascript">
+      lightJekyllSearch.search({
+          el : document.querySelector('form[name="search"] input[name="q"]'),
+          placeholder : '검색어를 입력해주세요.',
+          postJsonPath : '/assets/json/posts.json'
+      });
+  </script>
   </body>
 </html>
