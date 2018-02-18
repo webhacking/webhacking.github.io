@@ -1,11 +1,8 @@
-# Lite jekyll theme aerogel
+# Hax0r's personal blog
 
-`Lite`, `Powerful`, `Simple`
+This blog using [aerogel](https://github.com/webhacking/aerogel) theme.
 
-Everyone who reads a blog aims for a blog that can reach its essence, regardless of the environment.
-
-
-<p align="center">
+<p>
     <a href="https://circleci.com/gh/vuejs/vue/tree/dev">
         <img src="https://img.shields.io/badge/IE8%2B--green.svg" alt="Supprot IE8+">
     </a>
