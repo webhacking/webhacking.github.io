@@ -118,8 +118,6 @@ artisan make:command MakeConstants
 
 저는 아래와 같이 위 구조에서 constants 파일을 생성하는 명령어를 추가했다.
 
-  
-
 코드는 아래와 같다.
 
   
