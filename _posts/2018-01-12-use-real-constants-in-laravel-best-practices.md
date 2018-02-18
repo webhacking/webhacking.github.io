@@ -56,7 +56,8 @@ config(['app.timezone' => 'America/Chicago']);
 define(001, 'hax0r');
 ```
  
- 2. 아래 코드를 \`Bootstrap\` 디렉토리 내 `Loader.php` 파일에 추가한다.
+ 2. \`app\` 하위 디렉토리로 \`Bootstrap\` 디렉토리를 생성한다.
+ 3. 아래 코드를 \`Bootstrap\` 디렉토리 내 `Loader.php` 파일에 추가한다.
 
 ```php
 // Loader.php
@@ -65,15 +66,15 @@ foreach ( glob(__DIR__."/Dependency/*.php") as $dependency ) {
 }
 ```
 
- 3. \`Bootstrap\` 하위 디렉토리로 `Dependency` 디렉토리를 추가한다.
- 4. 아래 코드를 \`Dependency\` 디렉토리 내 `Constants.php`에 추가한다.
+ 4. \`Bootstrap\` 하위 디렉토리로 `Dependency` 디렉토리를 추가한다.
+ 5. 아래 코드를 \`Dependency\` 디렉토리 내 `Constants.php`에 추가한다.
 
 ```php
 foreach ( glob(__DIR__."/../../Constants/*.php") as $constantFile ) {
     require $constantFile;
 }
 ```
- 5. 아래와 같이 composer.json 을 추가한다.
+ 6. 아래와 같이 composer.json 을 추가한다.
 
 ```json
 "autoload": {
