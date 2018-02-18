@@ -683,7 +683,7 @@ ul.nav-list > li:before {
   width: 60%;
   position: absolute;
   right: 0px;
-  margin-top: 10px;
+  margin-top: 4px;
 
   input {
     width: 100%;
@@ -695,7 +695,7 @@ ul.nav-list > li:before {
     color: rgb(59, 64, 69);
     border: 0px;
     margin: 0px;
-    height: 30px;
+    height: 40px;
     padding-left :30px
   }
   > div {
@@ -741,7 +741,7 @@ ul.nav-list > li:before {
 i.icon-search {
   display : block;
   background-image: url(/assets/images/active-search.png);
-  top: 5px;
+  top: 10px;
   left: 5px;
   width: 30px;
   height: 30px;
@@ -750,3 +750,10 @@ i.icon-search {
   background-repeat: no-repeat;
 }
 
+
+
+#related-posts {
+  p {
+    font-size : 16px
+  }
+}
