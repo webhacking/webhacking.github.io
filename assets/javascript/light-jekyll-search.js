@@ -17,7 +17,10 @@ var lightJekyllSearch = {
         var self = this;
 
         lightJekyllSearch.initialize();
-        config.el.placeholder = ( config.placeholder ) ? config.placeholder : '';
+
+        if ( config.el !== null ) {
+            config.el.placeholder = ( config.placeholder ) ? config.placeholder : '';
+        }
 
         if ( config.postJsonPath ) {
             this.postJsonPath = config.postJsonPath;
