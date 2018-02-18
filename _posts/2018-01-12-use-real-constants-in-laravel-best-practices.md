@@ -75,8 +75,8 @@ foreach ( glob(__DIR__."/../../Constants/*.php") as $constantFile ) {
 }
 ```
  6. 아래와 같이 composer.json 을 추가한다.
-```json
 
+```json
 "autoload": {
 
     "files": [
@@ -117,8 +117,6 @@ artisan make:command MakeConstants
 파일은 \`app > commands\` 의 위치해있다.
 
 저는 아래와 같이 위 구조에서 constants 파일을 생성하는 명령어를 추가했다.
-
-  
 
 코드는 아래와 같다.
 
