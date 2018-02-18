@@ -75,8 +75,8 @@ foreach ( glob(__DIR__."/../../Constants/*.php") as $constantFile ) {
 }
 ```
  6. 아래와 같이 composer.json 을 추가한다.
-```json
 
+```json
 "autoload": {
 
     "files": [
