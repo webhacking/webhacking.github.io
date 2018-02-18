@@ -119,15 +119,6 @@ laravel-prefer-dist) 에서 발췌한 설명은 아래와 같다.
 > \--prefer-dist and --prefer-source are the two options of **composer** which
 included in various documentations with a lack of proper explanation.
 
->
-
->  
-
->
-
->  
-
->
 
 > \--prefer-dist would try to download and unzip archives of the dependencies
 using GitHub or another API when available. This is used for faster
