@@ -1,6 +1,11 @@
 ---
 title: Jekyll 에 검색기능을 추가해보세요.
 layout: post
+description: ""
+categories : development
+sub_categories : ""
+date: 2018-02-18
+tags: ['Jekyll','Jekyll search using light-Jekyll-search.js']
 ---
 
 ## TL;DR
@@ -52,20 +57,30 @@ github 내 `jekyll search` 기능을 구현할 수 있는 좋은 library 들이 
 
 ## Let's get it
 
-일전 제 요구사항을 충족할 수 있는 별도의 라이브러리 `lightJekyllSearch`  을 만들었습니다.
+일전 제 요구사항을 충족할 수 있는 별도의 라이브러리 [lightJekyllSearch](https://github.com/webhacking/light-Jekyll-search)을 만들었습니다.
 Github 에 공유되어있으니, 필요에따라 사용하시기 바랍니다.
 
 `lightJekyllSearch`  을 사용하고있다는 가정하에 글 적습니다.
 
 1. 포스트들의 집합이 필요하다. 따라서 아래  `posts.json` 을 추가합니다.
 
-```yaml
+```html
+{% raw %}
 ---
 layout: null
 ---
 [
-
+  {% for post in site.posts %}
+  {
+  "title"    : "{{ post.title | escape }}",
+  "category" : "{{ post.category }}",
+  "tags"     : "{{ post.tags | join: ', ' }}",
+  "url"      : "{{ site.baseurl }}{{ post.url }}",
+  "date"     : "{{ post.date }}"
+  } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
 ]
+{%endraw%}
 ```
 
 위 `posts.json` 은, 후에 아래와 같이 작성한 문서들을 전부가지고 옵니다.
@@ -73,7 +88,7 @@ layout: null
 ![fetch-posts](/assets/images/posts/using-search-from-jekyll/fetch-posts.png)
 
 
-2. 아래와 같이 자신의 경로에 위치해 있는  `lightJekyllSearch` 을 불러옵니다.
+2. 아래와 같이 자신의 경로에 위치해 있는 [lightJekyllSearch](https://github.com/webhacking/light-Jekyll-search) 을 불러옵니다.
 
 ```html
 <!DOCTYPE html>

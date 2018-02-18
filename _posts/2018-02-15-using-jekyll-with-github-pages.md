@@ -1,8 +1,11 @@
 ---
 title: 나는 Jekyll 을 사용하여 GitHub Pages에 블로깅하기로 했다.
 layout: post
-categories : etc
+description: ""
+categories : development
 sub_categories : ""
+date: 2018-02-18
+tags: ['Jekyll','Jekyll 시작하기']
 ---
 
 ## 티스토리가 싫어요.
@@ -251,3 +254,9 @@ class Post(Base):
 더 이상 블로그를 이전하고 싶지 않다.
 
 왠만하면 테마를 변경하는 일에 내 시간을 쏟고 싶지도 않다.
+
+
+## 유용했으면 좋겠다.
+
+1. 포스팅하면서 Liquid 코드를 본문에 기재해야할때가 있는데, 이 때 해당 코드 앞뒤에 `{% raw %}` 와 `{% endraw %}`를 사용하면 된다.
+
