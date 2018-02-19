@@ -25,10 +25,10 @@ google-analytics:
 
 # Disqus
 disqus:
-  id:               "codekit"
+  id:               "hax0rs-blog"
 
 # URL
-url:                "http://blog.hax0r.info"
+url:                "https://blog.hax0r.info"
 # url:                "http://localhost:4000" # use this url when you develop
 baseurl:            ""
 
