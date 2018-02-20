@@ -248,7 +248,7 @@ class Post(Base):
 
 그래서 혹시 몰라서 아래와 같이 치환하지 않은 본문 문서를 따로 postfix로 backup을 붙여 저장하기로 했다.
 
-![스크린샷%202018-02-15%20오후%201.27.42](/assets/images/posts/using-jekyll-with-gitHub-pages/스크린샷%202018-02-15%20오후%201.27.42.png)
+![screen-shot](/assets/images/posts/using-jekyll-with-gitHub-pages/screen-shot.png)
 
 
 더 이상 블로그를 이전하고 싶지 않다.
