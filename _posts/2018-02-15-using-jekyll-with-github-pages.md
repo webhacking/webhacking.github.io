@@ -232,7 +232,7 @@ class Post(Base):
 ```
 ## 이사 끝
 
-![new blog](/assets/images/posts/using-jekyll-with-gitHub-pages/new-blog-screen.png)
+![new-blog](/assets/images/posts/using-jekyll-with-gitHub-pages/new-blog-screen.png)
 
 귀찮음을 이기고, 마주한 블로그는 아주 마음에들었다.
 
@@ -255,8 +255,4 @@ class Post(Base):
 
 왠만하면 테마를 변경하는 일에 내 시간을 쏟고 싶지도 않다.
 
-
-## 유용했으면 좋겠다.
-
-1. 포스팅하면서 Liquid 코드를 본문에 기재해야할때가 있는데, 이 때 해당 코드 앞뒤에 `{% raw %}{% raw %}{%endraw%}` 와 `{% raw %}{% endraw %}{%endraw%}`를 사용하면 된다.
 
