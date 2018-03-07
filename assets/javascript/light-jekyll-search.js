@@ -28,21 +28,45 @@ var lightJekyllSearch = {
 
         this.innerFunctions.addEvent('keyup', config.el, function(e)
         {
-            if ( document.getElementById('light-jekyll-search-suggestion') !== null ) {
-                if ( document.getElementById('light-jekyll-search-suggestion').style.display === 'none' ) {
-                    document.getElementById('light-jekyll-search-suggestion').style.display = '';
-                }
+            if ( e.target.value.length === 0 ){
+                self.disableSuggestion();
             }
 
+            if ( document.getElementById('light-jekyll-search-suggestion') !== null ) {
+                if ( document.getElementById('light-jekyll-search-suggestion').style.display === 'none' ) {
+                    this.enableSuggestion();
+                }
+            }
+            self.suggestion(config.el, self.searchFor(e.target.value, self.posts));
+        });
+
+        this.innerFunctions.addEvent('keydown', config.el, function(e)
+        {
+            if ( e.target.value.length === 0 ){
+                self.disableSuggestion();
+            }
+            if ( document.getElementById('light-jekyll-search-suggestion') !== null ) {
+                if ( document.getElementById('light-jekyll-search-suggestion').style.display === 'none' ) {
+                    self.enableSuggestion();
+                }
+            }
             self.suggestion(config.el, self.searchFor(e.target.value, self.posts));
         });
 
         this.innerFunctions.addEvent('click', document.querySelector('html'), function(e)
         {
             if ( document.getElementById('light-jekyll-search-suggestion') !== null ) {
-                document.getElementById('light-jekyll-search-suggestion').style.display = 'none';
+                self.disableSuggestion();
             }
         });
+    },
+    enableSuggestion : function()
+    {
+        document.getElementById('light-jekyll-search-suggestion').style.display = '';
+    },
+    disableSuggestion : function()
+    {
+        document.getElementById('light-jekyll-search-suggestion').style.display = 'none';
     },
     searchFor : function(toSearch, posts)
     {
