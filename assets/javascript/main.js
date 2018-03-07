@@ -31,6 +31,10 @@ var hax0r = {
     },
     addEvent : function (evnt, elem, func)
     {
+        if ( !elem ) {
+            return false;
+        }
+
         if (elem.addEventListener) {
             elem.addEventListener(evnt,func,false);
         } else if (elem.attachEvent) {
@@ -62,6 +66,17 @@ var hax0r = {
 }
 
 window.hx = hax0r;
+hax0r.extends = {
+    enableSearchBar : function()
+    {
+        hx.removeClass(document.getElementById('search'), 'hide');
+    },
+    disableSearchBar : function()
+    {
+        hx.addClass(document.getElementById('search'), 'hide');
+    }
+};
+
 hx.ready(function()
 {
     hx.initialize();
@@ -72,6 +87,18 @@ hx.ready(function()
     });
 
     hx.removeClass(document.querySelector('nav.nav'), 'hide');
+    hx.addEvent('click', document.getElementById('search-for'), function(e)
+    {
+        e.preventDefault();
+        hx.extends.enableSearchBar();
+    });
+
+    hx.addEvent('click', document.getElementById('close-search-section'), function(e)
+    {
+        e.preventDefault();
+        hx.extends.disableSearchBar();
+    });
+
     hx.addEvent('click', document.querySelector('nav.nav > a'), function(e)
     {
         e.preventDefault();

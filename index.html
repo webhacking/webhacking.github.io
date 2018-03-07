@@ -2,6 +2,7 @@
 layout: default
 ---
 
+{% include search.html %}
 <header class="header">
     {% include navigation.html %}
     <div class="header-title">
@@ -9,9 +10,7 @@ layout: default
             {{ site.name }}
         </a>
     </div>
-    {% include search.html %}
 </header>
-
 <div class="list">
     {% if site.posts.size == 0 %}
     <h2>
