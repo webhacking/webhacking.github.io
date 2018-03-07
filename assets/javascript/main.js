@@ -69,13 +69,7 @@ window.hx = hax0r;
 hax0r.extends = {
     enableSearchBar : function()
     {
-        var self = this;
         hx.removeClass(document.getElementById('search'), 'hide');
-        hx.addEvent('click', document.getElementById('close-search'), function(e)
-        {
-            e.preventDefault();
-            self.extends.disableSearchBar();
-        });
     },
     disableSearchBar : function()
     {
@@ -99,6 +93,11 @@ hx.ready(function()
         hx.extends.enableSearchBar();
     });
 
+    hx.addEvent('click', document.getElementById('close-search-section'), function(e)
+    {
+        e.preventDefault();
+        hx.extends.disableSearchBar();
+    });
 
     hx.addEvent('click', document.querySelector('nav.nav > a'), function(e)
     {
