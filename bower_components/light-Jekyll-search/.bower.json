@@ -1,0 +1,24 @@
+{
+  "name": "light-Jekyll-search",
+  "homepage": "https://github.com/webhacking/light-Jekyll-search",
+  "authors": [
+    "webhacking <a@hax0r.info>"
+  ],
+  "description": "The Stunningly Fast Jekyll Search Library",
+  "main": "scripts/light-jekyll-search.js",
+  "keywords": [
+    "Jekyll",
+    "search"
+  ],
+  "license": "MIT",
+  "_release": "849b70ab5c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "849b70ab5c6152ec50848dad79b0fdfa8f2116f4"
+  },
+  "_source": "https://github.com/webhacking/light-Jekyll-search.git",
+  "_target": "*",
+  "_originalSource": "light-jekyll-search",
+  "_direct": true
+}

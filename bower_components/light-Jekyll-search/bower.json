@@ -1,0 +1,14 @@
+{
+  "name": "light-Jekyll-search",
+  "homepage": "https://github.com/webhacking/light-Jekyll-search",
+  "authors": [
+    "webhacking <a@hax0r.info>"
+  ],
+  "description": "The Stunningly Fast Jekyll Search Library",
+  "main": "scripts/light-jekyll-search.js",
+  "keywords": [
+    "Jekyll",
+    "search"
+  ],
+  "license": "MIT"
+}
