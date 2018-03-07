@@ -288,3 +288,11 @@ var lightJekyllSearch = {
 하지만 아쉬움도 많이 남는다.
 
 좀 더 `modern` 하게 작업할 수 있는 미래를 생각하며 글 마친다.
+
++ bower 에 package register 했다.
+
+아래 command 를 통하여 손 쉽게 설치 할 수 있다.
+
+'''vim
+bower install light-jekyll-search
+'''
