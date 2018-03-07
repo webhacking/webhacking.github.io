@@ -96,17 +96,17 @@ var lightJekyllSearch = {
         }
 
         suggestionHtml += '<p class="found_results_n">';
-            suggestionHtml += related.length.toString() + 'Result(s) found';
+        suggestionHtml += related.length.toString() + 'Result(s) found';
         suggestionHtml += '</p>';
 
         suggestionHtml += '<ul>';
-            for ( var i = 0; i < related.length; i++ ) {
-                suggestionHtml += '<li>';
-                    suggestionHtml += '<a href="'+ related[i].url +'">';
-                        suggestionHtml += related[i].title;
-                    suggestionHtml += '</a>';
-                suggestionHtml += '</li>';
-            }
+        for ( var i = 0; i < related.length; i++ ) {
+            suggestionHtml += '<li>';
+            suggestionHtml += '<a href="'+ related[i].url +'">';
+            suggestionHtml += related[i].title;
+            suggestionHtml += '</a>';
+            suggestionHtml += '</li>';
+        }
         suggestionHtml += '</ul>';
 
         if ( suggestionNode === null ) {
