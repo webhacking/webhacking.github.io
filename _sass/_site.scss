@@ -270,11 +270,15 @@ mark {
   }
 
   &-author .about-me h4 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
     margin: 0px;
   }
 
   &-author .about-me p {
-    margin-top: 1rem;
+    font-size: 14px;
+    margin-top: 8px;
   }
 }
 
