@@ -3,14 +3,6 @@ layout: default
 ---
 
 {% include search.html %}
-<header class="header">
-    {% include navigation.html %}
-    <div class="header-title">
-        <a href="{{ site.url }}{{ site.baseurl }}">
-            {{ site.name }}
-        </a>
-    </div>
-</header>
 <div class="list">
     {% if site.posts.size == 0 %}
     <h2>
@@ -38,7 +30,7 @@ layout: default
             </a>
     </div>
     {% endfor %}
-    <!-- Pagination links -->
+
     <div class="list-pagination">
     <span class="list-pagination-previous">
       {% if paginator.previous_page %}

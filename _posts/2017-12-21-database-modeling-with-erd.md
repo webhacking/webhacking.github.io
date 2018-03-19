@@ -63,17 +63,12 @@ _매우 쉽다. 데이터와 데이터간의 관계만 나타내면 된다_.
 
 바커표기법과 IE표기법에 대해 얘기해보자.
 
-_  
-_
-
-_바커 표기법 (Baker Notation) _은 영국 컨설팅 회사 CACI에 의해 처음 개발되었고 리차드 바커(Richard
+바커 표기법 (Baker Notation) _은 영국 컨설팅 회사 CACI에 의해 처음 개발되었고 리차드 바커(Richard
 Barker)에 의해 지속으로 업그레이드 되었다.
 
 오라클에서 Case Method로 채택하여 사용하고 있다
 
-  
-
-_I/E 표기법 (Information Engineering Notation)_ 은 1981년에 Clive Finkelstein과 James
+I/E 표기법 (Information Engineering Notation)은 1981년에 Clive Finkelstein과 James
 Martin이 공동 저술로 발표하였으며, 80년대 중반에 James Martin에 의해 그 체계가 정리되면서 본격적으로 활용이 되었고,
 정보시스템을 구축하는데 있어서 데이터 분석(Data Analysis)과 데이터베이스 설계(Database Design)를 위한 매우 유용한
 기법으로 자리 잡게 되었다.

@@ -1,7 +1,23 @@
+@import "fontawesome/fontawesome";
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.btn {
+  display: block;
+  height: 50px;
+  padding: 0 15px;
+  border-bottom: 0;
+  color: #ccc;
+  text-transform: uppercase;
+  line-height: 50px;
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+  position: relative;
+  font-size: 14px;
 }
 
 html {
@@ -22,10 +38,6 @@ body {
 mark {
   color: #000;
   background: #ff0;
-}
-
-header {
-  position : relative;
 }
 
 .content-container {
@@ -54,8 +66,47 @@ header {
   Header
   -------------- */
 .header {
-  padding: 0px;
-  margin-bottom: 1.5em;
+  position : relative;
+  overflow: hidden;
+  height: 50px;
+  margin: 0 8px;
+  z-index: 2;
+  font-size: .85em;
+  color: #7e888b;
+  background: transparent;
+  border-bottom: 1px solid #eee;
+
+  > .right {
+    position : absolute;
+    right : 0;
+    top : 0px;
+  }
+
+  > .left {
+    position : absolute;
+    left : 0;
+    top : 0px;
+
+  }
+
+  h1 {
+    overflow: hidden;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 50px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px;
+    border: none;
+  }
+
+  h1 > a {
+    color: #111;
+    font-weight: bold;
+    font-size : 16px;
+  }
 
   &-title {
     margin: 0.3em 0;
@@ -91,22 +142,6 @@ header {
   }
 }
 
-.header-small {
-  text-align: left;
-  margin-bottom: .75rem;
-  font-size: .75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-
-  a {
-    color: $base-color;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-}
 
 /*--------------
   Page
@@ -780,23 +815,5 @@ i.icon-search {
 
 /* For mobile device */
 @media (max-width: 480px) {
-  .header {
-    margin-bottom: 0.5em;
-  }
 
-  body.opened-nav .nav-list {
-    background: #0000008c;
-    border-radius: 5px;
-    padding: 10px;
-  }
-
-  body.opened-nav header {
-    z-index: 10;
-  }
-
-  .nav {
-    transform: none;
-    right: 0px;
-    left: 0px;
-  }
 }
