@@ -22,10 +22,7 @@ layout: default
 
   {{ content }}
 
-  {% include share-it.html %}
-
   {% include author.html %}
-
   {% if page.comments != false and site.disqus.id %}
   <h2>
     Comments
@@ -35,6 +32,4 @@ layout: default
       {% include disqus.html %}
   </div>
   {% endif %}
-
-  {% include related.html %}
 </div>
