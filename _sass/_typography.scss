@@ -5,12 +5,10 @@
   -------------- */
 
 body {
-  font: $base-font;
-  font-size: $base-font-size;
-  font-weight: 400;
   color: $text-color;
   background-color: $background-color;
   -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 0.1px rgba(0,0,0,.2);
 
   @media (max-width: 38rem){
     font-size: $mobile-font-size;
@@ -79,8 +77,7 @@ h6 {
 
 p {
   color: $text-color;
-  margin: 0 0 1rem;
-  line-height: 1.7em;
+  line-height: 1.5em;
 }
 
 /*--------------

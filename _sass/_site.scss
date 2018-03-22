@@ -76,6 +76,13 @@ mark {
   background: transparent;
   border-bottom: 1px solid #eee;
 
+  a.btn:hover {
+    position: relative;
+    text-decoration: none;
+    color: #444;
+    background: 0 0;
+  }
+
   > .right {
     position : absolute;
     right : 0;
@@ -95,11 +102,11 @@ mark {
     font-size: 20px;
     font-weight: 200;
     text-align: center;
-    line-height: 50px;
     text-overflow: ellipsis;
     white-space: nowrap;
     border-bottom: 1px;
     border: none;
+    line-height: 35px;
   }
 
   h1 > a {
@@ -357,107 +364,6 @@ mark {
       }
     }
   }
-}
-
-
-.nav {
-  position: absolute;
-  top: 12px;
-  left: -15px;
-  transform: translateX(-100%);
-  text-align: right;
-}
-.nav-btn {
-  display: inline-block;
-  line-height: 16px;
-}
-.nav-btn.is-on .ci-burger {
-  background: transparent;
-}
-.nav-btn.is-on .ci-burger::before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  top: 0;
-}
-.nav-btn.is-on .ci-burger::after {
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  bottom: 0;
-}
-.nav-btn.is-on + .nav-list {
-  opacity: 1;
-}
-.nav-list {
-  list-style: none;
-  font-size: 0.8rem;
-  margin-top: 1rem;
-  padding: 0;
-  opacity: 0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.nav-list .spacer {
-  text-align: center;
-}
-
-.ci {
-  display: inline-block;
-  font-size: inherit;
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  position: relative;
-  vertical-align: top;
-}
-.ci:before, .ci:after {
-  content: "";
-  display: block;
-  position: absolute;
-}
-.ci-burger {
-  width: 16px;
-  height: 3px;
-  top: 7px;
-  left: 0;
-  background: #333;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.ci-burger:before, .ci-burger:after {
-  width: 100%;
-  height: 3px;
-  background: #333;
-  left: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.ci-burger:before {
-  top: -6px;
-}
-.ci-burger:after {
-  bottom: -6px;
-}
-
-.nav-btn.is-on .ci-burger{
-  background:transparent
-}
-.nav-btn.is-on .ci-burger::before{
-  -webkit-transform:rotate(45deg);
-  -ms-transform:rotate(45deg);
-  transform:rotate(45deg);
-  top:0
-}
-.nav-btn.is-on .ci-burger::after{
-  -webkit-transform:rotate(-45deg);
-  -ms-transform:rotate(-45deg);
-  transform:rotate(-45deg);
-  bottom:0
-}
-.nav-btn.is-on+.nav-list{
-  opacity:1
 }
 
 .list {

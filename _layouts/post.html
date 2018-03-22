@@ -20,7 +20,9 @@ layout: default
     </ul>
   </div>
 
-  {{ content }}
+  <div class="content">
+    {{ content }}
+  </div>
 
   {% include author.html %}
   {% if page.comments != false and site.disqus.id %}
