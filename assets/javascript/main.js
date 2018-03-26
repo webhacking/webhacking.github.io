@@ -1,19 +1,15 @@
-var hax0r = {
+window.app = {
     isMobile : false,
     chooseDevice : function()
     {
-        hx.isMobile = false;
+        app.isMobile = false;
         if ( Math.max(document.documentElement.clientWidth, window.innerWidth || 0) <= 480 ) {
-            hx.isMobile = true;
+            app.isMobile = true;
         }
     },
     initialize : function ()
     {
         this.chooseDevice();
-
-        this.removeClass(document.querySelector('nav.nav > a'), 'is-on');
-        this.removeClass(document.querySelector('body'), 'opened-nav');
-        this.addClass(document.getElementById('veil'), 'hide');
     },
     ready : function(fn)
     {
@@ -63,72 +59,77 @@ var hax0r = {
             el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
         }
     }
-}
+};
 
-window.hx = hax0r;
-hax0r.extends = {
-    enableSearchBar : function()
+app.extends = {
+    enableSideBar : function()
     {
-        hx.removeClass(document.getElementById('search'), 'hide');
+        app.addClass(document.querySelector('body'), 'enable-side-bar');
     },
-    disableSearchBar : function()
+    disableSideBar : function()
     {
-        hx.addClass(document.getElementById('search'), 'hide');
+        app.removeClass(document.querySelector('body'), 'enable-side-bar');
+    },
+    shareThis : function(shareTo)
+    {
+        console.log(shareTo);
+
+        var link = null,
+            shareLink = encodeURI(window.location.href),
+            shareTitle = encodeURI(window.document.title),
+            shareBody = encodeURI(( document.querySelector('.post > .content') === null ) ? '' : document.querySelector('.post > .content').textContent.trim().substring(0, 120));
+
+        if ( shareBody ) {
+            if ( document.querySelector('.post > .content').textContent.trim().length > 120 ) {
+                shareBody = shareBody + '...';
+            }
+        }
+
+        if ( shareTo === 'facebook' ) {
+            link = 'https://www.facebook.com/sharer.php?u=' + shareLink;
+        } else if ( shareTo === 'twitter' ) {
+            link = 'https://twitter.com/share?url=' + shareLink+ '&text='+shareBody;
+        } else if ( shareTo === 'google-plus' ) {
+            link = 'https://plus.google.com/share?url=' + shareLink;
+        }
+
+        window.open(link);
     }
 };
 
-hx.ready(function()
+app.ready(function()
 {
-    hx.initialize();
-    hx.addEvent('resize', window, function(e)
+    app.initialize();
+    app.addEvent('resize', window, function(e)
     {
-        hx.initialize();
-        hx.chooseDevice();
+        app.initialize();
+        app.chooseDevice();
     });
 
-    hx.removeClass(document.querySelector('nav.nav'), 'hide');
-    hx.addEvent('click', document.getElementById('search-for'), function(e)
-    {
-        e.preventDefault();
-        hx.extends.enableSearchBar();
-    });
-
-    hx.addEvent('click', document.getElementById('close-search-section'), function(e)
-    {
-        e.preventDefault();
-        hx.extends.disableSearchBar();
-    });
-
-    hx.addEvent('click', document.querySelector('nav.nav > a'), function(e)
+    app.addEvent('click', document.querySelector('header > .left > a'), function(e)
     {
         e.preventDefault();
 
-        if ( hx.hasClass(e.currentTarget, 'is-on') ) {
-            hx.removeClass(e.currentTarget, 'is-on');
-            hx.removeClass(document.querySelector('body'), 'opened-nav');
-
-            if ( hx.isMobile ) {
-                hx.addClass(document.getElementById('veil'), 'hide');
-            }
+        if ( app.hasClass(document.querySelector('body'), 'enable-side-bar') ) {
+            app.extends.disableSideBar();
         } else {
-            hx.addClass(document.querySelector('body'), 'opened-nav');
-            hx.addClass(e.currentTarget, 'is-on');
-
-            if ( hx.isMobile ) {
-                hx.removeClass(document.getElementById('veil'), 'hide');
-            }
+            app.extends.enableSideBar();
         }
     });
 
-    var shareButtons = document.getElementsByClassName("share-button");
+    var shareButtons = document.querySelectorAll('header > .right > a');
 
     for ( var i = 0; i < shareButtons.length; i++ ) {
-        hx.addEvent('click', shareButtons[i], function(e)
+        app.addEvent('click', shareButtons[i], function(e)
         {
+            e.preventDefault();
+            var sharing = e.currentTarget.getAttribute('data-sharing');
+            app.extends.shareThis(sharing);
+
             ga("send", "event", {
-                eventCategory: "Outbound Link",
+                eventCategory: "Outbound Link, Share to",
                 eventAction: "click",
-                eventLabel: e.target.href,
+                eventLabel: sharing,
                 transport: "beacon"
             });
         });
