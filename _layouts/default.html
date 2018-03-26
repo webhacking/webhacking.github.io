@@ -2,23 +2,24 @@
 <html lang="ko">
 {% include head.html %}
   <body>
-  {% include search.html %}
-  <div id="veil" class="hide"></div>
-  <div class="content-container face">
-      {{ content }}
+  {% include sidebar.html %}
+  <div id="app">
+    {% include header.html %}
 
+    <div class="content-container face">
+      {{ content }}
       {% include footer.html %}
     </div>
+  </div>
   <script type="text/javascript" src="{{ site.baseurl }}/assets/javascript/main.js"></script>
   <script type="text/javascript" src="{{ site.baseurl }}/bower_components/light-Jekyll-search/scripts/light-jekyll-search.js"></script>
 
   <script type="text/javascript">
       lightJekyllSearch.search({
-          el : document.querySelector('form[name="search"] input[name="q"]'),
+          el : document.querySelector('input[name="q"]'),
           placeholder : '검색어를 입력해주세요.',
           postJsonPath : '/assets/json/posts.json'
       });
   </script>
-  {% include addthis.html %}
   </body>
 </html>

@@ -10,11 +10,7 @@ comments: true
 share: true
 ---
 
-**안녕, JWT**
-
-  
-
-단어가 모든걸 나타내 듯, [JWT](https://jwt.io/)는 JSON을 이용한 Web Token 이며, 웹표준([RFC
+단어가 모든걸 뜻을 나타내 듯, [JWT](https://jwt.io/)는 JSON을 이용한 Web Token 이며, 웹표준([RFC
 7519](https://tools.ietf.org/html/rfc7519))이다.
 
 Claim Base Token 이며, 두 개체에서 JSON 객체를 이용해 자가수용적(Self-contained)이며 가볍고 안전하다.
@@ -59,7 +55,7 @@ Claim Base 의 경우 서버에 위와 같은 token과 연관된 정보를 저�
 
   
 
-**JWT의 구조**
+### JWT의 구조
 
   
 
@@ -69,9 +65,9 @@ JWT는 아래와 같이 점을 기준으로 3개의 형태로 구분된 구조�
 Signature이라 부른다.
 
   
-
-    Header.Payload.Signature
-
+```
+Header.Payload.Signature
+```
   
 
   
@@ -88,7 +84,7 @@ Signature이라 부른다.
 
 암호화는 Signature에만 적용되어있다.
 
-아래는JWT Token 값 이다.
+아래는 JWT Token 값 이다.
 
   
 
@@ -97,51 +93,22 @@ Signature이라 부른다.
   
 
 > JWT는 안전하다 얘기하지만, 보안적으로 결함의 소지는 있다.
-
->
-
 > 엘런튜링이
 [에니그마](https://ko.wikipedia.org/wiki/%EC%97%90%EB%8B%88%EA%B7%B8%EB%A7%88)를 통해
 나치의 암호문을 해독하듯이 공격자가 당신의 암호문 또한 해독에 성공 할 수 있다.
-
->
-
 > 따라서 토큰의 TTL 주기를 짧게 설정하기를 권장한다.
-
->
-
->  
-
->
-
 > 무결성(Integrity)을 보장방식으로 JWT는 HMAC 를 채택하고있다.
-
->
-
 > HMAC은 Hash-based Message Authentication Code의 준말이며, Hash화 된 키를 사용하여 메세지의
 무결성을 검증하는 방법이다.
-
->
-
 > 추가로 'replay attack'을 방지하기 위해 timestamp 값을 통해서 보안 이슈를 예방할 수 있다.
-
->
-
->  
-
->
-
 > 즉 변조는 불가능하나 Hash 에 사용된 서버측 비밀키가 노출될 경우, 보안의 아주 치명적이다.
 
-  
 
 ![](/assets/images/posts/850/998B574C5A50A8F9284637.PNG)
 
-  
 
-  
 
-**Header**
+### Header
 
   
 
@@ -163,11 +130,16 @@ HS256 외에도 HS512, RSASSA-PKCS1-v1_5 + SHA256, ECDSA + P-256 + SHA256 등의
 
   
 
-    {  "alg":"HS256",  "typ":"JWT"}
+```
+{
+    "alg":"HS256",
+    "typ":"JWT"
+}
+```
 
   
 
-**Payload(Claims)**
+### Payload(Claims)
 
   
 
@@ -217,7 +189,7 @@ HS256 외에도 HS512, RSASSA-PKCS1-v1_5 + SHA256, ECDSA + P-256 + SHA256 등의
 
   
 
-**Signature**
+### Signature
 
   
 
@@ -227,17 +199,32 @@ Header 와 Payload를 Base64 인코딩한 값으로 합친 후, 비밀키를 통
 
   
 
-    //headermyHeaders = {    "alg": "HS256", //denotes the algorithm (shorthand alg) used for the  signature is HMAC SHA-256    "typ": "JWT" //denotes the type (shorthand typ) of token this is}//claimsmyClaims = {    "sub": "a@hax0r.info",    "name": "Woo YoungJun",    "role": "user"}var headers = base64URLencode(myHeaders);var claims = base64URLencode(myClaims);var payload = header + "." + claims;var signature = base64URLencode(HMACSHA256(payload, secret));var encodedJWT = payload + "." + signature;
+```
 
+headerMyHeaders = {
+    "alg": "HS256", //denotes the algorithm (shorthand alg) used for the  signature is HMAC SHA-256
+    "typ": "JWT" //denotes the type (shorthand typ) of token this is
+}
+
+Claims = {   
+   "sub": "a@hax0r.info",   
+   "name": "Woo YoungJun",   
+   "role": "user"
+}
+
+var headers = base64URLencode(headerMyHeaders);
+var claims = base64URLencode(Claims);
+var payload = header + "." + claims;
+var signature = base64URLencode(HMACSHA256(payload, secret));
+var encodedJWT = payload + "." + signature;
+```
   
 
-  
+### 마치며
 
-**마치며**
 
-  
 
-JWT는 확실히 서버측의 부담을 덜어주는 것은 사실이다.
+`JWT`는 확실히 서버측의 부담을 덜어주는 것은 사실이다.
 
 하지만 사용함에 있어서 주의할 점들이 몇가지 있다.
 

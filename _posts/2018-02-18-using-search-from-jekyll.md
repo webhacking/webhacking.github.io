@@ -293,6 +293,6 @@ var lightJekyllSearch = {
 
 아래 command 를 통하여 손 쉽게 설치 할 수 있다.
 
-'''vim
+```
 bower install light-jekyll-search
-'''
+```
