@@ -90,7 +90,7 @@ app.extends = {
         } else if ( shareTo === 'google-plus' ) {
             link = 'https://plus.google.com/share?url=' + shareLink;
         } else if ( shareTo === 'weibo' ) {
-            link = 'http://service.weibo.com/share/share.php?content=utf-8&url=' + shareLink;
+            link = 'http://service.weibo.com/share/share.php?content=utf-8&url=' + shareLink + '&title=' + shareTitle;
         }
 
         window.open(link);

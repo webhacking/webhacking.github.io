@@ -23,7 +23,15 @@ $HOME/.ssh/config 위 경로의 설정파일을 생성한다.
 
   
 
-    Host github.com-youngjun    HostName github.com    PreferredAuthentications publickey    IdentityFile ~/.ssh/github-key/youngjun/id_rsa    IdentitiesOnly yes Host github.com-hax0r    HostName github.com    PreferredAuthentications publickey    IdentityFile ~/.ssh/github-key/hax0r/id_rsa    IdentitiesOnly yes 
+    Host github.com-youngjun   
+    HostName github.com    
+    PreferredAuthentications publickey    
+    IdentityFile ~/.ssh/github-key/youngjun/id_rsa
+    IdentitiesOnly yes Host github.com-hax0r    
+    HostName github.com    
+    PreferredAuthentications publickey    
+    IdentityFile ~/.ssh/github-key/hax0r/id_rsa
+    IdentitiesOnly yes 
 
   
 
