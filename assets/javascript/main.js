@@ -72,8 +72,6 @@ app.extends = {
     },
     shareThis : function(shareTo)
     {
-        console.log(shareTo);
-
         var link = null,
             shareLink = encodeURI(window.location.href),
             shareTitle = encodeURI(window.document.title),
@@ -91,6 +89,8 @@ app.extends = {
             link = 'https://twitter.com/share?url=' + shareLink+ '&text='+shareBody;
         } else if ( shareTo === 'google-plus' ) {
             link = 'https://plus.google.com/share?url=' + shareLink;
+        } else if ( shareTo === 'weibo' ) {
+            link = 'http://service.weibo.com/share/share.php?content=utf-8&url=' + shareLink;
         }
 
         window.open(link);
@@ -117,14 +117,21 @@ app.ready(function()
         }
     });
 
-    var shareButtons = document.querySelectorAll('header > .right > a');
+    var shareButtons = document.querySelectorAll('header > .right a, header > .right button');
 
     for ( var i = 0; i < shareButtons.length; i++ ) {
         app.addEvent('click', shareButtons[i], function(e)
         {
             e.preventDefault();
             var sharing = e.currentTarget.getAttribute('data-sharing');
-            app.extends.shareThis(sharing);
+
+            if ( sharing === 'another' && app.hasClass(e.currentTarget, 'opened') ) {
+                app.removeClass(e.currentTarget, 'opened');
+            } else if ( sharing === 'another' && !app.hasClass(e.currentTarget, 'opened') ) {
+                app.addClass(e.currentTarget, 'opened');
+            } else {
+                app.extends.shareThis(sharing);
+            }
 
             ga("send", "event", {
                 eventCategory: "Outbound Link, Share to",
