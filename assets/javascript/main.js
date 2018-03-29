@@ -100,6 +100,8 @@ app.extends = {
 app.ready(function()
 {
     app.initialize();
+
+    document.querySelector('.header > h1 > a').innerHTML = ( page.title ) ? page.title : site.name;
     app.addEvent('resize', window, function(e)
     {
         app.initialize();
