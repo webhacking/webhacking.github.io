@@ -101,7 +101,23 @@ app.ready(function()
 {
     app.initialize();
 
-    document.querySelector('.header > h1 > a').innerHTML = ( page.title ) ? page.title : site.name;
+    if ( !app.isMobile ) {
+        document.querySelector('.header > h1 > a').innerHTML = ( page.title ) ? page.title + ' - ' + site.name : site.name;
+        setTimeout(function () {
+            app.addClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+        }, 1600);
+
+        app.addEvent('mouseenter', document.querySelector('.header > h1'), function(e)
+        {
+            app.removeClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+        });
+
+        app.addEvent('mouseleave', document.querySelector('.header > h1'), function(e)
+        {
+            app.addClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+        });
+    }
+
     app.addEvent('resize', window, function(e)
     {
         app.initialize();
