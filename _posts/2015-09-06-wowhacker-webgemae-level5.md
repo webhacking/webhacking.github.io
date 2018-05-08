@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-09-06
-tags: ['5번', 'writeup', '문제', '문제풀이', '와우해커', '워게임', '웹해커', '해답']
+tags: ['webhacking', 'wowhacker']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 이전 ASP 프로젝트가 끝나고, 다시 또 프로젝트에 들어가야 될 것 같아서 블로그 포스팅을 몰아서 하는 것 같다.

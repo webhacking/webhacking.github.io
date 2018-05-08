@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-22
-tags: ['24번', '쉬는문제', '쉬운문제']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 24번문제는 100 스코어 문제이며 잠시 쉬어가는 문제라고도 할 수 있다.

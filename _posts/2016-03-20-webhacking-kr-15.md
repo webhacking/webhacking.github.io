@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-03-20
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 50점 짜리 문제입니다. 간단해서 짧게 말씀드릴게요. 해당 경로로 이동하면 스크립트 로드될때 alert 창과 함께 뒤로가기 됩니다.

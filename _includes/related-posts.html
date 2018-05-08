@@ -1,0 +1,58 @@
+{% assign RELATED_POSTS_THRESHOLD = 3 %}
+
+<ul>
+    {% assign related_post_count = 0 %}
+    {% for post in site.related_posts %}
+    {% if related_post_count == RELATED_POSTS_THRESHOLD %}
+    {% break %}
+    {% endif %}
+    {% for tag in post.tags %}
+    {% if page.tags contains tag %}
+    <li>
+        <div class="related-post">
+            {% if post.background_image %}
+            <div class="related-post-background-image" style="background-image: url('{{ post.background_image }}')"></div>
+            {% endif %}
+            <div class="related-post-overlay"></div>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </div>
+    </li>
+    {% assign related_post_count = related_post_count | plus: 1 %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+
+    {% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}
+    {% unless posts_left == 0 %}
+    {% for post in site.related_posts %}
+    {% if posts_left == 0 %}
+    {% break %}
+    {% endif %}
+
+    {% assign already_related = false %}
+    {% for tag in post.tags %}
+    {% if page.tags contains tag %}
+    {% assign already_related = true %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+    {% unless already_related %}
+    {% assign posts_left = posts_left | minus: 1 %}
+    <li>
+        <div class="related-post">
+            {% if post.background_image %}
+            <div class="related-post-background-image" style="background-image: url('{{ post.background_image }}')"></div>
+            {% endif %}
+            <div class="related-post-overlay"></div>
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </div>
+    </li>
+    {% endunless %}
+    {% endfor %}
+    {% endunless %}
+</ul>

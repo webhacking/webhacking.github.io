@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-24
-tags: ['150번', '25번', '정답', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 25번문제는 150스코어 문제이다.

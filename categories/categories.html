@@ -1,12 +1,16 @@
 ---
-layout: page
+layout: little-wider-page
 permalink: /categories/
 title: Categories
 ---
-
-<div id="archives">
+<div class="categories-banner">
+    <h2>
+        Categories
+    </h2>
+</div>
+<div id="archives" class="categories-frame">
     {% for category in site.categories %}
-    <div class="archive-group">
+    <div class="archive-group categories-group">
         {% capture category_name %}{{ category | first }}{% endcapture %}
         <h3 class="category-head">
             {{ site.blog-categories[category_name] }}

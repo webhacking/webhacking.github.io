@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-03-20
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 13번 이후에 급격하게 쉬워진 문제들로 다소 당황스러울수있습니다.

@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-01-26
-tags: ['5번', 'WebHacking', '문제', '웹해킹', '정답', '풀이', '해킹']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 ![](/assets/images/posts/495/22473E3C56A6FA691B8FCD.PNG)

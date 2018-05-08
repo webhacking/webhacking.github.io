@@ -32,8 +32,6 @@ url:                "https://blog.hax0r.info"
 # url:                "http://localhost:4000" # use this url when you develop
 baseurl:            ""
 
-minify_html: true
-
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:           Asia/Seoul
 permalink:          /:year-:month-:day/:title/
@@ -46,6 +44,15 @@ paginate_path:      /page/:num/
 markdown:           kramdown
 kramdown:
   input:            GFM
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
 
 # Sass
 sass:
@@ -73,5 +80,6 @@ gems:
   - jekyll-paginate
   - jekyll-admin
   - jekyll-sitemap
+  - jekyll-feed
 
 exclude:            [vendor]

@@ -10,38 +10,7 @@ comments: true
 share: true
 ---
 
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
+```
 #include <stdio.h>
 
 void Hanoi(int n, char A, char B, char C)
@@ -69,11 +38,7 @@ Hanoi(4, 'A', 'B', 'C');
 return 0;
 
 }
-
-[Colored by Color Scripter](http://colorscripter.com/info#e)
-
-[cs](http://colorscripter.com/info#e)
-
+```
   
 
   

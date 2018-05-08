@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-06-02
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 35번 문제는 350 스코어의 문제입니다.

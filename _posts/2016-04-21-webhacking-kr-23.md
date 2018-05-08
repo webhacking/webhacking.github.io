@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-21
-tags: ['23번', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 이제 슬슬 문제 풀이하는게 좀 귀찮아지고있다.

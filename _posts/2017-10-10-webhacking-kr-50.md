@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-10-10
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 50번 문제는 이전 문제보다 150스코어 높은 450스코어의 해당하는 문제이다.

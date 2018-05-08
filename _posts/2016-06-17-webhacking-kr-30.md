@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-06-17
-tags: ['30번', 'challenge_30_answer', 'WebHacking', '문제', '웹해킹', '풀이', '해킹']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 오랜만이죠? 30번 문제는 550 스코어 문제네요.

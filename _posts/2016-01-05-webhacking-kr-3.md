@@ -5,9 +5,10 @@ description: ""
 categories : etc
 sub_categories : ""
 date: 2016-01-05
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 ![](/assets/images/posts/473/27548B41568B61F8154C1B.PNG)

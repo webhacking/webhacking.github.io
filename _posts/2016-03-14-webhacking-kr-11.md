@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-03-14
-tags: ['11번', 'Regular Expression', 'webhacking.kr', '문제풀이', '정규식', '정답', '풀이', '해답', '해킹']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 바로 다음 문제로 넘어갔습니다.

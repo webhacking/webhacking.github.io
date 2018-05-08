@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-09-06
-tags: ['webhacking.kr', 'writeup', '문제', '소개', '올드좀비', '워게임', '웹보아', '웹해킹', '웹해킹케이알', '해킹', '회원가입']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 중학생때 알게된 webhacking.kr 입니다.
