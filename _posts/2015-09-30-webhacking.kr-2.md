@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-09-30
-tags: ['블라인드인젝션', '뽐뿌', '심심', '심심할때', '올드좀비', '워게임', '웹해킹', '인젝션', '탈탈', '털림']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 2번 문제를 보면 아래와같이 길동이형(홍길동)이 명상하고있는 사진이 나온다.

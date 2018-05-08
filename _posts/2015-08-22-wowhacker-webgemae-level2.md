@@ -5,9 +5,10 @@ description: ""
 categories : etc
 sub_categories : ""
 date: 2015-08-22
-tags: ['2번', 'write up', '문제', '와우해커', '워게임', '웹해킹', '풀이']
+tags: ['webhacking', 'wowhacker']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 흠, 1번 문제가 너무 쉬워서 뭔가 포스팅을 끝내기 아쉬워서 2번문제도 풀었습니다.

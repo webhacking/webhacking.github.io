@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-09-08
-tags: ['7번', '7본', '문제풀이', '심심', '심심할때', '와우해커', '와우해킹', '워게임', '웹해킹', '정답', '풀이', '해답', '해킹']
+tags: ['webhacking', 'wowhacker']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 하루하루 진행하다보니, 일주일사이에 7번 문제풀이를 하게되었네요.

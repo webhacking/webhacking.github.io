@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-03-14
-tags: ['12번', 'Hack', 'hacking', 'WebHacking', '문제풀이', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 12번 문제네요. 바로 다음이 기다리는 13번 문제입니다.

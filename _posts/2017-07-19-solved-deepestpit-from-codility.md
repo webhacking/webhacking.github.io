@@ -5,9 +5,8 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-07-19
-tags: []
-comments: true
-share: true
+tags: ['Codility', 'Codility DeepestPit', '알고리즘 풀이']
+background_image: /assets/images/posts/786/2658E233596F1FA108FB17.PNG
 ---
   
 
@@ -31,11 +30,7 @@ max pit depth 값을 반환하면 된다.
 > Given an array of integers, find a bitonic sequence with maximal difference
 between the middle term and the first and the last terms.
 
->
-
->  
-
-_Task description_
+## Task description
 
 A non-empty zero-indexed array A consisting of N integers is given. A pit in
 this array is any triplet of integers (P, Q, R) such that:

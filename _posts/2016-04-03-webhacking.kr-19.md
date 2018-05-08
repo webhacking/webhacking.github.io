@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-03
-tags: ['문제풀이', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 150 점 짜리 스코어라서 되게 가벼운 마음으로했는데, 좀 시간이 걸렸다.

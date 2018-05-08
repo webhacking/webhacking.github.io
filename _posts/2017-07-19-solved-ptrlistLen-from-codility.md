@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-07-19
-tags: []
+tags: ['Codility', 'Codility PtrListLen', '알고리즘 풀이']
 comments: true
 share: true
+background_image: /assets/images/posts/785/2105CE33596F1E25249094.PNG
 ---
   
 

@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-03
-tags: ['200', '20번', '문제', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 20번 문제는 200점 짜리 스코어이고, 개인적으로 쉽게 풀이했던 문제입니다.

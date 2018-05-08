@@ -5,9 +5,10 @@ description: ""
 categories : etc
 sub_categories : ""
 date: 2016-05-31
-tags: ['29번', 'http://blog.hax0r.info/615', 'Multiple Rows', '서브 쿼리', '정답', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 안녕하세요.

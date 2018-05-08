@@ -1,6 +1,7 @@
 ---
 title: Google Campus Expert Summit
 layout: post
+background_image: /assets/images/posts/google-campus-expert-summit/google-campus.png
 ---
 
 17년 5월 구글 캠퍼스 서울 입주 당시 고맙게도 정말 많은 프로그램들을 지원받았는데,

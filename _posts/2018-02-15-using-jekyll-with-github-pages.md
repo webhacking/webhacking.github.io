@@ -6,6 +6,7 @@ categories : development
 sub_categories : ""
 date: 2018-02-18
 tags: ['Jekyll','Jekyll 시작하기']
+background_image: /assets/images/posts/using-jekyll-with-gitHub-pages/1280px-Dr_Jekyll_and_Mr_Hyde_poster_edit2-1.jpg
 ---
 
 ## 티스토리가 싫어요.

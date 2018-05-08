@@ -6,6 +6,7 @@ categories : development
 sub_categories : ""
 date: 2018-02-18
 tags: ['Jekyll','Jekyll search using light-Jekyll-search.js']
+background_image: /assets/images/posts/using-search-from-jekyll/fetch-posts.png
 ---
 
 ## TL;DR
@@ -289,7 +290,7 @@ var lightJekyllSearch = {
 
 좀 더 `modern` 하게 작업할 수 있는 미래를 생각하며 글 마친다.
 
-+ bower 에 package register 했다.
+bower 에 package register 했다.
 
 아래 command 를 통하여 손 쉽게 설치 할 수 있다.
 

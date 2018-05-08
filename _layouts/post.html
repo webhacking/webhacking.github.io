@@ -4,7 +4,7 @@ layout: default
 <div class="post">
   <div class="post-title">{{ page.title }}</div>
   <span class="post-date">
-    <time>{{ page.date | date_to_string }}</time>
+    Written on <time>{{ page.date | date: "%B %e, %Y" }}</time>
   </span>
   <div class="post-tag">
     <ul>
@@ -23,14 +23,29 @@ layout: default
     {{ content }}
   </div>
 
-  {% include author.html %}
+  <h2 class="hr">
+    About Me
+  </h2>
+  <div class="author">
+    {% include author.html %}
+  </div>
+
+  <h2 class="hr">
+    Related Posts
+  </h2>
+  <div class="related-posts">
+    {% include related-posts.html %}
+  </div>
+
   {% if page.comments != false and site.disqus.id %}
-  <h2>
-    Comments
+  <h2 class="hr">
+    What do you think?
   </h2>
   <div class="post-disqus">
       <section id="disqus_thread"></section>
-      {% include disqus.html %}
   </div>
   {% endif %}
 </div>
+
+{% include post-navigation.html %}
+{% include widgets.html %}

@@ -101,21 +101,30 @@ app.ready(function()
 {
     app.initialize();
 
+    var stie = site;
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + site.disqusId + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+
     if ( !app.isMobile ) {
         document.querySelector('.header > h1 > a').innerHTML = ( page.title ) ? page.title + ' - ' + site.name : site.name;
         setTimeout(function () {
-            app.addClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+            if ( document.documentElement.getAttribute('data-page') !== 'default' ) {
+                app.addClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+            }
+            app.addEvent('mouseenter', document.querySelector('.header > h1'), function(e)
+            {
+                app.removeClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+            });
+
+            app.addEvent('mouseleave', document.querySelector('.header > h1'), function(e)
+            {
+                app.addClass(document.querySelector('.header > h1'), 'want-to-concentrate');
+            });
         }, 1600);
-
-        app.addEvent('mouseenter', document.querySelector('.header > h1'), function(e)
-        {
-            app.removeClass(document.querySelector('.header > h1'), 'want-to-concentrate');
-        });
-
-        app.addEvent('mouseleave', document.querySelector('.header > h1'), function(e)
-        {
-            app.addClass(document.querySelector('.header > h1'), 'want-to-concentrate');
-        });
     }
 
     app.addEvent('resize', window, function(e)

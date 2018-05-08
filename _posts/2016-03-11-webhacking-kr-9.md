@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-03-11
-tags: ['9번', 'Apache', 'Hack', 'Python', 'pythonhack', 'WebHacking', '문제풀이', '우회', '인젝션', '정답', '코드', '파이썬', '파이썬해킹', '풀이', '해킹']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 저번주 까지는 날씨가 따듯해서 좋았는데, 요 몇일 정말 추워졌네요. 후덜덜 사무실에 다들 퇴근하고 혼자 남아있네요.
