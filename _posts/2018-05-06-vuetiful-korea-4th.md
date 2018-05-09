@@ -1,6 +1,8 @@
 ---
 title: Vuetiful Korea 4th
 layout: post
+tags: ['발표', 'vue.js']
+background_image: /assets/images/posts/vuetiful-korea-4th/IMG_0034.jpg
 ---
 
 회사에서 신규 프로젝트를 진행함에따라 기술 스택을 정의하게되었다.
