@@ -1,5 +1,3 @@
-@import "fontawesome/fontawesome";
-
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -8,6 +6,16 @@
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display : block;
+}
+
+pre.highlight {
+  overflow-x: auto;
+  margin: 1.5em 0 3em;
+  padding: 20px;
+  max-width: 100%;
+  border: 1px solid #000;
+  color: #e5eff5;
+  background: #0e0f11;
 }
 
 a {
@@ -195,6 +203,13 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 
 html[data-page="default"],
@@ -653,6 +668,11 @@ html[data-page="little-wider-page"] {
     padding: 0rem 1rem 0rem 1rem;
   }
 
+  ul {
+    list-style-type: circle;
+    list-style-image: inherit;
+  }
+
   blockquote, blockquote  p {
     position: relative;
     font-size: 22.4px;
@@ -779,6 +799,12 @@ html[data-page="little-wider-page"] {
       transition: box-shadow .2s, color .2s;
     }
 
+    blockquote {
+      a[href] {
+        color: #fff;
+      }
+    }
+
     a[href]:hover {
       box-shadow: inset 0 -20px 0 #F57C00;
       color: #fff;
@@ -844,6 +870,11 @@ html[data-page="little-wider-page"] {
 
   &-disqus {
     margin-top: 1rem;
+
+    > .disqus_thread {
+      overflow: auto;
+      position: relative;
+    }
   }
 
   &-author {
@@ -851,7 +882,7 @@ html[data-page="little-wider-page"] {
   }
 
   &-author .author-image {
-    width: 100px;
+    width: 15%;
     float: left;
     margin: 0px;
   }
@@ -866,7 +897,7 @@ html[data-page="little-wider-page"] {
 
   &-author .about-me {
     padding-left: 25px;
-    width: 668px;
+    width: 85%;
     float: right;
   }
 
