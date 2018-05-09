@@ -203,11 +203,6 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-}
-
-body {
-  height: 100%;
-  min-height: 100%;
   overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
 }
@@ -405,6 +400,7 @@ html[data-page="little-wider-page"] {
         word-break: keep-all;
         word-wrap: break-word;
         font-weight: 400;
+        max-width: 98%;
       }
 
       .meta-title {
