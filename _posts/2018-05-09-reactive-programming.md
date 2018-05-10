@@ -104,7 +104,7 @@ push-scenario 의 장점은 제어의 흐름 주체를 외부로 위임함으로
 reactive programming 은 `Push-scenario` 로 동작합니다.
 
 이 때, 외부에서 내부로 흘러오는 데이터 스트림을 생성하는 객체를 `Observable`, stream 을 구독하여 사용하는 객체를 `Observer` 라 합니다.
-좀 더 쉽게 얘기하자면, 스트림은 observed 되는 대상(Subject), `Observable`은 Streaming 역할, `Observer` 는 stream 을 처리하는 역할을 합니다.
+좀 더 쉽게 얘기하자면, 스트림은 observed 되는 대상, `Observable`은 Streaming 역할, `Observer` 는 stream 을 처리하는 역할을 합니다.
 `Observer`는 `Observable`을 `Subscribe`합니다.
 이는 [Observer Design Pattern](https://en.wikipedia.org/wiki/Observer_pattern) 과 동일합니다.
 아래 그림을 통해 이해하면 좀 더 쉽게 이해할 수 있습니다.
@@ -139,6 +139,8 @@ Recommends 항목에 있는 `Getting Started with Reactive Programming Using RxJ
 해당 문서에서는 조금 많은 예제들로 좀 더 이해를 돕기 위해 작성했습니다.
 제가 부족한 부분이 많아서, 문서 내 본래 내용과 상이한 내용이 있을 수 있습니다. 발견하시면 아래 코멘트를 통해 알려주시면 조금 더 성숙한 문서를 만드는데 기여해 주실 수 있습니다.
 부족한 글 읽어주셔서 감사합니다.
+
+내가 원하는 데이터는 어디에서 오는가를 한번 생각해보시면서 즐겁게 코딩하시길 바랍니다.
 
 # Recommends
 

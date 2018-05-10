@@ -667,6 +667,10 @@ html[data-page="little-wider-page"] {
   ul {
     list-style-type: circle;
     list-style-image: inherit;
+
+    li {
+      color: #454545;
+    }
   }
 
   blockquote, blockquote  p {
