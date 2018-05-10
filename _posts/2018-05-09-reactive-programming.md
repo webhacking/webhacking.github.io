@@ -1,7 +1,7 @@
 ---
 title: Reactive Programming
 layout: post
-tags: ['Reactive Programming']
+tags: ['Reactive Programming', 'Functional Reactive Programming']
 background_image: /assets/images/posts/reactive-programming/stream.jpg
 ---
 
@@ -135,8 +135,15 @@ OS에 있어 쓰레드는 아주 귀한 친구이니까요.
 
 # Ended
 
-Recommends 항목에 있는 `Getting Started with Reactive Programming Using RxJS` 를 읽어보길 추천합니다.
+Recommends 항목에 있는 `Getting Started with Functional Reactive Programming Using RxJS` 를 읽어보길 추천합니다.
 해당 문서에서는 조금 많은 예제들로 좀 더 이해를 돕기 위해 작성했습니다.
+
+Functional Reactive Programming 에 대해서도 한번 짚고 넘어가겠습니다.
+
+> Functional Reactive Programming 이란 어떠한 문제를 해결 하기 위한 과정이나 공식에 치중하기 보다 이미 만들어진 함수를 활용하는 방식을 일컫습니다.
+
+따라서, 이어서 `Rx` 를 다룬다면 그 것은 Functional Reactive Programming 입니다.
+
 제가 부족한 부분이 많아서, 문서 내 본래 내용과 상이한 내용이 있을 수 있습니다. 발견하시면 아래 코멘트를 통해 알려주시면 조금 더 성숙한 문서를 만드는데 기여해 주실 수 있습니다.
 부족한 글 읽어주셔서 감사합니다.
 
@@ -144,7 +151,7 @@ Recommends 항목에 있는 `Getting Started with Reactive Programming Using RxJ
 
 # Recommends
 
-- [Getting Started with Reactive Programming Using RxJS](https://blog.hax0r.info/2018-05-10/getting-started-with-reactive-programming-using-rxjs/)
+- [Getting Started with Reactive Programming Using RxJS](https://blog.hax0r.info/2018-05-10/getting-started-with-functional-reactive-programming-using-rxjs/)
 - [Introduction to Promises in Javascript](https://blog.hax0r.info/2017-09-19/Introduction-to-promises-in-javascript/)
 
 # Special thanks

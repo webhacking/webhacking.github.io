@@ -1,8 +1,8 @@
 ---
-title: Getting Started with Reactive Programming Using RxJS
+title: Getting Started with Functional Reactive Programming Using RxJS
 layout: post
-tags: ['reactive programming', 'RxJS', 'Rx']
-background_image: '/assets/images/posts/getting-started-with-reactive-programming-using-rxjs/rxjs-logo.png'
+tags: ['reactive programming', 'Functional Reactive Programming', 'RxJS', 'Rx']
+background_image: '/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/rxjs-logo.png'
 ---
 
 `Reactive Programming` 에 대해 선행된 내용이 없으시다면 [이 문서](https://blog.hax0r.info/2018-05-09/reactive-programming/)를 참고해보시는건 어때요 ?
@@ -55,14 +55,14 @@ EventEmitter와 동일한 Multicast 이므로 `Observers`에 값 또는 이벤�
 
 ## AsyncSubject
 
-![s-async-subject](/assets/images/posts/reactive-programming/s-async-subject.png)
+![s-async-subject](/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/s-async-subject.png)
 
 
 Complete 된 후, Source Observable 마지막 데이터를 Emit 합니다.
 Source Observable 가 아무런 값을 응답 하지 않을 경우, `AsyncSubject` 역시 아무값도 응답하지 않습니다.
 
 
-![s-async-subject-e](/assets/images/posts/reactive-programming/s-async-subject-e.png)
+![s-async-subject-e](/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/s-async-subject-e.png)
 
 
 아의 예제 코드는 "Next: 3" 이라는 문자열을 콘솔에 출력 할 것 입니다.
@@ -96,13 +96,13 @@ const { AsyncSubject, Observable, Subject, from, fromEvent, of, range } = rxjs;
 
 ## BehaviorSubject
 
-![s-async-subject-e](/assets/images/posts/reactive-programming/s-behavior-subject.png)
+![s-async-subject-e](/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/s-behavior-subject.png)
 
 BehaviorSubject는 반드시 값을 초기화 해야합니다.
 Observer에게 Subscribe 하기 전 마지막 이벤트 혹은 초기 값부터 emit 하게합니다.
 아래와 같이 만약 Source Observable `Complete` 또는 `Error` 가 발생하면 응답하지 않고 소스 Observable 에서 발생한 오류를 그대로 전달합니다.
 
-![s-async-subject-e](/assets/images/posts/reactive-programming/s-behavior-subject-e.png)
+![s-async-subject-e](/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/s-behavior-subject-e.png)
 
 아래는 `BehaviorSubject` 의 예제 코드입니다.
 설명에 이해를 도와줄 것 입니다. 아래 코드는 "Next: 42", "Next: 56", "Completed" 세 개의 문자열을 출력합니다.
@@ -136,7 +136,7 @@ subject.complete();
 
 ## ReplaySubject
 
-![s-replay-subject](/assets/images/posts/reactive-programming/s-replay-subject.png)
+![s-replay-subject](/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/s-replay-subject.png)
 
 ReplaySubject는 Observer가 구독을 시작한 시점과 관계 Observable들이 Emit한 모든 항목들을 모든 Observer에게 Emit 합니다.
 또한 Observable의 complete or error 영향을 받지 않습니다.
@@ -294,7 +294,7 @@ RxJS를 테스트 할 때, [RxVisotion](https://jaredforsyth.com/rxvision/exampl
 좋은 Playground 를 제공합니다. Visual하게 Observable 스트림 또한 보여줍니다.
 
 
-![s-replay-subject](/assets/images/posts/reactive-programming/screen-shot-2018-05-10-RxVision.png)
+![s-replay-subject](/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/screen-shot-2018-05-10-RxVision.png)
 
 
 # Recommends
