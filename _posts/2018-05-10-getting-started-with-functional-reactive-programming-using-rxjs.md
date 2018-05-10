@@ -69,29 +69,29 @@ Source Observable 가 아무런 값을 응답 하지 않을 경우, `AsyncSubjec
 
 ```javascript
 const { AsyncSubject, Observable, Subject, from, fromEvent, of, range } = rxjs;
-    const { map, filter, switchMap } = rxjs.operators;
+const { map, filter, switchMap } = rxjs.operators;
 
-    var subject = new AsyncSubject;
+var subject = new AsyncSubject;
 
-    var i = 0;
-    var handle = setInterval(function () {
-        subject.next(i)
-        if (++i > 3) {
-            subject.complete();
-            clearInterval(handle);
-        }
-    }, 500);
+var i = 0;
+var handle = setInterval(function () {
+    subject.next(i)
+    if (++i > 3) {
+        subject.complete();
+        clearInterval(handle);
+    }
+}, 500);
 
-    var subscription = subject.subscribe(
-        function (x) {
-            console.log('Next: ' + x.toString());
-        },
-        function (err) {
-            console.log('Error: ' + err);
-        },
-        function () {
-            console.log('Completed');
-        })
+var subscription = subject.subscribe(
+    function (x) {
+        console.log('Next: ' + x.toString());
+    },
+    function (err) {
+        console.log('Error: ' + err);
+    },
+    function () {
+        console.log('Completed');
+    })
 ```
 
 ## BehaviorSubject
