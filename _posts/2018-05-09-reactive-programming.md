@@ -140,7 +140,7 @@ Recommends 항목에 있는 `Getting Started with Functional Reactive Programmin
 
 Functional Reactive Programming 에 대해서도 한번 짚고 넘어가겠습니다.
 
-> Functional Reactive Programming 이란 어떠한 문제를 해결 하기 위한 과정이나 공식에 치중하기 보다 이미 만들어진 함수를 활용하는 방식을 일컫습니다.
+> Functional Programming 이란 어떠한 문제를 해결 하기 위한 과정이나 공식에 치중하기 보다 이미 만들어진 함수를 활용하는 방식을 일컫습니다.
 
 따라서, 이어서 `Rx` 를 다룬다면 그 것은 Functional Reactive Programming 입니다.
 
