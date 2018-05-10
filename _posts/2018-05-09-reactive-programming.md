@@ -7,6 +7,7 @@ background_image: /assets/images/posts/reactive-programming/stream.jpg
 
 [Rx(Reactive Extensions)](https://archive.codeplex.com/?p=rx) 를 다루기전, `Reactive programming` 에 대해 학습한 내용을 토대로 정리하여 공유합니다.
 Rx 의 약자로 Reactive Extensions, Reactive x 둘 다 맞습니다. (Historically, Reactive Extensions. Recently, Reactive x. So, both are correct)
+따라서 이 문서에 Rx의 glossary 는 Reactive Extensions 으로 정의하겠습니다.
 이와 같이 학습에 혼선을 주는 내용들이 많아서 조금 당혹스러웠습니다 (e.g. 리액티브 프로그래밍과 함수형 리액티브 프로그래밍과 혼동).
 이 문서에서 다룰 Observable 이 [Promise](https://blog.hax0r.info/2017-09-19/Introduction-to-promises-in-javascript/)와 개념적으로 유사합니다 따라서 일전 작성한 Promise 글을 참고하시면 더 도움이 될 것 같습니다.
 
@@ -14,12 +15,31 @@ Rx 의 약자로 Reactive Extensions, Reactive x 둘 다 맞습니다. (Historic
 
 > Reactive programming is programming with asynchronous data streams. You can listen to that stream and react accordingly
 
-이 관점으로 볼 때, Reactive programming 은 Asynchronous dataflow programming 으로도 불립니다.
+이 관점으로 볼 때, Reactive Programming 은 Asynchronous dataflow programming 으로도 불립니다.
+애매모호한가요?
+좀 더 본질에서 얘기하자면 기존의 Imperative Programming(명령형 프로그래밍)은 절차지향 적인 반면 Reactive Programming 에서는 데이터 흐름을 먼저 정의하고 데이터가 변경되었을때 연관되는 함수나 수식이 업데이트 되는 방식입니다.
 Reactive programming 에서는 기본적으로 모든 데이터는 흐르는 강물이라 간주하고, 그 데이터의 흐름을 stream 으로 봅니다.
 결론적으로 stream 은 연속된 데이터의 흐름을 일컫습니다.
 
 ![stream](/assets/images/posts/reactive-programming/stream.jpg)
 
+비동기 데이터 스트림이라 칭하니, 조금 어색한데, 전혀 새로운 개념은 아닙니다.
+`이벤트 처리`를 예제로 삼아 얘기해봅시다.
+아래와 같이 클릭 이벤트를 처리한다고 가정할 때, 우리는 다음과 같이 처리할 수 있습니다.
+
+```javascript
+const button = document.getElementById('my-button');
+button.addEventListener('click', (e) => { /* DO SOMETHING */ });
+```
+
+이벤트 리스너, 이벤트 핸들러 등을 통해 이벤트를 구독하고, 예제와 같이 비동기적 이벤트를 처리할 수 있습니다.
+
+```
+click stream : ---c---c---c-c---c----c-->
+```
+
+이벤트 리스너와 비슷한 측면에서 비동기 데이터 스트림 또한 마찬가지로 구독 가능하며, 이를 통해 데이터 혹은 사이드 이펙트를 안전하게 처리할 수 있습니다.
+다른점이라 하면 비동기 데이터 스트림은 좀 더 많은 연산을 수행할 수 있습니다.
 
 각각의 stream 은 branch 되어 새로운 스트림이 될 수 있고, merge 될 수 도 있습니다.
 또한 map, filter 와 같은 함수형 메소드를 이용하여 stream 을 정제할 수 있습니다. 이 내용은 아래 예제에서 조금 더 상세하게 다뤄보겠습니다.
@@ -92,6 +112,7 @@ reactive programming 은 `Push-scenario` 로 동작합니다.
 
 ![about-observable-observer](/assets/images/posts/reactive-programming/about-observable-observer.jpg)
 
+
 Observer는 Observable에 subscribe하고 onNext, onError, onCompleted를 Observer에 구현하면 이를 Observable이 호출 합니다.
 
 
@@ -121,7 +142,7 @@ Recommends 항목에 있는 `Getting Started with Reactive Programming Using RxJ
 
 # Recommends
 
-- [Getting Started with Reactive Programming Using RxJS](getting-started-with-reactive-programming-using-rxjs)
+- [Getting Started with Reactive Programming Using RxJS](https://blog.hax0r.info/2018-05-10/getting-started-with-reactive-programming-using-rxjs/)
 - [Introduction to Promises in Javascript](https://blog.hax0r.info/2017-09-19/Introduction-to-promises-in-javascript/)
 
 # Special thanks
