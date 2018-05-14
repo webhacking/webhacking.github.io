@@ -253,7 +253,7 @@ stream$
 
 ```
 
-이번에는 클릭의 형태를 더블클릭으로 한정 지어 볼까요 ?
+이번에는 클릭 형태를 더블클릭으로 한정 지어 볼까요 ?
 그렇다면 코드는 아래와 같습니다.
 
 
@@ -275,11 +275,49 @@ stream$
   })
 ```
 
+또 어떤 예를 들 수 있을까요 ?
+만약 콘솔창에 타이핑 되는 스트림을 정제해보는 건 어떨까요 ?
+아래는 임의로 정의한 타이핑 스트림입니다.
+
+```
+acbqibekboabkdnopenmenuckofqamdqlvopenmenuasdqweascqwekasdcnaskdeqweqwcasdopenmenu
+```
+
+여기서 `openmenu` 라는 키워드와 매치되는 스트림을 count 해 봅시다.
+이와 관련된 코드는 아래와 같습니다. 해당 코드는 콘솔에 3을 출력할 것 입니다.
+
+```
+const { from } = rxjs;
+const { bufferCount, filter, count } = rxjs.operators;
+
+let source = 'acbqibekboabkdnopenmenuckofqamdqlvopenmenuasdqweascqwekasdcnaskdeqweqwcasdopenmenu';
+let sequence$ = from(source);
+let matchSequence = 'openmenu';
+
+sequence$
+  .pipe(
+    bufferCount(matchSequence.length, 1),
+    filter((x) => {
+      return ( x.join('') === matchSequence )
+    }),
+    count(),
+  )
+  .subscribe((val) => {
+    console.log(val)
+  })
+```
+
+RxJS 에는 매우 유용하고 강력한 Operators들이 구현되어있습니다.
+문서에서 다 담을 순 없지만, 이 후 문서들에서 조금씩 쪼개어 연재 할 계획입니다.
+
+
 ## Operators Used
 
 - [buffer](https://www.learnrxjs.io/operators/transformation/buffer.html)
+- [bufferCount](https://www.learnrxjs.io/operators/transformation/buffercount.html)
 - [map](https://www.learnrxjs.io/operators/transformation/map.html)
 - [filter](https://www.learnrxjs.io/operators/filtering/filter.html)
+- [count](http://reactivex.io/documentation/operators/count.html)
 
 # Questions
 

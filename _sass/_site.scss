@@ -530,6 +530,19 @@ html[data-page="little-wider-page"] {
   transition: left 250ms ease;
 }
 
+body.enable-side-bar {
+  .header {
+    > .left{
+      a {
+        position: relative;
+        text-decoration: none;
+        color: #444;
+        background: 0 0;
+      }
+    }
+  }
+}
+
 .header {
   position : relative;
   overflow: visible;

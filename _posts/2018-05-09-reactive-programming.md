@@ -107,8 +107,11 @@ reactive programming 은 `Push-scenario` 로 동작합니다.
 좀 더 쉽게 얘기하자면, 스트림은 observed 되는 대상, `Observable`은 Streaming 역할, `Observer` 는 stream 을 처리하는 역할을 합니다.
 `Observer`는 `Observable`을 `Subscribe`합니다.
 이는 [Observer Design Pattern](https://en.wikipedia.org/wiki/Observer_pattern) 과 동일합니다.
-아래 그림을 통해 이해하면 좀 더 쉽게 이해할 수 있습니다.
 
+`Observer Design Pattern` 의 경우, 일전 [Gof의 디자인 패턴](https://blog.hax0r.info/2017-07-04/gof-design-pattern/) 을 읽어서 어느정도의 내용은 인지하고 있었습니다.
+행동 패턴의 속하며, 정의를 하자면 아래와 같이 할 수 있습니다.
+
+> 객체들 사이에 `일 대 다의 의존 관계를 정의`해 두어, 어떤 개첵의 상태가 변할 때 그 객체에 의존성을 가진 다른 책체들이 그 변화를 통지 받고 자동으로 갱신될 수 있게 하는 패턴을 일컫는다.
 
 ![about-observable-observer](/assets/images/posts/reactive-programming/about-observable-observer.jpg)
 
