@@ -286,7 +286,7 @@ acbqibekboabkdnopenmenuckofqamdqlvopenmenuasdqweascqwekasdcnaskdeqweqwcasdopenme
 여기서 `openmenu` 라는 키워드와 매치되는 스트림을 count 해 봅시다.
 이와 관련된 코드는 아래와 같습니다. 해당 코드는 콘솔에 3을 출력할 것 입니다.
 
-```
+```javascript
 const { from } = rxjs;
 const { bufferCount, filter, count } = rxjs.operators;
 
