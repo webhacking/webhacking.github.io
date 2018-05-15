@@ -307,8 +307,59 @@ sequence$
   })
 ```
 
+또 하나의 추가적인 예를 들어봅시다.
+이번에는 `클릭` 좌표 스트림들을 정의된 distance 간격에 따라 콘솔로그에 출력해보는 코드를 작성해봅시다.
+
+임의에 좌표 스트림은 아래와 같습니다.
+
+```
+{x: 1, y: 1},
+{x: 1, y: 2},
+{x: 3, y: 5},
+{x: 6, y: 9},
+{x: 2, y: 1},
+{x: 3, y: 5},
+{x: 8, y: 5},
+{x: 2, y: 3},
+{x: 1, y: 2},
+{x: 9, y: 7}
+```
+
+이 때, 유용하게 사용할 수 있는 Operator 가 `distinctUntilChanged` 입니다.
+아래 코드와 같이 피타고라스의 정리를 통해 좌표값의 거리를 정의하고 비교하면 테스트 목적에 따른 코드를 작성할 수 있습니다.
+
+```javascript
+const { from } = rxjs;
+const { distinctUntilChanged } = rxjs.operators;
+
+let source = [
+  {x: 1, y: 1},
+  {x: 1, y: 2},
+  {x: 3, y: 5},
+  {x: 6, y: 9},
+  {x: 2, y: 1},
+  {x: 3, y: 5},
+  {x: 8, y: 5},
+  {x: 2, y: 3},
+  {x: 1, y: 2},
+  {x: 9, y: 7},
+];
+let sequence$ = from(source);
+let distance = 2.5;
+
+sequence$
+  .pipe(
+        distinctUntilChanged((prev, next) => {
+          return Math.sqrt((prev.x - next.x)**2 + (prev.y - next.y)**2) < distance
+        })
+  )
+  .subscribe((val) => {
+    console.log(val)
+  })
+```
+
 RxJS 에는 매우 유용하고 강력한 Operators들이 구현되어있습니다.
-문서에서 다 담을 순 없지만, 이 후 문서들에서 조금씩 쪼개어 연재 할 계획입니다.
+문서에서 다 담을 수 없어 아쉽지만, 이 후 문서들에서 조금씩 쪼개어 연재 할 계획입니다.
 
 
 ## Operators Used
@@ -318,6 +369,7 @@ RxJS 에는 매우 유용하고 강력한 Operators들이 구현되어있습니�
 - [map](https://www.learnrxjs.io/operators/transformation/map.html)
 - [filter](https://www.learnrxjs.io/operators/filtering/filter.html)
 - [count](http://reactivex.io/documentation/operators/count.html)
+- [distinctUntilChanged](https://www.learnrxjs.io/operators/filtering/distinctuntilchanged.html)
 
 # Questions
 
