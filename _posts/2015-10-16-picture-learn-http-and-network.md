@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "그림으로 배우는 HTTP & NetWork"
+title: "그림으로 배우는 HTTP & Network"
 description: ""
 categories : etc
 sub_categories : ""
@@ -10,11 +10,7 @@ comments: true
 share: true
 ---
 
-그림으로 배우는 HTTP & NetWork : 재밌음.
-
-  
-
-  
+그림으로 배우는 HTTP & Network
 
 * * *
 

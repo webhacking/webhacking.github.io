@@ -10,27 +10,10 @@ comments: true
 share: true
 ---
 
-  
-
-  
+개념 다시 짚고가기 좋은 책.
 
 ![](/assets/images/posts/401/2708EE37566BAE9D16F00A.JPEG)
 
-  
-
-  
-
-  
-
-개념 다시 짚고가기 좋은 책.
-
-  
-
-  
-
-  
-
-  
 
 1장 DBMS 개요
 

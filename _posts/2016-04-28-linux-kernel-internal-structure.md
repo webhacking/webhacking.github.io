@@ -13,9 +13,6 @@ background_image: /assets/images/posts/609/211D72375721CD2A17913A.JPEG
 
 ![](/assets/images/posts/609/211D72375721CD2A17913A.JPEG)
 
-  
-
-  
 
   
 

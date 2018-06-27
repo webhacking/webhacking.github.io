@@ -2,6 +2,7 @@
 title: Vuetiful Korea 4th
 layout: post
 tags: ['발표', 'vue.js']
+categories : development
 background_image: /assets/images/posts/vuetiful-korea-4th/IMG_0034.jpg
 ---
 

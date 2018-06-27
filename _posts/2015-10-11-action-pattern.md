@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[디자인 패턴] 행위 패턴"
+title: "디자인 패턴 중, 행위 패턴"
 description: ""
 categories : development
 sub_categories : ""

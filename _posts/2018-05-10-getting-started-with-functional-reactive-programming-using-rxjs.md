@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Functional Reactive Programming Using RxJS
 layout: post
+categories : development
 tags: ['reactive programming', 'Functional Reactive Programming', 'RxJS', 'Rx']
 background_image: '/assets/images/posts/getting-started-with-functional-reactive-programming-using-rxjs/rxjs-logo.png'
 ---
