@@ -4,8 +4,7 @@ layout: post
 categories : development
 sub_categories : ""
 date: '2017-12-21'
-comments: true
-share: true
+background_image: /assets/images/posts/848/9929A44A5A53678925A681.JPEG
 ---
 
 ## TL;DR

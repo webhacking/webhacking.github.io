@@ -3,6 +3,8 @@ layout: post
 title: 라라벨에서 Constants 제대로 사용하기
 categories : development
 sub_categories : ""
+tags: ['laravel']
+background_image: /assets/images/posts/857/스크린샷%202018-01-12%20오후%2012.05.24.png
 ---
 
 [Laravel](https://laravel.com/) 에는 별도의 Constants 관련 디렉토리와 명령어가 존재하지 않는다.

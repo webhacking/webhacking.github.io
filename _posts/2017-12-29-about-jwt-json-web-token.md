@@ -5,9 +5,8 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-12-29
-tags: ['json web token']
-comments: true
-share: true
+tags: ['json web token', 'jwt']
+background_image: /assets/images/posts/850/99DB103A5A50BD9732FA29.PNG
 ---
 
 단어가 모든걸 뜻을 나타내 듯, [JWT](https://jwt.io/)는 JSON을 이용한 Web Token 이며, 웹표준([RFC

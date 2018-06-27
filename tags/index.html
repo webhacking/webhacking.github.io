@@ -1,8 +1,14 @@
 ---
-layout: page
+layout: little-wider-page
 title: Tags
 permalink: /tags/
 ---
+
+<div class="tags-banner">
+  <h2>
+    Tags
+  </h2>
+</div>
 
 {% capture site_tags %}
 {% for tag in site.tags %}
@@ -12,7 +18,7 @@ permalink: /tags/
 
 {% assign tags_list = site_tags | split:',' | sort %}
 
-<div class="tag-index">
+<div class="tag-index tag-frame tag-article">
   <ul>
     {% for item in (0..site.tags.size) %}
     {% unless forloop.last %}
@@ -30,7 +36,7 @@ permalink: /tags/
 
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
   {% capture this_tag %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-  <article>
+  <article class="tag-frame tag-article">
 
   <div class="tag-title" id="{{ this_tag }}">
     {{ this_tag }}

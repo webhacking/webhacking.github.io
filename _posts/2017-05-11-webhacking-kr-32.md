@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-05-11
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 32 번 문제는 150 스코어의 문제입니다.

@@ -1,0 +1,78 @@
+<div class="widgets">
+    <div>
+        <div class="widget">
+            <h3>
+                Recent posts
+            </h3>
+            <div class="widget-body" data-type-of-widget="recent-posts">
+                <ul>
+                    {% for post in site.posts limit:5 %}
+                    <li>
+                        <a href="{{ BASE_PATH }}{{ post.url }}">
+                            {{ post.title }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="widget">
+            <h3>
+                Tags
+            </h3>
+            <div class="widget-body" data-type-of-widget="tags">
+                <ul>
+                    {% assign tagCount = 0 %}
+                    {% for tag in site.tags %}
+                    {% if tagCount > 25 %}
+                        {% continue %}
+                    {% endif %}
+                    <li>
+                        <a href="/tags/#{{ tag | first }}" target="_blank">
+                            <span>
+                                {% assign tagCount = tagCount | plus: 1 %}
+                                {{ tag | first }}
+                            </span>
+                        </a>
+                    </li>
+                    {% unless forloop.last %}
+                    {% endunless %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="widget">
+            <h3>
+                Categories
+            </h3>
+            <div class="widget-body" data-type-of-widget="post-categories">
+                <div class="post-categories">
+                    <ul>
+                        {% assign categories_list = site.categories %}
+                        {% if categories_list.first[0] == null %}
+                        {% for category in categories_list %}
+                        <li>
+                            <a href="/categories/#{{ category }}">
+                                {{ category | capitalize }} ({{ site.tags[category].size }})
+                            </a>
+                        </li>
+                        {% endfor %}
+                        {% else %}
+                        {% for category in categories_list %}
+                        <li>
+                            <a href="/categories/#{{ category[0] | downcase }}">
+                                {{ category[0] | capitalize }} ({{ category[1].size }})
+                            </a>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+                        {% assign categories_list = nil %}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-27
-tags: ['26번']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 26번 문제는 100스코어 문제이며 난이도가 낮아서 이번에도 쉬어가는 문제라 볼 수 있습니다.

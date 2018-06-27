@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-09-08
-tags: ['wargame', 'writeup', '문제풀이', '심심할때', '워게임', '웹해킹', '재밌는게임', '해킹']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 와우해커에 이어서 올드좀비님의 Webhacking.kr을 연재하도록 하겠습니다.

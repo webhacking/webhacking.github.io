@@ -4,12 +4,10 @@ layout: post
 categories : development
 sub_categories : ""
 date: '2018-01-11'
-tags:
-- composer 성능 향상
-- composer 속도
-- 퍼포먼스
+tags: ['composer']
 comments: true
 share: true
+background_image : /assets/images/posts/optimizing-composer
 ---
 
 # Optimizing composer

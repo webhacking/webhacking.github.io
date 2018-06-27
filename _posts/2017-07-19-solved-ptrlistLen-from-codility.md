@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-07-19
-tags: []
+tags: ['Codility', 'Codility PtrListLen', '알고리즘 풀이']
 comments: true
 share: true
+background_image: /assets/images/posts/785/2105CE33596F1E25249094.PNG
 ---
   
 
@@ -41,18 +42,18 @@ tail is the terminator. The length of this list is 4.
 
 Assume that the following declarations are given:
 
-  
 
-    class IntList {  var $value = 0;  var $next = NULL;}
-
+```
+class IntList {  var $value = 0;  var $next = NULL;}
+```
   
 
 Write a function:
 
   
-
-    function solution($L);
-
+```php
+function solution($L);
+```
   
 
 that, given a non-empty linked list L consisting of N nodes, returns its
@@ -81,33 +82,33 @@ not be the focus of the assessment.
 
 ## 작성한 코드
 
+```php
+function solution($m)
 
-    function solution($m)
-    
-    {
-    
-         // var_dump($m);
-    
-         $counter = 0;
-    
-         while ( $m ) {
-    
-             $m = $m->next;
-    
-             $counter++;
-    
-         }
-    
-         
-    
-         
-    
-        //   var_dump($counter);
-    
-         return $counter;
-    
-    }
+{
 
+     // var_dump($m);
+
+     $counter = 0;
+
+     while ( $m ) {
+
+         $m = $m->next;
+
+         $counter++;
+
+     }
+
+
+
+
+
+    //   var_dump($counter);
+
+     return $counter;
+
+}
+```
 
 ![](/assets/images/posts/785/2105CE33596F1E25249094.PNG)
 

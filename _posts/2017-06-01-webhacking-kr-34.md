@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-06-01
-tags: []
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 34번 문제의 스코어는 400입니다.

@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-09-03
-tags: ['4번', 'write up', '문제풀이', '와우해커', '워게임', '웹해킹', '해커', '해킹']
+tags: ['webhacking', 'wowhacker']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 요즘 하기 싫은( = 배우고 싶지 않은) `ASP` 프로젝트 때문에 바빠서 블로그 연재를 못하고 있었습니다.

@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-08-23
-tags: ['3번', 'WebHacking', 'wowhacker', 'writeup', '레벨3', '문제', '문제풀이', '와우해커', '정답', '해답']
+tags: ['webhacking', 'wowhacker']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 안녕하세요.

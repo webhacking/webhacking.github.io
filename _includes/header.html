@@ -5,8 +5,11 @@
         </a>
     </div>
     <h1>
-        <a href="{{site.url}}{{site.baseurl}}{{page.url}}">
-        </a>
+        {% if page.layout == 'post' %}
+        <a href="{{site.url}}{{site.baseurl}}{{page.url}}"></a>
+        {% else %}
+        <a href="{{site.url}}{{site.baseurl}}"></a>
+        {% endif %}
     </h1>
     <div class="right">
         <a class="btn pull-right" href="#" target="_blank" data-sharing="another">

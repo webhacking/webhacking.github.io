@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2015-08-22
-tags: ['심심', '와우해커', '워게임', '웹게임']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 게임에 들어가기 앞서, 와우해커 및 hackme , webhacking 등 여러종류의 워게임을 제공하는 서비스들이 많다.

@@ -5,9 +5,8 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-07-19
-tags: []
-comments: true
-share: true
+tags: ['Codility', 'Codility DeepestPit', '알고리즘 풀이']
+background_image: /assets/images/posts/786/2658E233596F1FA108FB17.PNG
 ---
   
 
@@ -31,11 +30,7 @@ max pit depth 값을 반환하면 된다.
 > Given an array of integers, find a bitonic sequence with maximal difference
 between the middle term and the first and the last terms.
 
->
-
->  
-
-_Task description_
+## Task description
 
 A non-empty zero-indexed array A consisting of N integers is given. A pit in
 this array is any triplet of integers (P, Q, R) such that:
@@ -71,9 +66,9 @@ than 4.
 Write a function:
 
   
-
-    function solution($A);
-
+```php
+function solution($A);
+```
   
 
 that, given a non-empty zero-indexed array A consisting of N integers, returns
@@ -102,18 +97,12 @@ Assume that:
   * each element of array A is an integer within the range [−100,000,000..100,000,000]
 
 Complexity:
-
   
 
   * expected worst-case time complexity is O(N);
   * expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
   * Elements of input arrays can be modified.
 
-  
-
-  
-
-  
 
 ## 작성한 코드
 
@@ -121,134 +110,119 @@ Complexity:
 
 본 코드는 ... 퍼포먼스 이슈로 인해 점수가 안습입니다 ㅠㅠ
 
-  
-    function decreasingA(array $a,int $p,int $q) : bool
-    
-        {
-    
-            for ( $i = $p; $i < $q; $i++ ) {
-    
-                if ( $a[$i] < $a[$i+1] ) {
-    
-                    return false;
-    
-                }
-    
-            }
-    
-    
-    
-            return true;
-    
-        }
-    
-    
-    
-    
-    
-    function increasingA(array $a,int $q,int $r) : bool
-    
-    {
-    
-        for ( $i = $q; $i < $r; $i++ ) {
-    
-            if ( $a[$i] > $a[$i+1] ) {
-    
-                return false;
-    
-            }
-    
-        }
-    
-    
-    
-        return true;
-    
-    }
-    
-    
-    
-    function solution(array $a) : int
-    
-    {
-    
-        /*
-    
-            PIT (P,Q,R)
-    
-    
-    
-            1) 0 <=  P  < Q < R < N
-    
-            2) A[P] > A[P+1] > ...  > A[Q]
-    
-            3) A[Q] < A[Q+1] < ... < A[R]
-    
-    
-    
-            pit depth = min{A[P] - A[Q], A[R] - A[Q]}
-    
-        */
-    
-    
-    
-        $p = 0;
-    
-        $q = $p+1;
-    
-        $r = $q+1;
-    
-    
-    
-    
-    
-        $result = [];
-    
-        $length = count($a);
-    
-        $maxDepth = -1;
-    
-    
-    
-        for ( $i = 0; $i < $length-2; $i++ ) {
-    
-            for ( $j = ($i+1); $j < $length; $j++ ) {
-    
-                for ( $k = ($j+1); $k < $length; $k++ ) {
-    
-                    $p = $i;
-    
-                    $q = $j;
-    
-                    $r = $k;
-    
-    
-    
-                    if ( decreasingA($a,$p,$q) && increasingA($a,$q,$r) ) {
-    
-                        if ( min($a[$p] - $a[$q], $a[$r] - $a[$q]) > $maxDepth ) {
-    
-                            $maxDepth = min($a[$p] - $a[$q], $a[$r] - $a[$q]);
-    
-                        }
-    
-                    }
-    
-                }
-    
-            }
-    
-        }
-    
-    
-    
-        /* return max pit depth */
-    
-        return $maxDepth;
-    
-    }
-    
+```php
+function decreasingA(array $a,int $p,int $q) : bool
+{
 
+    for ( $i = $p; $i < $q; $i++ ) {
+
+        if ( $a[$i] < $a[$i+1] ) {
+
+            return false;
+
+        }
+
+    }
+
+    return true;
+
+}
+
+function increasingA(array $a,int $q,int $r) : bool
+{
+
+    for ( $i = $q; $i < $r; $i++ ) {
+
+        if ( $a[$i] > $a[$i+1] ) {
+
+            return false;
+
+        }
+
+    }
+
+    return true;
+
+}
+
+function solution(array $a) : int
+{
+
+    /*
+
+        PIT (P,Q,R)
+
+
+
+        1) 0 <=  P  < Q < R < N
+
+        2) A[P] > A[P+1] > ...  > A[Q]
+
+        3) A[Q] < A[Q+1] < ... < A[R]
+
+
+
+        pit depth = min{A[P] - A[Q], A[R] - A[Q]}
+
+    */
+
+
+
+    $p = 0;
+
+    $q = $p+1;
+
+    $r = $q+1;
+
+
+
+
+
+    $result = [];
+
+    $length = count($a);
+
+    $maxDepth = -1;
+
+
+
+    for ( $i = 0; $i < $length-2; $i++ ) {
+
+        for ( $j = ($i+1); $j < $length; $j++ ) {
+
+            for ( $k = ($j+1); $k < $length; $k++ ) {
+
+                $p = $i;
+
+                $q = $j;
+
+                $r = $k;
+
+
+
+                if ( decreasingA($a,$p,$q) && increasingA($a,$q,$r) ) {
+
+                    if ( min($a[$p] - $a[$q], $a[$r] - $a[$q]) > $maxDepth ) {
+
+                        $maxDepth = min($a[$p] - $a[$q], $a[$r] - $a[$q]);
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    /* return max pit depth */
+
+    return $maxDepth;
+
+}
+    
+```
   
 
 ![](/assets/images/posts/786/2658E233596F1FA108FB17.PNG)

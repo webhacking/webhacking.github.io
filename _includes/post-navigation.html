@@ -1,0 +1,42 @@
+{% assign hasCount = 0 %}
+{% if page.previous.url %}
+    {% assign hasCount = hasCount | plus: 1 %}
+{% endif %}
+{% if page.next.url %}
+    {% assign hasCount = hasCount | plus: 1 %}
+{% endif %}
+<div class="post-navigation" data-has="{{ hasCount }}">
+    {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url}}">
+        <div class="inner-meta">
+            <div class="meta-overlay"></div>
+            {% if page.previous.background_image %}
+            <div class="meta-background-image" style="background-image: url('{{ page.previous.background_image }}')"></div>
+            {% endif %}
+            <span class="meta-title horizontal-vertical">
+                이전글
+            </span>
+            <span class="meta-body horizontal-vertical">
+                {{page.previous.title}}
+            </span>
+        </div>
+    </a>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">
+        <div class="inner-meta">
+            <div class="meta-overlay"></div>
+            {% if page.next.background_image %}
+            <div class="meta-background-image" style="background-image: url('{{ page.next.background_image }}')"></div>
+            {% endif %}
+            <span class="meta-title horizontal-vertical">
+                다음글
+            </span>
+            <span class="meta-body horizontal-vertical">
+                {{page.next.title}}
+            </span>
+        </div>
+    </a>
+    {% endif %}
+</div>
+

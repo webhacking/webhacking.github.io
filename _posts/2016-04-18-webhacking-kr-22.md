@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-04-18
-tags: ['22번', 'MD5', '개념', '문제', '알고리즘', '풀이']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 22번 문제는 500스코어 문제입니다.

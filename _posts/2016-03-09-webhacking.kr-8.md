@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-03-09
-tags: ['8번', 'webhacking.kr', '웹해킹', '해킹']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 후덜덜, 정말 바빠서 요즘 연재할 생각을 못 했습니다.

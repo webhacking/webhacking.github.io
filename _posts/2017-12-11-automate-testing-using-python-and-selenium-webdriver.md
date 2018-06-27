@@ -147,9 +147,3 @@ python.readthedocs.io/api.html)를 통해서 확인하길바란다.
   
 
 그래도 다행히 코드를 작성하는 시간이 매우 짧고, selenium 에서 강력한 API 들을 지원해서 상당히 쉽게 만들 수 있다.
-
-  
-
-  
-
-![](/assets/images/posts/842/99FA80505A30FEBB18D8DA.PNG)

@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2016-01-26
-tags: ['6번', 'writeup', '문제풀이', '워게임', '웹해킹', '정답', '풀이', '해킹', '해킹문제']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 안녕하세요. 오늘 문제 두개 풀이를 포스팅하네요.

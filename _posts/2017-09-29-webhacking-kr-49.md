@@ -5,9 +5,10 @@ description: ""
 categories : development
 sub_categories : ""
 date: 2017-09-29
-tags: ['hacking', 'WebHacking', 'webhacking.kr']
+tags: [webhacking, 'webhacking.kr']
 comments: true
 share: true
+background_image: /assets/images/posts/well-used/hacked.jpg
 ---
 
 49번 문제는 300스코어의 문제이며, 이전의 문제 풀이 했을때 같은 쉬운 편에 속하는 문제와 비슷한 유형이다.
