@@ -1,6 +1,7 @@
 ---
 title: Reactive Programming
 layout: post
+categories : development
 tags: ['Reactive Programming', 'Functional Reactive Programming']
 background_image: /assets/images/posts/reactive-programming/stream.jpg
 ---

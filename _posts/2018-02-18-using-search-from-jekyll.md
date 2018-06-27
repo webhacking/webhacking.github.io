@@ -16,24 +16,17 @@ Jekyll 에 검색기능을 추가하는 방법을 서술하고있습니다.
 ## At the outset
 
 jekyll theme 중, `search` 기능을 제공하는 theme 도 있지만 그렇지 않은 theme 또한 많이 존재합니다.
-
 제가 사용한 `theme` 또한 그렇구요.
 
 jekyll 을 통해 생성한 `static`  문서들에대해 검색기능을 추가하고자한다면 우리는 `client-side` 국한되어서 기능을 구현해야합니다.
-
 그 이유는 `static` 블로그는 `dynamic` 블로그와 달리 서버와 상호작용이 없기 때문인데 서버에서 부담해야하는 `resource`를 client 에서 부담하게됩니다.
-
 client side 에서 resource를 사용하니 서버의 부담을 줄이는 이점인 동시에 client 환경에 따라 `crash` 가 발생할 수 단점도 존재합니다.
-
 질의되는 키워드를 변수 `q` , 현재 작성된 문서들을 변수 `p` 라고 가정했을 때
-
 `p` 의 양의 비례되어 `client (= 브라우저)` 에서  `resource`  가 사용되기에 글이 아주 많은 경우 좀 더 각별히 신경을 기우일 필요가 있습니다.
-
 
 ## What do you prefer
 
 github 내 `jekyll search` 기능을 구현할 수 있는 좋은 library 들이 존재한다.
-
 대표적인 library 는 아래와 같다.
 
 1. [simple jekyll search](https://github.com/christian-fei/Simple-Jekyll-Search)
@@ -47,13 +40,9 @@ github 내 `jekyll search` 기능을 구현할 수 있는 좋은 library 들이 
 > 대체로 위 기재된  library 들은 무겁고, cross browsing 이슈가 존재한다.
 
 내가 지향하는 블로그는 어떤 것에도 의존치 않고, IE8 까지 지원하는 블로그를 만들고싶다.
-
 솔직히 `cross browsing` 이슈에 대해 잠시나마 생각해본 결과, 모던브라우저를 사랑한다고 한들 현 시장에서 IE 점유률을 봤을 때 피치 못할 선택이었다.
-
 최근까지 난 `vue.js` 에 빠져있었고, 원래 계획대로라면 `vue.js` 로 구현할 생각이었다.
-
 하지만 이 또한 내가 지향한 `어떤 것에도 의존치 않고` 라는 지향점에서 벗어나기 때문에 선택지에서 제외되었다.
-
 만약 당신이 크로스브라우징 이슈를 해결해야하지만 모던하게 개발을 하고자한다면, [backbone.js](http://backbonejs.org/) 도 좋은 선택지일 것 이다.
 
 ## Let's get it
@@ -110,11 +99,8 @@ layout: null
 `postJsonPath` key 의 value 는 위 서술한 json 경로를 기입하면 된다.
 
 기본 값은 `/assets/json/posts.json` 이다.
-
-현재는 `suggestion` 만을 지원하고 있는데, 앞으로 좀 더 나아가서 `pagination` 과 질의되는 문자의 대한 `highlight` 와 `hashbang` 을 통한 별도의 페이지 구성 없이 `javascript` 에서 검색 내용을 출력하는 것 이다. 
-
+현재는 `suggestion` 만을 지원하고 있는데, 앞으로 좀 더 나아가서 `pagination` 과 질의되는 문자의 대한 `highlight` 와 `hashbang` 을 통한 별도의 페이지 구성 없이 `javascript` 에서 검색 내용을 출력하는 것 이다.
 아직 추가되어야할 기능들이 많다.
-
 기본적인 동작 화면은 아래와 같다.
 
 ![results](/assets/images/posts/using-search-from-jekyll/results.png)
@@ -285,13 +271,9 @@ var lightJekyllSearch = {
 ## Eneded
 
 검색 기능을 만들며 재밌었다.
-
 하지만 아쉬움도 많이 남는다.
-
 좀 더 `modern` 하게 작업할 수 있는 미래를 생각하며 글 마친다.
-
 bower 에 package register 했다.
-
 아래 command 를 통하여 손 쉽게 설치 할 수 있다.
 
 ```

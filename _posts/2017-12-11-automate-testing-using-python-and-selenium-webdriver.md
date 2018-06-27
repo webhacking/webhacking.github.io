@@ -124,8 +124,54 @@ Python unittest flow 에 맞춰 동작하며, 기본적인 내용은 아래 코�
 더 많은 Selenium WebDriver API 를 알고 싶다면 이 [링크](http://selenium-
 python.readthedocs.io/api.html)를 통해서 확인하길바란다.
 
-    import unittestfrom time import sleepfrom selenium import webdriverfrom selenium.webdriver.support.select import Selectfrom selenium.webdriver.common.keys import Keysfrom selenium.webdriver.chrome.options import Optionsclass Base(unittest.TestCase):    calendar_domain = 'https://calendar.google.com/'    def setUp(self):        options = webdriver.ChromeOptions()        options.add_argument("--start-maximized")        self.driver = webdriver.Chrome(chrome_options=options)        self.driver.start_client()        self.driver.implicitly_wait(3)        self.login()    def tearDown(self):        self.driver.close()    def login(self):        self.driver.get(self.calendar_domain)        account = {            'email' : '본인 이메일',            'password' : '본인 패스워드'        }        for key, value in account.items():            current_ele = self.driver.find_element_by_css_selector(f'input[type="{key}"][jsname="YPqjbf"]')            current_ele.send_keys(value)            next_button = self.driver.find_element_by_css_selector('content.CwaK9')            next_button.click()            sleep(1)        try_count = 0        while try_count < 10:            try_count += 10 if self.driver.find_element_by_css_selector('body[jscontroller="phtQPb"]') else 1            sleep(1)
+```python
+import unittest
+from time import sleep
+from selenium import webdriver
 
+from selenium.webdriver.support.select import Select
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+
+
+class Base(unittest.TestCase):
+    calendar_domain = 'https://calendar.google.com/'
+
+    def setUp(self):
+        options = webdriver.ChromeOptions()
+        options.add_argument("--start-maximized")
+
+        self.driver = webdriver.Chrome(chrome_options=options)
+        self.driver.start_client()
+        self.driver.implicitly_wait(3)
+        self.login()
+
+    def tearDown(self):
+        self.driver.close()
+
+    def login(self):
+        self.driver.get(self.calendar_domain)
+
+        account = {
+            'email' : '본인 이메일',
+            'password' : '본인 패스워드'
+        }
+
+        for key, value in account.items():
+            current_ele = self.driver.find_element_by_css_selector(f'input[type="{key}"][jsname="YPqjbf"]')
+            current_ele.send_keys(value)
+
+            next_button = self.driver.find_element_by_css_selector('content.CwaK9')
+            next_button.click()
+
+            sleep(1)
+
+        try_count = 0
+        while try_count < 10:
+            try_count += 10 if self.driver.find_element_by_css_selector('body[jscontroller="phtQPb"]') else 1
+            sleep(1)
+
+```
   
 
 아래는 manage 패키지 내 Add 모듈이다.
@@ -133,9 +179,34 @@ python.readthedocs.io/api.html)를 통해서 확인하길바란다.
 페이지내 일정 등록 버튼을 클릭 후, 일정 내용을 입력하고 그 후 등록하는 과정을 맡고있다.
 
   
+```python
+import unittest
 
-    import unittestfrom base import Basefrom time import sleepclass Add(Base):    def event(self, title):        self.driver.get(self.calendar_domain)        add_button = self.driver.find_element_by_css_selector('content > i.Gw6Zhc')        add_button.click()        sleep(1)        title_field = self.driver.find_element_by_id('xTiIn')        title_field.send_keys(title)        apply_button = self.driver.find_element_by_id('xSaveBu')        apply_button.click()    def test_all(self):        self.event(            title='영어 공부 시작'        )unittest.main()
+from base import Base
+from time import sleep
 
+
+class Add(Base):
+    def event(self, title):
+        self.driver.get(self.calendar_domain)
+        add_button = self.driver.find_element_by_css_selector('content > i.Gw6Zhc')
+        add_button.click()
+
+        sleep(1)
+
+        title_field = self.driver.find_element_by_id('xTiIn')
+        title_field.send_keys(title)
+
+        apply_button = self.driver.find_element_by_id('xSaveBu')
+        apply_button.click()
+
+    def test_all(self):
+        self.event(
+            title='영어 공부 시작'
+        )
+
+unittest.main()
+```
   
 
 아래는 실제 서비스에 적용한 모습이고, 배포 전 QA TEST 코드가 동작하는 모습이다.

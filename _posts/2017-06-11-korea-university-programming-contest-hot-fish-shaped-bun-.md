@@ -10,10 +10,6 @@ comments: true
 share: true
 ---
 
-  
-
-**  
-**
 
 **문제**
 
