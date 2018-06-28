@@ -20,7 +20,7 @@ background_image: /assets/images/posts/micro-service-architecture/mono-micro.png
 `Micro Service Architecture` 는 단어가 모든 뜻을 나타내고 있다.
 통상 전통적인 에플리케이션 개발 방식의 `Monolithic Architecture` 와 반대되며, 큰 모형(어플리케이션)을 잘게 쪼개어 추상화한다 생각하면 이해하기 쉽다.
 
-![mono-msa](/assets/images/posts/micro-service-architecture/mono-micro.png)
+![mono-msa](/assets/images/posts/micro-service-architecture/msa-ma.png)
 
 어떤 형태로 추상화할까 ? 커머스를 예를 들어보자.
 커머스를 모형이라 칭 하고, 이 모형을 구성하는 컴포넌트(서비스)들을 살펴보자.
