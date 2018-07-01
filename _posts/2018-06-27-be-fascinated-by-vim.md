@@ -1,5 +1,5 @@
 ---
-title: Vim의 매료되다. Feat.Happy Hacking
+title: Vim의 매료되다. (Feat.Happy Hacking)
 layout: post
 categories : development
 background_image: /assets/images/posts/be-fascinated-by-vim/my-happy-hacking-keyboard.jpeg
