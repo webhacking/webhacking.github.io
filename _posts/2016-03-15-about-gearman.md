@@ -120,7 +120,7 @@ Gearman 서버 구현체는 C로 작성된 gearmand와 펄로 작성된 Gearman:
 
 밑에는 간단하게 짠 것들.. 돌려봄
 
-`[supervisor](http://supervisord.org/)` 랑 함께 사용했습니다. 워커가 게속 x져서..
+`[supervisor](http://supervisord.org/)` 랑 함께 사용했습니다. 워커가 계속 x져서..
 
   
 
