@@ -5,8 +5,6 @@ categories : development
 background_image: /assets/images/posts/dreaming-of-better-programmer/master.jpg
 ---
 
-# 더 나은 프로그래머를 꿈꾸며
-
 이 문서는 본인(주니어 프로그래머)이 **성장에 갈증**을 느끼며 작성했다.
 아쉽게도 이 갈증의 해소 방법은 담고 있지 않다 왜냐하면 본인도 모르기 때문이다.
 따라서 이 갈증은 본인 삶이 끝나기 전 까지 게속 함께 할 것 같다.
