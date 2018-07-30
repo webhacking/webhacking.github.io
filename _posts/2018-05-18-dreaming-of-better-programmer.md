@@ -29,11 +29,19 @@ background_image: /assets/images/posts/dreaming-of-better-programmer/master.jpg
 
 갈증은 아주 좋은 신호이다.
 
-다만, 이 신호를 무시하지 않고 행하였을 때, 비로소 참된 결과를 얻을 수 있다.
-이를테면 새로운 개념에 대해 학습 하고자 하는 갈증이 생겼다면 지체하지 말고 바로 행하라.
+다만, 이 신호를 무시하지 않고 행하였을 때
+우리는 비로소 참된 결과를 얻을 수 있다.
+이를테면 새로운 개념에 대해 학습 하고자 하는 갈증이 생겼다면 지체하지 말고 바로 그 즉시 해소하라.
 그리고 또 새로운 갈증을 느껴라, 그리고 다시 해소해라.
 이러한 일련의 행동을 반복했을 때 우리는 성장한다.
-끊임없이 갈증하라.
+따라서 끊임없이 갈증해야한다.
+갈증과 해소 상당히 모호한 말일 수 있고, 어떤형태로 해야할지 감이 안잡힐 수 도 있다고 생각되어 본인의 사례를 예로 들어보고자한다.
+본인은 갈증의 요소들을 대개 주위로 부터 많이 얻고 있다.
+이와 같은 요소는 그 즉시 학습을 하고, 별도의 공간에 메모를 해두었다가 블로그나 이외 개인 저장소와 같은 형태의 클라우드에 학습한 내용을 정리하여 업로드한다.
+정리에 대한 내용은 아래 일전 내가 공유한 문서들을 참고하길 바란다.
+
+- [Getting Started with Functional Reactive Programming Using RxJS](https://blog.hax0r.info/2018-05-10/getting-started-with-functional-reactive-programming-using-rxjs/)
+- [Reactive Programming](https://blog.hax0r.info/2018-05-09/reactive-programming/)
 
 # 최고의 동료들과 함께하라.
 
