@@ -43,6 +43,14 @@ background_image: /assets/images/posts/dreaming-of-better-programmer/master.jpg
 - [Getting Started with Functional Reactive Programming Using RxJS](https://blog.hax0r.info/2018-05-10/getting-started-with-functional-reactive-programming-using-rxjs/)
 - [Reactive Programming](https://blog.hax0r.info/2018-05-09/reactive-programming/)
 
+실제로 이러한 정리는 복습의 시간을 주고, 선행 학습에서 제대로 이해되지 않았던 개념들에 대한 이해를 돕는데 많은 도움을 준다.
+하지만 이러한 정리는 상당히 손이 많이 가기에 시간이 오래 소요된다.
+따라서 매 학습 마다 이와 같은 정리를 진행하면 오히려 시간을 많이 뺏기게 되므로 적절히 조정할 필요가있다.
+
+이러한 애로사항을 해결해주는 것은 **주기적 기술 서적 구매** 이다.
+나의 경우 길면 1 - 2 개월, 짧으면 1주 간격으로 읽고 싶은 **기술 서적**을 구매하여 학습하고 있다.
+현재는 아직 습관으로 까지는 자리 잡지 못했지만, 꾸준히 행하여 이를 습관화하여 게속 학습하는 프로그래머가 되기를 희망하고 있다.
+
 # 최고의 동료들과 함께하라.
 
 동료라는 존재는 삶에 있어 아주 큰 영향력을 행사하는 요소 중 하나다.
