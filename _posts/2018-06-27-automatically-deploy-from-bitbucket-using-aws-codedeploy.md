@@ -5,6 +5,8 @@ categories : development
 background_image: /assets/images/posts/automatically-deploy-from-bitbucket-using-aws-codedeploy/cover.png
 ---
 
+> 작성 중....
+
 이직한 회사에서 배포 시스템 구현 업무를 담당 받게 되었다. (야호 !)
 전 회사에서 처음 배포 시스템을 주도적으로 구현 하면서 여러 애로 사항들을 겪으며 학습한 덕분에, 이번 배포 프로세스는 좀 더 무난히 구현할 수 있었던 것 같다.
 이번을 계기로 백엔드 개발자에게 있어서 배포란 필연적 관계인 것 같다.
