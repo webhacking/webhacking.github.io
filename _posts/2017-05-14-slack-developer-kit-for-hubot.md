@@ -10,250 +10,117 @@ comments: true
 share: true
 ---
 
-**휴봇이란 ?**
+## What is hubot
 
-태초는 Github 에서 사내용으로 만든 봇 입니다.
+[Hubot](https://hubot.github.com/) 은 본래 깃헙 사내용으로 제작된 챗봇이지만, 많은 발전을 거듭하며 현재 오픈소스로 공개되어 있다.
+Node 기반이며 슬랙에 친화되어 있으며, 왠만한 기능들을 모두 갖춘 챗봇 프레임워크 역할로써 빠른 개발의 도움을 준다.
 
-여러 수 많은 이슈들을 통해 발전을하여 지금과 같은 형태를 갖추었고, 현재는 오픈 소스로 공개되어있습니다.
+본인의 경우 전 회사와 현재 회사에서 모두 `Hubot` 을 채택하여 사내용 챗봇을 개발했다.
+이를테면 매일 오전 오늘 전국의 날씨를 알려준다거나, 태스크 통계를 내준다거나, elasticache redis 관련 명령어를 질의한다거나등 필요에 따른 기능들을 추가하여 재밌게 가지고 놀았다.
+이러한 짧은 경험에서 내가 느낀 휴봇의 가장 큰 장점은 간단한 스크립트(CoffeeScript, JavaScript) 작성을 통해 강력한 기능을 추가할 수 있다는 점 이다.
 
-  
+스크립트는 coffeescript 또는 javascript로 작성할 수 있으며, ***특정 단어, 문장, 행동등의 따라 이후의 프로세스를 정의*** 할 수 있다.
+스크립트를 직접 작성할 수 도 있겠지만, 휴봇에서는 여러 [스크립트들](https://github.com/hubot-scripts)을 제공하고 있어 구현하고자하는 명령어에 따라 손쉽게 스크립트를 추가하여 구현할 수 있다.
+아래는 스크립트에 대한 설명을 돕고자 몇가지 예를 들 수 있는 작은 항목들을 기재해 두었다.
+더 자사한 내용은 [공식 문서](https://hubot.github.com/docs/scripting/)에서 확인 가능하다.
 
-Hubot은 Node.js 기반에 CoffeeScript 로 개발되어있습니다.
+개념이 모호할 수 있으니, 특정 행동(룸 입장, 퇴장)에 대한 아래와 같은 코드 예를 살펴보자.
 
-휴봇은 AI 가 아닌, 단순 봇 이라는걸 알아두셔야합니다.
+```
+enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
 
-  
+module.exports = (robot) ->
+  robot.enter (res) ->
+    res.send res.random enterReplies
+  robot.leave (res) ->
+    res.send res.random leaveReplies
+```
 
-아래와 코드와 같이 개발자가 직접 명령어를 정규식 등으로 listen 한 이후,
+이와 같이 정말 코드가 간단하다.
+비개발자분들도 간단하게 학습하여 작업할 수 있다.
+이 문서에서는 스크립트 작성에 대한 내용을 다루지는 않지만, 이러한 스크립트를 작성 후 "Local" 또는 "Heroku" 를 통해 배포하여 슬랙과 연동하는 내용을 담고자 한다.
+node, npm 이 기본적으로 설치되어 있고, 슬랙에 휴봇 앱 토큰을 발급 받았다는 가정하에 문서를 작성한다.
 
-로직에 따라서 메세지등을 다시 반환하는 형식입니다.
+## Deploying to local
 
-  
+Hubot 은 [yeoman](http://yeoman.io/) 위에서 돌아가는 [hubot generator](https://github.com/hubotio/generator-hubot) 를 제공하고 있다.
+따라서 매우 쉽게 프로젝트를 구성할 수 있다.
+아래 명령어를 통해 제너레이터를 설치 합니다.
 
-    module.exports = (robot) ->  robot.respond /(.*) 영준이잘생김!/i, (msg) ->
+```
+npm install -g yo generator-hubot
+yo hubot
+```
 
-  
+hubot은 external-scripts.json에서 사용할 외부 스크립트들을 선어하는데, 기본적인 내용에서 불필요한건 필요에 따라 제거하면 된다.
+설치 완료 후, 아래와 같이 파일을 실행하면 hubot 을 만날 수 있다.
 
-예를 들어 아래와 같이 휴봇에 명령어를 추가하여 유용하게 사용할 수 있습니다.
+```
+bin/hubot
+```
 
-@휴봇 오늘 날씨 알려줘 , @휴봇 오늘 점심 메뉴 추천해줘 , @휴봇 운영부서가 하는일좀 알려줘
+슬랙과 연동하고자 한다면, 슬랙에서 휴봇으로 발급 받은 토큰을 아래와 같이 기재하여 질의하면 된다.
 
-  
+```
+HUBOT_SLACK_TOKEN=xoxb-~~ bin/hubot --adapter slack
+```
 
-  
+데몬으로 실행하고자 한다면, 아래와 같이 질의하면 된다.
 
-일단 본인은 Heroku 클라우드를 통해서 애플리케이션을 배포할 예정입니다.
+```
+HUBOT_SLACK_TOKEN=xoxb-~~ nohup bin/hubot --adapter slack &
+```
 
-Heroku 가입 방법은 따로 기재하지 않겠습니다.
+## Deploying to heroku
 
-  
+가장 먼저, heroku 계정을 만든다.
+이후, 생성된 계정 정보를 아래와 같이 기입 후 실행한다.
 
-  
+```
+% heroku login
+Enter your Heroku credentials.
+Email: youremail@example.com
+Password:
+Could not find an existing public key.
+Would you like to generate one? [Yn]
+Generating new SSH public key.
+Uploading ssh public key /Users/you/.ssh/id_rsa.pub
 
-**휴봇 시작하기**
+```
 
-시작에 앞 서, 저의 환경을 말하자면 아래와 같습니다.
+그 다음, heroku 애플리케이션을 생성한다.
+dyno 다이렉트 링크를 응답할 것 이다.
 
-  
+```
+heroku create
+```
 
-  * Node.js
-    * 0.10.37
-  * NPM
-    * 4.2.0
-  * Ubuntu
-    * 14.04
+이후, 환경 변수를 설정합니다.
 
-  
+```
+heroku config:set HUBOT_CAMPFIRE_ACCOUNT=yourcampfireaccount
+heroku config:set HUBOT_CAMPFIRE_TOKEN=yourcampfiretoken
+heroku config:set HUBOT_CAMPFIRE_ROOMS=comma,separated,list,of,rooms,to,joi
+heroku config:set HEROKU_URL=dyno direct link
+```
 
-* Node.js 버전 충돌 일 어 날 수 있으니 환경 변수 설정 확인 바래요.
+마지막으로 git push 를 하면 끝난다.
 
-  
+```
+git push heroku master
+```
 
-1\. Repositories 를 업데이트 합니다.
+## Problems
 
-  
+- [Hubot appears as user, but is offline](https://github.com/slackapi/hubot-slack/issues/161)
 
-    sudo apt-get update
 
-  
+## Reference
 
-  
+- [Getting Started With Hubot](https://hubot.github.com/docs/)
 
-2\. Prerequisites 를 설치합니다.
+## In conclusion
 
-  
-
-    sudo apt-get install build-essential
-
-  
-
-3\. Node.js 를 설치합니다.
-
-  
-
-#최신 버전 설치가 필요하다면 아래 repository 를 추가 *(선택 사항), 이후 다시 업데이트
-
-  
-
-    sudo add-apt-repository -m ppa:chris-lea/node.js 
-
-  
-
-    sudo apt-get update
-
-  
-
-    sudo apt-cache show nodejs | grep Version
-
-  
-
-    node -v
-
-  
-
-이 후, NPM (node package manager) 을 설치합니다.
-
-  
-
-    sudo apt-get install npm
-
-  
-
-  
-
-휴봇을 설치하기 앞 서, git 을 먼저 설치합니다. (* 설치 되있는 분은 건너 뛰시면 됩니다.)
-
-  
-
-    sudo apt-get install git-core
-
-  
-
-  
-
-    sudo apt-get install libssl-dev redis-server libexpat1-dev
-
-  
-
-  
-
-    sudo npm install -g coffee-script
-
-  
-
-  
-
-    cd /opt/hubot && sudo npm install
-
-  
-
-    npm ls
-
-  
-
-  
-
-아래 명령어를 사용하여 휴봇을 실행합니다.
-
-  
-
-    yo hubot
-
-  
-
-  
-
-기본적으로 아래 4가지의 정보를 받습니다.
-
-Owner,Bot name, Description, Bot adapter
-
-Bot adapter 의 경우 slack 으로 입력합니다. 이외 입력사항은 원하시는 내용을 추가하면 됩니다.
-
-  
-
-  
-
-![](/assets/images/posts/744/227E1B4359182199197056.PNG)
-
-  
-
-  
-
-  
-
-**Slack Token 발급**
-
-  
-
-슬랙에서 토큰을 발급해야합니다.  
-https://your-app.slack.com/apps 해당 링크로 이동 후에 `hubot`을 검색하여 추가합니다.
-
-Configuration 을 통해서 봇을 설정하고, Api Token을 copy 합니다.
-
-  
-
-  
-
-**Heroku toolbelt 사용하여 dyno 생성 및 Slack 연동**
-
-  
-
-    #heroku 로그인heroku login#dyno 생성, 아웃풋에 ****.herokuapp.com 이 와 같은 형태로 출력되니 본 주소 기억해두세요.heroku create#이 후, 아래 명령어를 통해 설정을 추가합니다.
-
-  
-
-    heroku config:add HUBOT_URL=herokuapp주소heroku config:add HUBOT_SLACK_TOKEN=발급 받은 토큰 값
-
-  
-
-  
-
-*** 발생한 문제점들**
-
-  1. [Hubot appears as user, but is offline](https://github.com/slackapi/hubot-slack/issues/161)
-    1. 특정 시간이 지난면 휴봇이 오프라인되는 현상이 발견 됨. heroku 에서 특정시간이 지나도 이벤트가 발생하지 않는 인스턴스는 자동으로 슬립 모드에 들어가는 것 같음. 그래서 나의 경우 cron을 통해서 특정시간(매 10분)마다 휴봇에게 요청을 보냄
-    2. 1번의 방법이 다소 귀찮다면, 현재 github repository에서 위 이슈관련하여 인기있는 repository('hubot-heroku-keepalive')를 받아주시면 됩니다.
-
-  
-
-  
-
-저희 회사는 슬랙을 나름 잘 활용하고있습니다.
-
-프로그램 오류 사항이나 또는 로직의 오류 내용등을 슬랙으로 피드백 받고 있고 또 전 사원이 슬랙을 통해서 커뮤니케이션하고있습니다.
-
-휴봇을 추가함으로써 뭔가 더 슬랙을 잘 활용하게 된 것 이 아닌지 나름 기쁩니다. ㅎㅎ  
-  
-
-  
-
-  
-
-![](/assets/images/posts/744/236F1B49591840EF0E2E29.PNG)
-
-  
-
-  
-
-  
-
-이름은 쟈비스로함. (최근에 아이언맨 다시 봄)
-
-  
-
-![](/assets/images/posts/744/2738EA4B591839C31C9DD9.PNG)
-
-  
-
-  
-
-  
-
-  
-
-**참고**
-
-  * [Getting Started With Hubot](https://hubot.github.com/docs/)
-
-  
-
+운 좋게도 흥미에서 끝나지 않고, 실제 사내에 여러 기능들을 붙이며 학습할 수 있어 매우 의미 있고 재밌었다.
+욕심이 나는 부분이 있다면, 현재 까지는 개발 직군의 한정되어 기능들이 추가되고 있지만 추후에는 비 개발직군에 일원들도 손 쉽게 개발할 수 있는 환경을 구성하고 싶다.
