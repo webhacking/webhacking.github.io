@@ -56,45 +56,8 @@ mocha --compilers "coffee:coffee-script/register" "{테스트할 대상 경로}"
 
   
 
-  
-
-  
-# 간단한 날씨 기능
-
-  
-
-아래는 팀원이 수기로 날씨를 알려주는 모습입니다...
-
-  
-
-  
-
-![](/assets/images/posts/758/274DD8395930D26533A103.JPEG)
-
-  
-
-  
-
-  
-
-이제 자비스(휴봇)이 실시간으로 알려주고있습니다.  
-간단한 스크립트이지만, 팀원에게 짐을 덜어준 것만 같아 여러모로 매우 뿌듯합니다.
-
-  
-
-![](/assets/images/posts/758/2328A3375930D387075462.JPEG)
-
-  
-
-![](/assets/images/posts/758/210AC6375930D387258D96.PNG)
-
-  
-
-  
-
 ## 참고
 
-  
 
   * [TESTING HUBOT SCRIPTS](http://leapfrogonline.io/articles/2015-11-09-testing-hubot-scripts/)
 
