@@ -812,6 +812,10 @@ body.enable-side-bar {
       transition: box-shadow .2s, color .2s;
     }
 
+    ol, ul {
+      list-style: inherit;
+    }
+
     blockquote {
       a[href] {
         color: #fff;
