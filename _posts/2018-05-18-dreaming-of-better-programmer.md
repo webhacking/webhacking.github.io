@@ -102,3 +102,6 @@ background_image: /assets/images/posts/dreaming-of-better-programmer/master.jpg
 이 부분에 대해서는 도입부에도 언급했 듯, 이는 나를 위해 하는 말이라 생각하고 작성했다.
 따라서 혹여 문서를 읽으며 조금 불편한 부분이 있었다면 이러한 부분을 고려하여 주시길 부탁드린다.
 
+# 관련 읽을 거리
+
+- [Why blog as a software developer](https://blog.hax0r.info/2018-08-24/why-blog-as-a-software-developer)
