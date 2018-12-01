@@ -130,8 +130,6 @@ if __name__ == "__main__":
 
 마지막 절차 "Terminating original instances" 에서 기본적으로 Waiting Time 을 임의적으로 설정을 하게되는데, 이는 처음에 지향하는 안정성과 상이되어 ASG 라이프 사이클 훅을 통하여 기존의 전달 받은 요청건에 대하여 모든 프로세스가 완료되면 즉시 terminate 하는 방향으로 진행했다.
 
-![flow-diagram](/assets/images/posts/automatically-deploy-from-bitbucket-using-aws-codedeploy/deployment-flow.png)
-
 배포 유형이, In-place 와 Blue-green 형태 두가지로 나뉜다.
 
 무중단 배포를 위해 우리의 경우 Blue/Green 형태를 채택했다.
