@@ -4,10 +4,6 @@ layout: post
 categories : development
 ---
 
-> 이 문서는 아직 작성 중에 있습니다.
-
-# Introduction
-
 S3에 파일 업로드 또는 다운로드 하는 행위에 대해 통상 우리는 서버를 경유해서 진행한다.
 경유하는 이유는 AWS는 이러한 행위에 대해 인증 정보(Access Key, Secret Key)를 필요로하는데 이 정보는 외부에 노출이 되면 안되기 때문이다.
 하지만 이러한 방법은 매 요청 마다 서버의 자원을 소모하기 때문에 트래픽이 많은 서버스의 경우 다소 부담스러울 수 있을 뿐만 아니라 전송되는 속도 또한 해당 경유 서버에 제약을 받기 때문에 퍼포먼스 이슈 또한 초례할 수 있다.
@@ -71,7 +67,7 @@ Signature 생성 과정에는 두 가지의 버전(2, 4)이 존재하는데, 이
 }
 ```
 
-아래는 Signature 서명 절차를 자바 코드로 구현하 예 이다.
+아래는 Signature 서명 절차를 자바 코드로 구현한 예 이다.
 
 ```java
 static byte[] HmacSHA256(String data, byte[] key) throws Exception {
@@ -90,6 +86,9 @@ static byte[] getSignatureKey(String key, String dateStamp, String regionName, S
     return kSigning;
 }
 ```
+
+이를 통해 write/read 의 서명을 생성해서 실제 프론트 쪽에서 매니지 할 수 있도록 구현 했었다.
+서버 사이드의 부담을 줄이고, 프론트 쪽의 자유도를 높이는 이점으로 좋은 경험이었다.
 
 # Reference
 
