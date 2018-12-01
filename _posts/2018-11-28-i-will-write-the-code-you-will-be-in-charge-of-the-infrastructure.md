@@ -59,7 +59,7 @@ categories : development
 그냥 코드를 작성하고, **아래 명령어 한 줄을 통해 배포**하면된다.
 > **serverless deploy**
 
-<iframe width="auto" height="auto" src="https://medium.com/media/e6f7292915f9c7e55a783c67559004a6" frameborder=0 allowfullscreen></iframe>
+<iframe width="auto" height="auto" src="https://medium.com/media/e6f7292915f9c7e55a783c67559004a6" frameborder="0" allowfullscreen></iframe>
 
 ## 거 좀 편해 보이네, 좀 더 자세히 말해봐.
 
