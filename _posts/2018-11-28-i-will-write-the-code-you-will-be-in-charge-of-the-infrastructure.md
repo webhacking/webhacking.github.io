@@ -21,7 +21,7 @@ categories : development
 개발자가 Remote git server master 브랜치에 push 하면 CI 는 이를 배포로 간주하고 정의된 프로세스가 구동된다. 그 과정 중 PCA에 패키지들은 압축되어 S3의 업로드되고 Codedeploy 클라이언트를 통해 배포가 진행된다.
 이 절차를 수행하는 코드는 아래와 같다.
 
-<iframe src="https://medium.com/media/7ac49761235b085266c2ff744e545d58" frameborder=0></iframe>
+<script src="https://gist.github.com/webhacking/5d1ec3732c17092571a54145f13270e7.js"></script>
 
 아래는 Codedeploy 의 배포 절차이다.
 
@@ -59,7 +59,7 @@ categories : development
 그냥 코드를 작성하고, **아래 명령어 한 줄을 통해 배포**하면된다.
 > **serverless deploy**
 
-<iframe src="https://giphy.com/embed/3XR0chfiSTtAI" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mind-blown-3XR0chfiSTtAI">via GIPHY</a></p>
+<iframe src="https://giphy.com/embed/3XR0chfiSTtAI" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ## 거 좀 편해 보이네, 좀 더 자세히 말해봐.
 
