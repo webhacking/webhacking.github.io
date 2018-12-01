@@ -60,6 +60,7 @@ categories : development
 > **serverless deploy**
 
 <iframe src="https://giphy.com/embed/3XR0chfiSTtAI" width="480" height="365" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+(신입 개발자 우모씨가 배포 방법에 대한 문서를 읽고 있다.)
 
 ## 거 좀 편해 보이네, 좀 더 자세히 말해봐.
 
@@ -78,20 +79,20 @@ categories : development
 
 그리고 아래 sample tsconfig.json 을 추가한다.
 
-<iframe src="https://medium.com/media/f6852ded7c1decfcaa2677b670d820f0" frameborder=0></iframe>
+<script src="https://gist.github.com/webhacking/5466b197831da793715d30c79fa5072e.js"></script>
 
 이후, handler.js 를 handler.ts 로 치환하고 아래와 같이 간단한 코드를 작성할 수 있다.
 
-<iframe src="https://medium.com/media/cecd19ee9d9118a1eb050d4cdd83eb88" frameborder=0></iframe>
+<script src="https://gist.github.com/webhacking/daac127734451f07d35dbfa18abd9879.js"></script>
 
 그리고 serverless.yml 에 아래와 같이 핸들러를 추가한다.
 
-<iframe src="https://medium.com/media/fca101d0e8e2fe9a73a2d51e944e6aa3" frameborder=0></iframe>
+<script src="https://gist.github.com/webhacking/5a47af45812fc4a7b6957dc6da067db7.js"></script>
 
 이제 마지막으로 아래와 같이 End point 만 추가하면된다.
 “/hello” 라는 경로로 요청 시, 우리가 기술한 hello 메소드가 질의될 것이다.
 
-<iframe src="https://medium.com/media/1d9e1be3f2c22ecd60f86e6b4e5c8876" frameborder=0></iframe>
+<script src="https://gist.github.com/webhacking/0db284d078e41fa9c7bbdffea6ffbd8c.js"></script>
 
 그리고 아래 명령어를 통해 배포하면 APIGateway 를 통해 할당된 경로를 터미널 상에 출력할 것이다.
 > serverless deploy
@@ -153,7 +154,7 @@ Lambda 도 똑같다.
 
 플링크팀은 두 번째 방법을 통해 해당 이슈를 해결했다. (월 마다 프리티어가 존재하여 현재까지는 비용이 발생하지 않지 않는다.)
 
-<iframe src="https://medium.com/media/4a5c5874e5a0819fd4cf9e6741914741" frameborder=0></iframe>
+<iframe src="https://giphy.com/embed/hmlPfL3D6qgAo" width="480" height="381" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 ### **무거운 작업**
 
