@@ -4,8 +4,6 @@ layout: post
 categories : development
 ---
 
-# 나는 코드를 쓸테니, 너는 인프라를 맡거라.
-
 이 문서는 PageCall Console 을 개발하면서 인프라 구성이 귀찮았던 개발자 우 모씨가 Lambda, API Gateway, Cloud Formation 등의 AWS 리소스를 활용해 Serverless Architecture 를 구현 하면서 인프라 구성이라는 귀찮은 굴레 속에서 벗어나 코드 본연의 집중할 수 있었던 경험을 공유하고 있다.
 
 ## 뭐가 그렇게 귀찮아 ?
