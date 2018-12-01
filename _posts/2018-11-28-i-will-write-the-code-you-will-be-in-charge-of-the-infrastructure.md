@@ -14,7 +14,7 @@ categories : development
 이로써 개발자는 코드 본연에 신경쓸 수 있기에 비약적인 생산성 향상과 높은 품질의 제품을 생산할 수 있다.
 
 그전까지 나는 위의 모든 과정을 수행해야했다.
-대표적으로 우리의 서비스 [PageaCallAPI(이하 PCA)](https://www.pagecall.io/en) 의 배포 과정을 한 사례로 들어 수고스러움을 얘기해보겠다.
+대표적으로 우리의 서비스 [PageCallAPI(이하 PCA)](https://www.pagecall.io/en) 의 배포 과정을 한 사례로 들어 수고스러움을 얘기해보겠다.
 
 기본적으로 PCA 배포과정에서는 “Codedeploy”, “Elastic Load Balancer(이하 ELB)”, “Auto Scaling Group(이하 ASG)”, “S3” 등의 리소스를 필연적으로 사용하고있다.
 
