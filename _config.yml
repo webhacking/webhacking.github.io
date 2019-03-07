@@ -79,5 +79,5 @@ gems:
   - jekyll-admin
   - jekyll-sitemap
   - jekyll-feed
-
+  - match_regex
 exclude:            [vendor]
