@@ -18,13 +18,13 @@
   <meta content="{{ site.url }}{{ page.url }}" property="og:url">
 {% endif %}
 {% capture post_first_image %}
-  {% assign hero_image = match_regex: '<img .*?src="([^"]+)"' %}
+  {% assign hero_image = page.content | match_regex: '<img .*?src="([^"]+)"' %}
   {% if hero_image == nil %}
     {% assign hero_image = "https://41.media.tumblr.com/709bb3c371b9924add351bfe3386e946/tumblr_nxdq8uFdx81qzocgko1_1280.jpg" | prepend: site_base %}
   {% endif %}
   {{ hero_image }}
 {% endcapture %}
-<meta property="og:image" content="{{ post_first_image | strip }}">
+<meta property="og:image" content="{{ post_first_image[0] | strip }}">
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
   <meta content="{{ category }}" property="article:section">
