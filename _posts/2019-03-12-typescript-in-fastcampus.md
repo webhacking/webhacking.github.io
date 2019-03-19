@@ -56,6 +56,10 @@ background_image: '/assets/images/posts/2019-03-12-typescript-in-fastcampus/ts-m
 - 강사 본인은 모든 앱들을 타입스크립트로 개발할 만큼 타입스크립트 *광팬*이다. 개념이해를 넘어 실제 프로덕트레벨에서의 타입스크립트를 활용을 알려준다.
 - 4주라는 제한된 시간이지만 열심히 준비한 만큼 꼭 수강생분들이 한 단계 업그레이드할 수 있는 계기가 될 수 있도록 최선을 다할 것 이다.
 
+[지금 바로 패스트 캠퍼스 강의 보러가기](http://bit.ly/2XR5a4v)
+[![pc-link](/assets/images/posts/2019-03-12-typescript-in-fastcampus/ts-main.png)](http://bit.ly/2XR5a4v)
+
+
 > 수강생분들에 한에 슬랙 채널 등에서 1:1 질문을 할 수 있다. 모르는거 궁금한거 물어봐주길 바란다. 굳이 타입스크립트가 아니더라도 배포, 서버리스, 람다, RxJS 등 모르는 부분이 생긴다면 언제든 질문해라 !*
 
 - [강의 보러가기](http://bit.ly/2XR5a4v)
