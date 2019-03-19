@@ -1,0 +1,36 @@
+<meta content="{{ site.title }}" property="og:site_name">
+{% if page.title %}
+  <meta content="{{ page.title }}" property="og:title">
+{% else %}
+  <meta content="{{ site.title }}" property="og:title">
+{% endif %}
+{% if page.title %}
+  <meta content="article" property="og:type">
+{% else %}
+  <meta content="website" property="og:type">
+{% endif %}
+{% if page.excerpt %}
+  <meta content="{{ page.excerpt }}" property="og:description">
+{% else %}
+  <meta content="{{ site.description }}" property="og:description">
+{% endif %}
+{% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+{% endif %}
+{% if page.image %}
+    <meta property="og:image" content="{{page.image}}" />
+    <meta name="twitter:image" content="{{page.image}}" />
+{% else %}
+  <meta property="og:image" content="https://41.media.tumblr.com/709bb3c371b9924add351bfe3386e946/tumblr_nxdq8uFdx81qzocgko1_1280.jpg" />
+  <meta name="twitter:image" content="https://41.media.tumblr.com/709bb3c371b9924add351bfe3386e946/tumblr_nxdq8uFdx81qzocgko1_1280.jpg" />
+{% endif %}
+{% if page.categories %}
+  {% for category in page.categories limit:1 %}
+  <meta content="{{ category }}" property="article:section">
+  {% endfor %}
+{% endif %}
+{% if page.tags %}
+  {% for tag in page.tags %}
+  <meta content="{{ tag }}" property="article:tag">
+  {% endfor %}
+{% endif %}
