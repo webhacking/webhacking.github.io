@@ -59,7 +59,7 @@ background_image: '/assets/images/posts/2019-03-12-typescript-in-fastcampus/ts-m
 자바스크립트에 정적 타이핑을 도입하고자 하거나 *안정성과 생산성* 에 관심이 많은 자바스크립트 개발자라면 본인 [강의](http://bit.ly/2XR5a4v)를 꼭 보는 것을 추천한다.
 
 [강의 보러가기](http://bit.ly/2XR5a4v)
-[강사 인터뷰]()
+[강사 인터뷰](https://blog.naver.com/fastcampus/221487426675)
 
 커리큘럼은 아래와 같이 구성 되어있다.
 
