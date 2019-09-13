@@ -35,7 +35,7 @@ timezone:           Asia/Seoul
 permalink:          /:year-:month-:day/:title/
 
 # Pagination
-paginate:           60
+paginate:           4
 paginate_path:      /page/:num/
 
 # Markdown
