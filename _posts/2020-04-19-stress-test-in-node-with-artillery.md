@@ -75,11 +75,6 @@ found 0 vulnerabilities
 
 이 커맨드를 보는 여러분도 `dino` 라는 커맨드에 눈길이 가실 것 같다.
 프로젝트 개발자 이스터에그 정도로 보이고, 실행해보니 공룡이 나왔다. (힁..)
-  
-궁금한건 못 참아서, 본 프로젝트랑 공룡이랑 뭔 상관이 있는지 좀 찾아보니 [artillery-dino](https://github.com/hassy/artillery-dino) 라는 프로젝트가 존재하고 artillery 를 베이스로 하며 사용하면 AWS Lambda에서 스트레스 테스트를 실행할 수 있다고 한다. (다만, 업데이트가 무려 4년전의 실험체라는 것..)
-  
-![gy dynogram](/assets/images/posts/2020-04-19-stress-test-in-node-with-artillery/dinogram.png)
-  
 
 ```
 Youngjunui-iMac:artillery-test youngjun$ ./node_modules/.bin/artillery dino
@@ -107,7 +102,11 @@ Youngjunui-iMac:artillery-test youngjun$ ./node_modules/.bin/artillery dino
       @ ,   @ @
       @ @   @ @
 ```
-
+  
+궁금한건 못 참아서, 본 프로젝트랑 공룡이랑 뭔 상관이 있는지 좀 찾아보니 [artillery-dino](https://github.com/hassy/artillery-dino) 라는 프로젝트가 존재하고 artillery 를 베이스로 하며 사용하면 AWS Lambda에서 스트레스 테스트를 실행할 수 있다고 한다. (다만, 업데이트가 무려 4년전의 실험체라는 것..)
+  
+![gy dynogram](/assets/images/posts/2020-04-19-stress-test-in-node-with-artillery/dinogram.png)
+  
 # 간단한 테스트하기
   
 # 시나리오 작성하여 테스트하기
