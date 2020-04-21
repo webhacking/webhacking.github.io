@@ -1,0 +1,10 @@
+I"�<p>배치하고자 하는 테이블의 수가 많아서 Diagram 을 확대하고자 할 때, 아래와 같이 설정하면 된다.</p>
+
+<p>상단 설정 탭에서 “Model &gt; Model Options” 을 선택 후, “Diagram” 탭을 선택한다.</p>
+
+<p>그리고 하단 부, “Use defaults from global settings…” Uncheck 한다.</p>
+
+<p>이 후 Apply 하고, 다시 설정 탭에서 “Model &gt; Diagram Properties and Size” 선택 후 자신이 원하는
+사이즈를 설정하면 된다.</p>
+
+:ET

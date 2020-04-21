@@ -1,0 +1,43 @@
+I"�<p>** 파일/폴더**</p>
+
+<p><strong>설명</strong></p>
+
+<p>app/</p>
+
+<p>애플리케이션 폴더</p>
+
+<p>bin/</p>
+
+<p>rails, rake 등 ruby 스크립트 실행파일 폴더</p>
+
+<p>config/</p>
+
+<p>route, db등 설정 파일 폴더</p>
+
+<p>db/</p>
+
+<p>데이터베이스 스키마 보관폴더</p>
+
+<p>vendor/</p>
+
+<p>서드파티 코드 보관</p>
+
+<p>lib/</p>
+
+<p>확장모듈 보관폴더</p>
+
+<p>log/</p>
+
+<p>애플리케이션 로그파일 보관폴더</p>
+
+<p>test/</p>
+
+<p>테스트 관련 파일 보관</p>
+
+<p>tmp/</p>
+
+<p>임시 파일 보관저장소(캐시,PID,세션 파일 등)</p>
+
+<p><img src="/assets/images/posts/676/2263BF3657763FB72FE0D8.PNG" alt="" /></p>
+
+:ET

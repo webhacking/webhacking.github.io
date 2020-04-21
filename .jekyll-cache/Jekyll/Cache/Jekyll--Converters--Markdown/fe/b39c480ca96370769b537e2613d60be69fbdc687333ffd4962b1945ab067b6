@@ -1,0 +1,46 @@
+I"�<p>500스코어 문제이며 파일 업로드 취약점에 관한 문제이다.</p>
+
+<p>개인적으로 스코어에 비해서 난이도가 그리 높지는 않은 것 같다.</p>
+
+<p>문제에 들어가면 아래와 같은 내용과 파일 업로드 폼이 보인다.</p>
+
+<p>hint</p>
+
+<p>upload/index.php</p>
+
+<?
+
+$pw = "???";
+
+?>
+
+<p>readme</p>
+
+<p>이미지파일을 업로드하고 전송하면 아래와 같은 문자를 노출한다.</p>
+
+<p>Done홈페이지 보안 문제로 파일내용은 표시해주지 않습니다.</p>
+
+<p>부득이하게 이렇게 하드코딩으로 바꿔놨으나, 실제로 취약점이 있는 상황에서 사용할 수 있는 취약점이니 재밌게 풀어주세요.</p>
+
+<p>hint : .htaccess</p>
+
+<p>링크가 걸려있는 <code class="highlighter-rouge">upload/index.php</code>에 접속하면 단순히 ‘read me’라는 짧은 문구만 보이네요.</p>
+
+<p>문제의 출제의도는 저 php파일을 읽는 것 같습니다. <code class="highlighter-rouge">.htaccess</code>파일에 아래와 같은 설정을 추가합니다.</p>
+
+<p>php확장자를 실행을 끄는 간단한 설정입니다.</p>
+
+<p>해당 파일을 업로드하면, 클리어.</p>
+
+<p>php_flag engine off</p>
+
+<p>AddType text/plain php</p>
+
+<p><strong>참고</strong></p>
+
+<p><a href="https://support.tigertech.net/php-value">Using php_flag or php_value in .htaccess
+files</a></p>
+
+<p><img src="/assets/images/posts/615/254FCE4E5726AC9605A3CD.PNG" alt="" /></p>
+
+:ET

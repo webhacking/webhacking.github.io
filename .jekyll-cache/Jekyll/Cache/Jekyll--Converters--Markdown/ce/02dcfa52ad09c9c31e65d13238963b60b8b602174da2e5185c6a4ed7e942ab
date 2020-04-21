@@ -1,0 +1,33 @@
+I"%<p>일반적인 프로그래밍 입문 책에서는 <code class="highlighter-rouge">매겨변수</code>와 <code class="highlighter-rouge">전달인자</code>의 대한 제대로된 개념을 설명하고있다.
+내가 입문했던 서적 또한 그렇다.</p>
+
+<p>매개변수의 경우 서브루틴의 인풋으로 제공되는 여러 데이터 중 하나를 가리키기 위해 사용된다.
+전달인자의 경우 서브루틴의 인풋으로 제공되는 여러 데이터들을 가리킨다.
+실상 종종 매겨변수와 전달인자를 섞어서 사용하고있는데, 이 경우 문맥의 따라 달리 해석되기도한다.</p>
+
+<p>그렇기 때문에 정확한 표현을 사용해야한다.
+매개변수는 함수의 정의 부분에 나열되는 변수를 뜻하며 전달인자는 함수 호출 시 전달되는 값을 뜻 한다.</p>
+
+<blockquote>
+  <p>매개변수는 변수(variable), 전달인자는 값(value)</p>
+</blockquote>
+
+<p><code class="highlighter-rouge">f(x) = x*x</code> 와 같은 정의에서 변수 <code class="highlighter-rouge">x</code> 가 매개변수가 되며 <code class="highlighter-rouge">f(n)</code> 과 같이 함수 호출 부분에서의 값 <code class="highlighter-rouge">n</code>이 전달인자가 된다.</p>
+
+<p>좀 더 이해를 돕기 위해 아래 코드를 보자.</p>
+
+<p><code class="highlighter-rouge">sum</code> 함수는 두개의 매개변수를 가지고있다.</p>
+
+<p><code class="highlighter-rouge">a</code>, <code class="highlighter-rouge">b</code> 는 실제 값이 존재하지 않고 형태를 나타내 줄 뿐이다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int sum(int a, int b)
+{
+    return a+b;
+}
+</code></pre></div></div>
+
+<p>아래 코드에서 <code class="highlighter-rouge">sum</code> 함수를 호출 시, 입력된 <code class="highlighter-rouge">1</code>, <code class="highlighter-rouge">2</code>(value) 를 전달인자라한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sum(1, 5)
+</code></pre></div></div>
+:ET

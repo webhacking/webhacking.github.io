@@ -1,0 +1,20 @@
+I"S<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python
+# -*- coding: utf-8 -*-
+</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">line</span> <span class="o">=</span> <span class="s">'Cats are smarter than dogs'</span>
+
+<span class="n">matchObj</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="s">r'dogs'</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">M</span> <span class="o">|</span> <span class="n">re</span><span class="p">.</span><span class="n">I</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">matchObj</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'match --&gt; matchObj.group() : '</span><span class="p">,</span> <span class="n">matchObj</span><span class="p">.</span><span class="n">group</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'No match!!'</span>
+
+<span class="n">searchObj</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'dogs'</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">M</span> <span class="o">|</span> <span class="n">re</span><span class="p">.</span><span class="n">I</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">searchObj</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'search --&gt; searchObj.group() : '</span><span class="p">,</span> <span class="n">searchObj</span><span class="p">.</span><span class="n">group</span><span class="p">()</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'Nothing found!!'</span>
+</code></pre></div></div>
+:ET

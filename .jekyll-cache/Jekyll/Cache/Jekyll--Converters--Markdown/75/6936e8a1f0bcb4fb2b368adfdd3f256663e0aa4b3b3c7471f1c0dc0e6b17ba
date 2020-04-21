@@ -1,0 +1,13 @@
+I"æ<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">cls</span><span class="p">():</span>
+
+<span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'cls'</span> <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">name</span><span class="o">==</span><span class="s">'nt'</span> <span class="k">else</span> <span class="s">'clear'</span><span class="p">)</span>
+
+<span class="c1"># now, to clear the screen
+</span>
+<span class="n">cls</span><span class="p">()</span>
+</code></pre></div></div>
+
+:ET

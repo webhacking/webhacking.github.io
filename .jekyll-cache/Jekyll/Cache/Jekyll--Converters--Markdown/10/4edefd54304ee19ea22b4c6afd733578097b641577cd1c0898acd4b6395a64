@@ -1,0 +1,62 @@
+I"«<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;stdio.h&gt;
+
+void Hanoi(int n, char A, char B, char C)
+
+{ //NumberOfDisk: n, from:A, temp:B, to:C
+
+if ( n &lt; 1 )
+
+return;
+
+Hanoi(n-1, A, C, B);
+
+printf("%c -&gt; %c\n", A, C);
+
+Hanoi(n-1, B, A, C);
+
+}
+
+int main()
+
+{
+
+Hanoi(4, 'A', 'B', 'C');
+
+return 0;
+
+}
+</code></pre></div></div>
+
+<p><strong>OUTPUT</strong></p>
+
+<p>A -&gt; B</p>
+
+<p>A -&gt; C</p>
+
+<p>B -&gt; C</p>
+
+<p>A -&gt; B</p>
+
+<p>C -&gt; A</p>
+
+<p>C -&gt; B</p>
+
+<p>A -&gt; B</p>
+
+<p>A -&gt; C</p>
+
+<p>B -&gt; C</p>
+
+<p>B -&gt; A</p>
+
+<p>C -&gt; A</p>
+
+<p>B -&gt; C</p>
+
+<p>A -&gt; B</p>
+
+<p>A -&gt; C</p>
+
+<p>B -&gt; C</p>
+
+:ET

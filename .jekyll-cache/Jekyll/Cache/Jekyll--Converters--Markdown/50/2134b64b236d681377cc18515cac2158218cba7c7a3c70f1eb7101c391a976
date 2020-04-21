@@ -1,0 +1,12 @@
+I":<p>https://msdn.microsoft.com/ko-kr/library/ms172827.aspx</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Private Function UnicodeBytesToString(
+
+ByVal bytes() As Byte) As String
+
+Return System.Text.Encoding.Unicode.GetString(bytes)
+
+End Function
+</code></pre></div></div>
+
+:ET

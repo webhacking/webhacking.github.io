@@ -1,0 +1,27 @@
+I"�<p>here https://code.google.com/p/jquery-graceful-websocket/</p>
+
+<p>So, you want to start building realtime event driven applications using the
+new HTML5 WebSocket API?</p>
+
+<p>You want it to work in all browsers, no matter if they have WebSocket support
+or not</p>
+
+<p>You don’t want to rely on proprietary technology such as Flash to provide a
+fallback</p>
+
+<p>And naturally, you don’t want to write more than one implementation</p>
+
+<p>Introducing, the gracefulWebSocket jQuery plugin:</p>
+
+<p>Implements the w3c WebSocket interface</p>
+
+<p>Wraps the native WebSocket if support is detected</p>
+
+<p>Provides a default fallback using traditional AJAX polling over HTTP</p>
+
+<p>Requires no extra code on the frontend, allows you to target the WebSocket API
+today and let users take advantage of it as more browsers add support.</p>
+
+<p>Default fallback behavior can be overridden by plugin options</p>
+
+:ET

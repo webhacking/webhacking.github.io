@@ -1,0 +1,21 @@
+I"8<p>36 번 문제는 200스코어의 문제입니다.</p>
+
+<p>페이지 로드 시 아래의 내용들이 보입니다.</p>
+
+<p>힌트로 “vi”, “blackout” 을 알려주고있네요.</p>
+
+<p>vi + blackout</p>
+
+<p>vi 를 자주 사용하는 사람은 알겠지만, 파일을 편집할 때 backup 파일로 “swp” 확장자의 복제본이 생성됩니다.</p>
+
+<p>해당 백업본의 파일명으로 요청을 하니 패스워드를 알려줍니다.</p>
+
+<p>본 패스워드를 auth 항목에서 submit 하면 클리어 입니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hintviblackout
+</code></pre></div></div>
+
+<p><img src="/assets/images/posts/778/271BB53359681F8E156B21.JPEG" alt="" /><img src="/assets/images/po
+sts/778/2646043359681F8E14577A.PNG" alt="" /></p>
+
+:ET

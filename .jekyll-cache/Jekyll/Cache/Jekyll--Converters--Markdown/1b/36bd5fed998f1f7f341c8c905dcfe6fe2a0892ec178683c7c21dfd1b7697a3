@@ -1,0 +1,4 @@
+I"È<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -name "improvement.out" -exec echo \{\} \; -exec cat \{\} \; &gt; improvements.out
+</code></pre></div></div>
+
+:ET

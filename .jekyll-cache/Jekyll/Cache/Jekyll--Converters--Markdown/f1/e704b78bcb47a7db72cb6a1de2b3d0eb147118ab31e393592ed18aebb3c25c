@@ -1,0 +1,31 @@
+I"j<p>SELECT</p>
+
+<p>ORDINAL_POSITION ‘필드순번’,</p>
+
+<p>COLUMN_NAME ‘필드명’,</p>
+
+<p>DATA_TYPE ‘데이터 TYPE’,</p>
+
+<p>COLUMN_TYPE ‘데이터 LENGTH’,</p>
+
+<p>COLUMN_KEY ‘KEY’,</p>
+
+<p>IS_NULLABLE ‘NULL값여부’,</p>
+
+<p>EXTRA ‘자동여부’,</p>
+
+<p>COLUMN_DEFAULT ‘디폴트값’,</p>
+
+<p>COLUMN_COMMENT ‘필드설명’</p>
+
+<p>FROM INFORMATION_SCHEMA.COLUMNS</p>
+
+<p>WHERE</p>
+
+<p>TABLE_SCHEMA = ‘사용자가 작성한 데이터베이스이름’</p>
+
+<p>AND TABLE_NAME = ‘사용자가 작성한 테이블이름’</p>
+
+<p>ORDER BY TABLE_NAME, ORDINAL_POSITION</p>
+
+:ET

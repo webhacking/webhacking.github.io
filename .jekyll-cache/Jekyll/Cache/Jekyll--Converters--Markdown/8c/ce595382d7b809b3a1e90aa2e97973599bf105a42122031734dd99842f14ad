@@ -1,0 +1,27 @@
+I"/<p>CREATE TABLE <code class="highlighter-rouge">articles</code> (</p>
+
+<p><code class="highlighter-rouge">id</code> int(11) NOT NULL DEFAULT ‘0’,</p>
+
+<p><code class="highlighter-rouge">title</code> varchar(65) DEFAULT NULL,</p>
+
+<p><code class="highlighter-rouge">topic</code> varchar(25) NOT NULL DEFAULT ‘’,</p>
+
+<p><code class="highlighter-rouge">author</code> varchar(25) NOT NULL DEFAULT ‘’,</p>
+
+<p><code class="highlighter-rouge">ondate</code> datetime NOT NULL DEFAULT ‘0000-00-00 00:00:00’,</p>
+
+<p><code class="highlighter-rouge">body</code> text NOT NULL,</p>
+
+<p>KEY <code class="highlighter-rouge">index_id</code> (<code class="highlighter-rouge">id</code>),</p>
+
+<p>FULLTEXT KEY <code class="highlighter-rouge">title</code> (<code class="highlighter-rouge">title</code>,<code class="highlighter-rouge">body</code>)</p>
+
+<p>) ENGINE=MyISAM DEFAULT CHARSET=utf8$$</p>
+
+<p>select id,title FROM articles WHERE</p>
+
+<p>MATCH(title) AGAINST (‘+cvs’ IN BOOLEAN MODE) limit 1000;</p>
+
+<p>what you have to consier is depending on DB Engine</p>
+
+:ET

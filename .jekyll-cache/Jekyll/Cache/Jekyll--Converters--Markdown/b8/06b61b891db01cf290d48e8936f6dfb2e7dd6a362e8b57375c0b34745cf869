@@ -1,0 +1,119 @@
+I"/<p>한 블록에서 throw된 오류가 다른 블록에서 처리되는 코드 블록을 설정합니다.</p>
+
+<p>try 블록 내부에서 throw되는 오류는 catch 블록에서 catch됩니다.</p>
+
+<h1 id="예외처리exception-handling">예외처리(Exception Handling)</h1>
+
+<ul>
+  <li>프로그램이 실행되는 동안 문제가 발생할 때 대처할수있게 처리하는 것</li>
+  <li>예외(Exception) : 프로그램 실행 중 발생하는 오류</li>
+  <li>에러(Error) : 프로그래밍 언어의 문법적인 오류</li>
+  <li>기본 예외 처리, 고급 예외처리 두 가지 방법으로 처리</li>
+</ul>
+
+<h2 id="기본-예외처리">기본 예외처리</h2>
+
+<ul>
+  <li>예외가 발생하지 않게 사전에 해결하는 것</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">registerEventListener</span><span class="p">(</span><span class="nx">node</span><span class="p">,</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">listener</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="nx">node</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">listener</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// 파이어폭스, 크롬, 사파리, 오페라</span>
+
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="nx">node</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">on</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">listener</span><span class="p">);</span> <span class="c1">// 익스 플로러</span>
+
+<span class="p">}</span> <span class="c1">// if</span>
+
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">whenClick</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="kd">var</span> <span class="nx">event</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span> <span class="o">||</span> <span class="nx">e</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">willAlert</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+
+<span class="nx">willAlert</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">clientX : </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">clientX</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">willAlert</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">clientY : </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">event</span><span class="p">.</span><span class="nx">clientY</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">willAlert</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><a href="http://colorscripter.com/info#e">Colored by Color Scripter</a></p>
+
+<p><a href="http://colorscripter.com/info#e">cs</a></p>
+
+<h2 id="고급-예외처리">고급 예외처리</h2>
+
+<ul>
+  <li>try키워드,catch키워드.finally키워드로 예외를 처리</li>
+  <li>try 구문안에서 예외가 발생하면 catch 구문에서 처리, finally구문은 필수사항은 아니고, 예외가 발생 여우와 상관없이 수행돼야하는 작업을 처리</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">try 구문</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">abcd</span><span class="p">.</span><span class="nx">run</span><span class="p">();</span> <span class="c1">// 없는객체의 없는 메서드이기 때문에 예외 발생</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">try 구문 끝</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// 예외로 인해 실행 되지 않음</span>
+
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">exception</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">예외 발생시 실행 되는 catch 구문</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">예외 발생 여부 상관없이 실행 되는 finaylly 구문</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="예외객체">예외객체</h2>
+
+<ul>
+  <li>try catch 구문을 사용할때 catch 괄호안에 입력하는 식별자</li>
+  <li>e, 또는 exception 식별자를 사용</li>
+  <li>예외 객체의 속성</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span> <span class="p">{</span>
+
+<span class="kd">var</span> <span class="nx">array</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">99999999999999999999999</span><span class="p">);</span>
+
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">exception</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="kd">var</span> <span class="nx">output</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="k">in</span> <span class="nx">exception</span><span class="p">)</span> <span class="p">{</span>
+
+<span class="nx">output</span> <span class="o">+=</span> <span class="nx">i</span> <span class="o">+</span> <span class="dl">'</span><span class="s1"> : </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">exception</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">+</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">output</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<h2 id="에러와-예외">에러와 예외</h2>
+
+<p>예외 : try catch 구문으로 해결할 수 있는 것</p>
+
+<p>에러 : try catch 구문으로 해결할 수 없는 것</p>
+
+<h2 id="예외-강제-발생">예외 강제 발생</h2>
+
+<p>예외를 강제로 발생시킬때는 “throw” 키워드를 사용</p>
+
+<p>에러와 다르게 예외는 try catch 구문으로 처리할 수 있음</p>
+
+:ET

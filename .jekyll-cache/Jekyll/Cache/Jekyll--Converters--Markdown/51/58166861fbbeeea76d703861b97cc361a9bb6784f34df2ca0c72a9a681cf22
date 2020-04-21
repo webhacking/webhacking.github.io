@@ -1,0 +1,40 @@
+I"�<p><strong><em>NN</em></strong></p>
+
+<p>시간 제한 : 1초</p>
+
+<p>메모리 제한 : 32 MB</p>
+
+<p><strong>문제</strong></p>
+
+<p>문제는 매우 간단하다.</p>
+
+<p>N을 N번 출력하는 프로그램을 작성하여라.</p>
+
+<p>다만, _답이 길어지는 경우 답의 앞 M자리만 출력_한다.</p>
+
+<p><strong>입력</strong></p>
+
+<p>첫 번째 줄에는 N, M이 주어진다. (1 ≤ N, M ≤ 2016)</p>
+
+<p><strong>출력</strong></p>
+
+<p>N을 N번 출력한다. 만약 답이 길어지면 답의 앞 M자리를 출력한다.</p>
+
+<p>**<br />
+**</p>
+
+<p>**<br />
+**</p>
+
+<p><strong>답</strong></p>
+
+<p>정소를 문자열로 표현해서 생각하면 쉽다.</p>
+
+<p>Index 를 길이로 나눈 나머지 값에 해당하는 문자를 출력한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include#includechar str[30];int len, n, m;int main() {    int i;    scanf("%s%d", str, &amp;m);    len = strlen(str);    for ( i = 0; i  n*len ) {        m = n*len;    }    for ( i = 0; i &lt; m; i++ ) {        putchar(str[i%len]);    }    return 0;}
+</code></pre></div></div>
+
+<p><img src="/assets/images/posts/753/21436036592B77A72BB50A.PNG" alt="" /></p>
+
+:ET

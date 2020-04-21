@@ -1,0 +1,17 @@
+I"M<p>자주 사용하는 것들, 이전에도 이 주제로 포스트한게있음.</p>
+
+<p>참고 : http://blog.hax0r.info/140</p>
+
+<p><strong>Basic True / False Declaration</strong>
+    $is_admin = ($user[‘permissions’] == ‘admin’ ? true : false);</p>
+
+<p>**<br />
+**</p>
+
+<p><strong>Conditional Welcome Message</strong>
+    echo ‘Welcome ‘.($user[‘is_logged_in’] ? $user[‘first_name’] : ‘Guest’).’!’;</p>
+
+<p><strong>Conditional Items Message</strong>
+    echo ‘Your cart contains ‘.$num_items.’ item’.($num_items != 1 ? ‘s’ : ‘’).’.’;</p>
+
+:ET

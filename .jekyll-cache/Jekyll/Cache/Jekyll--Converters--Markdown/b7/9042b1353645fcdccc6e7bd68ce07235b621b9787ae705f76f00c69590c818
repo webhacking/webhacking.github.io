@@ -1,0 +1,17 @@
+I"�<p><strong>문제:</strong><br />
+바이너리 파일의 머지가 깨진 경우, HEAD나 머지한 브랜치의 것 중 하나를 선택하려고 한다.</p>
+
+<p><strong>해결책:</strong></p>
+
+<p>git checkout 커맨드에서 –ours 와 –theirs 옵션을 제공한다.</p>
+
+<p>--ours: 현재 브랜치의 것을 선택<br />
+--theirs: 다른 브랜치의 것을 선택</p>
+
+<p>$ git checkout –ours – path/to/file # 현재 브랜치의 것을 선택<br />
+$ git checkout –theirs – path/to/file # 머지한 브랜치의 것을 선택</p>
+
+<p>참고: http://stackoverflow.com/questions/278081/resolving-a-git-conflict-with-
+binary-files</p>
+
+:ET

@@ -1,0 +1,42 @@
+I"7<p>150 포인트의 문제다.</p>
+
+<p>문제를 보면 <code class="highlighter-rouge">port</code> 라는 변수의 <code class="highlighter-rouge">rand(10000,10100)</code> 을 대입한다.</p>
+
+<p>여기서 <code class="highlighter-rouge">rand</code> php 내부 함수는 정수 난수를 생성한다.</p>
+
+<p>rand 는 0과 getrandmax 사이의 임의의 난수를 반환한다.</p>
+
+<blockquote>
+  <p>If called without the optional min, max arguments rand() returns a pseudo-
+random integer between 0 and getrandmax(). If you want a random number between
+5 and 15 (inclusive), for example, use rand(5, 15).</p>
+</blockquote>
+
+<p>이후 <code class="highlighter-rouge">socket</code> 이라는 변수에 fsockopen 함수를 대입한다.</p>
+
+<p>위의 선언된 <code class="highlighter-rouge">port</code> 는 두번째에 위치해 있고, 첫 번째 인자에는 get 메소드의 server 파라미터가 담겨있다.</p>
+
+<p>실질적으로 문제 페이지에 들어가면 아래 주소로 리다이렉트 된다.</p>
+
+<p>challenge/web/web-16/?server=175.196.156.178</p>
+
+<p>여기서 server 파라미터에 값은 현재 요청한 클라이언트의 아이피, 즉 본인의 아이피가 되겠다.</p>
+
+<p>그리고 하단에는 연결관련한 에러 문구(Connection refused)가 나온다.</p>
+
+<p>문제를 보면 알겠지만, 저 파라미터 값의 대상의 포트를 10000, 10100 에 해당하는 번호로 열면된다.</p>
+
+<p>정말 쉽게, 클리어</p>
+
+<p>$port=rand(10000,10100);</p>
+
+<p>$socket=fsockopen(“$_GET[server]”,”$port”,$errno,$errstr,3) or die(“error :
+$errstr”);</p>
+
+<p>Warning: fsockopen() [function.fsockopen]: unable to connect to
+175.196.156.178:10045 (Connection refused) in
+/home/hosting_users/webhacking/www/challenge/web/web-16/index.php on line 24</p>
+
+<p>error : Connection refused</p>
+
+:ET

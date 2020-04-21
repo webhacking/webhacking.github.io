@@ -1,0 +1,12 @@
+I"�<p>아래 게시물의 연장선상이다.</p>
+
+<p>http://blog.hax0r.info/750</p>
+
+<p>CORS 를 설정안하고있었다니 !</p>
+
+<p>SSL 설정하는라 제일 기본적인걸 건너뛰었다. 그래서 바로 추가함.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Header set Access-Control-Allow-Origin "Origin 호스트"Header set Access-Control-Allow-Methods "허용 메소드 (e.g GET, POST, PUT 등등)"
+</code></pre></div></div>
+
+:ET

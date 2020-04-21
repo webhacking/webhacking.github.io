@@ -1,0 +1,126 @@
+I"�<p>자꾸 까먹어서 포스팅하게됬다. . .</p>
+
+<p>참고자료(‘http://www.w3.org/TR/CSS21/selector.html%23id-selectors’)</p>
+
+<p><strong>Pattern matching</strong></p>
+
+<p>In CSS, pattern matching rules determine which style rules apply to elements
+in the <a href="http://www.w3.org/TR/CSS21/conform.html#doctree">document
+tree</a>(‘돔트리’). These patterns,
+called selectors, may range from simple element names to rich contextual
+patterns. If all conditions in the pattern are true for a certain element, the
+selector matches the element.</p>
+
+<p>The case-sensitivity of document language element names in selectors depends
+on the document language. For example, in HTML, element names are case-
+insensitive, but in XML they are case-sensitive.</p>
+
+<p>The following table summarizes CSS 2.1 selector syntax:</p>
+
+<p>PatternMeaningDescribed in section</p>
+
+<p>*
+Matches any element.</p>
+
+<p>Universal selector</p>
+
+<p>E</p>
+
+<p>Matches any E element (i.e., an element of type E).</p>
+
+<p>Type selectors</p>
+
+<p>E F</p>
+
+<p>Matches any F element that is a descendant of an E element.</p>
+
+<p>Descendant selectors</p>
+
+<p>E &gt; F</p>
+
+<p>Matches any F element that is a child of an element E.</p>
+
+<p>Child selectors</p>
+
+<p>E:first-child</p>
+
+<p>Matches element E when E is the first child of its parent.</p>
+
+<p>The :first-child pseudo-class</p>
+
+<p>E:link<br />
+E:visited</p>
+
+<p>Matches element E if E is the source anchor of a hyperlink of which the target
+is not yet visited (:link) or already visited (:visited).</p>
+
+<p>The link pseudo-classes</p>
+
+<p>E:active<br />
+E:hover<br />
+E:focus</p>
+
+<p>Matches E during certain user actions.</p>
+
+<p>The dynamic pseudo-classes</p>
+
+<p>E:lang(c)</p>
+
+<p>Matches element of type E if it is in (human) language c (the document
+language specifies how language is determined).</p>
+
+<p>The :lang() pseudo-class</p>
+
+<p>E + F</p>
+
+<p>Matches any F element immediately preceded by a sibling element E.</p>
+
+<p>Adjacent selectors</p>
+
+<p>E[foo]</p>
+
+<p>Matches any E element with the “foo” attribute set (whatever the value).</p>
+
+<p>Attribute selectors</p>
+
+<p>E[foo=”warning”]</p>
+
+<p>Matches any E element whose “foo” attribute value is exactly equal to
+“warning”.</p>
+
+<p>Attribute selectors</p>
+
+<p>E[foo~=”warning”]</p>
+
+<p>Matches any E element whose “foo” attribute value is a list of space-separated
+values, one of which is exactly equal to “warning”.</p>
+
+<p>Attribute selectors</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>E[lang</td>
+      <td>=”en”]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Matches any E element whose “lang” attribute has a hyphen-separated list of
+values beginning (from the left) with “en”.</p>
+
+<p>Attribute selectors</p>
+
+<p>DIV.warning</p>
+
+<p><em>Language specific.</em> (In HTML, the same as DIV[class~=”warning”].)</p>
+
+<p>Class selectors</p>
+
+<p>E#myid</p>
+
+<p>Matches any E element with ID equal to “myid”.</p>
+
+<p>ID selectors</p>
+
+:ET

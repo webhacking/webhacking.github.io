@@ -1,0 +1,13 @@
+I"�<p>서버 리부팅하고 웹서버 띄울려니깐 에러나길래 로그보니깐 내가 설정한 서버들이 모두 제외되있음.</p>
+
+<p>설정 경로에 <code class="highlighter-rouge">.save</code>이있으면 삭제하고 다시 리부팅하면 됨.</p>
+
+<p>참고 :</p>
+
+<p>I assume that you’re running a Linux, and you’re using gEdit to edit your
+files. In the <em>/etc/nginx/sites-enabled</em>, it may have left a temp file e.g.
+default~ (watch the ~). Depending on your editor, the file could be named
+<em>.save</em> or something like it. Just run $ ls -lahto see which files are
+unintended to be there and remove them</p>
+
+:ET

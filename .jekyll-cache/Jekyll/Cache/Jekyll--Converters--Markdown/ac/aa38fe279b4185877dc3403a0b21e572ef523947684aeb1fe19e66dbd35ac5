@@ -1,0 +1,14 @@
+I"�<p>http://packages.ubuntu.com/</p>
+
+<p>유효한 패키지인데 설치가 안될 때가 있다.</p>
+
+<p>그럴 때 해당 파일<code class="highlighter-rouge">/etc/apt/sources.list</code>을 확인한다.</p>
+
+<p>아래와 같이 추가하고. 업데이트(<code class="highlighter-rouge">apt-get update</code>) 한다.</p>
+
+<p>이후에 패키지를 다시 설치한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>deb http://archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse deb http://archive.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse deb http://archive.ubuntu.com/ubuntu/ trusty-updates main restricted universe multiverse deb http://archive.ubuntu.com/ubuntu/ trusty-proposed main restricted universe multiverse deb http://archive.ubuntu.com/ubuntu/ trusty-backports main restricted universe multiverse
+</code></pre></div></div>
+
+:ET

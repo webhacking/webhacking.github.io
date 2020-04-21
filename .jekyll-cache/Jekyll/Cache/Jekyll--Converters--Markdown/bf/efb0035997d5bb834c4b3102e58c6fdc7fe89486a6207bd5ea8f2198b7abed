@@ -1,0 +1,42 @@
+I"{<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HHOOK hKeyboardHook;
+ 
+LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam) 
+ 
+{
+ 
+    PKBDLLHOOKSTRUCT p; 
+ 
+    if (nCode == HC_ACTION) 
+    {
+        p = (PKBDLLHOOKSTRUCT) lParam;
+ 
+        if (((p-&gt;vkCode == VK_LWIN) || (p-&gt;vkCode == VK_RWIN)) 
+                                                || ( p-&gt;flags &amp; LLKHF_ALTDOWN) 
+                                                || (p-&gt;vkCode == VK_TAB)
+           )
+ 
+            return 1; 
+ 
+   }
+ 
+   return CallNextHookEx(hKeyboardHook, nCode, wParam, lParam);
+}
+</code></pre></div></div>
+
+<p><a href="http://terms.naver.com/entry.nhn?docId=932632&amp;cid=43667&amp;categoryId=43667">후킹</a>
+시작</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hKeyboardHook  = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, hInst, 0); // hook 설치
+</code></pre></div></div>
+
+<p>후킹제거</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>UnhookWindowsHookEx(hKeyboardHook); //제거
+hKeyboardHook = NULL;
+</code></pre></div></div>
+
+<p>(이 예제코드는 ‘int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR
+lpszCmdParam, int nCmdShow)’ 에서 사용할때의 예제입니다..) 컴파일했는데 PKBDLLHOOKSTRUCT를 못찾는
+에러가 난다면 #define _WIN32_WINNT 0x0400 를 추가하여 막을수 있습니다,</p>
+
+:ET

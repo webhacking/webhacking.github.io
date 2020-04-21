@@ -1,0 +1,13 @@
+I"�<p>입력 :</p>
+
+<p>두 자연수가 입력으로 주어지고 , 각각 가로 , 세로 길이이다.단위는 같은 것으로 가정한다.두 수는 1000 을 넘지 않는다.</p>
+
+<p>출력 :</p>
+
+<p>직 사각형의 넓이를 출력한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a,b = map(int,raw_input().split())
+print a*b
+</code></pre></div></div>
+
+:ET

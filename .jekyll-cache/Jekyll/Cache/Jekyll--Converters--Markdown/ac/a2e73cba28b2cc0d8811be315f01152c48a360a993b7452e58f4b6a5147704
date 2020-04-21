@@ -1,0 +1,49 @@
+I"X	<p><strong>Environment Variables</strong></p>
+
+<p><code class="highlighter-rouge">환경변수</code>란 프로세스가 컴퓨터에 동작하는 방식에 영향을 미치는 동적인 값들의 집합</p>
+
+<p>한번꼬이면 머리털 다빠질수있으니 유의.</p>
+
+<p>**<br />
+**</p>
+
+<p><strong>확인</strong></p>
+
+<p>Linux시스템에서는 쉘에서 <code class="highlighter-rouge">env</code>, <code class="highlighter-rouge">export</code> 등의 명령을 통해확인할수있다.</p>
+
+<p>아래 목록은 일반적으로 사용되는 환경변수들이다.</p>
+
+<ul>
+  <li><em>HOME</em> : 사용자의 홈디렉토리</li>
+  <li><em>PATH</em> : 실행파일을 찾는 경로</li>
+  <li><em>LANG</em> : 프로그램 사용시 기본 지원되는 언어</li>
+  <li><em>PWD</em> : 사용자의 현재 작업하는 디렉토리</li>
+  <li><em>TERM</em> : 로긴 터미널 타입</li>
+  <li><em>SHELL</em> : 로그인해서 사용하는 쉘</li>
+  <li><em>USER</em> : 사용자의 이름</li>
+  <li><em>DISPLAY</em> : X 디스플레이 이름</li>
+  <li><em>VISUAL</em> : visual 편집기의 이름</li>
+  <li><em>EDITOR</em> : 기본 편집기의 이름</li>
+  <li><em>COLUMNS</em> : 현재 터미널이나 윈도우 터미널의 컬럼수</li>
+  <li><em>PS1</em> : 명령프롬프트변수</li>
+  <li><em>PS2</em> : 2차 명령프롬프트이다. 명령행에서 를 사용하여 명령행을 연장했을 때 나타난다.</li>
+  <li><em>BASH</em> : 사용하는 bash 쉘의 경로</li>
+  <li><em>BASH_VERSION</em> : bash의 버전</li>
+  <li><em>HISTFILE</em> : history 파일의 경로</li>
+  <li><em>HISTFILESIZE</em> : history 파일의 크기</li>
+  <li><em>HISTSIZE</em> : history에 저장되는 갯수</li>
+  <li><em>HISTCONTROL</em> : 중복되어지는 명령에 대한 기록 유무를 지정하는 변수이다.</li>
+  <li><em>HOSTNAME</em> : 호스트의 이름</li>
+  <li><em>LINES</em> : 터미널의 라인 수</li>
+  <li><em>LOGNAME</em> :로그인이름</li>
+  <li><em>LS_COLORS</em> : ls 명령의 색상관련 옵션</li>
+  <li><em>MAIL</em> : 메일을 보관하는 경로</li>
+  <li><em>MAILCHECK</em> : 메일확인시간</li>
+  <li><em>OSTYPE</em> : 운영체제 타입</li>
+  <li><em>SHLVL</em> :쉘의 레벨</li>
+  <li><em>TERM</em> :터미널종류</li>
+  <li><em>UID</em> : 사용자의 UID</li>
+  <li><em>USERNAME</em> : 사용자이름</li>
+</ul>
+
+:ET

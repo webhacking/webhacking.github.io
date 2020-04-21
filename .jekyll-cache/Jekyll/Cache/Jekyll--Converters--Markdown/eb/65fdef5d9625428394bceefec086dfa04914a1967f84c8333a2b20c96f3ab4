@@ -1,0 +1,13 @@
+I"�<p><strong>ELK</strong></p>
+
+<p>Elasticsearch + Logstash + Kibana</p>
+
+<p>Elasticsearch는 Apache의 Lucene을 바탕으로 개발한 실시간 분산 검색 엔진이며,</p>
+
+<p>Logstash는 각종 로그를 가져와 JSON형태로 만들어 Elasticsearch로 전송하고,</p>
+
+<p>Kibana는 Elasticsearch에 저장된 Data를 사용자에게 Dashboard 형태로 보여주는 솔루션이다.</p>
+
+<p><img src="/assets/images/posts/560/22224C5056FB33EB1748B5.JPEG" alt="" /></p>
+
+:ET

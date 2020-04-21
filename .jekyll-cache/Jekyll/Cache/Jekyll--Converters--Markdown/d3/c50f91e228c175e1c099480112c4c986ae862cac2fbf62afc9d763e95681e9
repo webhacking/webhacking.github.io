@@ -1,0 +1,137 @@
+I"i<h1 id="개요">개요</h1>
+
+<p>안녕하세요.<br />
+본 문서는 <a href="https://dev.mysql.com/doc/relnotes/mysql/5.7/en/">MySQL 5.7</a> 버전의 새로운
+기능과 성능 차이 그리고 5.6버전 에서의 업데이트 과정을 다룹니다.</p>
+
+<p>MySQL 이 세상에 나온지 20년이라는 세월이 훌쩍 넘었습니다.</p>
+
+<p>오라클이 <code class="highlighter-rouge">[Innobase](https://en.wikipedia.org/wiki/Innobase)</code> 를 인수한지 10년이 넘었고, 썬
+마이크로시스템즈가 MySQL AB 를 인수한지 9년이 되었네요.</p>
+
+<p>지금까지의 MySQL은 개발자들의 많은 사랑과 관심을 받으며 계속 성장해왔습니다.</p>
+
+<p>또 한 테크 리딩 기업들의 기여로 MySQL의 생태계는 그 어느때보다 활발합니다.</p>
+
+<p>MySQL 측은 공식 홈페이지를 통해 5.7 버전은 이전 버전인 5.6 과 비교 했을 때
+<a href="https://www.mysql.com/products/enterprise/database/">3배</a> 정도의 성능 차이가 있다고 말합니다.</p>
+
+<p>이전의 경재사들 제품군에 비해 상대적으로 성능이 떨어진다는 이슈 제기가 많았습니다.</p>
+
+<p>경쟁 의식 덕분인지 5.7버전을 기점으로 성능 관련하여 많은 공을 들였습니다.</p>
+
+<p>그 뿐 아니라, New Optimizer, Native JSON support,Multi-source Replication 등의 추가 기능도
+있어 개발자 입장에서는 정말 반가운 소리 입니다.</p>
+
+<p>현재 시점 기준으로 8.0(5.8 MySQL 5.8 will be called MySQL 8.0)이 릴리즈 되었습니다.</p>
+
+<p>8.0의 경우 AWS RDS 에서 지원 해주지 않는 관계로 5.7에 대해서만 얘기 하고자 합니다.</p>
+
+<p>본 내용이 좀 더 궁금하신 분 들 께서는 공식 홈페이지를 통해서 보시면 좋을 것 같습니다.</p>
+
+<p>기회가 된다면 8.0의 대한 설명도 다음에 포스팅 하도록 노력하겠습니다.</p>
+
+<p><img src="/assets/images/posts/832/99D46A3359FC07642F1659.JPEG" alt="" /></p>
+
+<h1 id="mysql-57-은-56-버전과-무엇이-다른건가요-">MySQL 5.7 은 5.6 버전과 무엇이 다른건가요 ?</h1>
+
+<p>우선 첫 번째, 버전 명이 다릅니다.</p>
+
+<p>두번째, 기본 환경 변수의 기본 값이 다릅니다.</p>
+
+<p>5.6 버전 부터 <code class="highlighter-rouge">[START ](https://dev.mysql.com/doc/refman/5.6/en/innodb-
+performance-ro-txn.html)[TRANSACTION READ
+ONLY](https://dev.mysql.com/doc/refman/5.6/en/innodb-performance-ro-txn.html)</code>
+statement 를 지원합니다.</p>
+
+<p><code class="highlighter-rouge">Read Only</code> 트랜잭션이라는 것을 별도로 선언하는 것으로, <code class="highlighter-rouge">Read Only</code> 트랜잭션을 위해서 별도의 롤백 세그먼트를 할당 하지
+않도록 합니다.</p>
+
+<p>또한, <code class="highlighter-rouge">autocommit</code>이 활성화 된 상태에서의 SELECT (None Locking) 에서도 마찬가지로 롤백 세그먼트를 할당하지
+않습니다.</p>
+
+<p>5.7 버전 에서는 <code class="highlighter-rouge">autocommit</code> 모드가 아니거나 <code class="highlighter-rouge">START TRANSACTION READ ONLY</code>로 트랜젝션을 시작하지
+않더라도</p>
+
+<p>트랜잭션 내에서 데이터의 갱신이 없다면 롤백 세그먼트의 할당을 생략합니다.</p>
+
+<p>즉, 트랜젝션 내에서 갱신이 처음 시작될 때까지, 롤백 세그먼트의 할당을 지연시키는 것 입니다.</p>
+
+<p>설정 값의 기본 유무이긴 하지만요.</p>
+
+<p>좀 더 쉽게 <code class="highlighter-rouge">캐시</code>로 비유하자면, 비유가 옳은 지는 모르겠지만…</p>
+
+<p>Ab 라는 Hash Key 를 가진 데이터셋이 있다고 가정했을 때, 이 Ab의 데이터를 처음 생성한 시점 이후로부터</p>
+
+<p>데이터의 변동 사항이 없다면, 질의된 내용에 따른 자원을 소비하지 않고 이전의 캐시된 데이터를 응답합니다.</p>
+
+<p>이로써 자원과 Response time 을 단축하게 됩니다.</p>
+
+<p>롤백 세그먼트는 트랜잭션 진행시 그 이전 이미지를 기록하기 위해 사용되는 CIRCULAR구조의 세그먼트입니다.</p>
+
+<p>본래 목적은 트랜잭션 롤백, 트랜잭션 복구, 읽기 일관성을 제공하기 위해서 사용하는데, 위와 같이 데이터의 변동사항이 없다면</p>
+
+<p>이는 불 필요한 자원을 사용하는 것 입니다.</p>
+
+<p>아래는 5.7의 새로운 기능을 리스트 형식으로 정리해보았습니다.</p>
+
+<ul>
+  <li>JSON Support</li>
+  <li>Multi-source Replication</li>
+  <li>Optimizer Cost Model</li>
+  <li>Query Rewrite Plugin</li>
+  <li>Sys Schema</li>
+  <li>GIS Spatial Extensions</li>
+  <li>InnoDB Transparent Page Level Compression</li>
+  <li>InnoDB Native Partitioning</li>
+</ul>
+
+<h1 id="업그레이드-해볼까요">업그레이드 해볼까요?</h1>
+
+<p>업데이트는 공식 홈페이지에서 지원하는
+<a href="https://dev.mysql.com/doc/refman/5.7/en/upgrading.html">문서</a>를 참고하셔도 좋습니다.</p>
+
+<p>우분투 환경을 기준에서 말씀드리겠습니다.</p>
+
+<p>아래 명령어를 통하여 업데이트를 진행해주세요.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://dev.mysql.com/get/mysql-apt-config_0.8.0-1_all.debsudo dpkg -i mysql-apt-config_0.8.0-1_all.debsudo apt-get updatesudo apt-get install mysql-server
+</code></pre></div></div>
+
+<p><img src="/assets/images/posts/832/99F8833359FC193A067BC5.JPEG" alt="" /></p>
+
+<p>5.7 을 선택 후, <code class="highlighter-rouge">apply</code> 합니다.</p>
+
+<p>업그레이드 이후 <code class="highlighter-rouge">mysql_upgrade</code> 명령어를 잊지 말아주세요. (<a href="https://dev.mysql.com/doc/refman/5.7/en/upgrading-from-previous-
+series.html">MySQL Upgrading
+guide</a>)</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mysql_upgrade -u root -p
+</code></pre></div></div>
+
+<p>그리고 MySQL 을 재 시작합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service mysql restart
+</code></pre></div></div>
+
+<p>이 후 패스워드를 다시 설정합니다.</p>
+
+<p>5.7 버전에서는 <code class="highlighter-rouge">password</code> 라는 필드가 더 이상 존재 하지 않습니다.</p>
+
+<p>대신 앞으로는 <code class="highlighter-rouge">authentication_string</code> 이라 부릅니다. 아래 명령어를 통해서 설정해주세요.</p>
+
+<h1 id="글을-마치며">글을 마치며</h1>
+
+<p>5.6버전 에서 5.7버전으로 업그레이드를 하는 과정에서의 궁금증과 호기심을 적어보려 노력했으나, 많은 내용들을 쉽게 풀어 얘기할 수
+없었던게 많이 아쉽네요.</p>
+
+<p>본 글에서 수정되어야 되는 내용이 있다면, 댓글 통해서 알려주시면 감사하겠습니다.</p>
+
+<h1 id="참고-자료">참고 자료</h1>
+
+<ul>
+  <li><a href="https://www.percona.com/blog/2016/09/14/mysql-default-configuration-changes-between-5-6-and-5-7/">MySQL Default Configuration Changes between 5.6 and 5.7</a></li>
+  <li><a href="https://stackoverflow.com/questions/32208000/update-user-password-in-mysql-5-7">Update user password in Mysql 5.7</a></li>
+</ul>
+
+:ET

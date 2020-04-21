@@ -1,0 +1,22 @@
+I"5<p>9번 라인 조건에 $result[‘id’] 의 값이 admin으로 고정되어있다.</p>
+
+<p>쿼리문(‘id=’1’ or ‘1=1’ and id=’admin’#’ and pw=md5(‘’)’)준비하고 요청한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+  <span class="k">include</span> <span class="s2">"../config.php"</span><span class="p">;</span> 
+  <span class="nx">login_chk</span><span class="p">();</span>
+  <span class="nx">dbconnect</span><span class="p">();</span>
+  <span class="k">if</span><span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s1">'/prob|_|\.|\(\)/i'</span><span class="p">,</span> <span class="nv">$_GET</span><span class="p">[</span><span class="nx">id</span><span class="p">]))</span> <span class="k">exit</span><span class="p">(</span><span class="s2">"No Hack ~_~"</span><span class="p">);</span> 
+  <span class="k">if</span><span class="p">(</span><span class="nb">preg_match</span><span class="p">(</span><span class="s1">'/prob|_|\.|\(\)/i'</span><span class="p">,</span> <span class="nv">$_GET</span><span class="p">[</span><span class="nx">pw</span><span class="p">]))</span> <span class="k">exit</span><span class="p">(</span><span class="s2">"No Hack ~_~"</span><span class="p">);</span> 
+  <span class="nv">$query</span> <span class="o">=</span> <span class="s2">"select id from prob_cobolt where id='</span><span class="si">{</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">id</span><span class="p">]</span><span class="si">}</span><span class="s2">' and pw=md5('</span><span class="si">{</span><span class="nv">$_GET</span><span class="p">[</span><span class="nx">pw</span><span class="p">]</span><span class="si">}</span><span class="s2">')"</span><span class="p">;</span> 
+  <span class="k">echo</span> <span class="s2">"query : </span><span class="si">{</span><span class="nv">$query</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span> 
+  <span class="nv">$result</span> <span class="o">=</span> <span class="o">@</span><span class="nb">mysql_fetch_array</span><span class="p">(</span><span class="nb">mysql_query</span><span class="p">(</span><span class="nv">$query</span><span class="p">));</span> 
+  <span class="k">if</span><span class="p">(</span><span class="nv">$result</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'admin'</span><span class="p">)</span> <span class="nx">solve</span><span class="p">(</span><span class="s2">"cobolt"</span><span class="p">);</span>
+  <span class="k">elseif</span><span class="p">(</span><span class="nv">$result</span><span class="p">[</span><span class="s1">'id'</span><span class="p">])</span> <span class="k">echo</span> <span class="s2">"Hello </span><span class="si">{</span><span class="nv">$result</span><span class="p">[</span><span class="s1">'id'</span><span class="p">]</span><span class="si">}</span><span class="s2">You are not admin :("</span><span class="p">;</span> 
+  <span class="nb">highlight_file</span><span class="p">(</span><span class="k">__FILE__</span><span class="p">);</span> 
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/posts/414/234CD1475666A52B378792.PNG" alt="" /></p>
+
+:ET

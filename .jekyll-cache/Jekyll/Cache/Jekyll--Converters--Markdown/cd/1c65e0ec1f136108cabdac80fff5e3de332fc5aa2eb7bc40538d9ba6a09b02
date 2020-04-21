@@ -1,0 +1,11 @@
+I"<p>도커 파일 빌드 중에 쉘 스크립트가 동작하는데, 동작에 있어서 service <code class="highlighter-rouge">*</code> start 명령어가 실행되지않아<br />
+stack overflow 통하여 질문해보니 답변이 왔다.</p>
+
+<p>혹시 나와 동일하게 이 와 같은 <code class="highlighter-rouge">RUN path/your-sh.sh</code> 형식으로 진행하였다면 아래와 같이 수정하길 바란다.<br />
+**ENTRYPOINT [“path/your-sh.sh”] , <code class="highlighter-rouge">**ENTRYPOINT</code>는 컨테이너가 시작되었을 때 명령을 실행한다.</p>
+
+<p><em><code class="highlighter-rouge">ENTRYPOINT</code>는 Dockerfile 에서 단 한번만 사용할 수 있다.</em></p>
+
+<p><img src="/assets/images/posts/706/213F0F495835470D02A6DB.PNG" alt="" /></p>
+
+:ET

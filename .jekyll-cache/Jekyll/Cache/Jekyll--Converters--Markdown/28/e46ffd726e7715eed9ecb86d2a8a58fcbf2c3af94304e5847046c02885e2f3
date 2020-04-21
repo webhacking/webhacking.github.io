@@ -1,0 +1,18 @@
+I"�<p><strong>Remove directory from git and local</strong></p>
+
+<p>You could checkout ‘master’ with both directories;</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rm -r one-of-the-directories git commit -m "Remove duplicated directory" git push origin master
+</code></pre></div></div>
+
+<p><strong>Remove directory from git but NOT local</strong></p>
+
+<p>As mentioned in the comments, what you usually want to do is remove this
+directory from git but not delete it entirely from the filesystem (local)</p>
+
+<p>In that case use:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rm -r --cached myFolder
+</code></pre></div></div>
+
+:ET

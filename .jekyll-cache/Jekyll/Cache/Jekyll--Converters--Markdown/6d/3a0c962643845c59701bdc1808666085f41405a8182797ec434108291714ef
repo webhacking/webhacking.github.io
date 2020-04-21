@@ -1,0 +1,24 @@
+I"�<p>AWS 보안상의 이유로 key pair file을 이용하도록 권장하고있다.</p>
+
+<p>하지만 개발을 할때마다 너무 불편해서 ROOT 계정을 활성화한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ubuntu@ip-172-31-30-99:~$ sudo passwd rootEnter new UNIX password: Retype new UNIX password: passwd: password updated successfullyubuntu@ip-172-31-30-99:~$ su
+</code></pre></div></div>
+
+<p>루트계정 패스워드를 설정한후에 해당 계정으로 로그인합니다.</p>
+
+<p>그리고 ssh 설정 파일을 조금 수정해줍니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vi /etc/ssh/sshd_config
+
+  
+
+PasswordAuthentication yes
+</code></pre></div></div>
+
+<p>ssh 데몬을 다시 Restart 해줍니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service ssh restart
+</code></pre></div></div>
+
+:ET

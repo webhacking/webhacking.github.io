@@ -1,0 +1,86 @@
+I"<p>원본 문제</p>
+
+<p>https://community.topcoder.com/stat?c=problem_statement&amp;pm=13597&amp;rd=16086</p>
+
+<p>The King of Byteland has an army that consists of R*C soldiers. He has just
+arranged the soldiers into a grid with R rows and C columns. Two soldiers are
+neighbors if they stand next to each other in a row or in a column.</p>
+
+<p>Each of the soldiers is currently either happy or sad. You are given their
+current states in a String[] <strong>state</strong> with R elements, each containing C
+characters. The character <strong>state</strong>[i][j] is either ‘H’ (if the soldier in row
+i, column j is happy) or ‘S’ (if that soldier is sad).</p>
+
+<p>Happiness is contagious. Whenever two neighbors are both happy, they will tell
+each other jokes and after a minute that will make all of their neighbors
+happy as well.</p>
+
+<p>Here’s an example. There are two happy neighbors among many sad soldiers:</p>
+
+<p>{“SSSSS”,</p>
+
+<p>“SSHHS”,</p>
+
+<p>“SSSSS”}</p>
+
+<p>This is the situation after one minute: all of their neighbors are happy now.</p>
+
+<p>{“SSHHS”,</p>
+
+<p>“SHHHH”,</p>
+
+<p>“SSHHS”}</p>
+
+<p>And this is the situation after another minute. Now all the neighbors of the
+soldiers that are currently happy became happy as well.</p>
+
+<p>{“SHHHH”,</p>
+
+<p>“HHHHH”,</p>
+
+<p>“SHHHH”}</p>
+
+<p>After another minute, all the soldiers in the King’s army would be happy.</p>
+
+<p>The King wants all his soldiers to be happy. Sometimes it’s easy, as in the
+above example: all he has to do is wait for a while and all soldiers will
+become happy. However, it is not always the case. For example, in the
+situation below the happiness would not spread anywhere, each soldier would
+remain in his original state forever. (Note that a single happy soldier does
+not make his neighbors happy.)</p>
+
+<p>{“SSSSS”,</p>
+
+<p>“SSHSH”,</p>
+
+<p>“HSSSS”}</p>
+
+<p>The King can make a soldier happy by giving him an award for excellent
+service. Obviously, the King could make all soldiers happy by giving awards to
+all of them. But the King is smart and knows that there is a better solution.
+He will only give the awards to a few carefully selected soldiers and then he
+will simply wait until the happiness spreads to the rest of the army.</p>
+
+<p>You are given the String[] <strong>state</strong>. Compute and return the smallest number
+of awards the king has to give to make all soldiers happy in the end.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public  class  TheKingsArmyDiv2  {    
+    public  int  getNumber(String[]  state)  {        
+        int  rtn  =  2;        
+        int  H  =  state.length;        
+        int  W  =  state[0].length();                
+        for  (int  i  =  0;  i  &lt;  H;  i++)  {            
+            for  (int  j  =  0;  j  &lt;  W;  j++)  {                                
+                if  (state[i].charAt(j)  ==  'H')  {                    
+                    rtn  =  1;                                        
+                    if  (j + 1  &lt;  W   &amp;&amp;  state[i].charAt(j + 1)  ==  'H')                         return  0;                                        
+                    if  (i + 1  &lt;  H  &amp;&amp;  state[i + 1].charAt(j)  ==  'H')                         return  0;                
+                }            
+            }        
+        }                
+        return  rtn;            
+    }
+}
+</code></pre></div></div>
+
+:ET

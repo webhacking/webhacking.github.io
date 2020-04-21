@@ -1,0 +1,181 @@
+I"<p>Date 오브젝트는 date와 time 에 대한 내용들을 다룰 수 있습니다.</p>
+
+<p><strong>Try it Yourself - Examples</strong></p>
+
+<p>Return today’s date and time : Date() 함수를 이용하여 오늘 날짜를 알아내기</p>
+
+<p>getFullYear() : 년도 얻기</p>
+
+<p>getTime() : 1970년 1월 1일 이후 부터 지금까지의 시간을 밀리세컨드 단위의 숫자로 얻기</p>
+
+<p><strong>JavaScript Date Object</strong></p>
+
+<p>setFullYear() : 년도를 세팅하기</p>
+
+<p>toUTCString() : 오늘의 날짜를 UTC 기준으로 얻기</p>
+
+<p>getDay() :</p>
+
+<p>Use getDay() and an array to write a weekday, and not just a number.</p>
+
+<p>Display a clock : 시계 구현 예제</p>
+
+<p><strong>Create a Date Object</strong></p>
+
+<p>Date object는 Date() 생성자를 통해 만들 수 있다.</p>
+
+<p>아래는 만드는 방법에 대한 예들이다.</p>
+
+<p>new Date() // 현재 날짜와 시간이 기본으로 세팅됨</p>
+
+<p>new Date(milliseconds) //1970/01/01 기준으로 밀리세컨드 지난 시간을 기본으로 세팅됨</p>
+
+<p>new Date(dateString) // 사용자가 지정한 날짜 문자열을 기본으로 세팅됨</p>
+
+<p>new Date(year, month, day, hours, minutes, seconds, milliseconds) : 각 요소들을 직접
+지정하여 세팅함</p>
+
+<p>위 예제의 인자 대부분은 생략이 가능하다.</p>
+
+<p>Date object가 생성되면, 내장함수들을 사용할 수 있게 되고, 대부분의 내장함수들은 get 과 set 키워드를 통해 구분되어 진다.
+year, month, day, hour, minute, second, milliseconds 들에 get 과 set을 붙여서 사용할 수
+있는 것이다.</p>
+
+<p>All dates are calculated in milliseconds from 01 January, 1970 00:00:00
+Universal Time (UTC) with a day containing 86,400,000 milliseconds.</p>
+
+<p>초기화 예제:</p>
+
+<p>var today = new Date()</p>
+
+<p>var d1 = new Date(“October 13, 1975 11:13:00”)</p>
+
+<p>var d2 = new Date(79,5,24)</p>
+
+<p>var d3 = new Date(79,5,24,11,33,0)</p>
+
+<p>Set Dates</p>
+
+<p>Date 오브젝트를 통해 date와 time을 쉽게 사용할 수 있다.</p>
+
+<p>예를 들어 2010-01-14를 세팅하고 싶다면 아래처럼 사용할 수 있다.</p>
+
+<p>var myDate=new Date();</p>
+
+<p>myDate.setFullYear(2010,0,14);</p>
+
+<p>그리고 5일 후를 세팅하고 싶다면 아래처럼 사용할 수 있다.</p>
+
+<p>var myDate=new Date();</p>
+
+<p>myDate.setDate(myDate.getDate()+5);</p>
+
+<p><strong>Date Object Properties</strong></p>
+
+<p>Property Description</p>
+
+<p>constructor 생성자</p>
+
+<p>prototype 사용자 속성과 함수들 추가</p>
+
+<p><strong>Date Object Methods</strong></p>
+
+<p>Method Description</p>
+
+<p>getDate() 일자 반환 (from 1-31)</p>
+
+<p>getDay() 요일 반환 (from 0-6)</p>
+
+<p>getFullYear() 4자리 년도 반환 (four digits)</p>
+
+<p>getHours() 시간 반환 (from 0-23)</p>
+
+<p>getMilliseconds() 밀리세컨드 반환 (from 0-999)</p>
+
+<p>getMinutes() 분 반환 (from 0-59)</p>
+
+<p>getMonth() 월 반환 (from 0-11)</p>
+
+<p>getSeconds() 초 반환 (from 0-59)</p>
+
+<p>getTime() 1970.01.01 자정 이후 경과한 시간을 밀리세컨드로 반환</p>
+
+<p>getTimezoneOffset() UTC 시간과 로컬 시간 사이의 차이를 분 단위로 반환</p>
+
+<p>getUTCDate() UTC 기준 일자 반환 (from 1-31)</p>
+
+<p>getUTCDay() UTC 기준 요일 반환 (from 0-6)</p>
+
+<p>getUTCFullYear() UTC 기준 년도 반환 (four digits)</p>
+
+<p>getUTCHours() UTC 기준 시간 반환 (from 0-23)</p>
+
+<p>getUTCMilliseconds() UTC 기준 밀리세컨드 반환 (from 0-999)</p>
+
+<p>getUTCMinutes() UTC 기준 분 반환 (from 0-59)</p>
+
+<p>getUTCMonth() UTC 기준 월 반환 (from 0-11)</p>
+
+<p>getUTCSeconds() UTC 기준 초 반환 (from 0-59)</p>
+
+<p>getYear() 폐기. getFullYear() 함수로 대체</p>
+
+<p>parse() 1970-01-01 자정 이후 경과한 시간을 밀리세컨드로 반환</p>
+
+<p>setDate() 일자를 세팅</p>
+
+<p>setFullYear() 년도를 세팅</p>
+
+<p>setHours() 시간을 세팅</p>
+
+<p>setMilliseconds() 밀리세컨드를 세팅</p>
+
+<p>setMinutes() 분을 세팅</p>
+
+<p>setMonth() 월을 세팅</p>
+
+<p>setSeconds() 초를 세팅</p>
+
+<p>setTime() 1970-01-01 자정을 기준으로 밀리세컨드를 세팅</p>
+
+<p>setUTCDate() UTC 기준 일자 세팅</p>
+
+<p>setUTCFullYear() UTC 기준 년도 세팅 (four digits)</p>
+
+<p>setUTCHours() UTC 기준 시간 세팅</p>
+
+<p>setUTCMilliseconds()  UTC 기준 밀리세컨드 세팅</p>
+
+<p>setUTCMinutes() UTC 기준 분 세팅</p>
+
+<p>setUTCMonth() UTC 기준 월 세팅</p>
+
+<p>setUTCSeconds() UTC 기준 초 세팅</p>
+
+<p>setYear() 폐기. setFullYear() 함수로 대체</p>
+
+<p>toDateString() 문자열로 변환</p>
+
+<p>toGMTString() 폐기. toUTCString() 함수로 대체</p>
+
+<p>toISOString() ISO 표준 형태의 문자열로 변환</p>
+
+<p>toJSON() JSON date 포맷으로 변환</p>
+
+<p>toLocaleDateString() 사용자가 속한 지역의 날짜 표시 포맷 문자열로 변환</p>
+
+<p>toLocaleTimeString() 사용자가 속한 지역의 시간 표시 포맷 문자열로 변환</p>
+
+<p>toLocaleString() 사용자가 속한 지역의 포맷 문자열로 변환</p>
+
+<p>toString() 문자열로 변환</p>
+
+<p>toTimeString() 시간 문자열로 변환</p>
+
+<p>toUTCString() UTC 포맷 형태 문자열로 변환</p>
+
+<p>UTC() 1970-01-01 자정 기준 부터 경과한 시간을 밀리세컨드로 반환</p>
+
+<p>valueOf() Date 객체의 원시 값을 반환</p>
+
+:ET

@@ -1,0 +1,170 @@
+I"�><p>이 문서는 CodeDeploy 를 통해 배포 시스템을 구성 하면서 경험한 내용을 바탕으로 정리한 문서이다.
+간략한 내용만 다루고 있으므로, 좀 더 상세한 내용을 들춰보고 싶다면 이후에 작성한 “나는 코드를 쓸테니, 너는 인프라를 맡거라.” 문서를 읽어보길 바란다.</p>
+
+<p>아래는 구성 전 논의 된 지향점들 이고, 이에따라 그 때 당시 CodeDeploy 가 가장 적합해서 선택하게 되었다.</p>
+
+<ul>
+  <li>쉽고, 용이</li>
+  <li>무중단</li>
+  <li>자동화</li>
+  <li>롤백</li>
+  <li>안정성</li>
+  <li>AWS 리소스 최대한 활용</li>
+</ul>
+
+<p>Git 서버로 Bitbucket 을 채택하여 사용하고있는데, Bitbucket 에는 파이프라인이라는 개념이 존재한다.
+이를 테면 마스터 브랜치에 푸시한다고 가정하면 이에 따른 프로세스들을 기술할 수 있다.
+따라서 마스터 브랜치에 푸시하면, 배포로 간주하고 배포에 따른 스크립트가 실행된다.</p>
+
+<p>기본적으로 S3 의 패키지들이 업로드되고, 이후에 CodeDeploy 클라이언트를 통해 배포가 진행된다.
+아래는 간단하게 작성한 위 프로세스에 대한 파이썬 스크립트 이다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">strftime</span><span class="p">,</span> <span class="n">sleep</span>
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="kn">from</span> <span class="nn">botocore.exceptions</span> <span class="kn">import</span> <span class="n">ClientError</span>
+
+<span class="n">VERSION_LABEL</span> <span class="o">=</span> <span class="n">strftime</span><span class="p">(</span><span class="s">"%Y%m%d%H%M%S"</span><span class="p">)</span>
+<span class="n">BUCKET_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'APPLICATION_NAME'</span><span class="p">)</span> <span class="o">+</span> <span class="s">'/'</span> <span class="o">+</span> <span class="n">VERSION_LABEL</span> <span class="o">+</span> \
+    <span class="s">'-bitbucket_builds.zip'</span>
+
+<span class="k">def</span> <span class="nf">upload_to_s3</span><span class="p">(</span><span class="n">artifact</span><span class="p">):</span>
+    <span class="s">"""
+    Uploads an artifact to Amazon S3
+    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="n">client</span><span class="p">(</span><span class="s">'s3'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">ClientError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Failed to create boto3 client.</span><span class="si">\</span><span class="se">n</span><span class="s">"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">client</span><span class="p">.</span><span class="n">put_object</span><span class="p">(</span>
+            <span class="n">Body</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">artifact</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">),</span>
+            <span class="n">Bucket</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'S3_BUCKET'</span><span class="p">),</span>
+            <span class="n">Key</span><span class="o">=</span><span class="n">BUCKET_KEY</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">ClientError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Failed to upload artifact to S3.</span><span class="si">\</span><span class="se">n</span><span class="s">"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">except</span> <span class="nb">IOError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Failed to access artifact.zip in this directory.</span><span class="si">\</span><span class="se">n</span><span class="s">"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">deploy_new_revision</span><span class="p">():</span>
+    <span class="s">"""
+    Deploy a new application revision to AWS CodeDeploy Deployment Group
+    """</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="n">client</span><span class="p">(</span><span class="s">'codedeploy'</span><span class="p">)</span>
+    <span class="k">except</span> <span class="n">ClientError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Failed to create boto3 client.</span><span class="si">\</span><span class="se">n</span><span class="s">"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">create_deployment</span><span class="p">(</span>
+            <span class="n">applicationName</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'APPLICATION_NAME'</span><span class="p">)),</span>
+            <span class="n">deploymentGroupName</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'DEPLOYMENT_GROUP_NAME'</span><span class="p">)),</span>
+            <span class="n">revision</span><span class="o">=</span><span class="p">{</span>
+                <span class="s">'revisionType'</span><span class="p">:</span> <span class="s">'S3'</span><span class="p">,</span>
+                <span class="s">'s3Location'</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s">'bucket'</span><span class="p">:</span> <span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'S3_BUCKET'</span><span class="p">),</span>
+                    <span class="s">'key'</span><span class="p">:</span> <span class="n">BUCKET_KEY</span><span class="p">,</span>
+                    <span class="s">'bundleType'</span><span class="p">:</span> <span class="s">'zip'</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="n">deploymentConfigName</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s">'DEPLOYMENT_CONFIG'</span><span class="p">)),</span>
+            <span class="n">description</span><span class="o">=</span><span class="s">'New deployment from BitBucket'</span><span class="p">,</span>
+            <span class="n">ignoreApplicationStopFailures</span><span class="o">=</span><span class="bp">True</span>
+        <span class="p">)</span>
+    <span class="k">except</span> <span class="n">ClientError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"Failed to deploy application revision.</span><span class="si">\</span><span class="se">n</span><span class="s">"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+    <span class="s">"""
+    Wait for deployment to complete
+    """</span>
+    <span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">deploymentResponse</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get_deployment</span><span class="p">(</span>
+                <span class="n">deploymentId</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s">'deploymentId'</span><span class="p">])</span>
+            <span class="p">)</span>
+            <span class="n">deploymentStatus</span><span class="o">=</span><span class="n">deploymentResponse</span><span class="p">[</span><span class="s">'deploymentInfo'</span><span class="p">][</span><span class="s">'status'</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">deploymentStatus</span> <span class="o">==</span> <span class="s">'Succeeded'</span><span class="p">:</span>
+                <span class="k">print</span> <span class="p">(</span><span class="s">"Deployment Succeeded"</span><span class="p">)</span>
+                <span class="k">return</span> <span class="bp">True</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">deploymentStatus</span> <span class="o">==</span> <span class="s">'Failed'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">deploymentStatus</span> <span class="o">==</span> <span class="s">'Stopped'</span><span class="p">)</span> <span class="p">:</span>
+                <span class="k">print</span> <span class="p">(</span><span class="s">"Deployment Failed"</span><span class="p">)</span>
+                <span class="k">return</span> <span class="bp">False</span>
+            <span class="k">elif</span> <span class="p">(</span><span class="n">deploymentStatus</span> <span class="o">==</span> <span class="s">'InProgress'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">deploymentStatus</span> <span class="o">==</span> <span class="s">'Queued'</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">deploymentStatus</span> <span class="o">==</span> <span class="s">'Created'</span><span class="p">):</span>
+                <span class="k">continue</span>
+        <span class="k">except</span> <span class="n">ClientError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Failed to deploy application revision.</span><span class="si">\</span><span class="se">n</span><span class="s">"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">err</span><span class="p">))</span>
+            <span class="k">return</span> <span class="bp">False</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">upload_to_s3</span><span class="p">(</span><span class="s">'/tmp/artifact.zip'</span><span class="p">):</span>
+        <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">deploy_new_revision</span><span class="p">():</span>
+        <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>아래는 CodeDeploy 의 배포 진행 절차이다.</p>
+
+<ul>
+  <li>Provisioning replacement instances</li>
+  <li>Installing application on replacement instances</li>
+  <li>Rerouting traffic to replacement instances</li>
+  <li>Terminating original instances</li>
+</ul>
+
+<p>마지막 절차 “Terminating original instances” 에서 기본적으로 Waiting Time 을 임의적으로 설정을 하게되는데, 이는 처음에 지향하는 안정성과 상이되어 ASG 라이프 사이클 훅을 통하여 기존의 전달 받은 요청건에 대하여 모든 프로세스가 완료되면 즉시 terminate 하는 방향으로 진행했다.</p>
+
+<p>배포 유형이, In-place 와 Blue-green 형태 두가지로 나뉜다.</p>
+
+<p>무중단 배포를 위해 우리의 경우 Blue/Green 형태를 채택했다.
+이외 배포 구성 또한 지원하는데, 우리는 “One At A Time” 을 채택했다. (이 구성은 한 번에 한 인스턴스에 대하여 어플리케이션 개정을 배포한다.)
+아래 표를 참고하면 좀 더 이해가 편할 것 이다.</p>
+
+<p><img src="/assets/images/posts/automatically-deploy-from-bitbucket-using-aws-codedeploy/deployment-config.jpg" alt="deployment-config" /></p>
+
+<p>이와 같은 흐름으로, 인스턴스 두개에 대상의 배포를 진행한다고 했을 때, 약 25분 정도 소요된다.
+이벤트 트리를 확인 해보니, “Block Traffic” 단계에서 약 5분 정도 소요된다.</p>
+
+<p>이 부분에 대하여 찾아보니 AWS 포럼 글을 보게 되었고, ELB 와 연관되 있는 것을 확인하고 ELB Health Check기본 값을 살펴보면 아래와 같다.</p>
+
+<ul>
+  <li>Timeout 5 seconds</li>
+  <li>Interval 30 seconds</li>
+  <li>Unhealthy threshold 2</li>
+  <li>Healthy threshold 10</li>
+</ul>
+
+<p>위와 같은 시간 소요(Interval(30) +Timeout(5))* healthy(10) 를 줄이기 위해 아래와 같이 설정 변경했다.</p>
+
+<ul>
+  <li>Timeout 2 seconds</li>
+  <li>Interval 5 seconds</li>
+  <li>Unhealthy threshold 2</li>
+  <li>Healthy threshold 2</li>
+</ul>
+
+<p>설정 변경 후, 20초내로 소요된다.</p>
+
+<p>그리고 CodeDeploy 는 흐름에 따른 “이벤트 훅”을 지원한다.</p>
+
+<p>아래 표에 기재된 흐름에 따라 그에 대응하는 훅에 내용을 서술하면된다.</p>
+
+<p>이에 따라 소요되는 시간은 정의한 스크립트에 따라 각기 다르다.</p>
+
+<p><img src="/assets/images/posts/automatically-deploy-from-bitbucket-using-aws-codedeploy/deployment-flow.png" alt="deployment-flow" /></p>
+
+<p>이로써 무중단 배포 시스템을 간단하게 구현했다.</p>
+
+:ET

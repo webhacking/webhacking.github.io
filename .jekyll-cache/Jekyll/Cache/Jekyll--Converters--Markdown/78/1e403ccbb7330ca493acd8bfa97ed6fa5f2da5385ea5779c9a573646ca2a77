@@ -1,0 +1,39 @@
+I"�<ul>
+  <li>show open tables;
+    <ul>
+      <li>MySQL 전체 테이블 잠금여부</li>
+    </ul>
+  </li>
+  <li>show open tables from ‘db명’
+    <ul>
+      <li>해당 DB의 테이블 잠금 여부</li>
+    </ul>
+  </li>
+  <li>show open tables from ‘db명’ like ‘테이블명’
+    <ul>
+      <li>해당 DB의 특정 테이블의 잠금 정보</li>
+    </ul>
+  </li>
+</ul>
+
+<p><em>What is <code class="highlighter-rouge">show open tables</code> command ?</em></p>
+
+<blockquote>
+  <p>SHOW OPEN TABLES lists the non-TEMPORARY tables that are currently open in
+the table cache</p>
+</blockquote>
+
+<p>락 상태의 테이블 확인</p>
+
+<p>- SHOW OPEN TABLES WHERE in_use&gt;0;</p>
+
+<p>특정 상태의 테이블 확인</p>
+
+<p>- SHOW OPEN TABLES WHERE in_use&gt;0 AND <code class="highlighter-rouge">Table</code>=’your_table_name’;</p>
+
+<p><strong>참고</strong></p>
+
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/show-open-tables.html">MySQL 5.7 Reference Manual SHOW OPEN TABLES
+Syntax</a></p>
+
+:ET

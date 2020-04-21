@@ -1,0 +1,163 @@
+I"�D<p>이번에 회사에서 진행하는 새로운 프로젝트를 TDD(Test Driven Development)로 진행하며 느낀 바와 경험들을 공유하고자 글을 작성한다. 
+예전부터 TDD 도입에 대한 갈망은 컸으나, 요구사항에 맞추어 구현체 내용을 구현하기 급급했다는 핑계로 항상 뒷전에 두었는데 지금이나마 TDD 방법론이 주는 행복과 역할을 느낄 수 있어 뜻 깊은 시간이었다.
+본인의 경우 Typescript 환경에서 TDD 를 진행했으며, 혹시 같은 환경에서의 도입을 고민하는 이들에게 이 글이 조금의 도움이 되길 바란다.
+다만, 알다시피 TDD 는 개발 방법론이기에 특정 언어에 국한되어 있지 않다.
+본 문서에서 인용되는 코드들이나 라이브러리들도 각 언어마다 그 역할을 수행하는 녀석들이 있을 테니 그것은 각자 살펴보길 바란다.
+들어가기 앞 서, 조금의 우려는 TDD 에 대한 무조건적인 찬양의 글이 아니며 어디까지나 TDD 를 통해 개발을 하며 느낀 주관적인 생각이니 이 점 유의해 주고 글을 읽어주면 좋겠다.
+모든 개발 방법론에는 장단점이 존재하며 본 문서에서 다루는 TDD 또한 다르지 않다.</p>
+
+<h2 id="test-case-를-작성하지-않았던-건-아니다">Test case 를 작성하지 않았던 건 아니다.</h2>
+
+<p>난 요구 사항에 맞추어 기능을 개발하고 곧잘 기능에 대한 테스트 케이스도 작성하는 평범한 주니어 개발자다.
+가끔 요구 사항이 많아지거나 기능에 대한 follow up 을 못할 경우, 난 방학 시절 몰아쓰던 일기처럼 테스트를 몰아서 작성하곤 했다.
+아니 그래도 테스트 케이스를 작성했다는게 어디인가, 때론 테스트 케이스를 작성하지 못할때가 더 많았는걸.
+솔직히 촉박한 타임라인에 쉼 없이 쫓기다보면 감히 테스트라는 생각이 안날뿐더러 뒤늦은 죄책감에 떠오른다 하더라도 내 무의식 아주 깊숙한데 쳐박곤 못본척할때가 많았다.</p>
+
+<p><img src="/assets/images/posts/2020-03-20-together-tdd/turn-a-blind-eye%20.jpg" alt="turn-a-blind-eye" />
+(전 아무것도 본 게 없습니다만?)</p>
+
+<p>돌이켜보면 내가 진행했던 프로젝트들에서 제대로 <code class="highlighter-rouge">테스트</code> 개념을 이해하지 못하고 테스트라는 명목으로 작성한 그럴싸한 코드들만 존재하고 있는지도 모른다.
+테스트라는 게 어떤 관점으로 보느냐에 따라서 매우 쉽기도 하고, 머리를 쥐어뜯을 만큼 어렵기도 하다.
+Context 에 따른 일관된 추상화 레벨, 명확한 의도와 여러 요지들이 복합적으로 표현되는 것이 테스트인데 이러한 관점에서 보자면 나는 줄곧 엉터리 테스트를 작성했는지도 모른다.
+또한 내 기준에서 합당하다 느끼는 Context 가 누군가에게는 변질될 우려가 있고, 또 누군가의 Context 를 내가 아예 이해 못 할 때도 많다.
+테스트 코드라곤 하지만 수많은 매직 넘버들과 높은 결합을 가진 객체 또는 반대로 아예 낮은 응집에 객체들을 보면, “아.. 차라리 쓰질 말지..” 라고 느낄때가 많다.</p>
+
+<p>이는 결국에 테스트 케이스에 비중을 크게 두지 않았다는 것이고 제대로 작성해보지 않았다는 것을 반증한다고 본다.
+그렇다면 테스트 케이스를 무조건 작성하는 환경에 노출이 되면 조금은 테스트라는 녀석과 친밀해질 수 있을까?
+그 물음에 TDD 방법론이 조금의 답을 주지 않을까 조심스레 생각해본다.</p>
+
+<h2 id="tdd-란-그냥-test-first-tfdtest-first-development">TDD 란, 그냥 Test First. TFD(Test First Development)</h2>
+
+<p><code class="highlighter-rouge">테스트 케이스</code>를 <strong>먼저 작성</strong>하고 이후 그 테스트 케이스를 통과하는 <strong>구현체에 내용을 작성</strong>한다, 즉 <strong>테스트가 개발을 주도</strong>한다.
+이러한 일련의 작업을 반복하며 정상 동작에 대한 피드백을 적극적으로 받으며 받은 피드백을 통해 코드를 리팩토링한다.
+이로써 우리는 <code class="highlighter-rouge">동작하는 깨끗한 코드</code> 를 얻게 된다. 좀 더 눈에 들어오게 절차를 정리하자면 아래와 같다.</p>
+
+<p><img src="/assets/images/posts/2020-03-20-together-tdd/twp2_0403.png" alt="who-has-time-for-that-shit" />
+(TDD Cycle)</p>
+
+<ol>
+  <li>실패하는 단위 테스트 케이스 작성 (구현체에 절대 내용을 담지 말 것)</li>
+  <li>작성된 테스트 케이스를 통과하는 구현체 작성</li>
+  <li>피드백을 통한 코드 리팩토링</li>
+</ol>
+
+<p>이 과정을 흔히 <code class="highlighter-rouge">Red-Green-Refactor</code> 라고 부른다.</p>
+
+<p>일반적인 개발의 흐름을 보자면 우리는 구현체를 구현한 이후 선택적으로 테스트 코드를 작성한다.
+쉽게 순서를 바꾸면 된다. 그러면 <code class="highlighter-rouge">test coverage 가 기본 80%</code>가 넘는 경이로움을 느끼게 된다.</p>
+
+<blockquote>
+  <p>물론, 단순히 테스트로써의 역할로만 존재하는 건 아니다.</p>
+</blockquote>
+
+<p>TDD 를 함으로써 구현체에 내용을 담기전 인터페이스, 즉 <code class="highlighter-rouge">설계 관점</code>에서 여러 상황들을 열어두고 보게되는데 이러한 열린 설계 방식이 안정성 높고 좀 더 확장성 높은 프로그램을 만드는데 도움을 준다.
+실제 코드에 대한 명확한 처리를 설계함으로써 실제 구현체에서의 과도한 설계를 피할 수 있고, 간결한 인터페이스를 정의할 수 있다.
+이렇게 사전에 정의된 테스트 코드는 요구 사항을 구체화 하는 문서(Executable documentation/Specification)로써 활용될 수 있다.
+(누군가에게 전달 받은 프로젝트가 테스트 코드가 하나 없다면, 언제 터질지 모르는 폭탄을 받은거라 생각하면 된다.)
+따라서 테스트 케이스는 인터페이스에 의존적이며 구현에 독립적이다.</p>
+
+<p>난 처음에 TDD 를 도입하여 진행하는 순간은 꽤나 힘들었다. (물론, 지금이라고 아니라고는 말 못한다.)
+왜냐하면 내 오랜 관습과 매 순간 마주해야하는건데, 사람의 사고라는게 그리 쉽게 바뀔 수 있겠는가.
+잠깐 방심하다보면 어느순간 난 내 사고는 이미 구현체들에 내용을 다 담고, 원하는 값을 얻은 다음 테스트 케이스를 정의하고 있었다.
+테스트 케이스 정의가 끝나면, “아차! 나 지금 TDD 로 하고 있었지..” 하며 머리를 한번 긁적 거리곤 한숨 내뱉기 일수 였다.
+아마 TDD 를 가장 빠르게 학습할 수 있는 사람들은 개발을 이제 막 배우는 사람들이 아닐까 싶다.
+앞 서, TDD 는 일반 개발 순서를 바꾼다 했지만 테스트가 선택이 아닌 전제라면 바뀐 순서가 원래 옳은 순서가 아닌가라는 생각이든다.
+그래도 TDD 를 내 습관으로 만들고자 고군분투 하고 있다. TDD 가 내게 주는 확실한 보상이란 아마도 감격스러운 test coverage % 가 아닐까 싶다.
+그리고 수행되는 모든 테스트 케이스들이 성공적으로 통과하는걸 보면 내심 마음이 뿌듯하다.</p>
+
+<p>하지만 여전히 나는 테스트 케이스를 작성함에 어려움을 느낀다.
+결국에 이 말은 즉슨, 내가 그렇게 좋은 설계를 하지 못했다는 것을 반증한다.</p>
+
+<blockquote>
+  <p>테스트하기 좋다고 좋은 설계는 아니지만, 좋은 설계는 테스트하기 쉽다.</p>
+</blockquote>
+
+<p>그렇다면 여기서 우리는 <code class="highlighter-rouge">좋은 설계</code> 를 해야할텐데, 이 고민을 SOLID 원칙이 조금은 해결해 줄 거라 생각된다.
+객체 지향 5대 원칙으로 잘 알려진 SOLID 이지만, 모르는 이들도 있을 것 같아 아래와 같이 간략하게 뜻 을 적었다.
+본 문서에서 이 내용을 다 다루면 내용이 산으로 갈 것 같아, 자세한 내용은 다른 문서를 참고하기 바란다.</p>
+
+<ul>
+  <li>S(Single Responsibility) = 단일 책임 원칙</li>
+  <li>Open/Closed Principle = 개발/폐쇄 원칙</li>
+  <li>Liskov Substitution Principle = 리스코프 치환 원칙</li>
+  <li>Interface Segregation Principle = 인터페이스 분리 원칙</li>
+  <li>Dependency Inversion Principle = 의존성 역전 원칙</li>
+</ul>
+
+<p>앞 서, 언급했든 본인은 <code class="highlighter-rouge">Typescript</code> 환경에서 TDD 를 진행했다.
+<code class="highlighter-rouge">Typescript</code> 에서는 <code class="highlighter-rouge">Kotlin</code> 에서 사용되는 <code class="highlighter-rouge">todo</code> 와 같은 메소드는 없지만 <code class="highlighter-rouge">@ts-ignore</code> 을 통해 대체할 수 있다.</p>
+
+<p><code class="highlighter-rouge">Typescript</code> 에서는 아래와 같이 목킹하는 테스트 케이스를 작성할 수 있다.
+물론, 구현체에 내용은 담지 않고 테스트 케이스를 먼저 작성한 내용이다.</p>
+
+<p>아래 예가 좋은 예시 코드가 아닌 것 같아 뺼까 하다 딱히 생각나는 것도 없어서 넣어둔다.
+<code class="highlighter-rouge">@ts-ignore</code> 를 통하지 않고 <code class="highlighter-rouge">interface</code> 기반으로 작성하려면 <a href="https://github.com/marchaos/jest-mock-extended">jest-mock-extended</a> 와 같은 third party 를 통해 해결할 수 있다.
+<code class="highlighter-rouge">Kotlin</code> 환경에서의 <code class="highlighter-rouge">Mockito</code> 를 대체할 수 있는 third party 를 찾다 알게되었다.</p>
+
+<div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">fetch</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">mocked</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">ts-jest/utils</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">getNameOfHax0r</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./api</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="nx">jest</span><span class="p">.</span><span class="nx">mock</span><span class="p">(</span><span class="dl">'</span><span class="s1">node-fetch</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">beforeEach</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">mocked</span><span class="p">(</span><span class="nx">fetch</span><span class="p">).</span><span class="nx">mockClear</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="dl">'</span><span class="s1">getNameOfHax0r test</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">test</span><span class="p">(</span><span class="dl">'</span><span class="s1">getNameOfHax0r should fetch a name</span><span class="dl">'</span><span class="p">,</span> <span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+
+    <span class="nx">mocked</span><span class="p">(</span><span class="nx">fetch</span><span class="p">).</span><span class="nx">mockImplementation</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="dl">'</span><span class="s1">youngjun</span><span class="dl">'</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="kd">const</span> <span class="nx">hax0rName</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">getNameOfHax0r</span><span class="p">();</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">hax0rName</span><span class="p">).</span><span class="nx">toBeDefined</span><span class="p">();</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">hax0rName</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="dl">'</span><span class="s1">youngjun</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>조금 <code class="highlighter-rouge">팁</code>을 드리자면, Jest 를 쓴다는 가정하에 TDD 를 <code class="highlighter-rouge">강제</code> 하는 방안으로써 husky 와 같은 라이브러리를 통해 git <code class="highlighter-rouge">pre-push</code> 전에 작성된 테스트 케이스들에 대한 테스트를 수행활 수 있다.
+아래와 같은 옵션을 추가하면 기입된 % 만큼에 coverage 를 수행해야 테스트에 통과할 수 있다.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"collectCoverage"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"coverageThreshold"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"global"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"branches"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"functions"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"lines"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"statements"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="마치며">마치며</h2>
+
+<p>TDD 도입을 꺼려하는 이유 중에는 초반에 발생하는 <strong>time cost</strong> 가 상당 부분을 차지할 것 같다.
+본인도 TDD 를 도입하며 초반에 절대적인 시간이 소비되었으나, 결국에 time cost 를 초반에 사용하느냐 후반분에 사용하느냐 그 관점으로 보니 역시 초반에 사용하는게 훨 낮다는 결론이 났다.
+그렇다면 테스트를 구현체를 모두 구현한 다음에 작성해도 되지 않겠냐 되물을 수 있겠지만, 이는 위에서 언급한 설계 측면과 협업에 이점을 모두 놓치게되고 몰아쓴 테스트 케이스는 100% 성공하는 Happy case 들만 작성할 뿐이다.
+당장은 테스트 케이스를 작성하는데 추가적인 노력이 든다고 생각할 수 있지만, 전체 개발 주기를 생각했을때 이와 같은 테스트 케이스들은 생산성을 향상 시켜준다.</p>
+
+<p>결국 잘 작성된 테스트 케이스는 개발자로 하여금 논리적 오류를 범하는 것을 막아주고 좀 더 빠르게 trouble shooting 을 가능케 해준다. 즉, Debugging Time 을 눈에 띄게 줄여준다.
+<strong>trouble</strong> 이 발생할 빈도 또한 현저히 낮을 것이며, 더 이상 배포에 있어 두려워 하지 않아도 된다.
+급한 이슈로 발빠르게 코드를 작성 후, Git repository 에 푸시했는데 테스트가 실패했다면 작성된 테스트 케이스에 감사를 표해야한다.</p>
+
+<p>만약, 어떠한 테스트 절차도 밟지 않고 배포가 이루어졌다면 그 오류 코드를 가장 먼저 맞이하는건 본인 서비스에 유저가 될 것 이다.</p>
+
+<p><img src="/assets/images/posts/2020-03-20-together-tdd/slack-error-notification.png" alt="who-has-time-for-that-shit" />
+(이런 메세지라도 받는 날이면.. 주륵..)</p>
+
+<p>또 <strong>협업에 있어 역할의 분담</strong>도 쉬워진다.
+이를테면 a, b 를 입력 했을때, x 를 반환하라는 테스트 케이스 즉 인터페이스를 작성하고 그 구현체를 구현하는 것은 다른이에게 넘길 수 있는 것이다.
+이 예만 들어보더라도 정말 같이 코딩하는 맛이 나지 않겠는가 ?
+이렇게 작성된 테스트 케이스들은 결국에 code quality 를 높이고 안정성 있는 프로덕트를 만들게한다.</p>
+
+<blockquote>
+  <p>자, 그럼 이제 다 함께 TDD</p>
+</blockquote>
+:ET

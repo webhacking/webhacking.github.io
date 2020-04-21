@@ -1,0 +1,6 @@
+I"<p>scp파일복사 시, 마지막 파일 가져오기기 스크립트</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ dir="~"$ server="a@hax0r.info"$ scp $server:$dir/$(ssh $server 'ls -t $dir | head -1') .
+</code></pre></div></div>
+
+:ET

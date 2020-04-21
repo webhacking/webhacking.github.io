@@ -1,0 +1,23 @@
+I"n<p>LENGTH function returns the <em>length of the string measured in bytes.</em></p>
+
+<p>CHAR_LENGTH() returns the <em>length of the string measured in characters.</em></p>
+
+<p>1. LENGTH() : 길이를 bytes로 나타낸다.</p>
+
+<p>SELECT LENGTH(‘한글’) -&gt; 6</p>
+
+<p>SELECT LENGTH(‘abc’) -&gt; 3</p>
+
+<p>2. CHAR_LENGTH() : 글자의 수를 나타낸다.</p>
+
+<p>SELECT CHAR_LENGTH(‘한글’) -&gt; 2</p>
+
+<p>SELECT CHAR_LENGTH(‘abc’) -&gt; 3</p>
+
+<p>3. BIT_LENGTH() : 길이를 bit로 나타낸다.</p>
+
+<p>SELECT BIT_LENGTH(‘한글a’) -&gt; 56</p>
+
+<p>SELECT BIT_LENGTH(‘한글’) -&gt; 48</p>
+
+:ET

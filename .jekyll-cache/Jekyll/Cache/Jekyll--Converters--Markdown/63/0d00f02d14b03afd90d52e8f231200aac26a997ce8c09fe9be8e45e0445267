@@ -1,0 +1,36 @@
+I"<h1 id="개요">개요</h1>
+
+<p>일전에 <a href="http://blog.hax0r.info/744">슬랙에서 휴봇 사용하기</a>라는 게시물을 포스팅한적있습니다.</p>
+
+<p>아무래도 휴봇의 사용빈도가 높아지면서 사내에서 필요한 기능들이 터져나오기 시작했습니다.(기쁨)<br />
+날씨 요약본을 간단하게 알려주는 용도로 개발되었습니다. (맨 아래 사진도 몇 장 등본했습니다.)</p>
+
+<h1 id="설치">설치</h1>
+
+<p><code class="highlighter-rouge">hubot-test-helper</code>를 먼저 설치합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install hubot-test-helper --save-dev
+</code></pre></div></div>
+
+<p>CoffeeScript 를 위해 필요 의존성 도구를 설치합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install mocha --save-devnpm install co --save-devnpm install chai --save-devnpm install coffee-script --save-dev
+</code></pre></div></div>
+
+<p>이 후, 테스트를 원하는 스크립트를 아래와 같은 형태로 실행하면 됩니다.</p>
+
+<p>아래는 정상적으로 테스트가 성공한 결과입니다.</p>
+
+<p>아래의 명령어를 통해, 테스트를 진행 할 수 있습니다.<br />
+mocha –compilers “coffee:coffee-script/register” “{테스트할 대상 경로}”</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mocha --compilers "coffee:coffee-script/register" tests/test_hi.coffee  hello-world    user says hi to hubot      ✓ should reply to user  1 passing (152ms)
+</code></pre></div></div>
+
+<h2 id="참고">참고</h2>
+
+<ul>
+  <li><a href="http://leapfrogonline.io/articles/2015-11-09-testing-hubot-scripts/">TESTING HUBOT SCRIPTS</a></li>
+</ul>
+
+:ET

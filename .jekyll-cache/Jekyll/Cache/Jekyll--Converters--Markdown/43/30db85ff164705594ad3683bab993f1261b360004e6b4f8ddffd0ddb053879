@@ -1,0 +1,103 @@
+I"F
+<p>함수설명</p>
+
+<p>삼각 함수</p>
+
+<p>double <strong>sin</strong> ( double x );</p>
+
+<p>사인 x를 구한다.</p>
+
+<p>double <strong>cos</strong> ( double x );</p>
+
+<p>코사인 x를 구한다.</p>
+
+<p>double <strong>tan</strong> ( double x );</p>
+
+<p>탄젠트 x를 구한다.</p>
+
+<p>역 삼각 함수</p>
+
+<p>double <strong>asin</strong> ( double x );</p>
+
+<p>아크 사인 x를 구한다.</p>
+
+<p>double <strong>acos</strong> ( double x );</p>
+
+<p>아크 코사인 x를 구한다.</p>
+
+<p>double <strong>atan</strong> ( double x );</p>
+
+<p>아크 탄젠트 x를 구한다.</p>
+
+<p>double <strong>atan2</strong> ( double y, double x );</p>
+
+<p>아크 탄젠트 y/x를 구한다.</p>
+
+<p>쌍곡선 함수</p>
+
+<p>double <strong>sinh</strong> ( double x );</p>
+
+<p>하이퍼볼릭 사인 x를 구한다.</p>
+
+<p>double <strong>cosh</strong> ( double x );</p>
+
+<p>하이퍼볼릭 코사인 x를 구한다.</p>
+
+<p>double <strong>tanh</strong> ( double x );</p>
+
+<p>하이퍼볼릭 탄젠트 x를 구한다.</p>
+
+<p>지수 · 대수 함수</p>
+
+<p>double <strong>exp</strong> ( double x );</p>
+
+<p>ex를 구한다.</p>
+
+<p>double <strong><a href="http://ko.wikipedia.org/wiki/%EB%B6%80%EB%8F%99%EC%86%8C%EC%8
+8%98%EC%A0%90">frexp</a></strong> ( double x, int * exp );</p>
+
+<p>지수를 exp가 가리키는 변수에 저장하고 가수를 반환한다.</p>
+
+<p>double <strong>ldexp</strong> ( double x, int exp );</p>
+
+<p>x * 2exp를 반환한다.</p>
+
+<p>double <strong>log</strong> ( double x );</p>
+
+<p>loge x를 구한다.</p>
+
+<p>double <strong>log10</strong> ( double x );</p>
+
+<p>log10 x를 구한다.</p>
+
+<p>double <strong>modf</strong> ( double x, double * intpart );</p>
+
+<p>정수부를 intpart가 가리키는 변수에 저장하고 소수부를 반환한다.</p>
+
+<p>거듭제곱 · 거듭제곱근 · 올림 · 내림 · 절댓값 · 나머지 함수</p>
+
+<p>double <strong>pow</strong> ( double x, double y );</p>
+
+<p>xy를 구한다.</p>
+
+<p>double <strong>sqrt</strong> ( double x );</p>
+
+<p><img src="/assets/images/posts/494/bf3ad54d060ca456987fdccfe6705c7b.png.PNG" alt="\sqrt{x}" />를 구한다.</p>
+
+<p>double <strong>ceil</strong> ( double x );</p>
+
+<p>x보다 작지 않은 가장 작은 정수를 구한다.</p>
+
+<p>double <strong>floor</strong> ( double x );</p>
+
+<p>x보다 크지 않은 가장 큰 정수를 구한다.</p>
+
+<p>double <strong>abs</strong> ( double x );</p>
+
+<p>x의 <a href="http://ko.wikipedia.org/wiki/%EC%A0%88%EB%8C%93%EA%B0%92">절댓값</a>을 구한다.</p>
+
+<p>double <strong>fmod</strong> ( double x, double y );</p>
+
+<p>x를 y로 나눈 나머지를 구한다.</p>
+
+:ET

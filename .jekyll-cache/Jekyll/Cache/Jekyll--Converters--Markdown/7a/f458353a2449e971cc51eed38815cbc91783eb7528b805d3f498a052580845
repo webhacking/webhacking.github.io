@@ -1,0 +1,19 @@
+I"�<p><strong>문제점 :</strong></p>
+
+<p>엑셀 다운로드 시, 한글이 기재된 파일이름이 깨지는 현상. 이 현상은 캐릭터셋이 동일하지 않아 발생하는 경우가 대부분 입니다.</p>
+
+<p><strong>해결방안 :</strong></p>
+
+<p>따라서 PHP 내부 함수 중, <code class="highlighter-rouge">iconv</code> 를 통하여 UTF-8 캐릭터셋으로 변경(인코딩)합니다.</p>
+
+<p>string iconv ( string $in_charset , string $out_charset , string $str )</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ExName = iconv('UTF-8', 'UTF-8', '파일명');
+header('Content-Type: application/vnd.ms-excel;charset=utf-8');
+header('Content-Disposition: attachment;filename="' . $ExName. '.xls"');
+header('Cache-Control: max-age=0');
+$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+$objWriter-&gt;save('php://output');
+</code></pre></div></div>
+
+:ET

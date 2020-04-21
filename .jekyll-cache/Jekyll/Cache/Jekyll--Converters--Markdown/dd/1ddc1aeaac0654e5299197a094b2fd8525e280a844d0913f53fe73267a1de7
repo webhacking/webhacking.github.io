@@ -1,0 +1,141 @@
+I"�<p>x86 어셈블리에서 Short Call (0xE8) 또는 Short Jump (0xEB) 앞에 0x66 Prefix가 붙으면</p>
+
+<p>기존에 Short 방식으로 갈 수 없는 외계 행성?? 으로 갈 수 있다. ㅋㅋㅋ</p>
+
+<p>왜냐면 66 Prefix가 오퍼랜드 크기를 줄여서 읽기 때문에 그런 것</p>
+
+<p>1</p>
+
+<p>2</p>
+
+<p>3</p>
+
+<p>4</p>
+
+<p>5</p>
+
+<p>6</p>
+
+<p>7</p>
+
+<p>8</p>
+
+<p>9</p>
+
+<p>10</p>
+
+<p>11</p>
+
+<p>12</p>
+
+<p>13</p>
+
+<p>14</p>
+
+<p>15</p>
+
+<p>16</p>
+
+<p>17</p>
+
+<p>18</p>
+
+<p>19</p>
+
+<p>20</p>
+
+<p>21</p>
+
+<p>22</p>
+
+<p>23</p>
+
+<p>24</p>
+
+<p>25</p>
+
+<p>26</p>
+
+<p>27</p>
+
+<p>28</p>
+
+<p>29</p>
+
+<p>30</p>
+
+<p>31</p>
+
+<p>32</p>
+
+<p>33</p>
+
+<p>34</p>
+
+<p>35</p>
+
+<p>#include <windows.h></windows.h></p>
+
+<p>typedef DWORD (__stdcall *ZWALLOC)(HANDLE ProcessHandle,</p>
+
+<p>ULONG *BaseAddress,</p>
+
+<p>ULONG* ZeroBits,</p>
+
+<p>PSIZE_T RegionSize,</p>
+
+<p>ULONG AllocationType,</p>
+
+<p>ULONG Protect);</p>
+
+<p>int main()</p>
+
+<p>{</p>
+
+<p>ZWALLOC ZwAlloc;</p>
+
+<p>ZwAlloc =</p>
+
+<p>(ZWALLOC)GetProcAddress(GetModuleHandle(“ntdll.dll”),
+“ZwAllocateVirtualMemory”);</p>
+
+<p>ULONG addr = 1;</p>
+
+<p>ULONG size = 0xFFFF;</p>
+
+<p>ZwAlloc((HANDLE)0xffffffff, &amp;addr, 0, &amp;size,</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>MEM_COMMIT</td>
+      <td>MEM_RESERVE, PAGE_EXECUTE_READWRITE);</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>memset((PVOID)NULL, 0xC3, size);</p>
+
+<p>BYTE code[] = {0x66, 0x6A, 0x00, 0x66, 0xE8, 0x00, 0x00, 0xC3};</p>
+
+<p>addr = (ULONG)code;</p>
+
+<p>__asm {</p>
+
+<p>mov eax, addr</p>
+
+<p>call eax</p>
+
+<p>}</p>
+
+<p>return 0;</p>
+
+<p>}</p>
+
+<p>&lt;/windows.h&gt;</p>
+
+<p><a href="http://colorscripter.com/info#e">Colored by Color Scripter</a></p>
+
+<p><a href="http://colorscripter.com/info#e">cs</a></p>
+
+:ET

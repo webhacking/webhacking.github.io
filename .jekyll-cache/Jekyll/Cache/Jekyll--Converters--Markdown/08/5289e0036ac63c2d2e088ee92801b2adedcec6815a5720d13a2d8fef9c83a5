@@ -1,0 +1,181 @@
+I"A<p><a href="https://laravel.com/">Laravel</a> 에는 별도의 Constants 관련 디렉토리와 명령어가 존재하지 않는다.</p>
+
+<p>그렇다면 <code class="highlighter-rouge">Constants</code>는 어디에 위치해있는 것이 올바른 것 일까 ?</p>
+
+<p>사람들은 어떤 방법으로 이 문제를 해결 했을까 먼저 살펴보았다.</p>
+
+<p>검색 한번으로 많은 사람들이 나와 같은 궁금증을 품고있다는 것을 알았다.</p>
+
+<ul>
+  <li><a href="https://laravel.io/forum/06-05-2014-how-to-use-my-constants-in-larvel">How to use my constants in Laravel</a></li>
+  <li><a href="https://laracasts.com/discuss/channels/laravel/l51-how-i-can-define-my-own-constants?page=1">How i can define my own constants?</a></li>
+  <li><a href="https://stackoverflow.com/questions/42155536/what-is-the-best-practice-for-adding-constants-in-laravel-long-list">What is the best practice for adding constants in laravel? (Long List)</a></li>
+</ul>
+
+<p>하지만 답변은 내가 전적으로 동의할 수 없는 내용이었다.</p>
+
+<p>모든 답변들은 config 파일에 constants 관련 파일을 생성하라고하는데, 이는 진짜 constants 가 아니다.</p>
+
+<p>constants의 사전적 의미는 아래와 같다.</p>
+
+<blockquote>
+  <p>프로그램에서는 실행중에 바뀌지 않는 데이터를 말한다. 기억 장치 내부에 축적되어 있는 불변의 데이터로 보통 프로그램 단계에서 지정된 것이 프로그램을 읽어들일 때 루틴의 일부로서 컴퓨터 기억 장치에 읽어들여진다.</p>
+</blockquote>
+
+<p>laravel 에서 설정파일 내 값은 아래와 같이 쉽게 변경할 수 있다.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$value</span> <span class="o">=</span> <span class="nx">config</span><span class="p">(</span><span class="s1">'app.timezone'</span><span class="p">);</span>
+<span class="nx">config</span><span class="p">([</span><span class="s1">'app.timezone'</span> <span class="o">=&gt;</span> <span class="s1">'America/Chicago'</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>그러니 위 방법을 채택하여 사용 중이라면, 변경하길 권장한다.</p>
+
+<p>본인이 설정한 방법을 기준으로 서술하겠다.</p>
+
+<ul>
+  <li>
+    <p>`app` 하위 디렉토리로 `Constants` 디렉토리를 생성 한다.</p>
+  </li>
+  <li>
+    <p>생성된 디렉토리 정의하고자 하는 내용에 알맞는 파일명을 정의하고 파일 내 상수를 정의한다.</p>
+  </li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># e.g book.php</span>
+
+<span class="nb">define</span><span class="p">(</span><span class="mo">001</span><span class="p">,</span> <span class="s1">'hax0r'</span><span class="p">);</span>
+</code></pre></div></div>
+
+<ul>
+  <li>`app` 하위 디렉토리로 `Bootstrap` 디렉토리를 생성한다.</li>
+  <li>아래 코드를 `Bootstrap` 디렉토리 내 <code class="highlighter-rouge">Loader.php</code> 파일에 추가한다.</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Loader.php</span>
+<span class="k">foreach</span> <span class="p">(</span> <span class="nb">glob</span><span class="p">(</span><span class="k">__DIR__</span><span class="o">.</span><span class="s2">"/Dependency/*.php"</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$dependency</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">require</span> <span class="nv">$dependency</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>`Bootstrap` 하위 디렉토리로 <code class="highlighter-rouge">Dependency</code> 디렉토리를 추가한다.</li>
+  <li>아래 코드를 `Dependency` 디렉토리 내 <code class="highlighter-rouge">Constants.php</code>에 추가한다.</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">foreach</span> <span class="p">(</span> <span class="nb">glob</span><span class="p">(</span><span class="k">__DIR__</span><span class="o">.</span><span class="s2">"/../../Constants/*.php"</span><span class="p">)</span> <span class="k">as</span> <span class="nv">$constantFile</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">require</span> <span class="nv">$constantFile</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<ul>
+  <li>아래와 같이 composer.json 을 추가한다.</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"autoload"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nl">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="s2">"app/Bootstrap/Loader.php"</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">],</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nl">"classmap"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="s2">"database/seeds"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="s2">"database/factories"</span><span class="p">,</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">],</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nl">"App\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"app/"</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="nl">"autoload-dev"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nl">"psr-4"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="nl">"Tests\\"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tests/"</span><span class="w">
+</span><span class="err"> </span><span class="w"> </span><span class="err"> </span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="err">,</span><span class="w">
+</span></code></pre></div></div>
+
+<p>이 문서에서 <a href="https://getcomposer.org/doc/01-basic-usage.md#autoloading">Composer Autoloading</a> 에 대한 개념까지는 다루지 않겠다.</p>
+
+<p>해당 내용이 궁금하다면 해당 링크를 참고하길 바란다.</p>
+
+<p>좀 더 효율적으로 <code class="highlighter-rouge">Contants</code> 파일을 생성하고자 한다면, laravel <code class="highlighter-rouge">artisan</code> 을 활용해보자.</p>
+
+<p>라라벨 <a href="https://laravel.com/docs/5.5/artisan">artisan console</a> 을 통해서 새로운 명령어를 생성한다.</p>
+
+<p>아래 명령어를 통해서 <code class="highlighter-rouge">MakeConstants</code> 라는 명령어 파일을 추가한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>artisan make:command MakeConstants
+</code></pre></div></div>
+
+<p>파일은 `app &gt; commands` 의 위치해있다.</p>
+
+<p>저는 아래와 같이 위 구조에서 constants 파일을 생성하는 명령어를 추가했다.</p>
+
+<p>코드는 아래와 같다.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">namespace</span> <span class="nn">App\Console\Commands</span><span class="p">;</span>
+
+<span class="kn">use</span> <span class="nn">Couchbase\Exception</span><span class="p">;</span>
+<span class="kn">use</span> <span class="nn">Illuminate\Console\Command</span><span class="p">;</span>
+
+<span class="cd">/**
+ * Class MakeConstants
+ * @package App\Console\Commands
+ */</span>
+<span class="kd">class</span> <span class="nc">MakeConstants</span> <span class="k">extends</span> <span class="nx">Command</span>
+<span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="cd">/**
+     * The name and signature of the console command.
+     *
+     * @var string
+     */</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">protected</span> <span class="nv">$signature</span> <span class="o">=</span> <span class="s1">'make:constants {fileName}'</span><span class="p">;</span>
+
+<span class="err"> </span> <span class="err"> </span> <span class="cd">/**
+     * The console command description.
+     *
+     * @var string
+     */</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">protected</span> <span class="nv">$description</span> <span class="o">=</span> <span class="s1">'Create a constants file'</span><span class="p">;</span>
+
+<span class="err"> </span> <span class="err"> </span> <span class="cd">/**
+     * Create a new command instance.
+     *
+     * @return void
+     */</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">public</span> <span class="k">function</span> <span class="nf">__construct</span><span class="p">()</span>
+<span class="err"> </span> <span class="err"> </span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">();</span>
+<span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
+
+<span class="err"> </span> <span class="err"> </span> <span class="cd">/**
+     * Execute the console command.
+     *
+     * @return mixed
+     */</span>
+<span class="err"> </span> <span class="err"> </span> <span class="k">public</span> <span class="k">function</span> <span class="nf">handle</span><span class="p">()</span>
+<span class="err"> </span> <span class="err"> </span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nv">$fileName</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">argument</span><span class="p">(</span><span class="s1">'fileName'</span><span class="p">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nv">$filePath</span> <span class="o">=</span> <span class="s1">'app/Constants/'</span><span class="o">.</span><span class="nv">$fileName</span><span class="o">.</span><span class="s1">'.php'</span><span class="p">;</span>
+
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">try</span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="p">(</span> <span class="nb">file_exists</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">throw</span> <span class="k">new</span><span class="err"> </span> <span class="nx">\Exception</span><span class="p">(</span><span class="s1">'Constants file is already exist.'</span><span class="p">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
+
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nv">$fp</span> <span class="o">=</span> <span class="nb">fopen</span><span class="p">(</span><span class="nv">$filePath</span><span class="p">,</span><span class="s1">'w'</span><span class="p">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nb">fwrite</span><span class="p">(</span><span class="nv">$fp</span><span class="p">,</span> <span class="s1">'&lt;?php'</span><span class="o">.</span><span class="kc">PHP_EOL</span><span class="p">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nb">fclose</span><span class="p">(</span><span class="nv">$fp</span><span class="p">);</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">info</span><span class="p">(</span><span class="s1">'File generated successfully.'</span><span class="p">,</span> <span class="kc">PHP_EOL</span><span class="p">);</span>
+
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span> <span class="nx">\Exception</span> <span class="nv">$e</span> <span class="p">)</span> <span class="p">{</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">error</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
+<span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>앞으로 아래 명령어를 통해 쉽게 constants 파일을 생성할 수 있다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>artisan make:constants {파일 명}
+File generated successfully.
+</code></pre></div></div>
+
+<p><img src="/assets/images/posts/857/스크린샷%202018-01-12%20오후%2012.05.24.png" alt="스크린샷%202018-01-12%20오후%2012.05.24" /></p>
+:ET

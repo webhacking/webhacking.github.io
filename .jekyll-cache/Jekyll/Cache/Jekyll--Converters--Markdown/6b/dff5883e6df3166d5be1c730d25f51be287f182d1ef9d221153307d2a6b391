@@ -1,0 +1,8 @@
+I"'<p>구글 애널리틱스 sdk 이용하고있었음, 근데 별도의 웹서버 active connection수가 필요해서 찾음.</p>
+
+<p>nginx: See Active connections / Connections Per Seconds</p>
+
+<p>참고 : http://www.cyberciti.biz/faq/nginx-see-active-connections-connections-
+per-seconds/</p>
+
+:ET

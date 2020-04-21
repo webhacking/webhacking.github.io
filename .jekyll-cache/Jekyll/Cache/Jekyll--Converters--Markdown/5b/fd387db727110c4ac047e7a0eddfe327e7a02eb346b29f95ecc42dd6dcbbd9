@@ -1,0 +1,273 @@
+I"|<h2 id="tldr">TL;DR</h2>
+
+<p>Jekyll 에 검색기능을 추가하는 방법을 서술하고있습니다.</p>
+
+<h2 id="at-the-outset">At the outset</h2>
+
+<p>jekyll theme 중, <code class="highlighter-rouge">search</code> 기능을 제공하는 theme 도 있지만 그렇지 않은 theme 또한 많이 존재합니다.
+제가 사용한 <code class="highlighter-rouge">theme</code> 또한 그렇구요.</p>
+
+<p>jekyll 을 통해 생성한 <code class="highlighter-rouge">static</code>  문서들에대해 검색기능을 추가하고자한다면 우리는 <code class="highlighter-rouge">client-side</code> 국한되어서 기능을 구현해야합니다.
+그 이유는 <code class="highlighter-rouge">static</code> 블로그는 <code class="highlighter-rouge">dynamic</code> 블로그와 달리 서버와 상호작용이 없기 때문인데 서버에서 부담해야하는 <code class="highlighter-rouge">resource</code>를 client 에서 부담하게됩니다.
+client side 에서 resource를 사용하니 서버의 부담을 줄이는 이점인 동시에 client 환경에 따라 <code class="highlighter-rouge">crash</code> 가 발생할 수 단점도 존재합니다.
+질의되는 키워드를 변수 <code class="highlighter-rouge">q</code> , 현재 작성된 문서들을 변수 <code class="highlighter-rouge">p</code> 라고 가정했을 때
+<code class="highlighter-rouge">p</code> 의 양의 비례되어 <code class="highlighter-rouge">client (= 브라우저)</code> 에서  <code class="highlighter-rouge">resource</code>  가 사용되기에 글이 아주 많은 경우 좀 더 각별히 신경을 기우일 필요가 있습니다.</p>
+
+<h2 id="what-do-you-prefer">What do you prefer</h2>
+
+<p>github 내 <code class="highlighter-rouge">jekyll search</code> 기능을 구현할 수 있는 좋은 library 들이 존재한다.
+대표적인 library 는 아래와 같다.</p>
+
+<ol>
+  <li><a href="https://github.com/christian-fei/Simple-Jekyll-Search">simple jekyll search</a></li>
+  <li><a href="https://github.com/slashdotdash/jekyll-lunr-js-search">jekyll lunr js search</a></li>
+  <li><a href="https://github.com/mathaywarduk/jekyll-search">jekyll search</a></li>
+</ol>
+
+<p>위와 같은 선택지 중 그 어떤걸 선택해도 좋은 선택일 것 같다.</p>
+
+<p>하지만 나는 다르다.</p>
+
+<blockquote>
+  <p>대체로 위 기재된  library 들은 무겁고, cross browsing 이슈가 존재한다.</p>
+</blockquote>
+
+<p>내가 지향하는 블로그는 어떤 것에도 의존치 않고, IE8 까지 지원하는 블로그를 만들고싶다.
+솔직히 <code class="highlighter-rouge">cross browsing</code> 이슈에 대해 잠시나마 생각해본 결과, 모던브라우저를 사랑한다고 한들 현 시장에서 IE 점유률을 봤을 때 피치 못할 선택이었다.
+최근까지 난 <code class="highlighter-rouge">vue.js</code> 에 빠져있었고, 원래 계획대로라면 <code class="highlighter-rouge">vue.js</code> 로 구현할 생각이었다.
+하지만 이 또한 내가 지향한 <code class="highlighter-rouge">어떤 것에도 의존치 않고</code> 라는 지향점에서 벗어나기 때문에 선택지에서 제외되었다.
+만약 당신이 크로스브라우징 이슈를 해결해야하지만 모던하게 개발을 하고자한다면, <a href="http://backbonejs.org/">backbone.js</a> 도 좋은 선택지일 것 이다.</p>
+
+<h2 id="lets-get-it">Let’s get it</h2>
+
+<p>일전 제 요구사항을 충족할 수 있는 별도의 라이브러리 <a href="https://github.com/webhacking/light-Jekyll-search">lightJekyllSearch</a>을 만들었습니다.
+Github 에 공유되어있으니, 필요에따라 사용하시기 바랍니다.</p>
+
+<p><code class="highlighter-rouge">lightJekyllSearch</code>  을 사용하고있다는 가정하에 글 적습니다.</p>
+
+<ol>
+  <li>포스트들의 집합이 필요하다. 따라서 아래  <code class="highlighter-rouge">posts.json</code> 을 추가합니다.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+  {
+  "title"    : "{{ post.title | escape }}",
+  "category" : "{{ post.category }}",
+  "tags"     : "{{ post.tags | join: ', ' }}",
+  "url"      : "{{ site.baseurl }}{{ post.url }}",
+  "date"     : "{{ post.date }}"
+  } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+
+</code></pre></div></div>
+
+<p>위 <code class="highlighter-rouge">posts.json</code> 은, 후에 아래와 같이 작성한 문서들을 전부가지고 옵니다.</p>
+
+<p><img src="/assets/images/posts/using-search-from-jekyll/fetch-posts.png" alt="fetch-posts" /></p>
+
+<ol>
+  <li>아래와 같이 자신의 경로에 위치해 있는 <a href="https://github.com/webhacking/light-Jekyll-search">lightJekyllSearch</a> 을 불러옵니다.</li>
+</ol>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"ko"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"/assets/javascript/light-jekyll-search.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+      <span class="nx">lightJekyllSearch</span><span class="p">.</span><span class="nx">search</span><span class="p">({</span>
+          <span class="na">el</span> <span class="p">:</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">form[name="search"] input[name="q"]</span><span class="dl">'</span><span class="p">),</span>
+          <span class="na">placeholder</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">검색어를 입력해주세요.</span><span class="dl">'</span><span class="p">,</span>
+          <span class="na">postJsonPath</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">/assets/json/posts.json</span><span class="dl">'</span>
+      <span class="p">});</span>
+  <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p><code class="highlighter-rouge">postJsonPath</code> key 의 value 는 위 서술한 json 경로를 기입하면 된다.</p>
+
+<p>기본 값은 <code class="highlighter-rouge">/assets/json/posts.json</code> 이다.
+현재는 <code class="highlighter-rouge">suggestion</code> 만을 지원하고 있는데, 앞으로 좀 더 나아가서 <code class="highlighter-rouge">pagination</code> 과 질의되는 문자의 대한 <code class="highlighter-rouge">highlight</code> 와 <code class="highlighter-rouge">hashbang</code> 을 통한 별도의 페이지 구성 없이 <code class="highlighter-rouge">javascript</code> 에서 검색 내용을 출력하는 것 이다.
+아직 추가되어야할 기능들이 많다.
+기본적인 동작 화면은 아래와 같다.</p>
+
+<p><img src="/assets/images/posts/using-search-from-jekyll/results.png" alt="results" /></p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cm">/**
+ * lightJekyllSearch
+ *
+ * Copyright 2018, Woo YeongJun(a@hax0r.info)
+ * Licensed under the MIT License.
+ */</span>
+
+<span class="dl">'</span><span class="s1">use strict</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">lightJekyllSearch</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">initialize</span> <span class="p">:</span> <span class="kd">function</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">posts</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">featchPosts</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">postJsonPath</span><span class="p">);</span>
+    <span class="p">},</span>
+    <span class="na">search</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">config</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nb">self</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+
+        <span class="nx">lightJekyllSearch</span><span class="p">.</span><span class="nx">initialize</span><span class="p">();</span>
+        <span class="nx">config</span><span class="p">.</span><span class="nx">el</span><span class="p">.</span><span class="nx">placeholder</span> <span class="o">=</span> <span class="p">(</span> <span class="nx">config</span><span class="p">.</span><span class="nx">placeholder</span> <span class="p">)</span> <span class="p">?</span> <span class="nx">config</span><span class="p">.</span><span class="nx">placeholder</span> <span class="p">:</span> <span class="dl">''</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">config</span><span class="p">.</span><span class="nx">postJsonPath</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">postJsonPath</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">postJsonPath</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">innerFunctions</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">keyup</span><span class="dl">'</span><span class="p">,</span> <span class="nx">config</span><span class="p">.</span><span class="nx">el</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">light-jekyll-search-suggestion</span><span class="dl">'</span><span class="p">)</span> <span class="o">!==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">light-jekyll-search-suggestion</span><span class="dl">'</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">light-jekyll-search-suggestion</span><span class="dl">'</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="nb">self</span><span class="p">.</span><span class="nx">suggestion</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">el</span><span class="p">,</span> <span class="nb">self</span><span class="p">.</span><span class="nx">searchFor</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="nb">self</span><span class="p">.</span><span class="nx">posts</span><span class="p">));</span>
+        <span class="p">});</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">innerFunctions</span><span class="p">.</span><span class="nx">addEvent</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">html</span><span class="dl">'</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">light-jekyll-search-suggestion</span><span class="dl">'</span><span class="p">)</span> <span class="o">!==</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">light-jekyll-search-suggestion</span><span class="dl">'</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">none</span><span class="dl">'</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">},</span>
+    <span class="na">searchFor</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">toSearch</span><span class="p">,</span> <span class="nx">posts</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">results</span> <span class="o">=</span> <span class="p">[],</span>
+            <span class="nx">toSearch</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">innerFunctions</span><span class="p">.</span><span class="nx">trimString</span><span class="p">(</span><span class="nx">toSearch</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">posts</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">posts</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="nx">posts</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">key</span><span class="p">].</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">toSearch</span><span class="p">)</span><span class="o">!=-</span><span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">innerFunctions</span><span class="p">.</span><span class="nx">itemExists</span><span class="p">(</span><span class="nx">results</span><span class="p">,</span> <span class="nx">posts</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">results</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">posts</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">results</span><span class="p">;</span>
+    <span class="p">},</span>
+    <span class="na">suggestion</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">el</span><span class="p">,</span> <span class="nx">related</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">suggestionHtml</span> <span class="o">=</span> <span class="dl">''</span><span class="p">,</span>
+            <span class="nx">suggestionNode</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">light-jekyll-search-suggestion</span><span class="dl">'</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">suggestionNode</span> <span class="o">===</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;div id="light-jekyll-search-suggestion"&gt;</span><span class="dl">'</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">suggestionNode</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="dl">''</span>
+        <span class="p">}</span>
+
+        <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;p class="found_results_n"&gt;</span><span class="dl">'</span><span class="p">;</span>
+            <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="nx">related</span><span class="p">.</span><span class="nx">length</span><span class="p">.</span><span class="nx">toString</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">Result(s) found</span><span class="dl">'</span><span class="p">;</span>
+        <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;/p&gt;</span><span class="dl">'</span><span class="p">;</span>
+
+        <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;ul&gt;</span><span class="dl">'</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">related</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;li&gt;</span><span class="dl">'</span><span class="p">;</span>
+                    <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;a href="</span><span class="dl">'</span><span class="o">+</span> <span class="nx">related</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">url</span> <span class="o">+</span><span class="dl">'</span><span class="s1">"&gt;</span><span class="dl">'</span><span class="p">;</span>
+                        <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="nx">related</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">title</span><span class="p">;</span>
+                    <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;/a&gt;</span><span class="dl">'</span><span class="p">;</span>
+                <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;/li&gt;</span><span class="dl">'</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;/ul&gt;</span><span class="dl">'</span><span class="p">;</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">suggestionNode</span> <span class="o">===</span> <span class="kc">null</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">suggestionHtml</span> <span class="o">+=</span> <span class="dl">'</span><span class="s1">&lt;/div&gt;</span><span class="dl">'</span><span class="p">;</span>
+            <span class="nx">el</span><span class="p">.</span><span class="nx">insertAdjacentHTML</span><span class="p">(</span><span class="dl">'</span><span class="s1">afterend</span><span class="dl">'</span><span class="p">,</span> <span class="nx">suggestionHtml</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">suggestionNode</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">suggestionHtml</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="na">posts</span> <span class="p">:</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">,</span>
+    <span class="na">postJsonPath</span> <span class="p">:</span> <span class="dl">'</span><span class="s1">/assets/json/posts.json</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">featchPosts</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">postJsonPath</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">xmlHttp</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+        <span class="nx">xmlHttp</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span> <span class="dl">"</span><span class="s2">GET</span><span class="dl">"</span><span class="p">,</span> <span class="nx">postJsonPath</span><span class="p">,</span> <span class="kc">false</span> <span class="p">);</span>
+        <span class="nx">xmlHttp</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span> <span class="kc">null</span> <span class="p">);</span>
+
+        <span class="k">return</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xmlHttp</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+
+    <span class="p">},</span>
+    <span class="na">innerFunctions</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="na">addEvent</span> <span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">evnt</span><span class="p">,</span> <span class="nx">elem</span><span class="p">,</span> <span class="nx">func</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">elem</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="nx">evnt</span><span class="p">,</span><span class="nx">func</span><span class="p">,</span><span class="kc">false</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">elem</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">elem</span><span class="p">.</span><span class="nx">attachEvent</span><span class="p">(</span><span class="dl">"</span><span class="s2">on</span><span class="dl">"</span><span class="o">+</span><span class="nx">evnt</span><span class="p">,</span> <span class="nx">func</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">elem</span><span class="p">[</span><span class="nx">evnt</span><span class="p">]</span> <span class="o">=</span> <span class="nx">func</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="na">trimString</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                <span class="nx">r</span> <span class="o">=</span> <span class="nx">s</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+            <span class="k">while</span> <span class="p">(</span> <span class="nx">l</span> <span class="o">&lt;</span> <span class="nx">s</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">s</span><span class="p">[</span><span class="nx">l</span><span class="p">]</span> <span class="o">==</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="p">){</span>
+                <span class="nx">l</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">while</span> <span class="p">(</span> <span class="nx">r</span> <span class="o">&gt;</span> <span class="nx">l</span> <span class="o">&amp;&amp;</span> <span class="nx">s</span><span class="p">[</span><span class="nx">r</span><span class="p">]</span> <span class="o">==</span> <span class="dl">'</span><span class="s1"> </span><span class="dl">'</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="nx">r</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="nx">s</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">l</span><span class="p">,</span> <span class="nx">r</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">},</span>
+        <span class="na">compareObjects</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">o1</span><span class="p">,</span> <span class="nx">o2</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">k</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+
+            <span class="k">for</span> <span class="p">(</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">o1</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="nx">o1</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">o2</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">for</span> <span class="p">(</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">o2</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="nx">o1</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">o2</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">},</span>
+        <span class="na">itemExists</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">haystack</span><span class="p">,</span> <span class="nx">needle</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span> <span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">haystack</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">compareObjects</span><span class="p">(</span><span class="nx">haystack</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span> <span class="nx">needle</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="eneded">Eneded</h2>
+
+<p>검색 기능을 만들며 재밌었다.
+하지만 아쉬움도 많이 남는다.
+좀 더 <code class="highlighter-rouge">modern</code> 하게 작업할 수 있는 미래를 생각하며 글 마친다.
+bower 에 package register 했다.
+아래 command 를 통하여 손 쉽게 설치 할 수 있다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bower install light-jekyll-search
+</code></pre></div></div>
+:ET

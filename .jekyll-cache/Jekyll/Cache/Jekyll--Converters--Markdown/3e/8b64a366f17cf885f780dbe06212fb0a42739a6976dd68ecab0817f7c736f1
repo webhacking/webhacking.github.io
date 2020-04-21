@@ -1,0 +1,22 @@
+I"�<p>each</p>
+
+<ul>
+  <li>A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function’s arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties.</li>
+</ul>
+
+<p>상황에 따라서 루프에서 break 또는 continue 조건을 넣어야할 때 가있다.</p>
+
+<p>루프내에서 <code class="highlighter-rouge">return 1</code> 일 경우, <code class="highlighter-rouge">continue</code> 의 역할을 한다. 반대로 0일 경우에는 <code class="highlighter-rouge">break</code> 역할을 한다.</p>
+
+<p>We can break the $.each() loop at a particular iteration by making the
+callback function return false. <em>Returning non-false is the same as a continue
+statement in a for loop</em>; it will skip immediately to the next iteration.</p>
+
+<p>True : This is equivalent of ‘break’ for jQuery loop</p>
+
+<p>False : This is equivalent of ‘continue’ for jQuery loop</p>
+
+<p>참고 : <a href="http://www.tutorialspoint.com/javascript/javascript_loop_control.htm">Loop
+Control</a></p>
+
+:ET

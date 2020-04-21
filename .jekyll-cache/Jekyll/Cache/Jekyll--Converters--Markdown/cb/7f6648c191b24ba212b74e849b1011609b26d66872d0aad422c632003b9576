@@ -1,0 +1,58 @@
+I"�<p>MS 커뮤니티에서 참고함.</p>
+
+<p>Click [Start] [Run] and type “REGSVR32 /i SHELL32” then press the Enter key.</p>
+
+<p>Try the below methods and check:</p>
+
+<p><strong>Method 1: Run the SFC.</strong></p>
+
+<p>Follow the below steps:</p>
+
+<p>Open Command Prompt.</p>
+
+<p>Select “Run as Administrator”.</p>
+
+<p>Type “sfc /scannow” without quotes and hit Enter.</p>
+
+<p>Now check for the issue.</p>
+
+<p><strong>Method 2: Run the DISM Tool.</strong></p>
+
+<p>If the issue persists, I would have you run the DISM tool to check the system
+health and will try to restore the files.</p>
+
+<p>Click on ‘Start’.</p>
+
+<p>Enter ‘Command prompt’ in the Search box.</p>
+
+<p>In the list of results, swipe down on or right-click Command prompt, and then
+tap or click ‘Run as administrator’.</p>
+
+<p>In the Administrator: Command Prompt window, type the following commands.
+Press the Enter key after each command:</p>
+
+<p>DISM.exe /Online /Cleanup-image /Scanhealth</p>
+
+<p>DISM.exe /Online /Cleanup-image /Restorehealth</p>
+
+<p>To close the Administrator: Command Prompt window, type Exit, and then press
+Enter.</p>
+
+<p>Note: The tool might take 15-20 minutes to finish running, so please do not
+cancel it.</p>
+
+<p><strong>Method 3:</strong></p>
+
+<p>I would suggest you to run virus scan to make sure the computer is free from
+virus.</p>
+
+<p>The Microsoft Safety Scanner is a free downloadable security tool that
+provides on-demand scanning and helps remove virus, spyware, and other
+malicious software. It works with your existing antivirus software.</p>
+
+<p>http://www.microsoft.com/security/scanner/en-us/default.aspx</p>
+
+<p>Keep us posted if you face any issues on windows in future. We will be glad to
+help you.</p>
+
+:ET

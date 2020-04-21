@@ -1,0 +1,79 @@
+I"�<h2 id="ptrlistlen">PtrListLen</h2>
+
+<p>회사에서 면접 진행하기 앞 서, 면접자에게 문제를 주기 전</p>
+
+<p>먼저 Codility 문제를 풀어보고 난이도를 판단해서 문제를 고르기로하여 간단하게 문제를 풀어보았다.</p>
+
+<p>A pointer is called a linked list if:</p>
+
+<ul>
+  <li>it is an empty pointer (it is then called a terminator or an empty list); or</li>
+  <li>it points to a structure (called a node or the head) that contains a value and a linked list (called the tail).</li>
+  <li>The length of a list is defined as the total number of nodes it contains. In particular, an empty list has length 0.</li>
+</ul>
+
+<p>For example, consider the following linked list:</p>
+
+<p>A -&gt; B -&gt; C -&gt; D -&gt;</p>
+
+<p>This list contains four nodes: A, B, C and D. Node D is the last node and its
+tail is the terminator. The length of this list is 4.</p>
+
+<p>Assume that the following declarations are given:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class IntList {  var $value = 0;  var $next = NULL;}
+</code></pre></div></div>
+
+<p>Write a function:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">solution</span><span class="p">(</span><span class="nv">$L</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>that, given a non-empty linked list L consisting of N nodes, returns its
+length.</p>
+
+<p>For example, given list L shown in the example above, the function should
+return 4.</p>
+
+<p>Assume that:</p>
+
+<p>N is an integer within the range [1..5,000];</p>
+
+<p>list L does not have a cycle (each non-empty pointer points to a different
+structure).</p>
+
+<p>In your solution, focus on correctness. The performance of your solution will
+not be the focus of the assessment.</p>
+
+<h2 id="작성한-코드">작성한 코드</h2>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">solution</span><span class="p">(</span><span class="nv">$m</span><span class="p">)</span>
+
+<span class="p">{</span>
+
+     <span class="c1">// var_dump($m);</span>
+
+     <span class="nv">$counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+     <span class="k">while</span> <span class="p">(</span> <span class="nv">$m</span> <span class="p">)</span> <span class="p">{</span>
+
+         <span class="nv">$m</span> <span class="o">=</span> <span class="nv">$m</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">;</span>
+
+         <span class="nv">$counter</span><span class="o">++</span><span class="p">;</span>
+
+     <span class="p">}</span>
+
+
+
+
+
+    <span class="c1">//   var_dump($counter);</span>
+
+     <span class="k">return</span> <span class="nv">$counter</span><span class="p">;</span>
+
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><img src="/assets/images/posts/785/2105CE33596F1E25249094.PNG" alt="" /></p>
+
+:ET

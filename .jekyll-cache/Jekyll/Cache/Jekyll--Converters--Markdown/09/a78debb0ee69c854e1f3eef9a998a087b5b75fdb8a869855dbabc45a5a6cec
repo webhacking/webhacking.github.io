@@ -1,0 +1,10 @@
+I"<p>You can do it in MySQL with the ORDER BY clause. Sort by NULL first, then the
+date.</p>
+
+<blockquote>
+  <p>SELECT * FROM your_table ORDER BY (date_column IS NULL), date_column ASC</p>
+</blockquote>
+
+<p><strong>Note:</strong> This assumes rows without a date are NULL.</p>
+
+:ET

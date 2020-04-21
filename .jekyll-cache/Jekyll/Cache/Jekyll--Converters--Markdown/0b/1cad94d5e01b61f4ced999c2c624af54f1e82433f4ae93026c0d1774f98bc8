@@ -1,0 +1,27 @@
+I"<p><a href="http://www.wixsoft.com/">팀</a>에서 검색엔진때문에 자료를 찾고있다가 구글 이미지 검색엔진이 궁금해서 자료를 찾아봤다.</p>
+
+<p>My guess is that Google probably uses some combination of the following
+techniques and ranks the results using a proprietary algorithm.</p>
+
+<p><strong>Feature Detection (Image fingerprinting to look for exact match) &amp; Search by Color &amp; Visual Similarity Search</strong></p>
+
+<p>There are three commonly used feature detection algorithms for matching image
+deformation such as blur, rotation, scale, and illumination change.</p>
+
+<p>They are SIFT, PCA-SIFT and SURF</p>
+
+<ul>
+  <li>SIFT is slow and not good at illumination changes, while it is invariant to rotation, scale changes and affine transformations.</li>
+  <li>SURF is fast and has good performance as the same as SIFT, but it is not stable to rotation and illumination changes.</li>
+  <li>PCA-SIFT is the best but it has problems with image blur.</li>
+</ul>
+
+<p>There is no perfect algorithm, so the choice depends mainly on the
+application, and what kind of trade-offs the application can tolerate.</p>
+
+<p>Example: PixID http://ideeinc.com/products/pixid/</p>
+
+<p>더보기 : https://www.quora.com/What-is-the-algorithm-used-by-Google-Search-by-
+Image-1</p>
+
+:ET

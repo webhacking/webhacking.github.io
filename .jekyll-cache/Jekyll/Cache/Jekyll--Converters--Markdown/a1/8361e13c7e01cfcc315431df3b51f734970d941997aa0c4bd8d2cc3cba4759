@@ -1,0 +1,38 @@
+I"«<p>https://github.com/ctfs/write-ups-2015/tree/master/codegate-ctf-2015</p>
+
+<h1 id="codegate-general-ctf-write-ups">CodeGate General CTF write-ups</h1>
+
+<ul>
+  <li><a href="http://general.grayhash.com/html/Main.html?lang=eng">http://general.grayhash.com/html/Main.html?lang=eng</a></li>
+  <li><a href="http://general.grayhash.com/html/Main.html?page=rank">Scoreboard</a> or <a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/scoreboard.txt">here</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/solves.txt">Number of solves per task</a></li>
+</ul>
+
+<h2 id="completed-write-ups">Completed write-ups</h2>
+
+<ul>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/web/owlur">web/owlur</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/web/owltube">web/owltube</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/sokoban">pwnable/sokoban</a></li>
+</ul>
+
+<h2 id="external-write-ups-only">External write-ups only</h2>
+
+<ul>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/crypto/icbm">crypto/icbm</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/programming/good-crypto">programming/good-crypto</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/beef-steak">pwnable/beef-steak</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/bookstore">pwnable/bookstore</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/mashed-potato">pwnable/mashed-potato</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/olive-and-mushroom-pizza">pwnable/olive-and-mushroom-pizza</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/rodent">pwnable/rodent</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/systemshock">pwnable/systemshock</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/pwnable/weff">pwnable/weff</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/reversing/arc4-stranger">reversing/arc4-stranger</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/reversing/dodocrackme2">reversing/dodocrackme2</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/reversing/oemu">reversing/oemu</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/reversing/pirate-danbi">reversing/pirate-danbi</a></li>
+  <li><a href="https://github.com/ctfs/write-ups-2015/blob/master/codegate-ctf-2015/trick/guesspw">trick/guesspw</a></li>
+</ul>
+
+:ET

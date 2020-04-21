@@ -907,9 +907,9 @@ body.enable-side-bar {
   &-author .author-image img {
     border: 1px solid #eee;
     margin : 0px;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 4px;
   }
 
   &-author .about-me {
@@ -938,13 +938,6 @@ body.enable-side-bar {
 .list {
   &-post {
     padding: 4% 2%;
-    
-    &:hover {
-      background-color: $background-over-color;
-      border-color: transparent;
-      border-radius: 10px;
-    }
-
     a {
       color: $base-color;
 

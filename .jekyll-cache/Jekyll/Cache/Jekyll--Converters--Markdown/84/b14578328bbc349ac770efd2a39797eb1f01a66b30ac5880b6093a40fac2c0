@@ -1,0 +1,20 @@
+I"�<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* 기본구조 */
+/* 속성 추가 */
+</code></pre></div></div>
+
+<p><em>target-densitydpi</em> 속성을 찾다가 정리가 잘 된 글이있어 이리 포스팅하게되었다.</p>
+
+<p><strong>뷰포트(viewport)의 속성</strong></p>
+
+<ul>
+  <li>meta name=”viewport” : 뷰포트 속성 선언</li>
+  <li>width=”viewport 넓이” : 컨텐츠를 보여줄 크기[기본값 : 980px, 설정값 : 200 – 10,000px 직접입력, device-width(디바이스 단말기 폭에 맞춤)]</li>
+  <li>intial-scale : 초기 크기 설정[기본 꽉찬 화면]</li>
+  <li>minimum-scale : 최소 크기 설정 [기본값 : 0.25, 범위 : 0~10.0]</li>
+  <li>maximum-scale : 최대 크기 설정 [기본값 : 5.0, 범위 : 0~10.0]</li>
+  <li>user-scalable : 사용자 단말의 확대기능 사용 유무 선언 [yes, no]</li>
+  <li>target-densitydpi : dpi지정 – 안드로이드에 한함 [기본값 : medium-dpi, 설정값 : medium-dpi, high-dpi, device-dpi(단말기 dpi 설정)]</li>
+  <li>모바일 작업시 주의할 점은 viewport 작성시 <strong>안드로이드는 0.5단위를 인식하지 못하기 때문에 1단위</strong>로 적어줘야 하며 <strong>[ target-densitydpi=medium-dpi ]</strong>는 안드로이드에서만 인식이 되기에 <strong>안드로이드를 위한 구문이지만 Validation 체크시 오류가 발생</strong>하기 때문에 가급적 사용을 하지 않는게 좋다</li>
+</ul>
+
+:ET

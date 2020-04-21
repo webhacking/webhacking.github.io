@@ -1,0 +1,52 @@
+I"o<p><code class="highlighter-rouge">Github</code> 통해서 <a href="https://github.com/webhacking/infinite-scroll-by-codekit">공유</a>했습니다.</p>
+
+<p>링크 : https://github.com/webhacking/infinite-scroll-by-codekit</p>
+
+<h2 id="생각">생각</h2>
+
+<p>프론트단은 반응형 처리였고, 슬릭딜 RSS에서 상품이미지하고 가격,무료배송을 파싱하여 출력함.</p>
+
+<ul>
+  <li>
+    <p>핫딜 : https://slickdeals.net/newsearch.php?mode=frontpage&amp;searcharea=deals&amp;sear
+chin=first&amp;rss=1</p>
+  </li>
+  <li>
+    <p>쿠폰 :
+https://slickdeals.net/newsearch.php?searchin=first&amp;forumchoice%5b%5d=10&amp;rss=1</p>
+  </li>
+</ul>
+
+<h2 id="상세-내용">상세 내용</h2>
+
+<p>Gride형의 경우 딜8개(2줄* 4개딜)</p>
+
+<p>단, 웹페이지 가로 width 길이에 따라 노출되는 딜 숫자 조정 가능</p>
+
+<p>list 형의 경우 딜 8개(1줄 *8개 딜)</p>
+
+<p>이벤트/프로모션 배너</p>
+
+<p>총 3개로 구성(이미지는 임의 삽입 가능);</p>
+
+<p>roling 기능 (버튼 클릭시, 화살표 클릭시), 배너 클릭시 해당 딜/쿠폰 페이지로 넘어가는 기능 구현</p>
+
+<p>Featured Deal/Coupon</p>
+
+<p>grid / list view 전환 기능</p>
+
+<p>딜/쿠폰 구분 표시 (클릭 시, 해당 딜/쿠폰 페이지로 넘어감)</p>
+
+<p>상품 이미지</p>
+
+<p>상품 판매처(캐논,아마존,월마트 등)</p>
+
+<p>상품 타이틀 : Grid 뷰에서 타이틀이 길 경우 말줌임 표시</p>
+
+<p>가격정보 : 무료배송일 경우 정보 표시</p>
+
+<p>상품정보(description) : List뷰에서만 구현. 길 경우 말줄임 표시</p>
+
+<p>무한 스크롤 형태</p>
+
+:ET

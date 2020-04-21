@@ -1,0 +1,117 @@
+I"�<p><strong>개요</strong></p>
+
+<p><a href="https://www.instantssl.com/ssl-certificate-products/https.html">HTTPS</a> 는 더 이상
+선택이 아닌 필수입니다.</p>
+
+<p><a href="https://letsencrypt.org/">Lets’ Encrypt</a> 는 SSL을 무료로 제공해
+<a href="https://www.instantssl.com/ssl-certificate-products/https.html">HTTPS</a> 의 보급율을
+높이기 위해 만들어졌습니다</p>
+
+<p><a href="https://letsencrypt.org/">Let’s Encrypt</a> 는 점유율 0.1% 미만의 인증기관입니다.</p>
+
+<p>점유율이 매우 낮지만 절차 방법 또한 간단하고 최상위 발급 기관 중에 하나입니다.</p>
+
+<p>대표적으로 무료 SSL을 지원하는 기관은 아래와 같습니다.</p>
+
+<ul>
+  <li><a href="https://www.startssl.com/">Startssl</a></li>
+  <li><a href="https://www.wosign.com/English/">Wosign</a></li>
+  <li><a href="https://letsencrypt.org/">Let’s Encrypt</a></li>
+</ul>
+
+<p>위 인증기관마다 각자의 장단점의 내용 간략하게 적어봅니다.</p>
+
+<ul>
+  <li>StartSSL
+    <ul>
+      <li>인증서 기간은 1년이다. (1년 마다 재발급 가능하다.)</li>
+      <li>분실시, 재 발급은 유료이다.</li>
+    </ul>
+  </li>
+  <li>Wosign
+    <ul>
+      <li>인증서 기간을 1~3년까지 지정할 수 있다.</li>
+      <li>꽤 많은 브라우저에서 해당 인증서를 신뢰할 수 없다.</li>
+    </ul>
+  </li>
+  <li>Let’s Encrypt’s
+    <ul>
+      <li>인증서 기간은 90일이며, 설치가 매운 간단하다.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>이번에 자체 로그 시스템을 개발하게되어 아파치 웹 서버로 구성하여 개발하였다.</p>
+
+<p>테스트 환경은 아래와 같습니다.</p>
+
+<p>본 문서는 자동 갱신의 대해서는 따로 기재하지 않았습니다.</p>
+
+<p>참고 문서 내용 중..</p>
+
+<blockquote>
+  <p>Let’s Encrypt’s certificates are only valid for ninety days. This is to
+encourage users to automate their certificate renewal process. We’ll need to
+set up a regularly run command to check for expiring certificates and renew
+them automatically.</p>
+</blockquote>
+
+<p>Let’s Encrypt’s 는 3개월만 유효하며, 이후에는 자동으로 갱신을 진행해야합니다.</p>
+
+<p>매번 갱신 과정이 귀찮으신분은 cron 을 통해 해당 문제를 해결할 수 있습니다.</p>
+
+<p>설정 작업 또한 간단하니 필요하신분은 참고 문서 내용을 통해서 개별적으로 작업을 진행하시면 되겠습니다.</p>
+
+<p><strong>테스트 환경</strong></p>
+
+<p>Distributor ID : Ubuntu</p>
+
+<p>Description : Ubuntu 14.04.5 LTS</p>
+
+<p>Release : 14.04</p>
+
+<p>Codename : trusty</p>
+
+<p><strong>설치</strong></p>
+
+<p>설치 과정은 매우 간단하니, 아래 절차되로 진행하면 됩니다.</p>
+
+<p>1. git 설치</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 이미 git 이 설치되어있다면, 아래 명령어는 무시하시면 됩니다.sudo apt-get install git
+</code></pre></div></div>
+
+<p>2. 저장소 Clone</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /optgit clone https://github.com/letsencrypt/letsencrypt
+</code></pre></div></div>
+
+<p>3. 디렉토리 이동후 자동설치</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd letsencrypt./letsencrypt-auto --help
+</code></pre></div></div>
+
+<p>4. 자동으로 도메인 설정</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./letsencrypt-auto --apache -d yourdomain.com
+</code></pre></div></div>
+
+<p>도메인 설정 진행 중 아래와 같은 다이얼로그가 출력됩니다.</p>
+
+<ol>
+  <li>이메일을 입력하세요.</li>
+  <li>약관에 동의하세요.</li>
+</ol>
+
+<p>설치일로부터 3개월이 인증서 만료일입니다.</p>
+
+<p>위 와 같은 방식으로 매번 갱신을 진행하면됩니다.</p>
+
+<p><strong>참고</strong></p>
+
+<ul>
+  <li><a href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-14-04">How To Secure Apache with Let’s Encrypt on Ubuntu 14.04</a></li>
+  <li><a href="https://letsencrypt.org/docs/">Lets’ Encrypt Documentation</a></li>
+</ul>
+
+:ET

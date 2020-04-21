@@ -1,0 +1,65 @@
+I"�
+<p>PHP 7이 릴리즈되면서 <a href="https://www.tutorialspoint.com/php7/php7_scalartype_declarations.htm">Scalar
+types</a>
+추가되었습니다. (아래 항목 참고)</p>
+
+<ul>
+  <li>int</li>
+  <li>float</li>
+  <li>bool</li>
+  <li>string</li>
+  <li>interfaces</li>
+  <li>array</li>
+  <li>callable</li>
+</ul>
+
+<p>type hinting은 변수의 타입을 명시적으로 지정하는 것을 말합니다.</p>
+
+<p>타입을 명시하게 되면 프로세스가 실행하는 시점에 명시된 타입의 변수가 아닌 다른 타입의 경우 에러를 반환하고 프로세스를 중단 시킵니다.
+명시된 type으로써 좀 더 정확한 정보를 얻을 수 있고 <a href="http://terms.naver.com/entr
+y.nhn?docId=1588313&amp;cid=50372&amp;categoryId=50372">self documenting</a> php 프로그램을 만드는데 한걸을 다가설 수 있습니다.</p>
+
+<p>php7 이전 type hinting은 아래와 같이 메소드의 매겨변수 안에 class 타입과 array 타입 형태로만 지원하고 있었습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function enroll(Student $student, array $classes) {    foreach ($classes as $class) {        echo "Enrolling " . $student-&gt;name . " in " . $class;    }}/* Catchable fatal error: Argument 1 passed to enroll() must be an instance of Student, string given */enroll("name",array("class 1", "class 2"));/* Catchable fatal error: Argument 2 passed to enroll() must be of the type array, string given */enroll($student,"class");enroll($student, array("class 1", "class 2"));
+</code></pre></div></div>
+
+<p>스카랄 변수의 type hinting은 strict mode가 아닙니다.</p>
+
+<p>다른 타입의 변수가 전달되는 경우 명시된 type으로 자동 형변환(type cast)을 시도하게 됩니다.</p>
+
+<p>글을 마치며 .. 변수나 프로퍼티 선언시 타입 명시는 아직 지원하지않는 것은 아쉬운 점 입니다.</p>
+
+<p><img src="/assets/images/posts/768/270DDF3B595621D811265B.PNG" alt="" /></p>
+
+<blockquote>
+  <p>In PHP 7, a new feature, Scalar type declarations, has been introduced.
+Scalar type declaration has two options.</p>
+</blockquote>
+
+<blockquote>
+
+</blockquote>
+
+<blockquote>
+  <p>Whereas type hints ensure input consistency, return type declarations ensure
+output consistency.</p>
+</blockquote>
+
+<blockquote>
+
+</blockquote>
+
+<blockquote>
+  <p>We use a colon before the opening curly brace of a function to hint the
+return type</p>
+</blockquote>
+
+<p><strong>참고</strong></p>
+
+<ul>
+  <li><a href="http://blog.teamtreehouse.com/5-new-features-php-7">5 New Features in PHP 7</a></li>
+  <li><a href="https://www.sitepoint.com/type-hinting-in-php/">Type Hinting in PHP (Version is 5)</a></li>
+</ul>
+
+:ET

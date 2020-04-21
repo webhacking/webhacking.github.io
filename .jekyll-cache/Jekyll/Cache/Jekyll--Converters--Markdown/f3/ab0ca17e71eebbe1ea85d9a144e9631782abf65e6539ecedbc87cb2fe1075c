@@ -1,0 +1,102 @@
+I"{<p><strong>GoF의 디자인 패턴</strong></p>
+
+<p>최근들어 다시금 디자인 패턴에 관심이 많아 졌다.
+이 관심 덕분에 <a href="http://www.yes24.com/24/goods/17525598?scode=032&amp;OzSrank=1">GoF의 디자인 패턴</a>을 알게되었고 구매까지 이르렀다.
+본인은 조금 더 유연한, 조금 더 확장성있고 효율적인 Architecture 를 구현하고 싶다.</p>
+
+<p>뭐 이것은 모든 프로그래머의 꿈 아니겠는가.</p>
+
+<p>본 책에서는 본인이 알고있던 내용과는 조금은 다른 (e.g. 싱글톤 패턴) 내용을 담고있어 혼란스러웠는데<br />
+많이 찾고 생각이 정리되어 되려 내 지식이 된 것 같아.</p>
+
+<p>기쁘다.</p>
+
+<p>열심히 읽어서 친구들에게 공유해주고싶다.</p>
+
+<p><strong>생성 패턴(Creation Patterns)</strong></p>
+
+<ul>
+  <li>
+    <p>Abstract Factory</p>
+  </li>
+  <li>
+    <p>Builder</p>
+  </li>
+  <li>
+    <p>Factory Method</p>
+  </li>
+  <li>
+    <p>Prototype</p>
+  </li>
+  <li>
+    <p>Singleton</p>
+  </li>
+</ul>
+
+<p><strong>구조 패턴(Structural Patterns)</strong></p>
+
+<ul>
+  <li>
+    <p>Adapter</p>
+  </li>
+  <li>
+    <p>Bridge</p>
+  </li>
+  <li>
+    <p>Composite</p>
+  </li>
+  <li>
+    <p>Decorator</p>
+  </li>
+  <li>
+    <p>Facade</p>
+  </li>
+  <li>
+    <p>Flyweight</p>
+  </li>
+  <li>
+    <p>Proxy</p>
+  </li>
+</ul>
+
+<p><strong>행동 패턴(Behavioral Patterns)</strong></p>
+
+<ul>
+  <li>
+    <p>Chain of Responsibility</p>
+  </li>
+  <li>
+    <p>Command</p>
+  </li>
+  <li>
+    <p>Interpreter</p>
+  </li>
+  <li>
+    <p>Iterator</p>
+  </li>
+  <li>
+    <p>Mediator</p>
+  </li>
+  <li>
+    <p>Memento</p>
+  </li>
+  <li>
+    <p>Observer</p>
+  </li>
+  <li>
+    <p>State</p>
+  </li>
+  <li>
+    <p>Strategy</p>
+  </li>
+  <li>
+    <p>Template method</p>
+  </li>
+  <li>
+    <p>Visitor</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/posts/773/2729833A595B687229A01C.JPEG" alt="" /></p>
+
+:ET

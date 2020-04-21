@@ -1,0 +1,8 @@
+I"�<p>자바스크립트는 arguments를 통해서 가인수를 받아온다.</p>
+
+<p>오버라이딩 처럼 사용가능함을 의미한다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sum(){    /* 오버 라이딩 */    var s=0;    for(var i=0; i&lt;arguments.length; i++){        s+=arguments[i];    }    alert(s);}/* 실인수 */sum(1,2,3,4,5,6);
+</code></pre></div></div>
+
+:ET

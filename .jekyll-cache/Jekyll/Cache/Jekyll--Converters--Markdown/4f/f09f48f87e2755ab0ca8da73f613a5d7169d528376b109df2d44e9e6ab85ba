@@ -1,0 +1,41 @@
+I"�<p>파티션 1개는 최대 3,000 읽기 용량 단위 또는 1,000 쓰기 용량 단위를 지원할 수 있습니다.</p>
+
+<p>테이블 생성시 파티션의 초기 번호를 다음과 같이 표현할 수 있습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( readCapacityUnits / 3,000 ) + ( writeCapacityUnits / 1,000 ) = initialPartitions (rounded up)
+</code></pre></div></div>
+
+<p>예를 들어 1,000 읽기 용량 단위와 500 쓰기 용량 단위를 수용하는 테이블을 생성했다고 가정하겠습니다.</p>
+
+<p>이 경우 파티션의 초기 번호는 다음과 같습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( 1,000 / 3,000 ) + ( 500 / 1,000 ) = 0.8333 --&gt; 1
+</code></pre></div></div>
+
+<p>따라서 단일 파티션은 테이블의 프로비저닝된 처리량 요구 사항을 모두 수용할 수 있습니다.</p>
+
+<p>그러나 1,000 읽기 용량 단위 및 1,000 쓰기 용량 단위를 수용하는 테이블을 생성했다면 파티션 1개는 지정된 처리 능력을 지원할 수
+없습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>( 1,000 / 3,000 ) + ( 1,000 / 1,000 ) = 1.333 --&gt; 2
+</code></pre></div></div>
+
+<p>이 경우 테이블에는 500 읽기 용량 단위와 500 쓰기 용량 단위의 파티션이 각각 하나씩 필요합니다.</p>
+
+<ul>
+  <li>이 공식으로 한번 늘어나면 capacity를 줄여도 파티션이 줄어들지 않는다고 합니다.</li>
+</ul>
+
+<p>그래서 구매해 둔 capacity가 파티션마다 균등하게 분할되어서 10개의 파티션이 있고 1000 capacity가 있으면 파티션마다 100
+capacity만 할당되어서 실제로 1000을 쓰지 못하더라도 throttle이 발생한다고 합니다.</p>
+
+<p>그리고 파티션이 늘어나게 될 때 문서 상으로는 백그라운드 작업으로 늘어난다고 하는데 실제로는 수십초~수분 정도 dynamodb가 응답하지
+않는 경우가 많습니다. 따라서 이 정보를 감안하여, **capacity **값을 잘 설정해야 합니다.</p>
+
+<p>참고</p>
+
+<ul>
+  <li>http://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/GuidelinesForTables.html</li>
+</ul>
+
+:ET

@@ -1,0 +1,200 @@
+I"�(<blockquote>
+  <p>하루에도 수천 번, 수백개의 서버의 빠르게 배포하자.</p>
+</blockquote>
+
+<blockquote>
+
+</blockquote>
+
+<blockquote>
+  <p>본 문서는 도커의 개념과 설치 및 실행 방법을 다루고 있다.</p>
+</blockquote>
+
+<p><strong>그래서 도커가 뭔대 ?</strong></p>
+
+<p>**<br />
+**</p>
+
+<p>도커는 리눅스 기반의 _Container RunTime 오픈소스_입니다.</p>
+
+<p>16년 현재 가장인기있는 클라우드 오픈소스이다. 도커는 <a href="https://github.com/docker/docker"><code class="highlighter-rouge">Go</code></a> 언어로
+작성되었습니다.</p>
+
+<p>현 시점 기준으로 도커는 현재 Github 에서 <code class="highlighter-rouge">36,836</code> star 1,577명의 contributors를 보유하고있습니다.</p>
+
+<p>도커의 인기는 13년도부터 현재까지 건재한 것은 클라우드 시장의 성장의 비례할 수 있습니다.</p>
+
+<p>단 한 명의 프로그래머가 몇 번의 클릭으로 수 백대의 서버를 간단히 띄울 수 있는 시대가 온 것이다.</p>
+
+<p>하지만 서버의 대수가 증가함에 따라 소스 동기화 관련하여 문제점이 많이 거론되면서 수많은 배포 방법론이 나왔다.</p>
+
+<p>여러 서비스들마다 서로 각기 다른 배포 방법론을 찾아 배포하고 있을 것입니다.</p>
+
+<p>초창기의 서비스들은 FTP를 통해 파일을 복사하는 방식으로 동작했다.</p>
+
+<p><code class="highlighter-rouge">Rsync</code> (capistrano, fabric )등과 같은 프로그램을 통하여 파일이나 디렉토리들을 다수의 서버의 동기화시키는 방법입니다.</p>
+
+<p>이전부터 사용했던 셸 스크립트를 통해 자동화 구현이 어느정도 가능하지만 이 또한 한계가있습니다.</p>
+
+<p>셸 스크립트로 중앙 관리기능이나 복잡한 기능은 사실상 구현하기 힘들기 때문입니다.</p>
+
+<p>위 방법들의 문제점은 여러가지가 존재합니다.</p>
+
+<p>대표적으로 환경변수, 데이터베이스 구조변경, 패키지 의존성 업데이트등을 예로 들 수 있습니다.<br />
+3-5개 정도의 서비스는 개발자가 단순 노동으로 수정할 수 있습니다. (물론 노오오력의 전제조건이있습니다.)<br />
+하지만 프로그래머로써 확장성을 논한다면 위 구조는 절대하지않을거라 생각합니다.</p>
+
+<p>아직도 위와 같은 구조로 동작하고있는 서비스를 운영중이라면 확장성을 고려해볼 필요가있습니다.</p>
+
+<p><strong>방법론이 많다면 왜 굳이 도커?</strong></p>
+
+<p>**<br />
+**</p>
+
+<p>도커를 사용하면 위에 거론되었던 문제점들을 보안할수있다.</p>
+
+<p>배포 서버본의 환경 그대로 분산서버에 적용되기에 별도로 환경변수, 데이터베이스 구조변경으로 불필요한 시간을 소요하지않아도된다.</p>
+
+<p>또한 확실히 가볍고, 빠르게 적용할수있는 배포 프로세스를 만들수있다.</p>
+
+<p>추가로 도커의 장점중의 하나는 이미지 생성화 배포에 특화되어있다는 점이다.</p>
+
+<p>이미지의 버전관리, 원격 저장소를 통하여 이미지를 올리고 받을수있다.</p>
+
+<p>현재 도커는 여러 클라우드 서비스(AWS,Google Cloud Platform, Microsoft Azure)에서 공식적으로
+지원하고있습니다.</p>
+
+<p>또한 구글은 지메일부터 자사 서비스 관리하기위해 약 20억개의 컨테이너를 운영중에있습니다.</p>
+
+<p>앞으로도 추가적 업데이트를 통해서 자사 서비스와의 융합에대하여 많이 거론되고있을많큼 그 비중을 무시할수 없는 존재가 되었습니다.</p>
+
+<p>도커의 컨테이너 기술은 가상화(Virtual Machine)와 매우 유사한 기능을 가지고있습니다.</p>
+
+<p>가상화를 얘기하기전 하이퍼바이저를 모르는 분들을 위해 위키의 기재된 내용을 표기하겠습니다.</p>
+
+<p>“하이퍼바이저는 호스트 컴퓨터에서 다수의 운영 체제(operating system)를 동시에 실행하기 위한 논리적 플랫폼(platform)을
+말한다.”</p>
+
+<p>즉, 쉽게 풀어 얘기하자면 하나의 PC에 여러개의 OS를 사용할 수 있게 도와주는 기술이다.</p>
+
+<p>가상화 환경에서는 가장 _밑단에 깔린 호스트 OS_를 공유한다.</p>
+
+<p>호스트 OS의 자원은 한정적이고 애플리케이션의 갯수가 늘어나면 당연히 여러 작업을 감당하기 어려운 상황이된다.</p>
+
+<p>하이퍼바이저 또한 호스트 OS와 게스트 OS, 애플리케이션을 중재하는 과정에서 많은 작업을 처리한다.</p>
+
+<p>아무리 시간이 지남에따라 하드웨어의 스펙이 좋아졌다고해도 위의 문제점을 감안하기에는 역부족이었다.</p>
+
+<p><img src="/assets/images/posts/701/2626794858297E222B855E.PNG" alt="" /></p>
+
+<p>VM은 HOST OS가 깔리고 그 위에 하이퍼 바이저가 깔립니다. 또 그 위에 Virtual Machine이 생성된다.</p>
+
+<p>Virtual Machine 은 일종의 x86 하드웨어를 가상화 한 것이라 여기면된다. 따라서 VM위에 다양한 OS가 설치가능 한 것이다.</p>
+
+<p><em>HOST OS =&gt; Hypervisor =&gt; Virtual Machine</em> 순서 인 것이다.</p>
+
+<p>Docker도 VM 처럼 Docker Engine이 호스트 위에서 수행된다.</p>
+
+<p>하이퍼바이저를 대체하여 Docker Engine이 올라가는 것 이다.</p>
+
+<p>또한 <em>도커는 게스트 OS를 필요로하지않는다</em>. 이게 좀 중요하다.</p>
+
+<p>한마디로 OS위에 OS를 다시 올릴 필요가 없기 때문에 가볍다.</p>
+
+<p>가상머신의 경우 독립된 컴퓨터이다. 따라서 항상 게스트 OS를 설치해야한다.(필수)</p>
+
+<p>당연히 이미지안에 OS가 포함되어있기에 용량이 크다. 네트워크로 가상화 이미지를 주고 받는거 실상 꽤나 부담스러운 작업이다.</p>
+
+<p>도커는 이미지에 서버 운영을 위한 프로그램과 라이브러리만 격리해서 설치따라서 이미지의 용량이 크게 줄어들었다.</p>
+
+<p>또한 도커는 하드웨어 가상화 계층이 없다.</p>
+
+<p>메모리 접근, 파일 시스템, 네트워크 전송속도가 Virtual Machine에 비해 월등히 빠르다.</p>
+
+<p>컨테이너에서 앱을 수행하고 프로세스를 보면 <code class="highlighter-rouge">lxc</code> 이름으로 앱이 실행되었음을 알 수 있다.</p>
+
+<p><code class="highlighter-rouge">lxc(LinuXContainer)</code>는 컨테이를 실행시켜주는 runtime이다.</p>
+
+<p>아래 표를 보면 퍼포먼스 감소가 매우 적은 것을 알 수 있다.</p>
+
+<p><img src="/assets/images/posts/701/2505984E582991062847BD.PNG" alt="" /></p>
+
+<p><strong>이미는 무엇이고, 컨테이너는 무엇인가 ? **</strong>도커의 구성요소좀 알려줘라.**</p>
+
+<ul>
+  <li>이미지 : 서비스 운영에 필요한 서버 프로그램, 소스 코드, 컴파일된 실행파일을 묶은 형태입니다. <em>Read-only</em> 템플릿이며 컨테이너의 변경 사항은 다시 이미지화 할 수있습니다.</li>
+  <li>컨테이너 : 이미지를 실행한 상태 따라서 이미지를 통해 여러개의 컨테이너를 생성가능</li>
+  <li>레지스트리 : 이미지를 보관하는 역할입니다. 공개/비공개 보관 이미지의 업로드 및 다운이 가능합니다. 공개 레지스트리로 도커 허브가 제공되고 있어 이미지를 공유하고 타 개발자의 이미지를 사용할 수 있습니다.</li>
+  <li>LXC(Linux Containers) : 고유의 파일 시스템, 프로세스, 네트워크 공간을 가진다.</li>
+  <li>도커 엔진 : 사용자가 컨테이너를 생성하고 사용 할 수 있도록한다.</li>
+  <li>도커 허브 : SaaS 기반의 서비스로 도커 서비스를 생성하고 공유할 수 있도록 한다.</li>
+</ul>
+
+<p>이미와 컨테이너의 관계 쉽게 운영체제로 비유하자면 _이미지는 실행파일_이며 _컨테이너는 프로세스_입니다.</p>
+
+<p>크게 세가지 이미지,컨테이너,레지스트리는 꼭 인지하고 계셔야합니다.</p>
+
+<p>도커의 컨테이너를 조금 비유해서 얘기하자면..</p>
+
+<p>이전부터 우리가 알고있는 물리적인 화물 또한 컨테이너의 <code class="highlighter-rouge">등장</code>으로 <code class="highlighter-rouge">효율</code>적인 운송이 가능해졌습니다.</p>
+
+<p>도커의 컨테이너 기술도 같은 개념으로 출발한 기술임을 알아두길 바랍니다.</p>
+
+<p>로고를 보면 알수있듯이 로고 속 고래는 수 많은 컨테이너를 등에 싣고 각 서버에 운반(배포)합니다.</p>
+
+<p><img src="/assets/images/posts/701/2754604F58298295282997.PNG" alt="" /></p>
+
+<p><strong>도커의 아키텍쳐는 어떤식으로 되어있나 ?</strong></p>
+
+<p>아래 영상 참고</p>
+
+<p><img src="/assets/images/posts/701/2225AB47582AD56D1DBDF5.PNG" alt="" /></p>
+
+<p><strong>설치</strong></p>
+
+<p>**<br />
+**</p>
+
+<p>이제 도커를 설치해보자.</p>
+
+<p>리눅스 환경에서 도커를 설치하는 방법은 두가지가 있다.</p>
+
+<p>제공하는 자동 설치 스크립트를 이용하는 방법과 리눅스 배포판의 패키징 시스템을 이용하여 설치하는 방법.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$ sudo wget -qO- https://get.docker.com/</td>
+      <td>sh</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>또는 패키지 매너저를 통하여 설치합니다.</p>
+
+<p>$ sudo apt-get install docker.io</p>
+
+<p>AWS 환경이라면 4243 포트를 개방하고, 필요에따라 방화벽 해제를 해주세요.</p>
+
+<p>$ sudo ufw allow 4243/tcp</p>
+
+<p><strong>참고</strong></p>
+
+<ul>
+  <li><a href="https://docs.docker.com/">https://docs.docker.com/</a></li>
+  <li><a href="http://www.slideshare.net/modestjude/dockerat-deview-2013">Docker at Deview 2013</a></li>
+  <li><a href="https://www.google.co.kr/?gfe_rd=cr&amp;ei=EogpWMboArHz8AfLjIEw#q=how+can+i+install+docker+on+ubuntu">how can i install docker on ubuntu</a></li>
+  <li><a href="http://owaaa.github.io/docker/amazon/aws/devops/continuous/delivery/2014/10/10/docker_continous_delivery.html">Continous Delivery with Docker on AWS</a></li>
+</ul>
+
+<p>**<br />
+**</p>
+
+<p><strong>커뮤니티</strong></p>
+
+<ul>
+  <li><a href="http://forum.docker.co.kr/">Docker Korea</a></li>
+  <li><a href="https://www.facebook.com/groups/korea.docker.user.group/">페이스북 Korea Docker User Group</a></li>
+</ul>
+
+:ET

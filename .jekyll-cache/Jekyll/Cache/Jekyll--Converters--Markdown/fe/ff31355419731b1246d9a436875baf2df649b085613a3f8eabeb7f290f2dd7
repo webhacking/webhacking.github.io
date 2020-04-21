@@ -1,0 +1,32 @@
+I",<p>작년에 SSL 설정을 따로해놨는데, 이번에 강제이전(?)을 하게되고 재 설정하게되었다.</p>
+
+<p><code class="highlighter-rouge">Configuring HTTPS Servers</code> 꽤 잘 설명되있는 <a href="('http://nginx.org/en/docs/http/configuring_https_servers.html')">문서</a>를 가지고왔다.</p>
+
+<ul>
+  <li>.key - CSR 자동생성 신청시, 같이 자동 생성된 개인키 (SHA1 알고리즘, PEM 텍스트, 패스워드 없음)</li>
+  <li>.pfx - 개인키+서버응답인증서 패키징된 인증서 (설치시 암호 필요)</li>
+  <li>.pfx.txt - pfx 를 이용해서 인증서 설치시 필요한 해제 암호</li>
+  <li>
+    <p>.Chain.zip - 설치가 필수인 체인 인증서 모음 압축 파일</p>
+
+    <p>server {</p>
+
+    <p>listen 443 ssl;</p>
+
+    <p>server_name www.example.com;</p>
+
+    <p>ssl_certificate www.example.com.crt;</p>
+
+    <p>ssl_certificate_key www.example.com.key;</p>
+
+    <p>ssl_protocols TLSv1 TLSv1.1 TLSv1.2;</p>
+
+    <p>ssl_ciphers HIGH:!aNULL:!MD5;</p>
+
+    <p>…</p>
+
+    <p>}</p>
+  </li>
+</ul>
+
+:ET

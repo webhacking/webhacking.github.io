@@ -1,0 +1,138 @@
+I"h<p>Javascript 에 클래스 개념 더하기, http://www.phpied.com/3-ways-to-define-a-javascript-
+class/</p>
+
+<p>**<br />
+**</p>
+
+<p><strong>Introduction</strong></p>
+
+<p>JavaScript is a very flexible object-oriented language when it comes to
+syntax. In this article you can find three ways of defining and instantiating
+an object. Even if you have already picked your favorite way of doing it, it
+helps to know some alternatives in order to read other people’s code.</p>
+
+<p>It’s important to note that there are no classes in JavaScript. Functions can
+be used to somewhat simulate classes, but in general JavaScript is a class-
+less language. Everything is an object. And when it comes to inheritance,
+objects inherit from objects, not classes from classes as in the “class”-ical
+languages.</p>
+
+<p><strong>1. Using a function</strong></p>
+
+<p>This is probably one of the most common ways. You define a normal JavaScript
+function and then create an object by using the new keyword. To define
+properties and methods for an object created using function(), you use the
+this keyword, as seen in the following example.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Apple (type) {    this.type = type;    this.color = "red";    this.getInfo = getAppleInfo;} // anti-pattern! keep reading...function getAppleInfo() {    return this.color + ' ' + this.type + ' apple';}
+</code></pre></div></div>
+
+<p>To instantiate an object using the Apple constructor function, set some
+properties and call methods you can do the following:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var apple = new Apple('macintosh');apple.color = "reddish";alert(apple.getInfo());
+</code></pre></div></div>
+
+<p>**<br />
+**</p>
+
+<p><strong>1.1. Methods defined internally</strong></p>
+
+<p>In the example above you see that the method getInfo() of the Apple “class”
+was defined in a separate function getAppleInfo(). While this works fine, it
+has one drawback – you may end up defining a lot of these functions and they
+are all in the “global namespece”. This means you may have naming conflicts if
+you (or another library you are using) decide to create another function with
+the same name. The way to prevent pollution of the global namespace, you can
+define your methods within the constructor function, like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Apple (type) {    this.type = type;    this.color = "red";    this.getInfo = function() {        return this.color + ' ' + this.type + ' apple';    };}
+</code></pre></div></div>
+
+<p>Using this syntax changes nothing in the way you instantiate the object and
+use its properties and methods.</p>
+
+<p><strong>1.2. Methods added to the prototype</strong></p>
+
+<p>A drawback of 1.1. is that the method getInfo() is recreated every time you
+create a new object. Sometimes that may be what you want, but it’s rare. A
+more inexpensive way is to add getInfo() to the prototype of the constructor
+function.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Apple (type) {    this.type = type;    this.color = "red";} Apple.prototype.getInfo = function() {    return this.color + ' ' + this.type + ' apple';};
+</code></pre></div></div>
+
+<p>Again, you can use the new objects exactly the same way as in 1. and 1.1.</p>
+
+<p><strong>2. Using object literals</strong></p>
+
+<p>Literals are shorter way to define objects and arrays in JavaScript. _To
+create an empty objec_t using you can do:</p>
+
+<p>var o = {};</p>
+
+<p>instead of the “normal” way:</p>
+
+<p>var o = new Object();</p>
+
+<p><em>For arrays</em> you can do:</p>
+
+<p>var a = [];</p>
+
+<p>instead of:</p>
+
+<p>var a = new Array();</p>
+
+<p>So you can skip the class-like stuff and create an instance (object)
+immediately. Here’s the same functionality as described in the previous
+examples, but using object literal syntax this time:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var apple = {    type: "macintosh",    color: "red",    getInfo: function () {        return this.color + ' ' + this.type + ' apple';    }}
+</code></pre></div></div>
+
+<p>In this case you don’t need to (and cannot) create an instance of the class,</p>
+
+<p>it already exists. So you simply start using this instance.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apple.color = "reddish";alert(apple.getInfo());
+</code></pre></div></div>
+
+<p>Such an object is also sometimes called singleton. In “classical” languages
+such as Java, singleton means that you can have only one single instance of
+this class at any time, you cannot create more objects of the same class. In
+JavaScript (no classes, remember?) this concept makes no sense anymore since
+all objects are singletons to begin with.</p>
+
+<p>**<br />
+**</p>
+
+<p><strong>3. Singleton using a function</strong></p>
+
+<p>Again with the singleton, eh? :)</p>
+
+<p>The third way presented in this article is a combination of the other two you
+already saw. You can use a function to define a singleton object. Here’s the
+syntax:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var apple = new function() {    this.type = "macintosh";    this.color = "red";    this.getInfo = function () {        return this.color + ' ' + this.type + ' apple';    };}
+</code></pre></div></div>
+
+<p>So you see that this is very similar to 1.1. discussed above, but the way to
+use the object is exactly like in 2.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apple.color = "reddish";alert(apple.getInfo());
+</code></pre></div></div>
+
+<p>new function(){…} does two things at the same time: define a function (an
+anonymous constructor function) and invoke it with new. It might look a bit
+confusing if you’re not used to it and it’s not too common, but hey, it’s an
+option, when you really want a constructor function that you’ll use only once
+and there’s no sense of giving it a name.</p>
+
+<p><strong>Summary</strong></p>
+
+<p>You saw three (plus one) ways of creating objects in JavaScript. Remember that
+(despite the article’s title) there’s no such thing as a class in JavaScript.
+Looking forward to start coding using the new knowledge? Happy JavaScript-ing!</p>
+
+:ET

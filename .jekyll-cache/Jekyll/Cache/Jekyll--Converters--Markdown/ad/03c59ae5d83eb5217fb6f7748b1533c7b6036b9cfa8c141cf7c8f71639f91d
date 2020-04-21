@@ -1,0 +1,38 @@
+I"+<ul>
+  <li>IoT 통신 (짧은거리)</li>
+</ul>
+
+<p>Z-Wave / Zigbee / Wi-Fi / 블루투스</p>
+
+<ul>
+  <li>IoT 통신 (중간 거리)</li>
+</ul>
+
+<p>Zigbee /LPWAN / PLC</p>
+
+<ul>
+  <li>IoT 통신 (긴거리)</li>
+</ul>
+
+<p>LTE / 3G / Ethernet</p>
+
+<ul>
+  <li>IoT 프로토콜</li>
+</ul>
+
+<p>LMQTT , MQTT-SN, M3DA, STOMP, AMQP, CoAP, WebSockets, WebRTC, XMPP IoT, future
+HTML 2.0</p>
+
+<ul>
+  <li>IoT 데이터 포맷</li>
+</ul>
+
+<p>BSON, JSON,XML</p>
+
+<ul>
+  <li>IoT 데이터 모델</li>
+</ul>
+
+<p>oBIX, OpenADR, ESTI M2M, IPSO Smart Object , SEP2.0</p>
+
+:ET
