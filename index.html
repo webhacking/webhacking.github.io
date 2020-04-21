@@ -23,7 +23,7 @@ layout: default
                 </div>
                 <div class="list-post-line"></div>
                 <div class="list-post-desc">
-                    {{ post.excerpt | strip_newlines | truncatewords: 150 }}
+                    {{ post.excerpt | strip_newlines | strip_html | truncatewords: 150, '...' }}
                 </div>
             </a>
     </div>
