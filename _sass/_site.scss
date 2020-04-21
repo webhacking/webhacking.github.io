@@ -1122,6 +1122,10 @@ body.enable-side-bar {
     a {
       color: $base-color;
       margin: 4px;
+      &:hover {
+        opacity: .6;
+        transition: opacity 250ms;
+      }
     }
   }
 }
