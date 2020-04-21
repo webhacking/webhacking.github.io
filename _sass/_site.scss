@@ -953,13 +953,13 @@ body.enable-side-bar {
     }
 
     &:hover {
-      &-line {
+      .list-post-line {
         width: 5rem!important;
       }
     }
 
     &-line {
-      transition: all 0.3s ease-out;
+      transition: all 0.25s ease-out;
       border-top: 0.2rem solid #353535;
       display: block;
       width: 2rem;
