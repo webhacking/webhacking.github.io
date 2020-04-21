@@ -2,7 +2,7 @@
 layout: post
 title: "도전"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2017-02-01
 tags: []

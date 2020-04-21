@@ -2,7 +2,7 @@
 layout: post
 title: "ECE's Revenge Plaid CTF 2015 Writeup"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-09-07
 tags: []

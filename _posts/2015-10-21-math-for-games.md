@@ -2,7 +2,7 @@
 layout: post
 title: "수포자를 위한 게임 수학 (Math for games) #01 - OT & What is Programming ?"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-10-21
 tags: []

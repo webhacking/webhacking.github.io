@@ -2,7 +2,7 @@
 layout: post
 title: "Git: 바이너리 파일의 머지가 충돌한 경우"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-29
 tags: []

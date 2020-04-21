@@ -2,7 +2,7 @@
 layout: post
 title: "클린코드, 프로그래머여 깨끗한 코드를 작성하라."
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-09-22
 tags: []

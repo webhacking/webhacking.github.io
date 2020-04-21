@@ -2,7 +2,7 @@
 layout: post
 title: "NEXTERS, 알고리즘 스터디 자료"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-06-03
 tags: []

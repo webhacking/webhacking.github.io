@@ -2,7 +2,7 @@
 layout: post
 title: "Linux IO Diagram"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-10-31
 tags: []

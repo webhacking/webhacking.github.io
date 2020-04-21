@@ -2,7 +2,7 @@
 layout: post
 title: "입력 - 형성평가1"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-26
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "Facebook and memcached - Tech Talk"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-22
 tags: []

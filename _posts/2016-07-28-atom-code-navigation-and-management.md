@@ -2,7 +2,7 @@
 layout: post
 title: "아톰(atom) Code Navigation & Management"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-07-28
 tags: []

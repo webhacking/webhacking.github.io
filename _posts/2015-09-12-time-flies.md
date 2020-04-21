@@ -2,7 +2,7 @@
 layout: post
 title: "시간이 빠르다."
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-09-12
 tags: []

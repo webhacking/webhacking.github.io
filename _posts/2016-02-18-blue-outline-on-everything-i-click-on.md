@@ -2,7 +2,7 @@
 layout: post
 title: "blue outline on everything i click on"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-02-18
 tags: []

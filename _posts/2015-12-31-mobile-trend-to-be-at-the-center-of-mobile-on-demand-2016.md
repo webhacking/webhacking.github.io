@@ -2,7 +2,7 @@
 layout: post
 title: "모바일 트렌드 2016 모바일, 온디맨드의 중심에 서다"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-31
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "규칙적인 삶"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-07-19
 tags: []

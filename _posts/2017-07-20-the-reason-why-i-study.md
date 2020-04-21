@@ -2,7 +2,7 @@
 layout: post
 title: "내가 공부하는 이유"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2017-07-20
 tags: []

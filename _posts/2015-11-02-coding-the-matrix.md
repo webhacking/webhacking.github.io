@@ -2,7 +2,7 @@
 layout: post
 title: "코딩 더 매트릭스"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-11-02
 tags: []

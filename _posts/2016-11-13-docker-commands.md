@@ -2,7 +2,7 @@
 layout: post
 title: "도커 명령어 정리"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-11-13
 tags: []

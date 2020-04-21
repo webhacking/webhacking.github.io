@@ -2,7 +2,7 @@
 layout: post
 title: "Languages used"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-28
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "What is aws dynamodb Hash and Range Primary Key? 다이나모디비 해쉬&레인지"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-09
 tags: []

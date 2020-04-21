@@ -2,7 +2,7 @@
 layout: post
 title: "redbubble에서 스티커"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-09
 tags: []

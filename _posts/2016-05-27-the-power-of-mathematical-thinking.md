@@ -2,7 +2,7 @@
 layout: post
 title: "틀리지 않는 법 수학적 사고의 힘"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-05-27
 tags: ['조던 엘렌버그']

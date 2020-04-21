@@ -2,7 +2,7 @@
 layout: post
 title: "안정성과 생산성"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2017-10-23
 tags: []

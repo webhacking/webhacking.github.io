@@ -2,7 +2,7 @@
 layout: post
 title: "심심할때 읽기 좋은 리눅스 파일구조"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-29
 tags: []

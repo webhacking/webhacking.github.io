@@ -2,7 +2,7 @@
 layout: post
 title: "[탑코더 레드 찍기]TopCoder 탑코더 알고리즘 트레이닝"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-16
 tags: []

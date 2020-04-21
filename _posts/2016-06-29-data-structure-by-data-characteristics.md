@@ -2,7 +2,7 @@
 layout: post
 title: "자료 특성별 자료구조"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-06-29
 tags: []

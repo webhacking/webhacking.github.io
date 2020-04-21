@@ -2,7 +2,7 @@
 layout: post
 title: "SSL Certificate 이슈"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-11-12
 tags: []

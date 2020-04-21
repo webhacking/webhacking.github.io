@@ -2,7 +2,7 @@
 layout: post
 title: "GoF의 디자인 패턴"
 description: "재사용성을 지닌 객체지향 소프트웨어의 핵심요소"
-categories : etc
+categories : development
 sub_categories : ""
 date: 2017-07-04
 tags: ['DESIGN PATTERNS']

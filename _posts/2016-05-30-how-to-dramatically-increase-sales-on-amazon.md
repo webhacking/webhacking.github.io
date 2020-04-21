@@ -2,7 +2,7 @@
 layout: post
 title: "How to Dramatically Increase Sales on Amazon"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-05-30
 tags: []

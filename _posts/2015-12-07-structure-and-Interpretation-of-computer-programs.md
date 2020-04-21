@@ -2,7 +2,7 @@
 layout: post
 title: "컴퓨터 프로그램의 구조와 해석"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-07
 tags: []

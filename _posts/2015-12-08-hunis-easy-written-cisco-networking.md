@@ -2,7 +2,7 @@
 layout: post
 title: "후니의 쉽게 쓴 시스코 네트워킹"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-08
 tags: []

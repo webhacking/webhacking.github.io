@@ -2,7 +2,7 @@
 layout: post
 title: "How Google makes improvements to its search algorithm"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-29
 tags: []

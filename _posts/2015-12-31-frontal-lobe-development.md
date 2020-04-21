@@ -2,7 +2,7 @@
 layout: post
 title: "전두엽 발달"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-31
 tags: []

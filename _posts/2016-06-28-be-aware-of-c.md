@@ -2,7 +2,7 @@
 layout: post
 title: "C를 배우기 전에 반드시 알아야 할 것들"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-06-28
 tags: []

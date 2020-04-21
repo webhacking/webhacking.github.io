@@ -2,7 +2,7 @@
 layout: post
 title: "AlphaGo 알고리즘 요약"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-08
 tags: []

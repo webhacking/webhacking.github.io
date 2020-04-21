@@ -2,7 +2,7 @@
 layout: post
 title: "소프트웨어 vs 건축 설계사"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-24
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "Travis CI 사용 + continuous integration 개념"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-05-30
 tags: ['CI', 'Continuous Integration', 'Jenkins', 'Travis', 'travis vs Jenkins', '영준스텔라', '지속적 통합']

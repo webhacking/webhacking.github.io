@@ -2,7 +2,7 @@
 layout: post
 title: "Environment Variables"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-07-04
 tags: []

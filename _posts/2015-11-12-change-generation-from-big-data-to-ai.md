@@ -2,7 +2,7 @@
 layout: post
 title: "IT 트렌드 '빅데이터'에서 '인공지능'으로 세대교체"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-11-12
 tags: []

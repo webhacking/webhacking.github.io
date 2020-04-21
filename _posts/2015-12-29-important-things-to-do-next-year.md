@@ -2,7 +2,7 @@
 layout: post
 title: "내년에 할 중요한 것들"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-29
 tags: []

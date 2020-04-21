@@ -2,7 +2,7 @@
 layout: post
 title: "Zabbix vs Nagios"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-12-12
 tags: []

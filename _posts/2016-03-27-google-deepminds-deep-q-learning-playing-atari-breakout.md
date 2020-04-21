@@ -2,7 +2,7 @@
 layout: post
 title: "Google DeepMind's Deep Q-learning playing Atari Breakout"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-27
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "Nginx error “conflicting server name” ignored"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-06-25
 tags: []

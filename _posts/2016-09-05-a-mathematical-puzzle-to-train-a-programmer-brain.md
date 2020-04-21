@@ -2,7 +2,7 @@
 layout: post
 title: "프로그래머의 뇌를 단련하는 수학퍼즐"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-09-05
 tags: []

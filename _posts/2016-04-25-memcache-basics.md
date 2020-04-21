@@ -2,7 +2,7 @@
 layout: post
 title: "Memcache Basics"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-25
 tags: []

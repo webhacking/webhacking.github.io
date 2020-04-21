@@ -2,7 +2,7 @@
 layout: post
 title: "Snort  Network IDS-IPS"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-12-20
 tags: ['IDS', 'IPS']

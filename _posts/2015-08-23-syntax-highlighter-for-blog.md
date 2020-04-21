@@ -2,7 +2,7 @@
 layout: post
 title: "블로그를 위한 SyntaxHighlighter"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-08-23
 tags: ['asp', 'C++', 'CDN', 'CODE', 'CSS', 'highlighter', 'HTML', 'Java', 'JS', 'SyntaxHighlighter', '블로그', '소스코드', '소스하이라이트', '티스토리']

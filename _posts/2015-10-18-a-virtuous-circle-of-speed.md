@@ -2,7 +2,7 @@
 layout: post
 title: "속도의 선순환 by Randy Shoup"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-10-18
 tags: []

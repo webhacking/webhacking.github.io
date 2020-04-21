@@ -2,7 +2,7 @@
 layout: post
 title: "다국어"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-10-03
 tags: []

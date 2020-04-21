@@ -2,7 +2,7 @@
 layout: post
 title: "http 2, 필터 관련"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-27
 tags: []

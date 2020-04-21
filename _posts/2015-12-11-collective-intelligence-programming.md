@@ -2,7 +2,7 @@
 layout: post
 title: "집단지성 프로그래밍"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-11
 tags: []

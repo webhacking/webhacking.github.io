@@ -2,7 +2,7 @@
 layout: post
 title: "CODE 코드"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-01-12
 tags: []

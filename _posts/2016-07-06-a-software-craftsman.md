@@ -2,7 +2,7 @@
 layout: post
 title: "소프트웨어 장인"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-07-06
 tags: []

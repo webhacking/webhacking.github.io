@@ -2,7 +2,7 @@
 layout: post
 title: "Webhacking.kr 4번 문제"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-01-12
 tags: [webhacking, 'webhacking.kr']

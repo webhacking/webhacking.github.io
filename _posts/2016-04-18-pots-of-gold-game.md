@@ -2,7 +2,7 @@
 layout: post
 title: "Pots of gold game"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-18
 tags: ['Pots of gold game', '구글', '기술', '전화면접']

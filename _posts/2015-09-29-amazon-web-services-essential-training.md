@@ -2,7 +2,7 @@
 layout: post
 title: "Amazon Web Services Essential Training"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-09-29
 tags: []

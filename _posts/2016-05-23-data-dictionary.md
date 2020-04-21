@@ -2,7 +2,7 @@
 layout: post
 title: "데이터 사전(data dictionary)"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-05-23
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "55 Quick SEO Tips Even Your Mother Would Love"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-06-01
 tags: []

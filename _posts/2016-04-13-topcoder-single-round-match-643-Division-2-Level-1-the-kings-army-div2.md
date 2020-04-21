@@ -2,7 +2,7 @@
 layout: post
 title: "[탑코더] Single Round Match 643, Division 2, Level 1: TheKingsArmyDiv2"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-13
 tags: []

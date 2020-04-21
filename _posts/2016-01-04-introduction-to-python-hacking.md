@@ -2,7 +2,7 @@
 layout: post
 title: "파이썬 해킹 입문"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-01-04
 tags: []

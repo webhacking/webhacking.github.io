@@ -2,7 +2,7 @@
 layout: post
 title: "메타인지"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-06-05
 tags: []

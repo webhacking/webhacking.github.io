@@ -2,7 +2,7 @@
 layout: post
 title: "Redis 스터디 관련 영상"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-20
 tags: []

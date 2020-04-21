@@ -2,7 +2,7 @@
 layout: post
 title: "참조 (reference)"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2017-07-13
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "이펙티브 모던 C++"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-14
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "NoSQL 데이터 모델링"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-07
 tags: []

@@ -2,7 +2,7 @@
 layout: post
 title: "공학수학"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-10-08
 tags: []

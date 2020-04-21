@@ -2,7 +2,7 @@
 layout: post
 title: "알고리즘 특집 1부 – 알고리즘 문제 해결 전략의 구종만님과 함께"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-11-23
 tags: []

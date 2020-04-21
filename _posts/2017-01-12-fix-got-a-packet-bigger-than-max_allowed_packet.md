@@ -2,7 +2,7 @@
 layout: post
 title: "Got a packet bigger than 'max_allowed_packet' 해결 방안"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2017-01-12
 tags: ['max_allowed_packet', 'MySQL']

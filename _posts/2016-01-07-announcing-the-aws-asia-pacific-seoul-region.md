@@ -2,7 +2,7 @@
 layout: post
 title: "AWS 한국 리전 관련 Announcing the AWS Asia Pacific (Seoul) Region"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-01-07
 tags: ['AWS']

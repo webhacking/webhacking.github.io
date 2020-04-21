@@ -2,7 +2,7 @@
 layout: post
 title: "누구나 쉽게 배우는 파이썬 프로그래밍"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-01-14
 tags: []

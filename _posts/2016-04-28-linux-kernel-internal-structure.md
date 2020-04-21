@@ -2,7 +2,7 @@
 layout: post
 title: "리눅스 커널 내부구조"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-28
 tags: ['linux', '리눅스']

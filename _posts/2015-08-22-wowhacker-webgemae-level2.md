@@ -2,7 +2,7 @@
 layout: post
 title: "WowHacker Webgemae level2"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-08-22
 tags: ['webhacking', 'wowhacker']

@@ -2,7 +2,7 @@
 layout: post
 title: "빠른 피드백과 속도, 크롬 브라우저 카나리아(Canary)"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-08
 tags: ['Canary', 'chrome', '카나리아', '크롬']

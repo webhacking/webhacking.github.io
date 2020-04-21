@@ -2,7 +2,7 @@
 layout: post
 title: "검색 알고리즘 성능 총정리"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-04-27
 tags: []

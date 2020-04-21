@@ -2,7 +2,7 @@
 layout: post
 title: "Energy Hackathon(에너지 해커톤) 2016 서울"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2016-03-08
 tags: ['에너지', '에너지란', '에너지해커톤', '해커톤']

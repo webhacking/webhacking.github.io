@@ -2,7 +2,7 @@
 layout: post
 title: "프로그래밍 실력을 위한 9가지 퍼즐 사이트(Puzzle Websites to Sharpen Your Programming Skills)"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-12-09
 tags: ['기초로직', '기초알고리즘', '문제해결능력', '알고리즘', '좋은프로그래머', '프로그래머', '프로그래밍', '프로그래밍잘하는법']

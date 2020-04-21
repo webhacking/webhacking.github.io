@@ -2,7 +2,7 @@
 layout: post
 title: "정보처리기사"
 description: ""
-categories : etc
+categories : development
 sub_categories : ""
 date: 2015-10-11
 tags: []
