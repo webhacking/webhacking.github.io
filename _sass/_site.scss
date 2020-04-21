@@ -954,7 +954,7 @@ body.enable-side-bar {
 
     &:hover {
       &-line {
-        width: 5rem;
+        width: 5rem!important;
       }
     }
 
@@ -978,6 +978,7 @@ body.enable-side-bar {
     }
 
     &-desc {
+      margin-top: 1em;
       color: $base-color;
       margin-bottom: .25rem;
       font-size :1rem;
