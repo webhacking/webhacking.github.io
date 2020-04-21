@@ -904,23 +904,17 @@ body.enable-side-bar {
   }
 
   &-author .author-image {
-    width: 15%;
-    float: left;
-    margin: 0px;
+    border-radius: 50%;
+    width: 167px;
+    height: 167px;
+    overflow: hidden;
+    margin-right: 2em;
   }
 
   &-author .author-image img {
-    border: 1px solid #eee;
-    margin : 0px;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 4px;
-  }
-
-  &-author .about-me {
-    padding-left: 25px;
-    width: 85%;
-    float: right;
+    max-width: 100%;
+    position: relative;
+    top: -34px;
   }
 
   &-author .about-me h4 {
@@ -928,6 +922,10 @@ body.enable-side-bar {
     font-weight: bold;
     letter-spacing: -1px;
     margin: 0px;
+    h3 {
+      font-size: 30px;
+      letter-spacing: -.4px
+    }
   }
 
   &-author .about-me p {
