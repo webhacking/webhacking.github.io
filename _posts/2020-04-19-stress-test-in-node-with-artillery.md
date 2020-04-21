@@ -5,8 +5,6 @@ categories : development
 background_image: '/assets/images/posts/2020-04-19-stress-test-in-node-with-artillery/artillery.jpg'
 ---
 
-(작성 중 ...)
-
 우리는 작성한 API 에 병목 현상과 얼마 만큼의 트래픽을 수용할 수 있는지에 대한 여부를 확인하고자 스트레스 테스트를 작성한다.
 통상 자바환경에 익숙하다면 스트레스 테스트를 생각하면 ngrinder (또는 grinder) 를 먼저 생각하게 되는데, 본인은 Node 환경에서 아주 가볍게 스트레스 테스트를 구성하고 싶었고 그 요구 사항에 맞는 툴을 리서치하다 third party 로 제공하는 [Artillery](https://www.npmjs.com/package/artillery) 를 알게되었다.
 본 문서에서는 Artillery 을 통해 스트레스 테스트를 진행하며 느낀 점과 그 방법에 대해 얘기해보고자한다.
