@@ -2,7 +2,7 @@
 layout: post
 title: "short 주소 앞에 0x66 Prefix가 붙으면"
 description: ""
-categories : think
+categories : development
 sub_categories : ""
 date: 2015-10-02
 tags: []
@@ -16,78 +16,7 @@ x86 어셈블리에서 Short Call (0xE8) 또는 Short Jump (0xEB) 앞에 0x66 Pr
 
 왜냐면 66 Prefix가 오퍼랜드 크기를 줄여서 읽기 때문에 그런 것
 
-  
-
-1
-
-2
-
-3
-
-4
-
-5
-
-6
-
-7
-
-8
-
-9
-
-10
-
-11
-
-12
-
-13
-
-14
-
-15
-
-16
-
-17
-
-18
-
-19
-
-20
-
-21
-
-22
-
-23
-
-24
-
-25
-
-26
-
-27
-
-28
-
-29
-
-30
-
-31
-
-32
-
-33
-
-34
-
-35
-
+```
 #include <windows.h>
 
 typedef DWORD (__stdcall *ZWALLOC)(HANDLE ProcessHandle,
@@ -140,10 +69,8 @@ return 0;
 }
 
 </windows.h>
+```
 
-[Colored by Color Scripter](http://colorscripter.com/info#e)
-
-[cs](http://colorscripter.com/info#e)
 
   
 
