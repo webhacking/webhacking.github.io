@@ -4,6 +4,11 @@
           box-sizing: border-box;
 }
 
+::selection {
+  color: #fff;
+  background-color: #d0414e;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display : block;
 }
