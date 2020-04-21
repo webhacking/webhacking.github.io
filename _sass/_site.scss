@@ -953,7 +953,7 @@ body.enable-side-bar {
     }
 
     &:hover {
-      .list-post-line {
+      > &-line {
         width: 5rem!important;
       }
     }
