@@ -21,6 +21,7 @@ layout: default
                 <div class="list-post-title">
                     {{ post.title }}
                 </div>
+                <div class="list-post-line"></div>
                 {%- if site.show_excerpts -%}
                 <div class="list-post-desc">
                     {{ post.excerpt | strip_html | truncatewords: 45 }}
