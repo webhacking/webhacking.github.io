@@ -909,6 +909,7 @@ body.enable-side-bar {
     height: 167px;
     overflow: hidden;
     margin-right: 2em;
+    float: left;
   }
 
   &-author .author-image img {
@@ -924,13 +925,37 @@ body.enable-side-bar {
     margin: 0px;
     h3 {
       font-size: 30px;
-      letter-spacing: -.4px
+      letter-spacing: -.4px;
+      margin-top: .6em;
+      margin-bottom: .2em;
+    }
+    a {
+      transition: color .3s ease;
+      color: #1464be;
+      text-decoration: underline;
+      letter-spacing: -.2px;
+      position: relative;
+      font-weight: bold;
+      &::after {
+        position: absolute;
+        left: 0;
+        background: #1464be;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        content: "";
+      }
+      &:hover {
+        &::after {
+          transform: scaleX(0);
+        }
+      }
     }
   }
 
   &-author .about-me p {
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 18px;
   }
 }
 
