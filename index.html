@@ -22,11 +22,9 @@ layout: default
                     {{ post.title }}
                 </div>
                 <div class="list-post-line"></div>
-                {%- if site.show_excerpts -%}
                 <div class="list-post-desc">
                     {{ post.excerpt | strip_html | truncatewords: 45 }}
                 </div>
-                {% endif %}
             </a>
     </div>
     {% endfor %}

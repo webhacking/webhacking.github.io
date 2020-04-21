@@ -949,9 +949,12 @@ body.enable-side-bar {
       &:hover,
       &:focus {
         text-decoration: none;
-        &-line {
-          width: 5rem;
-        }
+      }
+    }
+
+    &:hover {
+      &-line {
+        width: 5rem;
       }
     }
 
