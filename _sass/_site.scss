@@ -242,6 +242,7 @@ mark {
 }
 
 .content-container {
+  position: relative;
   padding: 5rem 1rem;
   margin-left:  auto;
   margin-right: auto;
@@ -341,6 +342,7 @@ html[data-page="little-wider-page"] {
     > div {
       .widget {
         width: 100%;
+        padding: 0em 1.6em;
       }
     }
   }
@@ -548,16 +550,24 @@ body.enable-side-bar {
   }
 }
 
+body.throttle {
+  .header {
+    position: fixed;
+  }
+}
+
 .header {
   position : relative;
   overflow: visible;
   height: 50px;
-  z-index: 2;
   font-size: .85em;
   color: #7e888b;
-  background: transparent;
   border-bottom: 1px solid #eee;
-
+  width: 100%;
+  z-index: 999;
+  background-color: #fff;
+  transition: all 2s ease 0s;
+  
   a.btn:hover {
     position: relative;
     text-decoration: none;
@@ -910,6 +920,9 @@ body.enable-side-bar {
     overflow: hidden;
     margin-right: 2em;
     float: left;
+    @media (max-width: 48rem) {
+      margin: auto 1.2rem 1.2rem auto;
+    }
   }
 
   &-author .author-image img {
@@ -918,11 +931,14 @@ body.enable-side-bar {
     top: -34px;
   }
 
-  &-author .about-me h4 {
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    margin: 0px;
+  &-author .about-me {
+    h4 {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: -1px;
+      margin: 0px;
+
+    }
     h3 {
       font-size: 30px;
       letter-spacing: -.4px;
@@ -932,7 +948,7 @@ body.enable-side-bar {
     a {
       transition: color .3s ease;
       color: #1464be;
-      text-decoration: underline;
+      text-decoration: none;
       letter-spacing: -.2px;
       position: relative;
       font-weight: bold;
@@ -943,12 +959,24 @@ body.enable-side-bar {
         right: 0;
         bottom: 0;
         height: 2px;
+        transition: all .3s cubic-bezier(.7,0,.3,1);
         content: "";
       }
       &:hover {
         &::after {
           transform: scaleX(0);
         }
+      }
+    }
+    @media (max-width: 48rem) {
+      h3 {
+        font-size: 24px;
+      }
+      a {
+        text-align: center;
+        display: table;
+        margin: auto;
+        position: relative;
       }
     }
   }
@@ -1147,6 +1175,7 @@ body.enable-side-bar {
 .footer {
   text-align: center;
   font-size: .75rem;
+  padding-bottom: 2em;
 
   &-link {
     margin: .2rem;
