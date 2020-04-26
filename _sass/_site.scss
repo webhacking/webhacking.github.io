@@ -995,6 +995,11 @@ body.throttle {
   Post list
   -------------- */
 
+.list-post a:hover {
+  .list-post-line {
+    width: 5rem!important;
+  }
+}
 .list {
   &-post {
     padding: 4% 2%;
