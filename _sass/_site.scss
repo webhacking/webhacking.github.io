@@ -1006,7 +1006,7 @@ body.throttle {
         text-decoration: none;
       }
       &:hover {
-        &-line {
+        > &-line {
           width: 5rem!important;
         }
       }

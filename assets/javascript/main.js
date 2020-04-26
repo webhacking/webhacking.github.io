@@ -144,6 +144,12 @@ app.ready(function()
     }
 
     if ( document.documentElement.getAttribute('data-page') === 'post' ) {
+        (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = '//{{ site.disqus.id }}.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
         document.getElementById('app').addEventListener("scroll", function (event) {
             var currentScrollSize = document.getElementById('app').scrollTop;
             var headerHeight = document.querySelector('.header').offsetHeight
