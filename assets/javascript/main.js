@@ -108,7 +108,7 @@ app.ready(function()
     window.addEventListener('copy', function (e) {
         document.execCommand('copy');
         e.preventDefault();
-        e.clipboardData.setData('text/plain', document.getSelection() + "\n\n[출처]" + document.URL +"  [Hax0r blog]");
+        e.clipboardData.setData('text/plain', document.getSelection() + "\n\n[출처] " + document.URL +"  [Hax0r blog]");
    }, false);
    
     var stie = site;
