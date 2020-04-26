@@ -1,5 +1,5 @@
 ---
-title: 다 함께 TDD
+title: Kubernetes health check
 layout: post
 categories : development
 background_image: '/assets/images/posts/2019-12-30-kubernetes-healthy/1_Xfdw0lkT4CdPtnza4-0Z7Q.png'
@@ -14,7 +14,6 @@ Readiness Probe 에서는 애플리케이션이 많은 양의 데이터를 수�
 재시작하지 않는 이유는 락이 걸렸거나 외부 주입된 모듈에 대해 이슈가 있으면 재시작한다해도 서비스가 불가한 상태이기 때문이다.
 
 아래는 Liveness probe 와 Readiness probe 설정이다.
-
 ```
 # Liveness probe
 ports:
