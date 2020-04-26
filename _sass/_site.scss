@@ -1005,11 +1005,10 @@ body.throttle {
       &:focus {
         text-decoration: none;
       }
-    }
-
-    &:hover {
-      &-line {
-        width: 5rem!important;
+      &:hover {
+        &-line {
+          width: 5rem!important;
+        }
       }
     }
 
@@ -1131,12 +1130,6 @@ body.throttle {
       &:hover,
       &:focus {
         text-decoration: none;
-      }
-
-      &:hover {
-        &-line {
-          width: 5rem!important;
-        }
       }
     }
 
