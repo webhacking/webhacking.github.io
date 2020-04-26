@@ -105,6 +105,12 @@ app.ready(function()
         document.getElementById('metaViewport').setAttribute('content', 'width='+screen.width+', initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
     }
 
+    window.addEventListener('copy', function (e) {
+        document.execCommand('copy');
+        e.preventDefault();
+        e.clipboardData.setData('text/plain', document.getSelection() + "\n\n[출처]" + document.URL +"  [Hax0r blog]");
+   }, false);
+   
     var stie = site;
     (function() { 
         var d = document, s = d.createElement('script');
