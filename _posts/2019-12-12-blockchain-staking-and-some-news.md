@@ -71,6 +71,18 @@ background_image: '/assets/images/posts/blockchain-staking-and-some-news/POW-POS
 
 ![](/assets/images/posts/blockchain-staking-and-some-news/Image-from-iOS-2.jpg)
 
+# Stackoverflow reputation 1000 을 달성했다.
+
+본래 질문하기를 겁내지 않았다, 오히려 질문하는걸 즐겼다.
+근데 어디까지나 난 한국어로 질문하는걸 겁내지 않았던 것 같다.
+그래서 2019년 신년 목표로 다짐한게 Stackoverflow reputation `1000` 이다.
+
+겁내지 말고 질문하고, 내가 아는 것은 답변해서 도와주자라는 생각으로 덤벼들었다.
+그렇게 영어로 질문하고 답변하는게 친숙해지니 좀 더 큰 세상과 마주한 것 같아 내심 좋았다.
+또한 신년 나와의 약속을 지킨 것 같아 내 자신도 대견했다.
+
+![](/assets/images/posts/blockchain-staking-and-some-news/screenshot-stackoverflow.png)
+
 # 마지막으로
 
 코인원 플러스 화이팅, 떡상 Gazua
