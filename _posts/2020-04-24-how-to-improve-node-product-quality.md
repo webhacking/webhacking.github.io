@@ -40,16 +40,38 @@ background_image: '/assets/images/posts/how-to-improve-node-product-quality/tetr
 
 ## 아니 코드를 왜 그 따위로 쓰세요?
 
-코드 스타일은 굉장히 주관적이다. 
-인덴트, 세미콜론 여부, 띄어쓰기, condition 표현식 등등 이러한 문제들은 이미 아주 오랜 시간 동안 개발자들끼리의 분쟁 대상이었다.
-하지만 답은 없다. 누가 옳다 그르다의 문제가 아니다. 결국에 어느 부분에 대해서 서로 타협을 할 줄 알아야한다.
+얘기에 앞 서, 여러분은 어떤 스타일의 코드를 좋아하는가 ?
 
-그래서 우리는 보통 이러한 타협을 `Code convention` 이라 부른다.
-Javascript 가 권장하는 코드 스타일 또는 프로젝트에서 선택한 프레임워크가 code convention 을 따르는게 가장 이상적이다.
+알다시피 코드 스타일은 굉장히 주관적이다. 
+인덴트, 세미콜론 여부, 띄어쓰기, condition 표현식 등과 같은 문제들은 아주 오랜 시간 동안 개발자들 사이 분쟁의 대상이었다.
+결론만 말하자면, 답은 없다. 누가 옳고 그르다의 문제가 아니다. 
+다만 협업에 있어서는 문제가 발생한다. 혼자 작성한 코드는 자신에게는 잘 읽힐지 몰라도 제 3자는 아니다.
 
+그래서 우리는 이러한 문제를 해결하기 위해 타협을 했다. 이를 `Code convention` 이라 부른다.
+프로그래밍 언어가 권장하는 코드 스타일 또는 프로젝트에서 선택한 프레임워크가 권장하는 convention 을 따르는게 가장 이상적이다.
 그게 아니라면 개발자들끼리 협의하여 code convention 을 정의해야한다.
+
 convention 을 정의하지 않고 개발을 시작하면 서로 각기 다른 스타일의 코드를 작성하게 된다.
 context 를 이해하기도 벅찬데, 이 눈에 들어오지 않는 코드를 읽어야 한다면 얼마나 생산성일 떨어질까.
+
 블록을 어떻게 어디에 쌓을 것인지를 정해라.
 
 ![](/assets/images/posts/how-to-improve-node-product-quality/code-style.png)
+
+컨벤션을 정했다면 `husky` 와 `prettier` 를 통해, `pre-commit` 시점에 `ESLint`에 정의한 포맷으로 리포맷 하는것을 추천한다.
+이렇게되면, 최종적으로 Remote repository 에는 깔끔한 코드 베이스를 유지할 수 있다.
+
+여기서 **husky** 는 git trigging 에 따른 hook 을 설정할 수 있는 도구이며, **ESLint** 는 자바 스크립트 문법을 `검사`해주는 도구이다.
+Prettier 는 코드를 자동으로 `정리`해주는 도구이다.
+
+백문이 불여일견 위 내용들을 설정해보자.
+우선 아래와 같이 위 도구들을 설치한다. 여기서 팁은 `-D` 옵션이 가르키는 것은 `dev dependency` 이다.
+실질적으로 배포를 할 때, `devDependencies` 있는 항목은 제외가 되므로 공간 확보와 퍼포먼스를 위해 꼭 `dev dependency` 를 잘 구분하길 바란다.
+
+```
+npm install husky -D
+npm install prettier -D
+npm install eslint -D
+```
+
+
