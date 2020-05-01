@@ -59,7 +59,7 @@ context 를 이해하기도 벅찬데, 이 눈에 들어오지 않는 코드를 
 ![](/assets/images/posts/how-to-improve-node-product-quality/code-style.png)
 
 컨벤션을 정했다면 `husky` 와 `prettier` 를 통해, `pre-commit` 시점에 `ESLint`에 정의한 포맷으로 리포맷 하는것을 추천한다.
-이렇게되면, 최종적으로 Remote repository 에는 깔끔한 코드 베이스를 유지할 수 있다.
+이와 같이 컨벤션을 강제하면, 최종적으로 Remote repository 에는 깔끔한 코드 베이스를 유지할 수 있다.
 
 여기서 **husky** 는 git trigging 에 따른 hook 을 설정할 수 있는 도구이며, **ESLint** 는 자바 스크립트 문법을 `검사`해주는 도구이다.
 Prettier 는 코드를 자동으로 `정리`해주는 도구이다.
@@ -71,7 +71,54 @@ Prettier 는 코드를 자동으로 `정리`해주는 도구이다.
 ```
 npm install husky -D
 npm install prettier -D
+npm install lint-staged -D
 npm install eslint -D
+```
+
+Dependency 들 설치가 끝났다면 우선 린트 설정을 아래와 같이 진행한다.
+위 보일러 플레이트가 자바스크립트 문법을 검사하기 위한 설정 파일을 생성해준다. 기본적으로는 세미콜론 (;) 을 허용하지 않고 인덴트 4 외 엄격한 규칙들이 잡혀있다.
+루트 디렉토리에 `.eslintrc.js`  가 생긴걸 확인할 수 있다.
+
+```
+./node_modules/.bin/eslint
+? How would you like to configure ESLint? Use a popular style guide
+? Which style guide do you want to follow? Standard
+? What format do you want your config file to be in? JavaScript
+```
+
+만약 `Typescript` 환경이라면 아래 설정을 추천한다.
+린트 설정이 끝났다면 자신이 사용하는 IDE 에 따라 린트 설정을 해주거나 재 시작을 통해 IDE 가 자동으로 인식할 수 있게 해야한다.
+설정을 정상 확인하고자 한다면 규칙을 어긴 코드를 작성하여 빨간색 하이라이트가 등의 인식할 수 있는 표시가 뜬다면 정상적으로 적용된 것 이다.
+
+```javascript
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: 'tsconfig.json',
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  extends: [
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+  ],
+  root: true,
+  env: {
+    node: true,
+  },
+  rules: {
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+  },
+};
+```
+
+```
+npm install @commitlint/cli @commitlint/config-conventional -D
 ```
 
 
