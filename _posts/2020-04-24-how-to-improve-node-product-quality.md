@@ -264,8 +264,48 @@ husky > commit-msg (node v10.16.2)
 
 ### CHANGELOG 자동화
 
-### Console 로그 대신 Break point
+우리는 Conventional Commits 을 통해 정규화된 커밋 메세지들을 생성하게 되었다.
+이를 토대로 [standard-version](https://www.npmjs.com/package/standard-version) 을 통해 versioning 과 CHANGELOG.md 를 자동으로 생성할 수 있다.
+기본적인 원리는 단순히 git에 commit 된 로그를 뒤져서 package.json 에 새로운 버전을 명시하고 CHANGELOG.md에 해당 내용을 추가하는 방식이다.
 
+아래 명령어를 통해 `standard-version` 을 설치한다.
+
+```
+npm install standard-version -D
+```
+
+이후, package.json 에 아래 스크립트를 추가한다.
+
+```json
+{
+  ...
+  "scripts": {
+    "release": "standard-version"
+  }
+}
+```
+
+이후, `npm run release` 를 하면 위에 말한 일련의 프로세스가 진행된다.
+package.json 에 버전이 올라가고 `CHANGELOG.md` 에 기존 커밋들을 기준으로 하여 내용이 정리된다.
+이를 통해 해당 버전에 대한 Summary 를 확인할 수 있기에 함께 협업하는 개발자들간 alias 가 쉽게 이루어진다.
+
+```
+➜  hax0r git:(master) ✗ npm run release
+
+> hax0r@0.0.0 release /Users/hax0r
+> standard-version
+
+✔ bumping version in package.json from 0.0.0 to 0.0.1
+✔ bumping version in package-lock.json from 0.0.0 to 0.0.1
+✔ created CHANGELOG.md
+✔ outputting changes to CHANGELOG.md
+✔ committing package-lock.json and package.json and CHANGELOG.md
+husky > pre-commit (node v10.16.2)
+ℹ No staged files match any configured task.
+husky > commit-msg (node v10.16.2)
+```
+
+### Console 로그 대신 Break point
 
 ## 안되는데요?
 
