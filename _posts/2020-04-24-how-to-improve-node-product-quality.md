@@ -391,6 +391,13 @@ Cisco 시스템 프로그래밍 팀의 연구에 따르면 300줄에서 400줄 �
 
 ## Git flow
 
+Git 에서 브랜치 관리가 능숙하게 이루어질 수 없다면 Git flow 를 사용하는걸 권장한다.
+Git flow는 Vincent Driessen의 [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) 을 적용하여 코드를 관리하는 전략이다. 
+Vincent의 브랜칭 모델은 'feature - develop - release - hotfixes - master'의 형태로 브랜치를 나누는데, git flow도 별반 다르지 않다.
+git-flow의 주요 브랜치는 `master`와 `develop` 이며 새 버전을 배포하기 위해서는 master 브랜치에 병합해야한다.
+
+> feature 브랜치를 리베이스(rebase)하지않는다.
+
 ![](/assets/images/posts/how-to-improve-node-product-quality/gitflow-workflow-diagram.png)
 
 ## 마치며
