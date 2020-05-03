@@ -9,8 +9,8 @@ background_image: '/assets/images/posts/how-to-improve-node-product-quality/tetr
 
 여러분은 협업에 대해 어떻게 생각하는가? 🤔
 
-모두가 알다시피 협업은 절대 만만한 일이 아니다, 어쩌면 프로젝트를 진행하면서 맞닥뜨리는 가장 큰 난관이다.
-그렇다해서 협업을 하지 않을 수 없다 현 시대에 소프트웨어는 너무나 크고 복잡해졌기에 문제를 해결할려면 혼자가 아닌 팀 단위로써 해결을 해야만한다.
+모두 알다시피 협업은 절대 만만한 일이 아니다, 어쩌면 프로젝트를 진행하면서 맞닥뜨리는 가장 큰 난관이다.
+그렇다해서 협업을 하지 않을 수 없다 현 시대에 소프트웨어는 너무 크고 복잡해졌기에 문제를 현명하게 해결할려면 혼자가 아닌 팀 단위로써 해결을 해야만한다.
 본 문서에서는 노드 환경에서 프로젝트를 진행하며 협업에 대해 고민하고 시도(=삽질) 했던 내용들을 공유해보고자 한다.
 다만, 본문에서 다루는 내용들이 꼭 노드 환경에 국한되어 있지 않다.
 또한, 어떠한 방법론에 대해서도 강요하지 않을 것이며 언급되는 내용과 생각들은 굉장히 주관적인 부분이라는 것을 이해해 주고 읽어주길 바란다.
@@ -286,8 +286,7 @@ npm install standard-version -D
 ```
 
 이후, `npm run release` 를 하면 위에 말한 일련의 프로세스가 진행된다.
-package.json 에 버전이 올라가고 `CHANGELOG.md` 에 기존 커밋들을 기준으로 하여 내용이 정리된다.
-이를 통해 해당 버전에 대한 Summary 를 확인할 수 있기에 함께 협업하는 개발자들간 alias 가 쉽게 이루어진다.
+package.json 에 버전이 올라가고 `CHANGELOG.md` 에 기존 커밋들을 기준으로 하여 내용이 정리된다. 
 
 ```
 ➜  hax0r git:(master) ✗ npm run release
@@ -305,7 +304,47 @@ husky > pre-commit (node v10.16.2)
 husky > commit-msg (node v10.16.2)
 ```
 
+이를 통해 해당 버전에 대한 **Summary** 를 확인할 수 있기에 함께 협업하는 개발자들간 alias 가 쉽게 이루어진다. 내부 릴리즈 노트로도 매우 유용하게 사용할 수 있다.
+
+![](/assets/images/posts/how-to-improve-node-product-quality/change-log.png)
+
 ### Console 로그 대신 Break point
+
+보통 디버깅을 할 때, console.log 를 통해 예상하는 값을 확인하는데 이 로그들이 쌓이다보면 터미널에 출력되는 내용들이 개발을 할 때 혼선을 줄 여지가 있고 아름다운 코드를 유지할 수 없다. 결국에 아름다운 코드란 주석/로그 등이 없어도 쉽게 읽힐 수 있어야한다.
+다만 필요에 따라 Console.log 를 사용해야할때가 있고, 잘 사용하는 이들에게는 다행이지만 다수가 잘 사용하기 힘들기에 협업 환경에서는 Break point 를 사용하길 권장한다.
+또한 Break point 를 통해 콜 스택과 같은 상세 정보를 확인할 수 있기에 순전히 디버깅용으로 console.log 를 사용했던 이들에게 큰 도움이 될 거다.
+
+Node 8 이상 부터 [v8-inspector](https://chromedevtools.github.io/debugger-protocol-viewer/v8/) 를 완전히 지원한다.
+`--inspect` 옵션을 사용하면 된다. `--inspect-brk` 옵션도 존재하는데 이 옵션을 사용하면 코드 첫 줄에서 멈추기에 처음부터 디버깅할 때 유용하다.
+
+```
+node --inspect {타켓}
+```
+
+아래는 본인 사이드 프로젝트에서 BP(=Break point) 를 찍어서 디버깅하는 모습이다. 
+
+![](/assets/images/posts/how-to-improve-node-product-quality/break-point.png)
+
+본인의 경우 IDE 상 Debug 모드를 통해 설정해서 진행한다.
+각자 사용하는 프레임워크와 환경이 다르나 쉽게 사용하는 IDE 상에 디버깅 모드와 관련한 문서를 찾을 수 있다. 아래 설정 값은 VSCode 에 본인 프로젝트(TS 환경)에서의 Debug 설정 파일 내용이다.
+
+```json
+{
+  "type": "node",
+  "request": "launch",
+  "name": "Launch Program",
+  "program": "${workspaceFolder}/src/main.ts",
+  "preLaunchTask": "tsc: watch - tsconfig.build.json",
+  "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+  "skipFiles": [
+    "${workspaceFolder}/node_modules/**/*.js",
+    "<node_internals>/**/*.js"
+  ]
+}
+```
+
+- [Debugging in Visual Studio Code](https://code.visualstudio.com/docs/editor/debugging)
+- [How to debug with WebStorm](https://blog.jetbrains.com/webstorm/2018/01/how-to-debug-with-webstorm/)
 
 ## 안되는데요?
 
