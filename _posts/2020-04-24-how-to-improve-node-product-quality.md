@@ -126,7 +126,7 @@ IDE 에 따라 prettier extention 을 설치하여 `onSave` 와 같은 trigging 
 
 따라서 우리는 아래와 같이 Husky 를 통해 pre-commit 전에 prettier 를 통해 아래와 같이 포맷을 재정의하여 강제할 필요가 있다.
 
-> husky 가 기존 Git hook 을 덮어쓰기 때문에 husky 설정 이전에 repogitory 를 초기화 해야한다.
+> husky 가 기존 Git hook 을 덮어쓰기 때문에 husky 설정 이전에 repository 를 초기화 해야한다.
 
 ```json
 "husky": {
