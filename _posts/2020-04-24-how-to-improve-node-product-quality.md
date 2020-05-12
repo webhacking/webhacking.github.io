@@ -388,6 +388,8 @@ https://jestjs.io/docs/en/configuration#coveragethreshold-object
 이때 유용하게 사용할 수 있는게 "NVM(Node Version Manager)" 이다.
 [NVM](https://github.com/nvm-sh/nvm)은 로컬에서 다양한 버전의 노드를 설치할 수 있게 해주는 도구 이다.
 
+![](/assets/images/posts/how-to-improve-node-product-quality/1_ti2tw3aeR_Fc0NFXsms-RA.png)
+
 아래와 같이 쉽게 설치할 수 있다.
 
 ```
