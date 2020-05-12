@@ -384,6 +384,96 @@ https://jestjs.io/docs/en/configuration#coveragethreshold-object
 }
 ```
 
+덧붙여 노드 버전에 따라 애플리케이션에서 요구하는 내부 함수가 deprecated 되거나 새로 추가된 경우가 있을 수 있으므로 꼭 같은 버전으로 맞추는게 좋다.
+이때 유용하게 사용할 수 있는게 "NVM(Node Version Manager)" 이다.
+[NVM](https://github.com/nvm-sh/nvm)은 로컬에서 다양한 버전의 노드를 설치할 수 있게 해주는 도구 이다.
+
+아래와 같이 쉽게 설치할 수 있다.
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+```
+
+기본적인 ~/.bash_profile 기준으로 아래와 같이 설정하면 된다.
+
+```
+~/.bash_profile:
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+// 편집하고 나와서 source ~/.bash_profile
+```
+
+이후 NVM 을 통해 Node 를 설치합니다.
+
+```
+➜  ~ git:(master) ✗ nvm install node
+
+Downloading and installing node v14.2.0...
+Downloading https://nodejs.org/dist/v14.2.0/node-v14.2.0-darwin-x64.tar.xz...
+##################################################################################################################################################################################################### 100.0%
+Computing checksum with shasum -a 256
+Checksums matched!
+Now using node v14.2.0 (npm v6.14.4)
+Creating default alias: default -> node (-> v14.2.0)
+```
+
+이후 `node -v` 를 하면 정상적으로 적용된 것을 확인할 수 있다. (v14.2.0) 다음으로 다른 버전을 이용하고자 한다면 아래 명령어를 이용한다.
+`nvm ls-remote` 해당 명령어는 현재 nvm 에서 사용가능한 노드 버전들을 출력한다.
+
+```
+➜  ~ git:(master) ✗ nvm ls-remote
+
+....
+       v12.13.0   (LTS: Erbium)
+       v12.13.1   (LTS: Erbium)
+       v12.14.0   (LTS: Erbium)
+       v12.14.1   (LTS: Erbium)
+       v12.15.0   (LTS: Erbium)
+       v12.16.0   (LTS: Erbium)
+       v12.16.1   (LTS: Erbium)
+       v12.16.2   (LTS: Erbium)
+       v12.16.3   (Latest LTS: Erbium)
+        v13.0.0
+        v13.0.1
+        v13.1.0
+        v13.2.0
+        v13.3.0
+        v13.4.0
+        v13.5.0
+        v13.6.0
+        v13.7.0
+        v13.8.0
+        v13.9.0
+       v13.10.0
+       v13.10.1
+       v13.11.0
+       v13.12.0
+       v13.13.0
+       v13.14.0
+        v14.0.0
+        v14.1.0
+->      v14.2.0
+```
+
+`v13.10.1` 을 사용한다고한다면 아래와 같이 설치한다.
+```
+➜  ~ git:(master) ✗ nvm install v13.10.1
+Downloading and installing node v13.10.1...
+Downloading https://nodejs.org/dist/v13.10.1/node-v13.10.1-darwin-x64.tar.xz...
+##################################################################################################################################################################################################### 100.0%
+Computing checksum with shasum -a 256
+Checksums matched!
+Now using node v13.10.1 (npm v6.13.7)
+```
+
+이후, 아래 명령어를 통해 설치된 `v13.10.1` 버전을 사용할 수 있다.
+
+```
+➜  ~ git:(master) ✗ nvm use v13.10.1
+Now using node v13.10.1 (npm v6.13.7)
+```
+
 ## 우리 코드 리뷰 좀 할까요 ?
 
 요 근래 많은 팀들이 코드 리뷰를 도입하고 있으나, 아직까지 많은 개발자들이 코드 리뷰에 대해 비관적인 시선이다.
