@@ -2,7 +2,7 @@
 title: 프로세스 스케줄링, 그리고 기법
 layout: post
 categories : development
-background_image: '/assets/images/posts/process-scheduling-and-techniques/Round-robin_tournament_10teams_en.png'
+background_image: '/assets/images/posts/process-scheduling-and-techniques/Untitled-Diagram-150.png'
 ---
 
 도커에서 프로세스 스케줄링 하다가 이전에 정처기에서 학습했던 선점/비선점 스케줄링에 대한 이해도 떨어지는 것 같아 정리할 겸 글을 남긴다.
