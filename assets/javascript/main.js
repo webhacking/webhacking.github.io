@@ -168,6 +168,39 @@ app.ready(function()
                 }, 1000);
             }
         }, false);
+
+        var dynamicGenerateIndex = function() {
+            var bindIndex = '';
+            bindIndex += '<ul id="post-index">';
+            var headNodes = document.querySelectorAll('.content h1, .content h2, .content h3, .content h4, .content h5');
+            var lastDepth = 0;
+            for (let i = 0; i < headNodes.length; i++) {
+                if (!headNodes[i].tagName) {
+                    continue;
+                }
+                if (!headNodes[i].tagName.toLowerCase().split('h')[1]) {
+                    continue;
+                }
+                var currentDepth = parseInt(headNodes[i].tagName.toLowerCase().split('h')[1]);
+                var nextDepth = headNodes[i+1] && headNodes[i+1].tagName ?  parseInt(headNodes[i+1].tagName.toLowerCase().split('h')[1]) : 0;
+                if (currentDepth >= lastDepth && lastDepth === nextDepth) {
+                    bindIndex += '<ol>';
+                }
+                bindIndex += '<li>';
+                bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '">' + headNodes[i].innerText + '</a>';
+                bindIndex += '</li>';
+                if (currentDepth < lastDepth && lastDepth === nextDepth) {
+                    bindIndex += '</ol>';
+                }
+                lastDepth = parseInt(headNodes[i].tagName.toLowerCase().split('h')[1]);
+            }
+
+            bindIndex += '</ul>';
+
+            return bindIndex;
+        };
+
+        document.querySelector('.content-container').innerHTML += dynamicGenerateIndex();
     }
 
     app.addEvent('resize', window, function(e)
