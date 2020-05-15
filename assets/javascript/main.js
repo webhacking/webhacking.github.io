@@ -180,7 +180,7 @@ app.ready(function()
                 if (!headNodes[i].tagName.toLowerCase().split('h')[1]) {
                     continue;
                 }
-                bindIndex += '<li style="display: block; color: rgb(33, 37, 41);">';
+                bindIndex += '<li style="display: block; color: rgb(33, 37, 41); cursor: pointer">';
                 bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '" style="color: inherit; text-decoration: none; box-shadow: none; transition: none;">' + headNodes[i].innerText + '</a>';
                 bindIndex += '</li>';
             }
