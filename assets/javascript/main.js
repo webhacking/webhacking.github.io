@@ -171,7 +171,7 @@ app.ready(function()
 
         var dynamicGenerateIndex = function() {
             var bindIndex = '';
-            bindIndex += '<ul id="post-index">';
+            bindIndex += '<ul id="post-index" style="position: absolute; border-left: 2px solid rgb(233, 236, 239); right: -2rem; top: 15rem;">';
             var headNodes = document.querySelectorAll('.content h1, .content h2, .content h3, .content h4, .content h5');
             var lastDepth = 0;
             for (let i = 0; i < headNodes.length; i++) {
@@ -186,8 +186,8 @@ app.ready(function()
                 if (currentDepth >= lastDepth && lastDepth === nextDepth) {
                     bindIndex += '<ol>';
                 }
-                bindIndex += '<li>';
-                bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '">' + headNodes[i].innerText + '</a>';
+                bindIndex += '<li style="display: block; color: rgb(33, 37, 41);">';
+                bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '" style="color: inherit; text-decoration: none;">' + headNodes[i].innerText + '</a>';
                 bindIndex += '</li>';
                 if (currentDepth < lastDepth && lastDepth === nextDepth) {
                     bindIndex += '</ol>';

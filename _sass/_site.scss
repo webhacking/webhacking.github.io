@@ -352,23 +352,6 @@ html[data-page="little-wider-page"] {
   }
 }
 
-.post-index {
-  position: absolute;
-  border-left: 2px solid rgb(233, 236, 239);
-  right: -2rem;
-  top: 15rem;
-  li {
-    display: block;
-    color: rgb(33, 37, 41);
-    transform: scale(1.05);
-    transition: all 0.125s ease-in 0s;
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-  }
-}
-
 .post-navigation {
   overflow: hidden;
   margin-top: 60px;
