@@ -173,7 +173,6 @@ app.ready(function()
             var bindIndex = '';
             bindIndex += '<ul id="post-index" style="position: absolute; border-left: 2px solid rgb(233, 236, 239); right: -2rem; top: 15rem;">';
             var headNodes = document.querySelectorAll('.content h1, .content h2, .content h3, .content h4, .content h5');
-            var lastDepth = 0;
             for (let i = 0; i < headNodes.length; i++) {
                 if (!headNodes[i].tagName) {
                     continue;
@@ -181,18 +180,9 @@ app.ready(function()
                 if (!headNodes[i].tagName.toLowerCase().split('h')[1]) {
                     continue;
                 }
-                var currentDepth = parseInt(headNodes[i].tagName.toLowerCase().split('h')[1]);
-                var nextDepth = headNodes[i+1] && headNodes[i+1].tagName ?  parseInt(headNodes[i+1].tagName.toLowerCase().split('h')[1]) : 0;
-                if (currentDepth >= lastDepth && lastDepth === nextDepth) {
-                    bindIndex += '<ol>';
-                }
                 bindIndex += '<li style="display: block; color: rgb(33, 37, 41);">';
-                bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '" style="color: inherit; text-decoration: none;">' + headNodes[i].innerText + '</a>';
+                bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '" style="color: inherit; text-decoration: none; box-shadow: none; transition: none;">' + headNodes[i].innerText + '</a>';
                 bindIndex += '</li>';
-                if (currentDepth < lastDepth && lastDepth === nextDepth) {
-                    bindIndex += '</ol>';
-                }
-                lastDepth = parseInt(headNodes[i].tagName.toLowerCase().split('h')[1]);
             }
 
             bindIndex += '</ul>';
@@ -200,7 +190,7 @@ app.ready(function()
             return bindIndex;
         };
 
-        document.querySelector('.content-container').innerHTML += dynamicGenerateIndex();
+        document.querySelector('.content-container .content').innerHTML += dynamicGenerateIndex();
     }
 
     app.addEvent('resize', window, function(e)
