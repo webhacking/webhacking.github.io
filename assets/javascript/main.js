@@ -168,29 +168,6 @@ app.ready(function()
                 }, 1000);
             }
         }, false);
-
-        var dynamicGenerateIndex = function() {
-            var bindIndex = '';
-            bindIndex += '<ul id="post-index" style="position: absolute; border-left: 2px solid rgb(233, 236, 239); right: -2rem; top: 15rem;">';
-            var headNodes = document.querySelectorAll('.content h1, .content h2, .content h3, .content h4, .content h5');
-            for (let i = 0; i < headNodes.length; i++) {
-                if (!headNodes[i].tagName) {
-                    continue;
-                }
-                if (!headNodes[i].tagName.toLowerCase().split('h')[1]) {
-                    continue;
-                }
-                bindIndex += '<li style="display: block; color: rgb(33, 37, 41); cursor: pointer">';
-                bindIndex += '<a href="#' + headNodes[i].getAttribute('id') + '" style="color: inherit; text-decoration: none; box-shadow: none; transition: none;">' + headNodes[i].innerText + '</a>';
-                bindIndex += '</li>';
-            }
-
-            bindIndex += '</ul>';
-
-            return bindIndex;
-        };
-
-        document.querySelector('.content-container .content').innerHTML += dynamicGenerateIndex();
     }
 
     app.addEvent('resize', window, function(e)
