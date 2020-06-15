@@ -1,8 +1,8 @@
 ---
-title: Node 프로덕트 퀄리티를 높이는 협업 방법
+title: Call for code IBM 해커톤
 layout: post
 categories : development
-background_image: '/assets/images/posts/how-to-improve-node-product-quality/tetris-same-thing.jpg'
+background_image: '/assets/images/posts/call-for-code-ibm/call-1.png'
 ---
 
 IBM에서 기후변화와 COVID-19를 주제로 해커톤을 진행한다는 소식을 접했고, 평소 특히 `COVID-19` 에 대해 관심이 많았던 나는 주저 없이 참가 신청을 했다. 코로나 바이러스는 발병 이후 현재까지도 우리 사회를 위협하고 있다. 이러한 위협적인 바이러스로부터 우리 사회에 내가 기여할 수 있는 것은 무엇일까, 어떠한 메세지를 전달할 수 있을까 내심 고심이 많았지만 이러한 고심에 시간 또한 내게는 설렘으로 다가왔다.
