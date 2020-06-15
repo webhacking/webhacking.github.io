@@ -108,7 +108,7 @@ public explore(
 - 일정이 빠듯해서 해커톤 당일에 에너지를 많이 쏟지 못했다.
 - 새로운 기술 스택이 아닌, 이미 너무 익숙한 기술 스택으로 진행했다.
 - 멘토링을 제공해주셨다고 하는데, 본인은 일정 때문에 멘토링 시간을 받지 못해서 그 때 여러 질문들을 못한게 조금 아쉬운점으로 남는다.
-![](/assets/images/posts/call-for-code-ibm/call-6.png)
+![](/assets/images/posts/call-for-code-ibm/call-6.jpg)
 
 
 ## Major Takeaways
