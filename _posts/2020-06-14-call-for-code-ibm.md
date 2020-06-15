@@ -30,12 +30,12 @@ IBM에서 기후변화와 COVID-19를 주제로 해커톤을 진행한다는 소
 현재 위치에 따른 혼잡도 구하고자 한다면, 크게 두가지 방법을 생각할 수 있다. 첫번째로는 현재 지도 기반으로 minimum maximum ((남,서), (북,동)) 위경도를 구하여 BETWEEN 으로 쿼리하는 간단한 방법이 있다. 아래는 카카오맵에서 제공하는 api 를 통해 쉽게 값을 구할 수 있다. `boundsMap` 을 이용자가 맵을 이동할때 마다 서버로 부터 요청을 해야하는데 이 때, `maps.event.addListener(map, 'dragend', func);` 을 통해 트리깅 이벤트를 전달 받을 수 있다.
 
 ```javascript
-    const bounds = map.getBounds();
-    const swLatLng = bounds.getSouthWest(); 
-    const neLatLng = bounds.getNorthEast(); 
-    const boundsStr = bounds.toString(); // ((남,서), (북,동)) 형식
+const bounds = map.getBounds();
+const swLatLng = bounds.getSouthWest(); 
+const neLatLng = bounds.getNorthEast(); 
+const boundsStr = bounds.toString(); // ((남,서), (북,동)) 형식
 
-    const boundsMap = [swLatLng.getLat(), swLatLng.getLng(), neLatLng.getLat(), neLatLng.getLng()];
+const boundsMap = [swLatLng.getLat(), swLatLng.getLng(), neLatLng.getLat(), neLatLng.getLng()];
 ```
 
 서버는 `boundsMap` 을 클라이언트로 부터 전달 받아, 아래와 같이 맵핑하여 쿼리를 수행하면 된다. 
