@@ -25,6 +25,9 @@ gRPC 는 JSON 과 같은 데이터 타입을 사용할 수 있지만 통상 구�
 
 ```proto
 # person.proto 
+
+syntax = "proto3";
+
 message Person {
   required string name = 1;
   required int32 id = 2;
@@ -34,6 +37,9 @@ message Person {
 
 이와 같이 만들어진 proto 파일은 프로토콜버퍼 컴파일러인 protoc 를 이용해서 원하는 언어의 데이터 액세스 클래스 코드로 만든다. 선택한 언어가 C++ 이라면 컴파일러는 Person 이라는 클래스를 만들 것 이다. 그 다음 응용 프로그램에서는 이 클래스를 이용하여 Person 프로토콜버퍼 메시지를 채우고 **직렬화** 할 수 있다.
 
+팁을 드리자면 `syntax = "proto3";` 를 적지 않으면 기본적으로 `proto2` 로 인식한다.
+proto3 는 모든 키 값에 대해 optional 로 간주한다.
+
 Nest 에서 gRPC 를 사용하고자 한다면 우선 아래 dependency 를 설치하길 바란다.
 
 ```
@@ -41,6 +47,9 @@ npm i --save grpc @grpc/proto-loader
 ```
 
 그리고 부트스트래핑 되는 `main.ts` 를 아래와 같이 수정한다.
+마이크로 서비스 전송 계층 구현과 마찬가지로 transport, createMicroservice()메소드에 전달 된 옵션 객체 의 속성을 사용하여 gRPC 전송기 메커니즘을 선택한다.
+
+기본적으로 `5000` 포트로 시작된다.
 
 ```javascript
 const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
@@ -50,6 +59,17 @@ const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule,
     protoPath: join(__dirname, 'person.proto'), // 아까 만든 person proto 경로
   },
 });
+
+await app.listenAsync();
 ```
+
+아래와 같이 실행된 것을 확인할 수 있다.
+
+```
+[Nest] 33368   - 06/24/2020, 10:01:17 AM   [NestFactory] Starting Nest application...
+[Nest] 33368   - 06/24/2020, 10:01:17 AM   [InstanceLoader] AppModule dependencies initialized +11ms
+[Nest] 33368   - 06/24/2020, 10:01:17 AM   [NestMicroservice] Nest microservice successfully started +89ms
+```
+
 
 > 작성 중 ...
