@@ -70,6 +70,3 @@ await app.listenAsync();
 [Nest] 33368   - 06/24/2020, 10:01:17 AM   [InstanceLoader] AppModule dependencies initialized +11ms
 [Nest] 33368   - 06/24/2020, 10:01:17 AM   [NestMicroservice] Nest microservice successfully started +89ms
 ```
-
-
-> 작성 중 ...
