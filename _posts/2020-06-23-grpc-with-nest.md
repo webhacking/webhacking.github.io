@@ -70,3 +70,31 @@ await app.listenAsync();
 [Nest] 33368   - 06/24/2020, 10:01:17 AM   [InstanceLoader] AppModule dependencies initialized +11ms
 [Nest] 33368   - 06/24/2020, 10:01:17 AM   [NestMicroservice] Nest microservice successfully started +89ms
 ```
+
+작성된 `proto` 파일은 `pbjs` 를 통해 컴파일해서 사용할 수 있다.
+아래는 간단하게 쉘 스크립트로 작성한 컴파일러이다.
+
+
+```sh
+#!/bin/bash
+​
+# ./scripts/compile_proto.sh
+# scan all .proto from ./src/proto and compile them to ./src/libs/codegen/rpc.js & rpc.d.ts
+​
+export ROOT="."
+export SRC="${ROOT}/proto"
+export DST="${ROOT}/libs/codegen/src/rpc"
+​
+rm -rf $DST
+mkdir -p $DST
+​
+npx pbjs --target static-module \
+  --wrap commonjs \
+  --keep-case \
+  --path "$ROOT/proto" \
+  --out "$DST/rpc.js" \
+  $SRC/*.proto
+​
+npx pbts --out "$DST/rpc.d.ts" \
+  ${DST}/rpc.js
+```
