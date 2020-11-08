@@ -139,6 +139,8 @@ Docker 리포지토리 및 이미지, 메모리 및 CPU 요구 사항, 공유 �
 
 ![](/assets/images/posts/2020-10-01-deployment-using-aws-ecs-ecr/codebuild_blogpost_2.png)
 
-
+Dockerfile 에서 이미지 빌드를 하다보면 수 많은 `Run` 명령어를 사용한다. 해당 명령어는 도커에서 이미지 레이어를 생성하게 되고 이 이미지 레이어는 게임에서 세이브 포인트 역할을 한다고 이해하면 편하다.
+따라서 다음 번 도커 이미지 빌드 시, 해당 이미지를 캐싱하여 사용하기에 빌드 시간을 단축 시킨다. 다만 캐싱을 사용하지 않고 수행하는 경우도 존재하는데, Remote repository 에서 소스 코드를 받아와서 사용하는 경우 캐싱된 이미지 레이어를 사용하는 경우
+변경된 소스가 반영되지 않는다. 따라서 `CodeBuild` 에서 `Artifacts` 항목에 `Cache type` 옵션을 설정해주길 바란다. (기본 값은 No Cache 이다)
 
 
