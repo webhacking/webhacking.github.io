@@ -2,7 +2,7 @@
 title: 이직에 대한 고찰
 layout: post
 categories : think
-background_image: '/assets/images/posts/2020-10-01-deployment-using-aws-ecs-ecr/diagram.png'
+background_image: '/assets/images/posts/2020-11-07-turnover-and-update/moved-960x500.jpg'
 ---
 
 평생직장이란 개념에서 이직이란 존재하지 않는다.
