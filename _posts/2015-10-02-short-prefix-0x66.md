@@ -2,7 +2,7 @@
 layout: post
 title: "short 주소 앞에 0x66 Prefix가 붙으면"
 description: ""
-categories : development
+categories : think
 sub_categories : ""
 date: 2015-10-02
 tags: []
