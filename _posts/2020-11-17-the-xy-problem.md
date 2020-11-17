@@ -27,14 +27,14 @@ background_image: '/assets/images/posts/2020-11-17-the-xy-problem/images.jpeg'
 질문자는 실질적으로 문자열에서 마지막 3개를 구하는게 아닌 파일 확장자를 구하고 싶어하는 상황(X)인데
 문자열 3개 구하는 방법(Y) 을 물어보며 전형적인 XY Problem 에 직관한걸 알 수 있다.
 
-질문자: How can I echo the last three characters in a filename?
-답변자: If they're in a variable: echo ${foo: -3}
-답변자: Why 3 characters? What do you REALLY want?
-답변자: Do you want the extension?
-질문자: Yes.
-답변자: There's no guarantee that every filename will have a three-letter extension,
-답변자: so blindly grabbing three characters does not solve the problem.
-답변자: echo ${foo##*.}
+- 질문자: How can I echo the last three characters in a filename?
+- 답변자: If they're in a variable: echo ${foo: -3}
+- 답변자: Why 3 characters? What do you REALLY want?
+- 답변자: Do you want the extension?
+- 질문자: Yes.
+- 답변자: There's no guarantee that every filename will have a three-letter extension,
+- 답변자: so blindly grabbing three characters does not solve the problem.
+- 답변자: echo ${foo##*.}
 
 
 ## How to avoid it
