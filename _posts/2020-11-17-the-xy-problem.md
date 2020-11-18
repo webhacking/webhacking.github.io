@@ -1,5 +1,5 @@
 ---
-title: The XT Problem
+title: The XY Problem
 layout: post
 categories : development
 background_image: '/assets/images/posts/2020-11-17-the-xy-problem/images.jpeg'
