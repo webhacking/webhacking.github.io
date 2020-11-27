@@ -16,7 +16,7 @@ background_image: '/assets/images/posts/2020-11-17-the-xy-problem/images.jpeg'
 - 유저는 X 를 어떻게 하는지는 모르지만, 만약 Y 를 해낼 수 있다면 X 의 해결책을 찾아낼 수 있을거라 생각한다. (User doesn't know how to do X, but thinks they can fumble their way to a solution if they can just manage to do Y)
 - 유저는 Y 도 어떻게 해야할지 모른다. (User doesn't know how to do Y either)
 - 유저는 Y 에 관해서 도움을 요청한다. (User asks for help with Y.)
-- 다른 이들을 Y 에 관래 도움을 주려하지만, Y 라는 문제를 풀려는 이류를 이해하지 못해 혼란에 빠진다. (Others try to help user with Y, but are confused because Y seems like a strange problem to want to solve)
+- 다른 이들을 Y 에 관래 도움을 주려하지만, Y 라는 문제를 풀려는 이유를 이해하지 못해 혼란에 빠진다. (Others try to help user with Y, but are confused because Y seems like a strange problem to want to solve)
 - 많은 상호작용과 시간 낭비 이후 마침내 유저는 X 에 관한 도움 필요를 인지하고, Y 는 사실 X 라는 문제를 해결하기에 적합한 해결책이 아니었다는 것이 명백해진다. (After much interaction and wasted time, it finally becomes clear that the user really wants help with X, and that Y wasn't even a suitable solution for X.)
 
 위 연출된 상황을 보면 사람들은 `Y` 에 집작하게되고 최종적으로 문제를 돕고자하는 이들을 결국 좌절의 늪으로 빠트린다.
