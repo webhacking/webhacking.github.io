@@ -2,7 +2,7 @@
 title: 이직에 대한 고찰
 layout: post
 categories : think
-background_image: '/assets/images/posts/2020-11-07-turnover-and-update/moved-960x500.jpg'
+background_image: '/assets/images/posts/turnover-and-update/moved-960x500.jpg'
 ---
 
 평생직장이란 개념에서 이직이란 존재하지 않는다.
@@ -29,46 +29,32 @@ background_image: '/assets/images/posts/2020-11-07-turnover-and-update/moved-960
 `코딩 테스트`, `기술 면접` 을 심층적으로 보는 것 같고, 스타트업이라기보단 좀 수직적인 회사 같다는 느낌을 받았다.
 코딩 테스트 난이도는 `상` 정도 되었고 아래 처럼 프로그래머스를 통해 진행한다.
 
-![](/assets/images/posts/2020-11-07-turnover-and-update/3.png)
+![](/assets/images/posts/turnover-and-update/3.png)
 
 # K
 
 K 사는 Codility 를 통해 `코딩 테스트` 를 진행하고, `기술 면접` 시간이 꽤 길다. (두시간 넘게 본 것 같다.)
 주로 System architecture 나 특정 상황들을 주고 어떤 식으로 설계하거나 해결할지에 대해 묻는다.
 
-![](/assets/images/posts/2020-11-07-turnover-and-update/4.png)
+![](/assets/images/posts/turnover-and-update/4.png)
 
 아, 그리고 면접 보면 3만원 쿠폰준다.
 
-![](/assets/images/posts/2020-11-07-turnover-and-update/2.jpg)
+![](/assets/images/posts/turnover-and-update/2.jpg)
 
 # B
 
 B 사도 코딩 테스트가 있었던 것 같은데, 메일을 뒤져보는데 실패했다.
 특이점은 외국계라서 병역특례 지정 업체가 아니라, 사회 복무 요원으로 다닐 수 가 없다는 것
 
-![](/assets/images/posts/2020-11-07-turnover-and-update/1.jpg)
-
-# P
-
-P 사는 지원은 아닌데, 어찌저찌하여 CTO 님이랑 얘기를하게 되었고 평소 내가 그리는 롤 모델에 이미지와 가깝고 그저 멋있다는 생각이 주로 자리 잡은 것 같다.
-정말 `같이 일하고 싶은 사람` 이 었고, 지금도 이 생각이 틀리지 않았다는 것을 보여주고 계신다.
-
-당시 현재 새로운 팀을 꾸리고 있다고 말씀해 주시곤, 현재 상황들에 대해 조리 있게 얘기했다.
-꾸려지는 팀 구성원들이 정말 같이 일하고 싶은 구성원들이고 나아가야 할 도전 과제들이 많았기에 바로 `콜`했다.
-
-아, P 사는 이제 다니고 있으니 풀 네임으로 노출해도 되겠지?
-***피플펀드***에서 보통 사람을 위한 보통이 아닌 금융을 만들고 있다.
-
-개발자 채용하고 있으니, 부디 한번 와서 봐주시길..!
-- https://www.notion.so/9-4a3ba31400a545ea9154304af4d2852c
+![](/assets/images/posts/turnover-and-update/1.jpg)
 
 # Z
 
 면접비를 현금으로 준 것이 기억 난다. 
 코딩 테스트 보단 코딩 과제를 주고 이를 수행하면 다음에 기술 면접이 있는데, 주로 K 와 비슷하게 System architecture 에 대해 많이 물어본다.
 
-![](/assets/images/posts/2020-11-07-turnover-and-update/5.png)
+![](/assets/images/posts/turnover-and-update/5.png)
 
 
 
