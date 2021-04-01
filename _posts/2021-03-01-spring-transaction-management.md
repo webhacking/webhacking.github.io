@@ -2,7 +2,7 @@
 title: Spring Transaction Management
 layout: post
 categories : development
-background_image: '/assets/images/posts/2020-12-15-from-the-grave-to-the-cradle-with-typescript/1.png'
+background_image: '/assets/images/spring-transaction-management-2.png'
 ---
 
 요즘 스프링으로 개발을하고있는데, 학습한 내용은 많으나 정리할 시간이 없다는 핑계로 이제서야 짤막한 정리글을 스멀스멀 올리려하고있다.
@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 - UncheckedException이 발생하면 Rollback
 
 
-![](https://images.velog.io/images/hax0r/post/e5cac8a0-ec20-4f7d-9823-fb0b7417b6c9/Read-Write-Read-Only-Spring-Transaction-Routing.png)
+![](/assets/images/spring-transaction-management-2.png)
 
 또한 주의점으로 @Transactional 은 우선 순위를 가지고 있다. 클래스 메서드에 선언된 트랜잭션의 우선 순위가 가장 높고, 인터페이스에 선언된 트랜잭션의 우선 순위가 가장낮다. (우선 순위는 아래와 같다.)
 
@@ -45,7 +45,7 @@ transactionTemplate.execute(new TransactionCallback < xx > () {
 
 TransactionTemplate의 트랜잭션 처리 과정은 다음과 같다.
 
-![](https://images.velog.io/images/hax0r/post/dffe3b7c-7ff4-4950-a0b0-c5a9e28f097f/download.png)
+![](/assets/images/spring-transaction-management-1.png)
 
 만약 doInTransaction 내에서 익셉션일 발생하면 TransactionTemplate에서 PlatformTransactionManager의 rollback 시킨 후, TransactionTemplate의 execute 메서드를 호출한 코드에 익셉션 전달한다.
 
